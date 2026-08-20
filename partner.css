@@ -1,0 +1,601 @@
+/* ==========================================================
+   TRUSTED PARTNERS - BASE
+========================================================== */
+
+.trusted-partners-section {
+    position: relative;
+    padding: 70px 0;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.partners-heading {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 55px;
+}
+
+.partners-heading::before,
+.partners-heading::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #dfe3e8;
+}
+
+.partners-heading span {
+    display: none;
+}
+
+.partners-heading h2 {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 38px;
+    font-weight: 800;
+    color: #171717;
+}
+
+.trusted-partners-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+
+.partner-item {
+    min-height: 95px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all .35s ease;
+}
+
+.partner-logo {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all .35s ease;
+}
+
+.partner-content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.partner-content strong {
+    font-size: 27px;
+    font-weight: 800;
+    color: #888;
+    transition: all .35s ease;
+}
+
+.partner-content small {
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+    letter-spacing: .2px;
+    transition: all .35s ease;
+}
+
+
+/* ==========================================================
+   DESIGN 1 - EMERALD
+   Clean horizontal logo strip
+========================================================== */
+
+.theme-emerald-block .trusted-partners-section {
+    background: #ffffff;
+}
+
+.theme-emerald-block .partners-heading h2 {
+    color: #1a1a1a;
+}
+
+.theme-emerald-block .partner-item {
+    border-right: 1px solid #eeeeee;
+}
+
+.theme-emerald-block .partner-item:last-child {
+    border-right: 0;
+}
+
+.theme-emerald-block .partner-logo {
+    color: #1ba085;
+}
+
+.theme-emerald-block .partner-item:hover {
+    transform: translateY(-5px);
+}
+
+.theme-emerald-block .partner-item:hover .partner-content strong {
+    color: #1ba085;
+}
+
+
+/* ==========================================================
+   DESIGN 2 - CURVED
+   Soft circular logo containers
+========================================================== */
+
+.theme-curved-scalloped .trusted-partners-section {
+    background: #faf8f2;
+}
+
+.theme-curved-scalloped .partners-heading {
+    justify-content: center;
+}
+
+.theme-curved-scalloped .partners-heading::before,
+.theme-curved-scalloped .partners-heading::after {
+    max-width: 100px;
+    flex: 1;
+}
+
+.theme-curved-scalloped .partners-heading h2 {
+    font-size: 34px;
+}
+
+.theme-curved-scalloped .partner-item {
+    flex-direction: column;
+    text-align: center;
+    border: 0;
+    position: relative;
+}
+
+.theme-curved-scalloped .partner-logo {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background: #f1eadc;
+    color: #1ba085;
+    font-size: 32px;
+    box-shadow: inset 0 0 0 1px #e5dccb;
+}
+
+.theme-curved-scalloped .partner-content strong {
+    font-size: 23px;
+    color: #333;
+}
+
+.theme-curved-scalloped .partner-content small {
+    color: #8c857b;
+}
+
+.theme-curved-scalloped .partner-item:hover .partner-logo {
+    transform: scale(1.08) rotate(5deg);
+    background: #1ba085;
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   DESIGN 3 - MINIMAL GRID
+   Sharp editorial grid
+========================================================== */
+
+.theme-default .trusted-partners-section {
+    background: #ffffff;
+}
+
+.theme-default .partners-heading {
+    margin-bottom: 40px;
+}
+
+.theme-default .partners-heading h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.theme-default .trusted-partners-grid {
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.theme-default .partner-item {
+    min-height: 125px;
+    border-right: 1px solid #e5e7eb;
+}
+
+.theme-default .partner-item:last-child {
+    border-right: 0;
+}
+
+.theme-default .partner-logo {
+    color: #555;
+}
+
+.theme-default .partner-content strong {
+    color: #333;
+    font-size: 22px;
+}
+
+.theme-default .partner-content small {
+    color: #999;
+}
+
+.theme-default .partner-item:hover {
+    background: #f8f9fa;
+}
+
+.theme-default .partner-item:hover .partner-logo {
+    color: #111;
+}
+
+
+/* ==========================================================
+   DESIGN 4 - MODERN DARK
+   Neon glass partner cards
+========================================================== */
+
+.theme-modern-dark .trusted-partners-section {
+    background:
+        radial-gradient(circle at 20% 50%, rgba(6,182,212,.08), transparent 30%),
+        #0b0f19;
+}
+
+.theme-modern-dark .partners-heading h2 {
+    color: #ffffff;
+}
+
+.theme-modern-dark .partners-heading::before,
+.theme-modern-dark .partners-heading::after {
+    background: #263244;
+}
+
+.theme-modern-dark .trusted-partners-grid {
+    gap: 15px;
+}
+
+.theme-modern-dark .partner-item {
+    min-height: 120px;
+    border: 1px solid rgba(6,182,212,.2);
+    border-radius: 16px;
+    background: rgba(17,24,39,.7);
+    backdrop-filter: blur(12px);
+}
+
+.theme-modern-dark .partner-logo {
+    color: #06b6d4;
+}
+
+.theme-modern-dark .partner-content strong {
+    color: #f3f4f6;
+}
+
+.theme-modern-dark .partner-content small {
+    color: #9ca3af;
+}
+
+.theme-modern-dark .partner-item:hover {
+    transform: translateY(-7px);
+    border-color: #06b6d4;
+    box-shadow: 0 12px 35px rgba(6,182,212,.15);
+}
+
+.theme-modern-dark .partner-item:hover .partner-logo {
+    text-shadow: 0 0 15px rgba(6,182,212,.8);
+}
+
+
+/* ==========================================================
+   DESIGN 5 - VIBRANT FLOATING
+   Colorful floating cards
+========================================================== */
+
+.theme-vibrant-cards .trusted-partners-section {
+    background: #f8fafc;
+}
+
+.theme-vibrant-cards .partners-heading {
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.theme-vibrant-cards .partners-heading::before,
+.theme-vibrant-cards .partners-heading::after {
+    display: none;
+}
+
+.theme-vibrant-cards .partners-heading span {
+    display: block;
+    padding: 6px 15px;
+    border-radius: 50px;
+    background: rgba(79,70,229,.1);
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.theme-vibrant-cards .partners-heading h2 {
+    font-size: 38px;
+}
+
+.theme-vibrant-cards .trusted-partners-grid {
+    gap: 20px;
+}
+
+.theme-vibrant-cards .partner-item {
+    min-height: 150px;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(79,70,229,.08);
+}
+
+.theme-vibrant-cards .partner-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 20px;
+    background: linear-gradient(135deg,#4f46e5,#7c3aed);
+    color: #ffffff;
+}
+
+.theme-vibrant-cards .partner-content {
+    text-align: center;
+}
+
+.theme-vibrant-cards .partner-content strong {
+    color: #1e293b;
+    font-size: 21px;
+}
+
+.theme-vibrant-cards .partner-content small {
+    color: #64748b;
+}
+
+.theme-vibrant-cards .partner-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(79,70,229,.16);
+}
+
+
+/* ==========================================================
+   DESIGN 6 - LUXURY
+   Gold editorial layout
+========================================================== */
+
+.theme-elegant-serif .trusted-partners-section {
+    background: #faf8f5;
+}
+
+.theme-elegant-serif .partners-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #2c2a29;
+}
+
+.theme-elegant-serif .partners-heading::before,
+.theme-elegant-serif .partners-heading::after {
+    background: #d4af37;
+}
+
+.theme-elegant-serif .trusted-partners-grid {
+    gap: 18px;
+}
+
+.theme-elegant-serif .partner-item {
+    min-height: 150px;
+    border: 1px solid #e4d7b7;
+    background: #ffffff;
+    position: relative;
+}
+
+.theme-elegant-serif .partner-item::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(212,175,55,.3);
+    pointer-events: none;
+}
+
+.theme-elegant-serif .partner-logo {
+    color: #d4af37;
+}
+
+.theme-elegant-serif .partner-content strong {
+    font-family: 'Playfair Display', serif;
+    color: #2c2a29;
+    font-size: 24px;
+}
+
+.theme-elegant-serif .partner-content small {
+    color: #8c857b;
+}
+
+.theme-elegant-serif .partner-item:hover {
+    transform: scale(1.025);
+    box-shadow: 0 10px 30px rgba(212,175,55,.12);
+}
+
+
+/* ==========================================================
+   DESIGN 7 - LAYERED OFFSET
+   Modern asymmetric cards
+========================================================== */
+
+.theme-layered-offset .trusted-partners-section {
+    background: #ffffff;
+}
+
+.theme-layered-offset .partners-heading {
+    justify-content: flex-start;
+}
+
+.theme-layered-offset .partners-heading h2 {
+    color: #2d3748;
+}
+
+.theme-layered-offset .partners-heading::before {
+    display: none;
+}
+
+.theme-layered-offset .partners-heading::after {
+    background: #f37a1f;
+    opacity: .25;
+}
+
+.theme-layered-offset .trusted-partners-grid {
+    gap: 20px;
+}
+
+.theme-layered-offset .partner-item {
+    min-height: 145px;
+    border-radius: 20px;
+    background: #f5f5f7;
+    position: relative;
+    overflow: visible;
+}
+
+.theme-layered-offset .partner-item:nth-child(1) {
+    --partner-accent: #f37a1f;
+}
+
+.theme-layered-offset .partner-item:nth-child(2) {
+    --partner-accent: #3dbbd3;
+}
+
+.theme-layered-offset .partner-item:nth-child(3) {
+    --partner-accent: #e8336d;
+}
+
+.theme-layered-offset .partner-item:nth-child(4) {
+    --partner-accent: #8e44ad;
+}
+
+.theme-layered-offset .partner-item:nth-child(5) {
+    --partner-accent: #27ae60;
+}
+
+.theme-layered-offset .partner-item::before {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    border: 2px solid var(--partner-accent);
+    border-radius: 22px;
+    z-index: -1;
+    transition: all .3s ease;
+}
+
+.theme-layered-offset .partner-item::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+    width: 55px;
+    height: 8px;
+    background: var(--partner-accent);
+    border-radius: 0 0 8px 8px;
+}
+
+.theme-layered-offset .partner-logo {
+    color: var(--partner-accent);
+}
+
+.theme-layered-offset .partner-content strong {
+    color: #2d3748;
+    font-size: 21px;
+}
+
+.theme-layered-offset .partner-content small {
+    color: #718096;
+}
+
+.theme-layered-offset .partner-item:hover {
+    transform: translateY(-8px);
+}
+
+.theme-layered-offset .partner-item:hover::before {
+    transform: translate(5px, 5px);
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1199.98px) {
+
+    .trusted-partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+    }
+
+    .partner-item {
+        border-right: 0 !important;
+    }
+
+}
+
+@media (max-width: 767.98px) {
+
+    .trusted-partners-section {
+        padding: 50px 0;
+    }
+
+    .partners-heading {
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .partners-heading h2 {
+        font-size: 28px !important;
+    }
+
+    .trusted-partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .partner-item {
+        min-height: 120px;
+        padding: 15px;
+    }
+
+    .partner-logo {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+        font-size: 24px;
+    }
+
+    .partner-content strong {
+        font-size: 18px !important;
+    }
+
+    .partner-content small {
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .trusted-partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-heading::before,
+    .partners-heading::after {
+        display: none;
+    }
+
+    .partner-item {
+        flex-direction: row !important;
+    }
+
+}

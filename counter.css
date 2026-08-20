@@ -1,0 +1,207 @@
+.stats-section,
+    .testimonial-section,
+    .cta-section {
+        padding-top: var(--section-pt);
+        padding-bottom: var(--section-pb);
+        margin-top: var(--section-mt);
+        margin-bottom: var(--section-mb);
+        transition: padding 0.3s ease, margin 0.3s ease;
+    }
+
+    .stats-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stats-section .container {
+        background-color: var(--section-bg);
+        border-radius: var(--section-radius);
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.4s ease, border-radius 0.4s ease;
+    }
+
+    .stats-section .container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: var(--bg-wave);
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .stat-card {
+        background: var(--card-bg);
+        border: var(--card-border);
+        border-radius: var(--card-radius);
+        backdrop-filter: var(--card-backdrop);
+        -webkit-backdrop-filter: var(--card-backdrop);
+        padding: 100px 0;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+            box-shadow 0.3s ease,
+            border 0.3s ease,
+            padding 0.3s ease;
+    }
+
+    .theme-default .stat-card,
+    .theme-emerald-block .stat-card {
+        border-right: var(--card-border-right);
+    }
+
+    @media (min-width: 992px) {
+
+        .theme-default .col-lg-3:last-child .stat-card,
+        .theme-emerald-block .col-lg-3:last-child .stat-card {
+            border-right: none;
+        }
+    }
+
+    .stat-card:hover {
+        transform: var(--card-hover-transform);
+    }
+
+    .theme-modern-dark .stat-card:hover {
+        box-shadow: 0 10px 30px rgba(6, 182, 212, 0.25);
+        border-color: rgba(6, 182, 212, 0.6);
+    }
+
+    .stat-icon {
+        display: none;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1;
+        z-index: 2;
+        transition: color 0.3s ease, display 0.3s ease;
+    }
+
+    .theme-layered-offset .stat-icon {
+        display: inline-block;
+    }
+
+    .stat-number {
+        font-size: 3.2rem;
+        font-weight: var(--stat-num-weight);
+        color: var(--stat-num-color);
+        background: var(--stat-num-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 2;
+        transition: color 0.3s ease;
+    }
+
+    .stat-label {
+        font-size: 0.95rem;
+        color: var(--stat-num-color);
+        margin: 0;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        z-index: 2;
+        transition: color 0.3s ease;
+    }
+
+    /* Arch & Scalloped Circle Elements (Theme 2 Stats) */
+    .theme-curved-scalloped .stats-section .stat-card::before {
+        content: '';
+        position: absolute;
+        bottom: 25px;
+        width: 240px;
+        height: 240px;
+        background-color: var(--arch-bg);
+        border-radius: 50%;
+        z-index: 0;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .theme-curved-scalloped .stats-section .col-lg-3:last-child .stat-card::after,
+    .theme-curved-scalloped .stats-section .stat-card:hover::after {
+        content: '';
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        border: var(--highlight-border);
+        border-radius: 50%;
+        z-index: 1;
+        pointer-events: none;
+        transition: transform 0.3s ease;
+    }
+
+    .theme-curved-scalloped .stats-section .stat-card:hover::before {
+        transform: scale(1.05);
+        background-color: #ebe3d3;
+    }
+
+    /* Layered Offset Frames Styles (Stats Section) */
+    .theme-layered-offset .stats-section .col-lg-3:nth-child(1) {
+        --accent-color: #f37a1f;
+    }
+
+    .theme-layered-offset .stats-section .col-lg-3:nth-child(2) {
+        --accent-color: #3dbbd3;
+    }
+
+    .theme-layered-offset .stats-section .col-lg-3:nth-child(3) {
+        --accent-color: #e8336d;
+    }
+
+    .theme-layered-offset .stats-section .col-lg-3:nth-child(4) {
+        --accent-color: #8e44ad;
+    }
+
+    .theme-layered-offset .stats-section .col-lg-3 {
+        position: relative;
+        padding: 15px 22px;
+    }
+
+    .theme-layered-offset .stats-section .col-lg-3::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 8px;
+        right: 8px;
+        bottom: 0;
+        border: 2.5px solid var(--accent-color);
+        border-radius: 20px;
+        z-index: 1;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .theme-layered-offset .stats-section .col-lg-3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 8px;
+        width: 80px;
+        height: 80px;
+        border-left: 14px solid var(--accent-color);
+        border-bottom: 14px solid var(--accent-color);
+        border-bottom-left-radius: 20px;
+        z-index: 1;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .theme-layered-offset .stat-label,
+    .theme-layered-offset .stat-icon {
+        color: var(--accent-color);
+    }
+
+   

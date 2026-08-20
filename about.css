@@ -1,0 +1,258 @@
+/* ===========================================================
+    INTRO / ABOUT SECTION STYLES (Dynamic per theme or offset style)
+    ===========================================================*/
+        .contribution-section {
+            /* background-color: #ffffff; */
+            font-family: 'Inter', sans-serif;
+            color: #333333;
+        }
+
+        /* Default / Emerald Left Composition Layout */
+        .image-composition-wrapper {
+            position: relative;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
+        .accent-bar-vertical {
+            position: absolute;
+            top: 0;
+            right: 45px;
+            width: 12px;
+            height: 120px;
+            background: linear-gradient(to bottom, #1ba085 50%, #ffc107 50%);
+            border-radius: 6px;
+            z-index: 1;
+        }
+
+        .image-box {
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .primary-image {
+            width: 85%;
+            height: 380px;
+        }
+
+        .secondary-image {
+            position: absolute;
+            bottom: -30px;
+            right: 0px;
+            width: 60%;
+            height: 270px;
+            border: 6px solid #ffffff;
+            border-radius: 16px;
+        }
+
+        .content-wrapper {
+            padding-left: 1rem;
+        }
+
+        .section-subtitle {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #1ba085;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.7rem);
+            font-weight: 800;
+            color: var(--title-color);
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.5px;
+        }
+
+        .section-desc {
+            font-size: 0.95rem;
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-custom-green {
+            background-color: #1ba085;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-green:hover {
+            background-color: #16866f;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-custom-yellow {
+            background-color: #ffc107;
+            color: #1a1a1a;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-yellow:hover {
+            background-color: #e0a800;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+        }
+
+        /* ===========================================================
+    THEME 7 OFFSET INTRO SECTION STYLES (New Layout Customization)
+    ===========================================================*/
+        /* .theme-layered-offset .contribution-section {
+            background-color: #ffffff;
+        } */
+
+        .theme-layered-offset .offset-intro-wrapper {
+            position: relative;
+            padding: 20px 0 20px 20px;
+        }
+
+        /* Left side image grid framework matching the layout requested */
+        .theme-layered-offset .offset-img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            position: relative;
+        }
+
+        .theme-layered-offset .offset-img-box {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .theme-layered-offset .offset-img-box img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .theme-layered-offset .offset-img-box:hover img {
+            transform: scale(1.03);
+        }
+
+        .theme-layered-offset .offset-img-box.full-width {
+            grid-column: span 2;
+        }
+
+        .theme-layered-offset .offset-img-box.full-width img {
+            height: 250px;
+        }
+
+        /* Scalloped Badge element matching design reference */
+        .theme-layered-offset .scalloped-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: #ffffff;
+            width: 170px;
+            height: 170px;
+            border-radius: 35% 65% 60% 40% / 40% 45% 55% 60%;
+            box-shadow: 0 10px 30px rgba(243, 122, 31, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            z-index: 3;
+            border: 2px dashed #f37a1f;
+        }
+
+        .theme-layered-offset .scalloped-badge i {
+            font-size: 2rem;
+            color: #f37a1f;
+            margin-bottom: 5px;
+        }
+
+        .theme-layered-offset .scalloped-badge span {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #2d3748;
+            line-height: 1.2;
+        }
+
+        /* Offset Theme Intro Content Adjustments */
+        .theme-layered-offset .contribution-section .section-subtitle {
+            color: #f37a1f;
+        }
+
+        .theme-layered-offset .contribution-section .section-title span {
+            color: #f37a1f;
+        }
+
+        .theme-layered-offset .contribution-section .btn-custom-offset-primary {
+            background-color: #f37a1f;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 12px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .theme-layered-offset .contribution-section .btn-custom-offset-primary:hover {
+            background-color: #d9630d;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .theme-layered-offset .contribution-section .btn-custom-offset-secondary {
+            background-color: #3dbbd3;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 12px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .theme-layered-offset .contribution-section .btn-custom-offset-secondary:hover {
+            background-color: #29a0b7;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 991.98px) {
+            .image-composition-wrapper {
+                padding-left: 0;
+                margin-bottom: 3rem;
+            }
+
+            .content-wrapper {
+                padding-left: 0;
+            }
+
+            .theme-layered-offset .scalloped-badge {
+                width: 140px;
+                height: 140px;
+                bottom: -10px;
+                left: 10px;
+            }
+        }

@@ -1,0 +1,171 @@
+ /* ==========================================================================
+       TEAM SECTION STYLES (Multi-Theme Matching Target Design Reference)
+       ========================================================================== */
+    .team-section {
+        background-color: #fcfcfd;
+        padding: 5rem 0;
+        position: relative;
+    }
+
+    .team-section .section-subtitle {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #0d6efd;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+    }
+
+    .team-section .section-title {
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        font-weight: 800;
+        color: #1a1a1a;
+        line-height: 1.2;
+        margin-bottom: 3.5rem;
+        letter-spacing: -0.5px;
+    }
+
+    .team-card {
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        border: 1px solid #edf2f7;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+    }
+
+    .team-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .team-img-wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 320px;
+        background-color: #f1f5f9;
+    }
+
+    .team-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        transition: transform 0.5s ease;
+    }
+
+    .team-card:hover .team-img-wrapper img {
+        transform: scale(1.04);
+    }
+
+    /* Unique Curved Image Bottom Border overlay matching design screenshot */
+    .team-img-wrapper::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: #ffffff;
+        border-radius: 30px 30px 0 0;
+        transition: background-color 0.3s ease;
+    }
+
+    .team-card-body {
+        padding: 1.25rem 1.5rem 1.75rem;
+        text-align: center;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+
+    .team-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 0.3rem;
+    }
+
+    .team-role {
+        font-size: 0.9rem;
+        color: #0d6efd;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .team-socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-top: auto;
+    }
+
+    .team-social-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #f8fafc;
+        color: #64748b;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .team-social-icon:hover {
+        background-color: #0d6efd;
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
+
+    /* Theme Adaptations for Team Section */
+    .theme-emerald-block .team-section { background-color: #f8fafc; }
+    .theme-emerald-block .team-section .section-subtitle,
+    .theme-emerald-block .team-role { color: #1ba085; }
+    .theme-emerald-block .team-social-icon:hover { background-color: #1ba085; }
+
+    .theme-curved-scalloped .team-section { background-color: #fcfbf9; }
+    .theme-curved-scalloped .team-section .section-subtitle,
+    .theme-curved-scalloped .team-role { color: #22b18a; }
+    .theme-curved-scalloped .team-card { border-radius: 24px; border: 1px solid #e9e5dc; }
+    .theme-curved-scalloped .team-social-icon:hover { background-color: #22b18a; }
+
+    .theme-modern-dark .team-section { background-color: #0b0f19; }
+    .theme-modern-dark .team-card { background: rgba(17, 24, 39, 0.75); border: 1px solid rgba(6, 182, 212, 0.3); backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0,0,0,0.37); }
+    .theme-modern-dark .team-img-wrapper::after { background: #111827; }
+    .theme-modern-dark .team-card-body { background: transparent; }
+    .theme-modern-dark .team-name { color: #f3f4f6; }
+    .theme-modern-dark .team-section .section-subtitle,
+    .theme-modern-dark .team-role { color: #06b6d4; }
+    .theme-modern-dark .team-social-icon { background-color: rgba(31, 41, 55, 0.8); color: #9ca3af; }
+    .theme-modern-dark .team-social-icon:hover { background-color: #06b6d4; color: #0b0f19; }
+
+    .theme-vibrant-cards .team-section { background-color: #f8fafc; }
+    .theme-vibrant-cards .team-section .section-subtitle,
+    .theme-vibrant-cards .team-role { color: #4f46e5; }
+    .theme-vibrant-cards .team-card { border-radius: 20px; border: 1px solid #e2e8f0; }
+    .theme-vibrant-cards .team-social-icon:hover { background-color: #4f46e5; }
+
+    .theme-elegant-serif .team-section { background-color: #faf8f5; font-family: 'Playfair Display', serif; }
+    .theme-elegant-serif .team-card { border-radius: 4px; border: 2px solid #d4af37; }
+    .theme-elegant-serif .team-img-wrapper::after { background: #ffffff; }
+    .theme-elegant-serif .team-name { font-family: 'Playfair Display', serif; font-weight: 700; }
+    .theme-elegant-serif .team-section .section-subtitle,
+    .theme-elegant-serif .team-role { color: #d4af37; }
+    .theme-elegant-serif .team-social-icon:hover { background-color: #d4af37; color: #ffffff; }
+
+    .theme-layered-offset .team-section { background-color: #ffffff; }
+    .theme-layered-offset .team-section .section-subtitle,
+    .theme-layered-offset .team-role { color: #f37a1f; }
+    .theme-layered-offset .team-card { border-radius: 20px; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.06); }
+    .theme-layered-offset .team-social-icon:hover { background-color: #f37a1f; }

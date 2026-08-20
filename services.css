@@ -1,0 +1,593 @@
+/* ==========================================================================
+   UNIQUE SERVICES SECTION ARCHITECTURES (All Layout Themes Combined)
+   ========================================================================== */
+
+.services-section {
+    padding-top: var(--section-pt, 4rem);
+    padding-bottom: var(--section-pb, 4rem);
+    margin-top: var(--section-mt, 2rem);
+    margin-bottom: var(--section-mb, 2rem);
+    background-color: var(--section-bg, transparent);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.services-section .section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.services-section .section-header h2 {
+    font-family: var(--font-family);
+    font-size: calc(2.4rem * var(--font-scale, 1));
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+}
+
+.services-section .section-header p {
+    font-family: var(--font-family);
+    font-size: calc(1.05rem * var(--font-scale, 1));
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.services-section .section-subtitle {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    color: var(--sub-color);
+}
+
+
+/* ==========================================================================
+   LAYOUT 2: CURVED (Organic Rounded Pill Archetype)
+   ========================================================================== */
+body.theme-curved .services-section {
+    background-color: var(--section-bg, #f8fafc);
+    padding: 5rem 0;
+}
+
+body.theme-curved .services-section .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+body.theme-curved .services-section .service-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 40px 16px 40px 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body.theme-curved .services-section .service-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 16px 40px 16px 40px;
+}
+
+body.theme-curved .services-section .service-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+body.theme-curved .services-section .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+body.theme-curved .services-section .service-card:hover .service-image img {
+    transform: scale(1.08);
+}
+
+body.theme-curved .services-section .service-content {
+    padding: 2.5rem 2rem;
+}
+
+body.theme-curved .services-section .service-content h3 {
+    color: #0f172a;
+    font-size: calc(1.3rem * var(--font-scale, 1));
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+body.theme-curved .services-section .service-content p {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+body.theme-curved .services-section .read-more {
+    color: #3b82f6;
+    background: #eff6ff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+body.theme-curved .services-section .read-more:hover {
+    background: #3b82f6;
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================================
+   LAYOUT 3: GRID (Structured Clean Modern Matrix Archetype)
+   ========================================================================== */
+body.theme-clean-grid .services-section {
+    background-color: var(--section-bg, #ffffff);
+    padding: 4rem 0;
+}
+
+body.theme-clean-grid .services-section .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 1px;
+    background-color: #e2e8f0;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+body.theme-clean-grid .services-section .service-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.theme-clean-grid .services-section .service-card:hover {
+    background-color: #fafafa;
+    z-index: 3;
+    transform: none;
+    box-shadow: inset 0 0 0 2px #0f172a;
+}
+
+body.theme-clean-grid .services-section .service-image {
+    height: 210px;
+    border-bottom: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+body.theme-clean-grid .services-section .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+body.theme-clean-grid .services-section .service-card:hover .service-image img {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+body.theme-clean-grid .services-section .service-content {
+    padding: 2.25rem;
+}
+
+body.theme-clean-grid .services-section .service-content h3 {
+    color: #0f172a;
+    font-size: calc(1.25rem * var(--font-scale, 1));
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+}
+
+body.theme-clean-grid .services-section .service-content p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+body.theme-clean-grid .services-section .read-more {
+    color: #0f172a;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+body.theme-clean-grid .services-section .read-more:hover {
+    color: #2563eb;
+}
+
+
+/* ==========================================================================
+   THEME 1: Emerald Solid Block (Asymmetric Split Showcase)
+   ========================================================================== */
+body.theme-emerald-block .services-section {
+    background-color: #1ba085;
+    border-radius: 24px;
+    padding: 5rem 2rem;
+}
+
+body.theme-emerald-block .services-section .section-header h2,
+body.theme-emerald-block .services-section .section-header p {
+    color: #ffffff;
+}
+
+body.theme-emerald-block .services-section .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    body.theme-emerald-block .services-section .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    body.theme-emerald-block .services-section .services-grid > *:first-child {
+        grid-column: span 2;
+    }
+}
+
+body.theme-emerald-block .services-section .service-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+body.theme-emerald-block .services-section .service-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+body.theme-emerald-block .services-section .service-image {
+    display: none;
+}
+
+body.theme-emerald-block .services-section .service-content h3 {
+    font-size: calc(1.5rem * var(--font-scale, 1));
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+body.theme-emerald-block .services-section .service-content p {
+    color: #e2f8f4;
+    font-size: calc(1rem * var(--font-scale, 1));
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+body.theme-emerald-block .services-section .read-more {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   THEME 4: Modern Dark Glassmorphism (Staggered Floating Horizon Grid)
+   ========================================================================== */
+body.theme-modern-dark .services-section .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+body.theme-modern-dark .services-section .service-card {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(16px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 992px) {
+    body.theme-modern-dark .services-section .services-grid > *:nth-child(even) {
+        transform: translateY(-30px);
+    }
+    body.theme-modern-dark .services-section .services-grid > *:nth-child(even):hover {
+        transform: translateY(-38px);
+    }
+}
+
+body.theme-modern-dark .services-section .service-card:hover {
+    border-color: rgba(6, 182, 212, 0.8);
+    box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+}
+
+body.theme-modern-dark .services-section .service-image {
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+
+body.theme-modern-dark .services-section .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+body.theme-modern-dark .services-section .service-card:hover .service-image img {
+    filter: brightness(1) contrast(1.2);
+}
+
+body.theme-modern-dark .services-section .service-content {
+    padding: 2rem;
+}
+
+body.theme-modern-dark .services-section .service-content h3 {
+    color: #f8fafc;
+    font-size: calc(1.3rem * var(--font-scale, 1));
+    margin-bottom: 0.75rem;
+}
+
+body.theme-modern-dark .services-section .service-content p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+body.theme-modern-dark .services-section .read-more {
+    color: #06b6d4;
+    font-weight: 600;
+}
+
+
+/* ==========================================================================
+   THEME 5: Vibrant Floating Cards (Side-by-Side Micro Panels)
+   ========================================================================== */
+body.theme-vibrant-cards .services-section .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+body.theme-vibrant-cards .services-section .service-card {
+    background: #ffffff;
+    border: 1px solid #e0e7ff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.06);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    body.theme-vibrant-cards .services-section .service-card {
+        flex-direction: column;
+    }
+}
+
+body.theme-vibrant-cards .services-section .service-card:hover {
+    transform: translateX(6px);
+    box-shadow: 0 12px 30px rgba(79, 70, 229, 0.12);
+    border-color: #c7d2fe;
+}
+
+body.theme-vibrant-cards .services-section .service-image {
+    width: 280px;
+    min-height: 100%;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    body.theme-vibrant-cards .services-section .service-image {
+        width: 100%;
+        height: 180px;
+    }
+}
+
+body.theme-vibrant-cards .services-section .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body.theme-vibrant-cards .services-section .service-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body.theme-vibrant-cards .services-section .service-content h3 {
+    color: #1e1b4b;
+    font-size: calc(1.25rem * var(--font-scale, 1));
+    margin-bottom: 0.5rem;
+}
+
+body.theme-vibrant-cards .services-section .service-content p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+body.theme-vibrant-cards .services-section .read-more {
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+
+/* ==========================================================================
+   THEME 6: Luxury Gold Frame Cards (Editorial Vertical Monoliths)
+   ========================================================================== */
+body.theme-elegant-serif .services-section .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+body.theme-elegant-serif .services-section .service-card {
+    background: #fffdf9;
+    border: 1px solid #dfc98d;
+    border-radius: 4px;
+    padding: 1.5px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.08);
+    transition: transform 0.4s ease;
+}
+
+body.theme-elegant-serif .services-section .service-card::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    pointer-events: none;
+}
+
+body.theme-elegant-serif .services-section .service-card:hover {
+    transform: translateY(-8px);
+}
+
+body.theme-elegant-serif .services-section .service-image {
+    height: 240px;
+    overflow: hidden;
+}
+
+body.theme-elegant-serif .services-section .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(15%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+body.theme-elegant-serif .services-section .service-card:hover .service-image img {
+    filter: sepia(0%);
+    transform: scale(1.03);
+}
+
+body.theme-elegant-serif .services-section .service-content {
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+body.theme-elegant-serif .services-section .service-content h3 {
+    font-family: Georgia, serif;
+    color: #2c220f;
+    font-size: calc(1.4rem * var(--font-scale, 1));
+    letter-spacing: 0.03em;
+    margin-bottom: 0.75rem;
+}
+
+body.theme-elegant-serif .services-section .service-content p {
+    font-family: Georgia, serif;
+    color: #5c5343;
+    font-size: calc(0.95rem * var(--font-scale, 1));
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+body.theme-elegant-serif .services-section .read-more {
+    color: #b3922d;
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+/* ==========================================================================
+   THEME 7: Layered Offset Frames (Artistic Geometric Layout)
+   ========================================================================== */
+body.theme-layered-offset .services-section .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+body.theme-layered-offset .services-section .service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+body.theme-layered-offset .services-section .service-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: 10px;
+    left: 10px;
+    border: 2px solid #f37a1f;
+    border-radius: 12px;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+body.theme-layered-offset .services-section .service-card:hover::before {
+    transform: translate(5px, 5px);
+}
+
+body.theme-layered-offset .services-section .service-image {
+    height: 200px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+}
+
+body.theme-layered-offset .services-section .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body.theme-layered-offset .services-section .service-content {
+    padding: 2rem;
+}
+
+body.theme-layered-offset .services-section .service-content h3 {
+    color: #111827;
+    font-size: calc(1.25rem * var(--font-scale, 1));
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+body.theme-layered-offset .services-section .service-content p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+body.theme-layered-offset .services-section .read-more {
+    color: #f37a1f;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+}

@@ -1,0 +1,59 @@
+/* ===========================================================
+   PHOTO GALLERY SECTION STYLES (Multi-Theme Support)
+   =========================================================== */
+.gallery-section {
+    background-color: var(--bg-body);
+    transition: background-color 0.4s ease;
+}
+.gallery-item-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--card-radius, 16px);
+    box-shadow: var(--card-shadow, 0 10px 30px rgba(0,0,0,0.08));
+    border: var(--card-border, none);
+    background: var(--card-bg, #ffffff);
+    aspect-ratio: 4 / 3;
+    display: block;
+}
+.gallery-item-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.gallery-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+.gallery-overlay i {
+    color: #ffffff;
+    font-size: 2rem;
+    transform: scale(0.5);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.gallery-item-card:hover img {
+    transform: scale(1.08);
+}
+.gallery-item-card:hover .gallery-overlay {
+    opacity: 1;
+}
+.gallery-item-card:hover .gallery-overlay i {
+    transform: scale(1);
+}
+
+/* Theme 4 (Dark) Gallery Border Adjustments */
+.theme-modern-dark .gallery-item-card {
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+/* Theme 6 (Luxury) Gallery Border Adjustments */
+.theme-elegant-serif .gallery-item-card {
+    border: 2px solid #d4af37;
+    border-radius: 4px;
+}

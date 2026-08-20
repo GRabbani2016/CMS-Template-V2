@@ -1,0 +1,296 @@
+
+    /* ==========================================================================
+   BASE & SHARED BLOG STYLES (Matching your reference layout)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. LAYOUT: DEFAULT MINIMALIST
+   ========================================================================== */
+.theme-default {
+    --blog-bg: #f8fafc;
+    --card-bg: transparent;
+    --card-border: none;
+    --card-radius: 0px;
+    --img-radius: 20px;
+    --badge-bg: #ffffff;
+    --badge-color: #111827;
+    --badge-radius: 14px;
+    --cat-bg: #f1f5f9;
+    --cat-color: #475569;
+    --cat-border: 1px solid #e2e8f0;
+    --cat-radius: 50px;
+    --title-color: #111827;
+    --sub-color: #5c677d;
+    --btn-bg: #1a1a1a;
+    --btn-color: #ffffff;
+    --btn-radius: 50px;
+}
+
+/* ==========================================================================
+   2. LAYOUT: EMERALD SOLID BLOCK
+   ========================================================================== */
+.theme-emerald-block {
+    --blog-bg: #16866f;
+    --card-bg: #1ba085;
+    --card-border: 1px solid rgba(255, 255, 255, 0.2);
+    --card-radius: 0px;
+    --img-radius: 0px;
+    --badge-bg: #ffffff;
+    --badge-color: #111827;
+    --badge-radius: 0px;
+    --cat-bg: rgba(255, 255, 255, 0.2);
+    --cat-color: #ffffff;
+    --cat-border: none;
+    --cat-radius: 0px;
+    --title-color: #ffffff;
+    --sub-color: #ffffff;
+    --btn-bg: #ffffff;
+    --btn-color: #1ba085;
+    --btn-radius: 0px;
+}
+
+/* ==========================================================================
+   3. LAYOUT: CURVED SCALLOPED PILLS
+   ========================================================================== */
+.theme-curved-scalloped {
+    --blog-bg: #fdfbf7;
+    --card-bg: #f5f0e6;
+    --card-border: 2px dashed #1ba085;
+    --card-radius: 40px;
+    --img-radius: 30px;
+    --badge-bg: #ffffff;
+    --badge-color: #111827;
+    --badge-radius: 50px;
+    --cat-bg: #1ba085;
+    --cat-color: #ffffff;
+    --cat-border: none;
+    --cat-radius: 50px;
+    --title-color: #1a1a1a;
+    --sub-color: #1ba085;
+    --btn-bg: #1ba085;
+    --btn-color: #ffffff;
+    --btn-radius: 50px;
+}
+
+/* ==========================================================================
+   4. LAYOUT: MODERN DARK GLASSMORPHISM
+   ========================================================================== */
+.theme-modern-dark {
+    --blog-bg: #0f172a;
+    --card-bg: rgba(17, 24, 39, 0.75);
+    --card-border: 1px solid rgba(6, 182, 212, 0.3);
+    --card-radius: 16px;
+    --img-radius: 12px;
+    --badge-bg: rgba(15, 23, 42, 0.9);
+    --badge-color: #f3f4f6;
+    --badge-radius: 10px;
+    --cat-bg: rgba(6, 182, 212, 0.15);
+    --cat-color: #06b6d4;
+    --cat-border: 1px solid rgba(6, 182, 212, 0.3);
+    --cat-radius: 8px;
+    --title-color: #f3f4f6;
+    --sub-color: #06b6d4;
+    --btn-bg: #06b6d4;
+    --btn-color: #0f172a;
+    --btn-radius: 8px;
+}
+
+/* ==========================================================================
+   5. LAYOUT: VIBRANT FLOATING CARDS
+   ========================================================================== */
+.theme-vibrant-cards {
+    --blog-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --card-border: 1px solid #e2e8f0;
+    --card-radius: 24px;
+    --img-radius: 16px;
+    --badge-bg: #ffffff;
+    --badge-color: #111827;
+    --badge-radius: 12px;
+    --cat-bg: #eef2ff;
+    --cat-color: #4f46e5;
+    --cat-border: none;
+    --cat-radius: 50px;
+    --title-color: #1e293b;
+    --sub-color: #4f46e5;
+    --btn-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --btn-color: #ffffff;
+    --btn-radius: 50px;
+}
+
+/* ==========================================================================
+   6. LAYOUT: LUXURY GOLD SERIF FRAME
+   ========================================================================== */
+.theme-elegant-serif {
+    --blog-bg: #faf8f5;
+    --card-bg: #ffffff;
+    --card-border: 2px solid #d4af37;
+    --card-radius: 4px;
+    --img-radius: 0px;
+    --badge-bg: #ffffff;
+    --badge-color: #2c2a29;
+    --badge-radius: 0px;
+    --cat-bg: #fdfbf7;
+    --cat-color: #d4af37;
+    --cat-border: 1px solid #d4af37;
+    --cat-radius: 0px;
+    --title-color: #2c2a29;
+    --sub-color: #d4af37;
+    --btn-bg: transparent;
+    --btn-color: #d4af37;
+    --btn-radius: 0px;
+}
+
+/* ==========================================================================
+   7. LAYOUT: LAYERED OFFSET FRAMES
+   ========================================================================== */
+.theme-layered-offset {
+    --blog-bg: #f8fafc;
+    --card-bg: #f5f5f7;
+    --card-border: none;
+    --card-radius: 20px;
+    --img-radius: 12px;
+    --badge-bg: #ffffff;
+    --badge-color: #111827;
+    --badge-radius: 10px;
+    --cat-bg: #fed7aa;
+    --cat-color: #9a3412;
+    --cat-border: none;
+    --cat-radius: 6px;
+    --title-color: #2d3748;
+    --sub-color: #f37a1f;
+    --btn-bg: #f37a1f;
+    --btn-color: #ffffff;
+    --btn-radius: 8px;
+}
+
+
+/* ==========================================================================
+   CORE STRUCTURAL & SPACING RULES (Driven by CSS Variables)
+   ========================================================================== */
+
+.blog-section {
+    background-color: var(--blog-bg);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    transition: background-color 0.4s ease;
+}
+
+.blog-section .section-subtitle {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    color: var(--sub-color);
+}
+
+.blog-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--title-color);
+}
+
+.blog-section .card {
+    background-color: var(--card-bg);
+    border-radius: var(--card-radius);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.theme-emerald-block .blog-section {
+    border-radius: 24px;
+    margin: 3rem 1.5rem;
+}
+
+.blog-section .position-relative {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--img-radius);
+    margin-bottom: 1.5rem;
+}
+
+.blog-section .card-img-top {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--img-radius);
+}
+
+.blog-section .date-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--badge-bg);
+    color: var(--badge-color);
+    padding: 10px 14px;
+    border-radius: var(--badge-radius);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.blog-section .date-badge .day {
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.blog-section .date-badge .month-year {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+
+.blog-section .category-badge {
+    display: inline-block;
+    background-color: var(--cat-bg);
+    color: var(--cat-color);
+    border: var(--cat-border);
+    border-radius: var(--cat-radius);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-section .card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--title-color);
+    line-height: 1.45;
+    margin-bottom: 0;
+}
+
+.blog-section .btn-read-more {
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    border-radius: var(--btn-radius);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.75rem 1.6rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+}
+
+.theme-elegant-serif .blog-section .section-subtitle,
+.theme-elegant-serif .blog-section .section-title,
+.theme-elegant-serif .blog-section .card-title,
+.theme-elegant-serif .blog-section .category-badge,
+.theme-elegant-serif .blog-section .btn-read-more {
+    font-family: 'Playfair Display', serif;
+}
+
+.theme-elegant-serif .blog-section .btn-read-more {
+    border-bottom: 1px solid #d4af37;
+    padding: 0;
+}

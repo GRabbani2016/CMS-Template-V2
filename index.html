@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Designs Multi-Theme Template</title>
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!-- Owl Carousel CSS CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<!-- Magnific Popup CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="feature.css">
+<link rel="stylesheet" href="testimonial.css">
+<link rel="stylesheet" href="counter.css">
+<link rel="stylesheet" href="services.css">
+<link rel="stylesheet" href="cta.css">
+<link rel="stylesheet" href="blog.css">
+<link rel="stylesheet" href="gallery.css">
+<link rel="stylesheet" href="partner.css">
+<link rel="stylesheet" href="team.css">
+<link rel="stylesheet" href="price.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="form.css">
+<link rel="stylesheet" href="faq.css">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+/* ==========================================================================
+1. BASE CTA BUTTON DISPLAY & ALIGNMENT RULE
+========================================================================== */
+.cta-buttons-group {
+    display: flex !important;
+    align-items: center;
+    justify-content: var(--cta-align-justify, flex-start);
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Default individual button hide rule (Theme overrides will show them) */
+.cta-btn-1,
+.cta-btn-2,
+.cta-btn-3 {
+    display: none !important;
+}
+
+/* Generic CTA Button Base Styling */
+.cta-btn-custom {
+    padding: 0.8rem 1.8rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+2. CSS VARIABLE DEFINITIONS (ALL 7 DESIGN STYLES)
+========================================================================== */
+
+/* DESIGN 1: Emerald Solid Block */
+.theme-emerald-block {
+    --font-family: 'Inter', sans-serif;
+    --bg-body: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+
+    --header-bg: #1ba085;
+    --header-border: 1px solid #16866f;
+    --header-brand: #ffffff;
+    --nav-link-color: rgba(255, 255, 255, 0.85);
+    --nav-link-hover: #ffffff;
+
+    --btn-bg: #ffffff;
+    --btn-text: #1ba085;
+    --btn-radius: 8px;
+
+    --section-bg: #1ba085;
+    --section-radius: 20px;
+    --bg-wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 300' opacity='0.15'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='1.5' d='M0,150 Q250,50 500,150 T1000,150 M0,170 Q250,70 500,170 T1000,170 M0,190 Q250,90 500,190 T1000,190 M0,130 Q250,30 500,130 T1000,130'/%3E%3C/svg%3E");
+
+    --card-bg: transparent;
+    --card-border: none;
+    --card-border-right: 1px solid rgba(255, 255, 255, 0.25);
+    --card-radius: 0px;
+    --card-shadow: none;
+    --card-backdrop: none;
+    --card-hover-transform: none;
+    --stat-num-color: #ffffff;
+    --stat-num-gradient: none;
+    --stat-num-weight: 800;
+
+    --cta-bg: #1da88a;
+    --cta-border: none;
+    --cta-title-color: #ffffff;
+    --cta-text-color: rgba(255, 255, 255, 0.95);
+    --cta-shadow: 0 12px 30px rgba(29, 168, 138, 0.2);
+    --cta-text-align: left;
+    --cta-align-justify: flex-start;
+
+    --footer-bg: #fafafa;
+    --footer-border: 1px solid #f0f0f0;
+    --footer-text: #5c677d;
+}
+
+.theme-emerald-block .site-header .btn-theme {
+    background-color: #ffffff !important;
+    color: #1ba085 !important;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.theme-emerald-block .site-header .btn-theme:hover {
+    background-color: #f8f9fa !important;
+    transform: translateY(-1px);
+}
+
+.theme-emerald-block .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.theme-emerald-block .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.theme-emerald-block .cta-btn-1 {
+    display: inline-flex !important;
+    background-color: #ffffff;
+    color: #1ba085 !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.theme-emerald-block .cta-btn-1:hover {
+    transform: translateY(-2px);
+    background-color: #f8f9fa;
+}
+
+/* DESIGN 2: Curved Scalloped Circles & Curved CTA Design */
+.theme-curved-scalloped {
+    --font-family: 'Inter', sans-serif;
+    --bg-body: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #5c677d;
+
+    --header-bg: #ffffff;
+    --header-border: 1px solid #f0f0f0;
+    --header-brand: #1a1a1a;
+    --nav-link-color: #5c677d;
+    --nav-link-hover: #1a1a1a;
+    --btn-bg: #1ba085;
+    --btn-text: #ffffff;
+    --btn-radius: 50px;
+
+    --section-bg: transparent;
+    --section-radius: 0px;
+    --bg-wave: none;
+
+    --card-bg: transparent;
+    --card-border: none;
+    --card-border-right: none;
+    --card-radius: 0px;
+    --card-shadow: none;
+    --card-backdrop: none;
+    --card-hover-transform: none;
+    --stat-num-color: #1a1a1a;
+    --stat-num-gradient: none;
+    --stat-num-weight: 800;
+
+    --arch-bg: #f5f0e6;
+    --highlight-border: 2px dashed #1ba085;
+
+    --cta-bg: #22b18a;
+    --cta-border: none;
+    --cta-title-color: #ffffff;
+    --cta-text-color: #ffffff;
+    --cta-shadow: 0 10px 25px rgba(34, 177, 138, 0.2);
+    --cta-text-align: center;
+    --cta-align-justify: center;
+
+    --footer-bg: #fcfbf9;
+    --footer-border: 1px solid #f0f0f0;
+    --footer-text: #5c677d;
+}
+
+.theme-curved-scalloped .cta-btn-1,
+.theme-curved-scalloped .cta-btn-2 {
+    display: inline-flex !important;
+}
+
+.theme-curved-scalloped .cta-btn-1 {
+    background-color: #1e2022;
+    color: #ffffff !important;
+    border-radius: 50px;
+    padding: 0.9rem 2.2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.theme-curved-scalloped .cta-btn-1:hover {
+    transform: translateY(-2px);
+    background-color: #000000;
+}
+
+.theme-curved-scalloped .cta-btn-2 {
+    background-color: transparent;
+    color: #ffffff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    padding: 0.9rem 2.2rem;
+}
+
+.theme-curved-scalloped .cta-btn-2:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* DESIGN 3: Minimalist Border Grid */
+.theme-default {
+    --font-family: 'Inter', sans-serif;
+    --bg-body: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #5c677d;
+
+    --header-bg: #ffffff;
+    --header-border: 1px solid #f0f0f0;
+    --header-brand: #1a1a1a;
+    --nav-link-color: #5c677d;
+    --nav-link-hover: #1a1a1a;
+    --btn-bg: #1a1a1a;
+    --btn-text: #ffffff;
+    --btn-radius: 6px;
+
+    --section-bg: transparent;
+    --section-radius: 0px;
+    --bg-wave: none;
+
+    --card-bg: #ffffff;
+    --card-border: none;
+    --card-border-right: 1px solid #f0f0f0;
+    --card-radius: 0px;
+    --card-shadow: none;
+    --card-backdrop: none;
+    --card-hover-transform: none;
+    --stat-num-color: #1a1a1a;
+    --stat-num-gradient: none;
+    --stat-num-weight: 800;
+
+    --cta-bg: #f8f9fa;
+    --cta-border: 1px solid #e9ecef;
+    --cta-title-color: #1a1a1a;
+    --cta-text-color: #5c677d;
+    --cta-shadow: none;
+    --cta-text-align: center;
+    --cta-align-justify: center;
+
+    --footer-bg: #fafafa;
+    --footer-border: 1px solid #f0f0f0;
+    --footer-text: #5c677d;
+}
+
+.theme-default .cta-btn-1 {
+    display: inline-flex !important;
+    background-color: #1a1a1a;
+    color: #ffffff !important;
+    border-radius: 6px;
+}
+
+.theme-default .cta-btn-1:hover {
+    background-color: #333333;
+}
+
+/* DESIGN 4: Modern Dark Glassmorphism Cards */
+.theme-modern-dark {
+    --font-family: 'Space Grotesk', sans-serif;
+    --bg-body: #0b0f19;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+
+    --header-bg: #111827;
+    --header-border: 1px solid #1f2937;
+    --header-brand: #06b6d4;
+    --nav-link-color: #9ca3af;
+    --nav-link-hover: #06b6d4;
+    --btn-bg: #06b6d4;
+    --btn-text: #0b0f19;
+    --btn-radius: 8px;
+
+    --section-bg: transparent;
+    --section-radius: 0px;
+    --bg-wave: none;
+
+    --card-bg: rgba(17, 24, 39, 0.75);
+    --card-border: 1px solid rgba(6, 182, 212, 0.3);
+    --card-border-right: 1px solid rgba(6, 182, 212, 0.3);
+    --card-radius: 16px;
+    --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --card-backdrop: blur(12px);
+    --card-hover-transform: translateY(-6px);
+    --stat-num-color: #06b6d4;
+    --stat-num-gradient: linear-gradient(135deg, #06b6d4, #3b82f6);
+    --stat-num-weight: 700;
+
+    --cta-bg: rgba(17, 24, 39, 0.85);
+    --cta-border: 1px solid rgba(6, 182, 212, 0.4);
+    --cta-title-color: #ffffff;
+    --cta-text-color: #9ca3af;
+    --cta-shadow: 0 10px 30px rgba(6, 182, 212, 0.15);
+    --cta-text-align: left;
+    --cta-align-justify: flex-start;
+
+    --footer-bg: #111827;
+    --footer-border: 1px solid #1f2937;
+    --footer-text: #9ca3af;
+}
+
+.theme-modern-dark .cta-btn-1,
+.theme-modern-dark .cta-btn-2 {
+    display: inline-flex !important;
+}
+
+.theme-modern-dark .cta-btn-1 {
+    background-color: #06b6d4;
+    color: #0b0f19 !important;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+.theme-modern-dark .cta-btn-1:hover {
+    background-color: #22d3ee;
+    transform: translateY(-2px);
+}
+
+.theme-modern-dark .cta-btn-2 {
+    background-color: transparent;
+    color: #06b6d4 !important;
+    border: 1px solid #06b6d4;
+    border-radius: 8px;
+}
+
+.theme-modern-dark .cta-btn-2:hover {
+    background-color: rgba(6, 182, 212, 0.1);
+    transform: translateY(-2px);
+}
+
+/* DESIGN 5: Vibrant Floating Cards */
+.theme-vibrant-cards {
+    --font-family: 'Poppins', sans-serif;
+    --bg-body: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+
+    --header-bg: #ffffff;
+    --header-border: none;
+    --header-brand: #4f46e5;
+    --nav-link-color: #475569;
+    --nav-link-hover: #4f46e5;
+    --btn-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --btn-text: #ffffff;
+    --btn-radius: 50px;
+
+    --section-bg: transparent;
+    --section-radius: 0px;
+    --bg-wave: none;
+
+    --card-bg: #ffffff;
+    --card-border: 1px solid #e2e8f0;
+    --card-border-right: 1px solid #e2e8f0;
+    --card-radius: 24px;
+    --card-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.1);
+    --card-backdrop: none;
+    --card-hover-transform: translateY(-8px);
+    --stat-num-color: #4f46e5;
+    --stat-num-gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
+    --stat-num-weight: 700;
+
+    --cta-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --cta-border: none;
+    --cta-title-color: #ffffff;
+    --cta-text-color: #e0e7ff;
+    --cta-shadow: 0 15px 30px rgba(79, 70, 229, 0.25);
+    --cta-text-align: center;
+    --cta-align-justify: center;
+
+    --footer-bg: #0f172a;
+    --footer-border: none;
+    --footer-text: #94a3b8;
+}
+
+.theme-vibrant-cards .cta-btn-1,
+.theme-vibrant-cards .cta-btn-2 {
+    display: inline-flex !important;
+}
+
+.theme-vibrant-cards .cta-btn-1 {
+    background-color: #ffffff;
+    color: #4f46e5 !important;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.theme-vibrant-cards .cta-btn-1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.theme-vibrant-cards .cta-btn-2 {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+}
+
+.theme-vibrant-cards .cta-btn-2:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+/* DESIGN 6: Luxury Gold Frame Cards */
+.theme-elegant-serif {
+    --font-family: 'Playfair Display', serif;
+    --bg-body: #faf8f5;
+    --text-main: #2c2a29;
+    --text-muted: #8c857b;
+
+    --header-bg: #faf8f5;
+    --header-border: 1px solid #e8e2d9;
+    --header-brand: #2c2a29;
+    --nav-link-color: #8c857b;
+    --nav-link-hover: #d4af37;
+    --btn-bg: #d4af37;
+    --btn-text: #ffffff;
+    --btn-radius: 0px;
+
+    --section-bg: transparent;
+    --section-radius: 0px;
+    --bg-wave: none;
+
+    --card-bg: #ffffff;
+    --card-border: 2px solid #d4af37;
+    --card-border-right: 2px solid #d4af37;
+    --card-radius: 4px;
+    --card-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
+    --card-backdrop: none;
+    --card-hover-transform: scale(1.02);
+    --stat-num-color: #d4af37;
+    --stat-num-gradient: none;
+    --stat-num-weight: 700;
+
+    --cta-bg: #ffffff;
+    --cta-border: 2px solid #d4af37;
+    --cta-title-color: #2c2a29;
+    --cta-text-color: #8c857b;
+    --cta-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
+    --cta-text-align: center;
+    --cta-align-justify: center;
+
+    --footer-bg: #2c2a29;
+    --footer-border: none;
+    --footer-text: #a39c95;
+}
+
+.theme-elegant-serif .cta-btn-1,
+.theme-elegant-serif .cta-btn-2,
+.theme-elegant-serif .cta-btn-3 {
+    display: inline-flex !important;
+    border-radius: 0px;
+}
+
+.theme-elegant-serif .cta-btn-1 {
+    background-color: #d4af37;
+    color: #ffffff !important;
+}
+
+.theme-elegant-serif .cta-btn-1:hover {
+    background-color: #b59226;
+}
+
+.theme-elegant-serif .cta-btn-2 {
+    background-color: #2c2a29;
+    color: #ffffff !important;
+}
+
+.theme-elegant-serif .cta-btn-2:hover {
+    background-color: #000000;
+}
+
+.theme-elegant-serif .cta-btn-3 {
+    background-color: transparent;
+    color: #d4af37 !important;
+    border: 1px solid #d4af37;
+}
+
+.theme-elegant-serif .cta-btn-3:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* DESIGN 7: Layered Offset Frames */
+.theme-layered-offset {
+    --font-family: 'Poppins', sans-serif;
+    --bg-body: #ffffff;
+    --text-main: #4a5568;
+    --text-muted: #f37a1f;
+
+    --header-bg: #ffffff;
+    --header-border: 1px solid #f0f0f0;
+    --header-brand: #f37a1f;
+    --nav-link-color: #4a5568;
+    --nav-link-hover: #f37a1f;
+    --btn-bg: #f37a1f;
+    --btn-text: #ffffff;
+    --btn-radius: 6px;
+
+    --section-bg: transparent;
+    --section-radius: 0px;
+    --bg-wave: none;
+
+    --card-bg: #f5f5f7;
+    --card-border: none;
+    --card-border-right: none;
+    --card-radius: 20px;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    --card-backdrop: none;
+    --card-hover-transform: translateY(-5px);
+    --stat-num-color: #4a5568;
+    --stat-num-gradient: none;
+    --stat-num-weight: 700;
+
+    --cta-bg: #f5f5f7;
+    --cta-border: 2px solid #f37a1f;
+    --cta-title-color: #2d3748;
+    --cta-text-color: #4a5568;
+    --cta-shadow: 0 10px 20px rgba(243, 122, 31, 0.15);
+    --cta-text-align: left;
+    --cta-align-justify: flex-start;
+
+    --footer-bg: #fafafa;
+    --footer-border: 1px solid #f0f0f0;
+    --footer-text: #5c677d;
+}
+
+.theme-layered-offset .cta-btn-1,
+.theme-layered-offset .cta-btn-2,
+.theme-layered-offset .cta-btn-3 {
+    display: inline-flex !important;
+    border-radius: 12px;
+}
+
+.theme-layered-offset .cta-btn-1 {
+    background-color: #f37a1f;
+    color: #ffffff !important;
+}
+
+.theme-layered-offset .cta-btn-1:hover {
+    background-color: #d9630d;
+}
+
+.theme-layered-offset .cta-btn-2 {
+    background-color: #3dbbd3;
+    color: #ffffff !important;
+}
+
+.theme-layered-offset .cta-btn-2:hover {
+    background-color: #29a0b7;
+}
+
+.theme-layered-offset .cta-btn-3 {
+    background-color: #e8336d;
+    color: #ffffff !important;
+}
+
+.theme-layered-offset .cta-btn-3:hover {
+    background-color: #cb1f57;
+}
+
+/* ==========================================================================
+3. SPACING OPTIONS
+========================================================================== */
+body.spacing-compact {
+    --section-pt: 1.5rem;
+    --section-pb: 1.5rem;
+    --section-mt: 0.5rem;
+    --section-mb: 0.5rem;
+    --card-py: 1.5rem;
+    --card-px: 1rem;
+}
+
+body.spacing-default {
+    --section-pt: 3.5rem;
+    --section-pb: 3.5rem;
+    --section-mt: 1.5rem;
+    --section-mb: 1.5rem;
+    --card-py: 3rem;
+    --card-px: 1.5rem;
+}
+
+body.spacing-generous {
+    --section-pt: 6rem;
+    --section-pb: 6rem;
+    --section-mt: 3rem;
+    --section-mb: 3rem;
+    --card-py: 4.5rem;
+    --card-px: 2rem;
+}
+
+body.font-small {
+    font-size: 0.875rem;
+}
+
+body.font-normal {
+    font-size: 1rem;
+}
+
+body.font-large {
+    font-size: 1.125rem;
+}
+
+/* ==========================================================================
+4. BASE STYLES & LAYOUT ELEMENTS
+========================================================================== */
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: background-color 0.4s ease, color 0.4s ease, font-size 0.3s ease;
+}
+
+.site-header {
+    background-color: var(--header-bg);
+    border-bottom: var(--header-border);
+    transition: background-color 0.4s ease, border 0.4s ease;
+}
+
+.navbar-brand {
+    color: var(--header-brand) !important;
+    font-weight: 800;
+    transition: color 0.4s ease;
+}
+
+.nav-link {
+    color: var(--nav-link-color, var(--text-muted)) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--nav-link-hover, var(--text-main)) !important;
+}
+
+.btn-theme {
+    background: var(--btn-bg);
+    color: var(--btn-text) !important;
+    border-radius: var(--btn-radius);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.stats-section,
+.cta-section {
+    padding-top: var(--section-pt);
+    padding-bottom: var(--section-pb);
+    margin-top: var(--section-mt);
+    margin-bottom: var(--section-mb);
+    transition: padding 0.3s ease, margin 0.3s ease;
+}
+
+.stats-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section .container {
+    background-color: var(--section-bg);
+    border-radius: var(--section-radius);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.4s ease, border-radius 0.4s ease;
+}
+
+.stats-section .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--bg-wave);
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border: var(--card-border);
+    border-radius: var(--card-radius);
+    backdrop-filter: var(--card-backdrop);
+    -webkit-backdrop-filter: var(--card-backdrop);
+    padding: 100px 0;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+        box-shadow 0.3s ease,
+        border 0.3s ease,
+        padding 0.3s ease;
+}
+
+.theme-default .stat-card,
+.theme-emerald-block .stat-card {
+    border-right: var(--card-border-right);
+}
+
+@media (min-width: 992px) {
+
+    .theme-default .col-lg-3:last-child .stat-card,
+    .theme-emerald-block .col-lg-3:last-child .stat-card {
+        border-right: none;
+    }
+}
+
+.stat-card:hover {
+    transform: var(--card-hover-transform);
+}
+
+.theme-modern-dark .stat-card:hover {
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.25);
+    border-color: rgba(6, 182, 212, 0.6);
+}
+
+.stat-icon {
+    display: none;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    z-index: 2;
+    transition: color 0.3s ease, display 0.3s ease;
+}
+
+.theme-layered-offset .stat-icon {
+    display: inline-block;
+}
+
+.stat-number {
+    font-size: 3.2rem;
+    font-weight: var(--stat-num-weight);
+    color: var(--stat-num-color);
+    background: var(--stat-num-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: var(--stat-num-color);
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Arch & Scalloped Circle Elements (Theme 2 Stats) */
+.theme-curved-scalloped .stats-section .stat-card::before {
+    content: '';
+    position: absolute;
+    bottom: 25px;
+    width: 240px;
+    height: 240px;
+    background-color: var(--arch-bg);
+    border-radius: 50%;
+    z-index: 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-curved-scalloped .stats-section .col-lg-3:last-child .stat-card::after,
+.theme-curved-scalloped .stats-section .stat-card:hover::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: var(--highlight-border);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.theme-curved-scalloped .stats-section .stat-card:hover::before {
+    transform: scale(1.05);
+    background-color: #ebe3d3;
+}
+
+/* Layered Offset Frames Styles (Stats Section) */
+.theme-layered-offset .stats-section .col-lg-3:nth-child(1) {
+    --accent-color: #f37a1f;
+}
+
+.theme-layered-offset .stats-section .col-lg-3:nth-child(2) {
+    --accent-color: #3dbbd3;
+}
+
+.theme-layered-offset .stats-section .col-lg-3:nth-child(3) {
+    --accent-color: #e8336d;
+}
+
+.theme-layered-offset .stats-section .col-lg-3:nth-child(4) {
+    --accent-color: #8e44ad;
+}
+
+.theme-layered-offset .stats-section .col-lg-3 {
+    position: relative;
+    padding: 15px 22px;
+}
+
+.theme-layered-offset .stats-section .col-lg-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 8px;
+    right: 8px;
+    bottom: 0;
+    border: 2.5px solid var(--accent-color);
+    border-radius: 20px;
+    z-index: 1;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.theme-layered-offset .stats-section .col-lg-3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    width: 80px;
+    height: 80px;
+    border-left: 14px solid var(--accent-color);
+    border-bottom: 14px solid var(--accent-color);
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.theme-layered-offset .stat-label,
+.theme-layered-offset .stat-icon {
+    color: var(--accent-color);
+}
+
+
+</style>
+</head>
+
+<body id="pageBody" class="theme-emerald-block spacing-default font-normal">
+
+<!-- CONTROL PANEL -->
+<div class="theme-controls shadow-sm">
+<div class="container text-center">
+    <div class="row gy-2 align-items-center">
+        <div class="col-12 col-lg-6">
+            <span class="fw-bold me-2 text-white small">SELECT DESIGN:</span>
+            <div class="btn-group flex-wrap gap-1" role="group">
+                <button class="btn btn-sm btn-outline-success active" onclick="setTheme('theme-emerald-block', this)">1. Emerald</button>
+                <button class="btn btn-sm btn-outline-warning" onclick="setTheme('theme-curved-scalloped theme-curved', this)">2. Curved</button>
+                <button class="btn btn-sm btn-outline-light" onclick="setTheme('theme-default theme-clean-grid', this)">3. Grid</button>
+                <button class="btn btn-sm btn-outline-light" onclick="setTheme('theme-modern-dark', this)">4. Dark</button>
+                <button class="btn btn-sm btn-outline-light" onclick="setTheme('theme-vibrant-cards', this)">5. Floating</button>
+                <button class="btn btn-sm btn-outline-light" onclick="setTheme('theme-elegant-serif', this)">6. Luxury</button>
+                <button class="btn btn-sm btn-outline-info" onclick="setTheme('theme-layered-offset', this)">7. Offset</button>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div
+                class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3 align-items-center">
+                <div>
+                    <span class="fw-bold me-1 text-white small">SPACING:</span>
+                    <div class="btn-group gap-1" role="group">
+                        <button class="btn btn-sm btn-outline-info"
+                            onclick="setSpacing('spacing-compact', this)">Compact</button>
+                        <button class="btn btn-sm btn-outline-info active"
+                            onclick="setSpacing('spacing-default', this)">Default</button>
+                        <button class="btn btn-sm btn-outline-info"
+                            onclick="setSpacing('spacing-generous', this)">Generous</button>
+                    </div>
+                </div>
+                <div>
+                    <span class="fw-bold me-1 text-white small">FONT:</span>
+                    <div class="btn-group gap-1" role="group">
+                        <button class="btn btn-sm btn-outline-warning"
+                            onclick="setFontSize('font-small', this)">S</button>
+                        <button class="btn btn-sm btn-outline-warning active"
+                            onclick="setFontSize('font-normal', this)">M</button>
+                        <button class="btn btn-sm btn-outline-warning"
+                            onclick="setFontSize('font-large', this)">L</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- HEADER SECTION -->
+<header class="site-header sticky-top">
+<nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+        <a class="navbar-brand fs-4" href="#">EduPulse</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Instructors</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+            </ul>
+            <a href="#" class="btn btn-theme px-4 py-2">Get Started</a>
+        </div>
+    </div>
+</nav>
+</header>
+
+<main>
+
+<!-- ==========================================================================
+INTRO / ABOUT SECTION (Switches dynamically based on Theme 1 vs Theme 7 Offset)
+========================================================================== -->
+<section class="contribution-section py-5">
+    <div class="container">
+
+        <!-- Standard / Theme 1 Layout Container -->
+        <div class="standard-intro-content">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="image-composition-wrapper">
+                        <div class="accent-bar-vertical"></div>
+                        <div class="image-box primary-image">
+                            <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80"
+                                alt="Islamic Center Exterior">
+                        </div>
+                        <div class="image-box secondary-image shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80"
+                                alt="Masjid Interior">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="content-wrapper">
+                        <span class="section-subtitle">ISLAMIC CENTER OF DELTONA</span>
+                        <h2 class="section-title">Your Contribution Creates Generations of Worship Tomorrow</h2>
+
+                        <p class="section-desc">
+                            The Islamic Center of Deltona is a welcoming masjid and community center serving
+                            Muslims in Deltona, DeBary, Orange City, Sanford and nearby Central Florida
+                            communities.
+                        </p>
+
+                        <p class="section-desc">
+                            Located at 420 Summerhaven Dr. DeBary, FL 32713, our masjid offers five daily
+                            prayers, Friday Jumu'ah prayer, Islamic classes, community gatherings, Ramadan
+                            programs, Eid salah, Janaza services, and burial support through the graveyard next
+                            to the masjid.
+                        </p>
+
+                        <p class="section-desc">
+                            Join us for prayer, learning, brotherhood, sisterhood and service to the community.
+                        </p>
+
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-custom-green">Read More</a>
+                            <a href="#" class="btn btn-custom-yellow">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Theme 7: Offset Layout Intro Container (Hidden by default, shown when Theme 7 is active) -->
+        <div class="offset-intro-content d-none">
+            <div class="row align-items-center g-5">
+                <!-- Left Column: Layered Offset Grid with Scalloped Badge -->
+                <div class="col-lg-6">
+                    <div class="offset-intro-wrapper">
+                        <div class="offset-img-grid">
+                            <div class="offset-img-box">
+                                <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80"
+                                    alt="Construction Work">
+                            </div>
+                            <div class="offset-img-box">
+                                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80"
+                                    alt="Roofing Professional">
+                            </div>
+                            <div class="offset-img-box full-width">
+                                <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80"
+                                    alt="Framing & Carpentry">
+                            </div>
+                        </div>
+                        <!-- Scalloped Badge Overlay -->
+                        <div class="scalloped-badge">
+                            <i class="bi bi-patch-check-fill"></i>
+                            <span>Licensed & Certified Experts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content & Offset Buttons -->
+                <div class="col-lg-6">
+                    <div class="content-wrapper">
+                        <span class="section-subtitle">WELCOME TO OUR FIRM</span>
+                        <h2 class="section-title">Your Local <span>Roofing & Remodeling</span> Experts</h2>
+
+                        <p class="section-desc">
+                            Welcome to Sunlite Roofing & Remodeling Services, your one-stop shop for
+                            comprehensive roofing and remodeling services. We specialize in both residential
+                            roofing and remodeling, offering various types of services for new construction and
+                            existing buildings.
+                        </p>
+
+                        <p class="section-desc">
+                            You can get roofing services including new and replacement roofing to ensure that
+                            your building stays protected from the elements. We understand that your time and
+                            money are valuable, so we work efficiently and effectively to ensure completed
+                            projects.
+                        </p>
+
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-custom-offset-primary">About Us</a>
+                            <a href="#" class="btn btn-custom-offset-secondary">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==========================================================================
+2. STATS SECTION
+========================================================================== -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="stat-card">
+                    <i class="bi bi-globe stat-icon"></i>
+                    <div class="stat-number">3.9k+</div>
+                    <p class="stat-label">Total Student Enrolled</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="stat-card">
+                    <i class="bi bi-rocket-takeoff stat-icon"></i>
+                    <div class="stat-number">1.2k+</div>
+                    <p class="stat-label">Active Courses</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="stat-card">
+                    <i class="bi bi-briefcase stat-icon"></i>
+                    <div class="stat-number">850+</div>
+                    <p class="stat-label">Qualified Instructors</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="stat-card">
+                    <i class="bi bi-phone stat-icon"></i>
+                    <div class="stat-number">5.5k+</div>
+                    <p class="stat-label">Course Completions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ==========================================================================
+        PRICING SECTION (Added as requested, matching template design layout)
+        ========================================================================== -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="text-center">
+                <div class="testimonial-badge">
+                    <i class="bi bi-book-half"></i> Pricing
+                </div>
+                <h2 class="testimonial-main-title">We've offred the best pricing for you</h2>
+            </div>
+            
+            <div class="row g-4 align-items-stretch">
+                <!-- Free Plan -->
+                <div class="col-12 col-lg-4">
+                    <div class="pricing-card">
+                        <span class="plan-badge">Free</span>
+                        <div class="plan-price">$0<span>/mo</span></div>
+                        <p class="plan-desc">Free forever and can be upgraded.</p>
+                        <hr>
+                        <ul class="pricing-features-list">
+                            <li><i class="bi bi-check"></i> Up to 10 individual users</li>
+                            <li><i class="bi bi-check"></i> Basic reporting and analytics</li>
+                            <li><i class="bi bi-check"></i> Project Management</li>
+                            <li><i class="bi bi-check"></i> 20GB individual data each user</li>
+                            <li><i class="bi bi-check"></i> Basic chat and email support</li>
+                        </ul>
+                        <a href="#" class="pricing-btn">Try for Free</a>
+                        <div class="pricing-footer-note">Free forever and can be upgraded.</div>
+                    </div>
+                </div>
+
+                <!-- Agency Plan (Popular / Featured) -->
+                <div class="col-12 col-lg-4">
+                    <div class="pricing-card featured-card">
+                        <span class="popular-tag">Popular</span>
+                        <span class="plan-badge">Agency</span>
+                        <div class="plan-price">$99<span>/mo</span></div>
+                        <p class="plan-desc">Value for money and can be upgraded.</p>
+                        <hr>
+                        <ul class="pricing-features-list">
+                            <li><i class="bi bi-check"></i> Up to 10 individual users</li>
+                            <li><i class="bi bi-check"></i> Basic reporting and analytics</li>
+                            <li><i class="bi bi-check"></i> Project Management</li>
+                            <li><i class="bi bi-check"></i> 20GB individual data each user</li>
+                            <li><i class="bi bi-check"></i> Basic chat and email support</li>
+                        </ul>
+                        <a href="#" class="pricing-btn">Try for Free</a>
+                        <div class="pricing-footer-note">Value for money and can be upgraded.</div>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="col-12 col-lg-4">
+                    <div class="pricing-card">
+                        <span class="plan-badge">Pro</span>
+                        <div class="plan-price">$49<span>/mo</span></div>
+                        <p class="plan-desc">All other plans features and options.</p>
+                        <hr>
+                        <ul class="pricing-features-list">
+                            <li><i class="bi bi-check"></i> Up to 10 individual users</li>
+                            <li><i class="bi bi-check"></i> Basic reporting and analytics</li>
+                            <li><i class="bi bi-check"></i> Project Management</li>
+                            <li><i class="bi bi-check"></i> 20GB individual data each user</li>
+                            <li><i class="bi bi-check"></i> Basic chat and email support</li>
+                        </ul>
+                        <a href="#" class="pricing-btn">Try for Free</a>
+                        <div class="pricing-footer-note">All other plans features and options.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ==========================================================================
+3. services section
+========================================================================== -->
+
+<section class="services-section">
+    <div class="container">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <span class="section-subtitle">Services</span>
+               <h2 class="section-title">Our Professional Services</h2>
+        </div>
+        <!-- Services Grid -->
+        <div class="services-grid">
+
+            <!-- Service Item 1 -->
+            <article class="service-card">
+                <div class="service-image">
+                    <img src="https://picsum.photos/600/400?random=1" alt="Web Development" loading="lazy">
+                </div>
+                <div class="service-content">
+                    <h3>Web Development</h3>
+                    <p>Build scalable, robust, and lightning-fast web applications using modern architectures and frameworks.</p>
+                    <a href="#service-details" class="read-more">Read More &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Service Item 2 -->
+            <article class="service-card">
+                <div class="service-image">
+                    <img src="https://picsum.photos/600/400?random=2" alt="UI/UX Design" loading="lazy">
+                </div>
+                <div class="service-content">
+                    <h3>UI/UX Design</h3>
+                    <p>Create intuitive, user-centered digital interfaces optimized for engagement, usability, and cross-device appeal.</p>
+                    <a href="#service-details" class="read-more">Read More &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Service Item 3 -->
+            <article class="service-card">
+                <div class="service-image">
+                    <img src="https://picsum.photos/600/400?random=3" alt="Digital Marketing" loading="lazy">
+                </div>
+                <div class="service-content">
+                    <h3>Digital Marketing</h3>
+                    <p>Expand your digital footprint and drive qualified conversions with performance-focused strategies.</p>
+                    <a href="#service-details" class="read-more">Read More &rarr;</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+           PHOTO GALLERY SECTION
+           ========================================================================== -->
+        <section class="gallery-section py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="section-subtitle">Visual Showcase</span>
+                    <h2 class="section-title">Explore Our Campus & Activities</h2>
+                </div>
+                
+                <div class="row g-4 popup-gallery">
+                   <div class="col-12 col-sm-6 col-lg-4">
+                        <a href="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80" class="gallery-item-card" title="Science & Chemistry Research Lab">
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="Science Lab">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-zoom-in"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a href="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" class="gallery-item-card" title="Collaborative Team Workshop">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Workshop">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-zoom-in"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a href="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80" class="gallery-item-card" title="Interactive Lecture Session">
+                            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80" alt="Lecture">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-zoom-in"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a href="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80" class="gallery-item-card" title="Student Discussion Group">
+                            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80" alt="Discussion">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-zoom-in"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a href="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80" class="gallery-item-card" title="Graduation Celebration">
+                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" alt="Graduation">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-zoom-in"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a href="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=80" class="gallery-item-card" title="Advanced Computer Lab">
+                            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80" alt="Computer Lab">
+                            <div class="gallery-overlay">
+                                <i class="bi bi-zoom-in"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+        3. TEAM SECTION (Added Matching Target Layout & Design)
+        ========================================================================== -->
+    <section class="team-section">
+        <div class="container text-center">
+            <span class="section-subtitle">Meet Our Team</span>
+            <h2 class="section-title">We Have a Professional<br>Consulting Team</h2>
+            
+            <div class="row g-4 text-start">
+                <!-- Team Member 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Team Member">
+                        </div>
+                        <div class="team-card-body">
+                            <div>
+                                <h4 class="team-name text-center">Jack Mehoff</h4>
+                                <p class="team-role text-center">Engineer</p>
+                            </div>
+                            <div class="team-socials">
+                                <a href="#" class="team-social-icon"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Team Member">
+                        </div>
+                        <div class="team-card-body">
+                            <div>
+                                <h4 class="team-name text-center">Sarah Jenkins</h4>
+                                <p class="team-role text-center">Consultant</p>
+                            </div>
+                            <div class="team-socials">
+                                <a href="#" class="team-social-icon"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Team Member">
+                        </div>
+                        <div class="team-card-body">
+                            <div>
+                                <h4 class="team-name text-center">David Miller</h4>
+                                <p class="team-role text-center">Senior Advisor</p>
+                            </div>
+                            <div class="team-socials">
+                                <a href="#" class="team-social-icon"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Team Member">
+                        </div>
+                        <div class="team-card-body">
+                            <div>
+                                <h4 class="team-name text-center">Emily Watson</h4>
+                                <p class="team-role text-center">Lead Architect</p>
+                            </div>
+                            <div class="team-socials">
+                                <a href="#" class="team-social-icon"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="team-social-icon"><i class="bi bi-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+         <!-- ==========================================================================
+        TESTIMONIALS SECTION (Generated match based on reference layout)
+        ========================================================================== -->
+    <section class="testimonial-section">
+        <div class="container text-center">
+            <div class="testimonial-badge">
+                <i class="bi bi-book-half"></i> Testimonials
+            </div>
+            <h2 class="testimonial-main-title">Students Say’s About Us!</h2>
+            
+            <div class="row g-4 text-start">
+                <!-- Testimonial 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">“</div>
+                        <h4 class="testimonial-card-title">Join the Future of Education</h4>
+                        <p class="testimonial-card-text">Innovative technologies such as AI and VR are enhancing online education, making it more interactive and effective, preparing students for the challenges of tomorrow.</p>
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="testimonial-rating-text">4.9 (10k)</span>
+                        </div>
+                        <div class="testimonial-divider"></div>
+                        <div class="testimonial-author-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="David Lee" class="testimonial-avatar">
+                            <div>
+                                <h5 class="testimonial-author-name">David Lee</h5>
+                                <p class="testimonial-author-role">Full-time Professional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">“</div>
+                        <h4 class="testimonial-card-title">Expand Your Horizons</h4>
+                        <p class="testimonial-card-text">With diverse course offerings and expert instructors, online education empowers learners to explore new fields and develop essential skills for the modern workforce.</p>
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="testimonial-rating-text">4.8 (8k)</span>
+                        </div>
+                        <div class="testimonial-divider"></div>
+                        <div class="testimonial-author-wrapper">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Emily Chen" class="testimonial-avatar">
+                            <div>
+                                <h5 class="testimonial-author-name">Emily Chen</h5>
+                                <p class="testimonial-author-role">Career Changer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote-icon">“</div>
+                        <h4 class="testimonial-card-title">Transform Your Career</h4>
+                        <p class="testimonial-card-text">Online certifications and degrees provide opportunities for advancement and can significantly enhance job prospects in competitive markets.</p>
+                        <div class="testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <span class="testimonial-rating-text">4.6 (5k)</span>
+                        </div>
+                        <div class="testimonial-divider"></div>
+                        <div class="testimonial-author-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Michael Brown" class="testimonial-avatar">
+                            <div>
+                                <h5 class="testimonial-author-name">Michael Brown</h5>
+                                <p class="testimonial-author-role">Aspiring Professional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ==========================================================================
+4. CALL TO ACTION (CTA) SECTION
+========================================================================== -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-banner" id="mainCtaBanner">
+            <div class="cta-avatar-list">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-1">
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-2">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-3">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-4">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-5">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-6">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-7">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-8">
+                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-9">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+                    alt="Student" class="cta-avatar cta-avatar-10">
+            </div>
+
+            <div class="cta-content-wrapper">
+                <h2 class="cta-title">Unlock Exclusive Savings <span class="highlight-text">50% Off</span> For
+                    New Scholarship</h2>
+                <p class="cta-text">Get unlimited access to <span class="highlight-text fw-bold">6,000+</span>
+                    of Udemy's top courses for your team.</p>
+
+                <div class="cta-buttons-group">
+                    <a href="#" class="cta-btn-custom cta-btn-1">APPLY NOW &rarr;</a>
+                    <a href="#" class="cta-btn-custom cta-btn-2">BECOME A TEACHER &rarr;</a>
+                    <a href="#" class="cta-btn-custom cta-btn-3">EXPLORE COURSES &rarr;</a>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80"
+                alt="CTA Illustration" class="cta-section-img">
+        </div>
+    </div>
+</section>
+
+
+   <!-- ==========================================================================
+        FAQ SECTION (Exact HTML structure matched to reference image design)
+        ========================================================================== -->
+    <section class="faq-section">
+        <div class="container">
+
+            <div class="heading-title text-center">
+                <div class="section-subtitle"> How To Help?</div>
+               <h2 class="testimonial-main-title">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="row g-4 align-items-stretch">
+                <!-- Left Column: Help Banner with Phone Number Box -->
+                <div class="col-lg-5">
+                    <div class="faq-left-card">
+                        <h2 class="faq-left-title">Need Help? Start Here..</h2>
+                        <div class="faq-call-box">
+                            <p class="faq-call-title">Get Started Free Call?</p>
+                            <a href="tel:1-888-452-1505" class="faq-call-number">
+                                <i class="bi bi-telephone-fill"></i>
+                                <span>1-888-452-1505</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: FAQ Accordion List -->
+                <div class="col-lg-7">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <!-- FAQ Item 1 (Open by default) -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                    <span class="flex-grow-1">What services does Bexon offer to clients?</span>
+                                    <span class="faq-icon"><i class="bi bi-dash"></i></span>
+                                </button>
+                            </h2>
+                            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Getting started is easy! Simply reach out to us through our contact form or give us a call, and we’ll schedule a consultation to discuss your project and how we can best assist you. Our team keeps you informed throughout the process, ensuring quality control and timely delivery.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                    <span class="flex-grow-1">How do I get started with Corporate Business?</span>
+                                    <span class="faq-icon"><i class="bi bi-plus"></i></span>
+                                </button>
+                            </h2>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our corporate packages are customized based on enterprise requirements. Schedule an appointment with our corporate advisory team to analyze your business workflows and receive a tailored implementation plan.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                    <span class="flex-grow-1">How do you ensure the success of a project?</span>
+                                    <span class="faq-icon"><i class="bi bi-plus"></i></span>
+                                </button>
+                            </h2>
+                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We assign a dedicated project manager, execute milestone-based reviews, and run rigorous quality assurance tests before final deployment to ensure full alignment with your business objectives.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                    <span class="flex-grow-1">How long will it take to complete my project?</span>
+                                    <span class="faq-icon"><i class="bi bi-plus"></i></span>
+                                </button>
+                            </h2>
+                            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Timelines vary depending on project scale and complexity. Smaller engagements typically take 2-4 weeks, while comprehensive multi-stage digital implementations can range from 2 to 6 months.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                    <span class="flex-grow-1">Can I track the progress of my project?</span>
+                                    <span class="faq-icon"><i class="bi bi-plus"></i></span>
+                                </button>
+                            </h2>
+                            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! All clients receive secure access to our project management client portal where you can monitor live milestone updates, inspect staging builds, and communicate directly with your team.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+        6. CONTACT FORM SECTION (Styled per theme layout)
+        ========================================================================== -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-wrapper-box">
+                <div class="row g-5 align-items-center">
+                    <!-- Left Column: Contact Information -->
+                    <div class="col-lg-5">
+                        <h4 class="contact-info-title">Office Location</h4>
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <div>
+                                <p class="mb-0 fw-medium">22 Baker Street,<br>London, United Kingdom,<br>W1U 3BW</p>
+                            </div>
+                        </div>
+
+                        <h4 class="contact-info-title mt-4">Office Hours</h4>
+                        <div class="contact-item">
+                            <i class="bi bi-clock-fill"></i>
+                            <div>
+                                <p class="mb-0 fw-medium">Mon - Fri 9:00 - 21:00<br>Saturday 10:00 - 16:00</p>
+                            </div>
+                        </div>
+
+                        <h4 class="contact-info-title mt-4">Phone</h4>
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <div>
+                                <p class="mb-0 fw-medium">+44-20-7328-4499<br>+99-34-8878-9989</p>
+                            </div>
+                        </div>
+
+                        <h4 class="contact-info-title mt-4">Email</h4>
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <div>
+                                <p class="mb-0 fw-medium">info@yourdomain.com<br>admin@yourdomain.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Contact Form -->
+                    <div class="col-lg-7">
+                        <h2 class="contact-form-title">Let's Talk About Your Idea</h2>
+                        <p class="contact-form-desc">Surrounded affronting favourable no mr. Lain knew like half she yet joy. Be than dull as seen very shot. Attachment ye so am travelling estimating projecting is. Off fat address attacks his besides. Suitable settling</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control custom-contact-input" placeholder="Name">
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control custom-contact-input" placeholder="Email*">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control custom-contact-input" placeholder="Phone">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control custom-contact-input" rows="5" placeholder="Tell Us About Project *"></textarea>
+                            </div>
+                            <button type="submit" class="btn contact-submit-btn">SEND MESSAGE <i class="bi bi-send-fill ms-1"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ==========================================================================
+5. BLOG SECTION
+========================================================================== -->
+
+<!-- HTML Structure -->
+<section class="blog-section py-5">
+<div class="container">
+<!-- Optional Section Header -->
+<div class="text-center mb-5">
+    <span class="section-subtitle">Our Insights</span>
+    <h2 class="section-title">Latest Articles & News</h2>
+</div>
+
+<div class="row g-5">
+    <!-- Blog Card 1 -->
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="position-relative">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Blog Image" class="card-img-top">
+                <div class="date-badge">
+                    <span class="day">04</span>
+                    <span class="month-year">Jun, 2026</span>
+                </div>
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <span class="badge category-badge">Event Security</span>
+                    <h3 class="card-title">Strategic Event Security: Managing Large Crowds Safely</h3>
+                </div>
+                <div class="mt-4">
+                    <a href="#" class="btn-read-more">READ MORE &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="position-relative">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Blog Image" class="card-img-top">
+                <div class="date-badge">
+                    <span class="day">12</span>
+                    <span class="month-year">Jun, 2026</span>
+                </div>
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <span class="badge category-badge">Technology</span>
+                    <h3 class="card-title">The Future of AI Integration in Modern Workplace Environments</h3>
+                </div>
+                <div class="mt-4">
+                    <a href="#" class="btn-read-more">READ MORE &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="position-relative">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Blog Image" class="card-img-top">
+                <div class="date-badge">
+                    <span class="day">25</span>
+                    <span class="month-year">Jun, 2026</span>
+                </div>
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <span class="badge category-badge">Leadership</span>
+                    <h3 class="card-title">Effective Remote Team Management Strategies for Leaders</h3>
+                </div>
+                <div class="mt-4">
+                    <a href="#" class="btn-read-more">READ MORE &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<!-- ==========================================================
+     TRUSTED PARTNERS SECTION
+     7 DIFFERENT DESIGNS BASED ON ACTIVE THEME
+========================================================== -->
+<section class="trusted-partners-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="partners-heading">
+            <span>Trusted Network</span>
+            <h2>Our Trusted Partners</h2>
+        </div>
+
+        <div class="trusted-partners-grid">
+
+            <!-- Partner 1 -->
+            <a href="#" class="partner-item">
+                <div class="partner-logo partner-logo-education">
+                    <i class="bi bi-journal-bookmark-fill"></i>
+                </div>
+                <div class="partner-content">
+                    <strong>Education</strong>
+                    <small>Academy For Kids</small>
+                </div>
+            </a>
+
+            <!-- Partner 2 -->
+            <a href="#" class="partner-item">
+                <div class="partner-logo partner-logo-online">
+                    <i class="bi bi-phone-fill"></i>
+                </div>
+                <div class="partner-content">
+                    <strong>ONLINE</strong>
+                    <small>YOUR BUSINESS</small>
+                </div>
+            </a>
+
+            <!-- Partner 3 -->
+            <a href="#" class="partner-item">
+                <div class="partner-logo partner-logo-escultion">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <div class="partner-content">
+                    <strong>Escultion</strong>
+                    <small>Online Education Platform</small>
+                </div>
+            </a>
+
+            <!-- Partner 4 -->
+            <a href="#" class="partner-item">
+                <div class="partner-logo partner-logo-probook">
+                    <i class="bi bi-book-fill"></i>
+                </div>
+                <div class="partner-content">
+                    <strong>ProBook</strong>
+                    <small>High Quality Books</small>
+                </div>
+            </a>
+
+            <!-- Partner 5 -->
+            <a href="#" class="partner-item">
+                <div class="partner-logo partner-logo-knowledge">
+                    <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <div class="partner-content">
+                    <strong>Knowledge</strong>
+                    <small>Language College</small>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER SECTION (CREOTE DESIGN IMPLEMENTATION) -->
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                
+                <!-- Column 1: Brand Logo, Text & CTA Link -->
+                <div class="col-12 col-lg-3 col-md-6">
+                    <a href="#" class="footer-brand-logo">
+                        <span class="brand-icon-circle">C</span>
+                        <span class="brand-text-name">Creote</span>
+                    </a>
+                    <p class="footer-desc">
+                        Duty the obligations of business will frequently occur that pleasure have too repudiated annoyances endures accepted.
+                    </p>
+                    <a href="#" class="btn-free-consultation">Free Consultation</a>
+                </div>
+
+                <!-- Column 2: Company Links -->
+                <div class="col-6 col-lg-2 col-md-6">
+                    <h4 class="footer-widget-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Professionals</a></li>
+                        <li><a href="#">Insights</a></li>
+                        <li><a href="#">HR Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Information Links -->
+                <div class="col-6 col-lg-2 col-md-6">
+                    <h4 class="footer-widget-title">Information</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">How it's Work</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Key Areas</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Essentials Links -->
+                <div class="col-6 col-lg-2 col-md-6">
+                    <h4 class="footer-widget-title">Essentials</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Infrastructure</a></li>
+                        <li><a href="#">Client Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Get In Touch (Location & Contact Details) -->
+                <div class="col-12 col-lg-3 col-md-6">
+                    <h4 class="footer-widget-title">Get In Touch</h4>
+                    <div class="contact-block-group">
+                        <div>
+                            <h5 class="contact-subheading">Location</h5>
+                            <p class="contact-info-text">
+                                280 Granite Run Drive Suite #200<br>
+                                Lancaster, PA 1760
+                            </p>
+                        </div>
+                        <div>
+                            <h5 class="contact-subheading">Contact</h5>
+                            <p class="contact-info-text">
+                                Phone : <a href="tel:+9806071234">+98 060 712 34</a><br>
+                                Mail Us : <a href="mailto:sendmail@creote.com">sendmail@creote.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Copyright & Social Networks Bar -->
+    <div class="footer-bottom">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+            <p class="copyright-text">
+                &copy; 2026 <strong>Steelthemes</strong>. All Rights Reserved.
+            </p>
+            <div class="social-icons-group">
+                <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="social-btn" aria-label="Skype"><i class="bi bi-skype"></i></a>
+                <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JS Scripting -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Magnific Popup JS CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+
+let currentTheme = localStorage.getItem('edupulse_theme') || 'theme-emerald-block';
+let currentSpacing = localStorage.getItem('edupulse_spacing') || 'spacing-default';
+let currentFontSize = localStorage.getItem('edupulse_fontsize') || 'font-normal';
+
+function updateClasses() {
+    document.getElementById('pageBody').className = `${currentTheme} ${currentSpacing} ${currentFontSize}`;
+    localStorage.setItem('edupulse_theme', currentTheme);
+    localStorage.setItem('edupulse_spacing', currentSpacing);
+    localStorage.setItem('edupulse_fontsize', currentFontSize);
+
+    // Toggle Intro Section Layouts based on active theme
+    const standardIntro = document.querySelector('.standard-intro-content');
+    const offsetIntro = document.querySelector('.offset-intro-content');
+
+    if (currentTheme === 'theme-layered-offset') {
+        standardIntro.classList.add('d-none');
+        offsetIntro.classList.remove('d-none');
+    } else {
+        standardIntro.classList.remove('d-none');
+        offsetIntro.classList.add('d-none');
+    }
+
+    // Toggle Testimonials Layout based on theme
+    const emeraldWrapper = document.querySelector('.emerald-testimonials-wrapper');
+    const curvedWrapper = document.querySelector('.curved-testimonials-wrapper');
+    const gridWrapper = document.querySelector('.grid-testimonials-wrapper');
+    const darkWrapper = document.querySelector('.dark-testimonials-wrapper');
+    const floatingWrapper = document.querySelector('.floating-testimonials-wrapper');
+    const luxuryWrapper = document.querySelector('.luxury-testimonials-wrapper');
+    const offsetWrapper = document.querySelector('.offset-testimonials-wrapper');
+
+    emeraldWrapper.classList.add('d-none');
+    curvedWrapper.classList.add('d-none');
+    gridWrapper.classList.add('d-none');
+    darkWrapper.classList.add('d-none');
+    floatingWrapper.classList.add('d-none');
+    luxuryWrapper.classList.add('d-none');
+    offsetWrapper.classList.add('d-none');
+
+    if (currentTheme === 'theme-layered-offset') {
+        offsetWrapper.classList.remove('d-none');
+        $('.offset-testimonial-carousel').trigger('refresh.owl.carousel');
+    } else if (currentTheme === 'theme-curved-scalloped') {
+        curvedWrapper.classList.remove('d-none');
+    } else if (currentTheme === 'theme-default') {
+        gridWrapper.classList.remove('d-none');
+    } else if (currentTheme === 'theme-modern-dark') {
+        darkWrapper.classList.remove('d-none');
+    } else if (currentTheme === 'theme-vibrant-cards') {
+        floatingWrapper.classList.remove('d-none');
+    } else if (currentTheme === 'theme-elegant-serif') {
+        luxuryWrapper.classList.remove('d-none');
+    } else {
+        emeraldWrapper.classList.remove('d-none');
+    }
+}
+
+function setTheme(themeName, btn) {
+    currentTheme = themeName;
+    updateClasses();
+    btn.parentElement.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+
+function setSpacing(spacingName, btn) {
+    currentSpacing = spacingName;
+    updateClasses();
+    btn.parentElement.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+
+function setFontSize(fontSizeName, btn) {
+    currentFontSize = fontSizeName;
+    updateClasses();
+    btn.parentElement.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const owl = $('.offset-testimonial-carousel');
+    owl.owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 }
+        }
+    });
+
+    $('#testimonialPrevBtn').click(function () {
+        owl.trigger('prev.owl.carousel');
+    });
+    $('#testimonialNextBtn').click(function () {
+        owl.trigger('next.owl.carousel');
+    });
+
+    updateClasses();
+
+    const controlGroups = document.querySelectorAll('.theme-controls .btn-group');
+    if (controlGroups[0]) {
+        controlGroups[0].querySelectorAll('.btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('onclick').includes(currentTheme));
+        });
+    }
+    if (controlGroups[1]) {
+        controlGroups[1].querySelectorAll('.btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('onclick').includes(currentSpacing));
+        });
+    }
+    if (controlGroups[2]) {
+        controlGroups[2].querySelectorAll('.btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('onclick').includes(currentFontSize));
+        });
+    }
+});
+
+   // Initialize Magnific Popup Gallery
+$('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1] // Will preload prev and next images
+    },
+    image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+    }
+});
+
+</script>
+
+</body>
+
+</html>
