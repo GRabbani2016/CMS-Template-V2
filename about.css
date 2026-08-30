@@ -1,258 +1,1423 @@
-/* ===========================================================
-    INTRO / ABOUT SECTION STYLES (Dynamic per theme or offset style)
-    ===========================================================*/
-        .contribution-section {
-            /* background-color: #ffffff; */
-            font-family: 'Inter', sans-serif;
-            color: #333333;
-        }
+/* ==========================================================
+   ABOUT SHOWCASE
+   BASE STYLE
+========================================================== */
 
-        /* Default / Emerald Left Composition Layout */
-        .image-composition-wrapper {
-            position: relative;
-            padding-left: 20px;
-            padding-top: 20px;
-        }
+.about-showcase-section {
+    --about-accent: #1ba085;
+    --about-heading: #0f172a;
+    --about-text: #64748b;
+    --about-surface: #ffffff;
 
-        .accent-bar-vertical {
-            position: absolute;
-            top: 0;
-            right: 45px;
-            width: 12px;
-            height: 120px;
-            background: linear-gradient(to bottom, #1ba085 50%, #ffc107 50%);
-            border-radius: 6px;
-            z-index: 1;
-        }
+    position: relative;
+    overflow: hidden;
 
-        .image-box {
-            overflow: hidden;
-            border-radius: 16px;
-        }
+    padding: 100px 0;
 
-        .image-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    background: var(--about-surface);
 
-        .primary-image {
-            width: 85%;
-            height: 380px;
-        }
+    font-family: var(--font-family, 'Inter', sans-serif);
+}
 
-        .secondary-image {
-            position: absolute;
-            bottom: -30px;
-            right: 0px;
-            width: 60%;
-            height: 270px;
-            border: 6px solid #ffffff;
-            border-radius: 16px;
-        }
+.about-showcase-row {
+    position: relative;
+}
 
-        .content-wrapper {
-            padding-left: 1rem;
-        }
 
-        .section-subtitle {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            color: #1ba085;
-            text-transform: uppercase;
-            margin-bottom: 0.75rem;
-        }
+/* ==========================================================
+   CONTENT
+========================================================== */
 
-        .section-title {
-            font-size: clamp(1.8rem, 3vw, 2.7rem);
-            font-weight: 800;
-            color: var(--title-color);
-            line-height: 1.2;
-            margin-bottom: 1.25rem;
-            letter-spacing: -0.5px;
-        }
+.about-content {
+    position: relative;
+    z-index: 4;
+}
 
-        .section-desc {
-            font-size: 0.95rem;
-            color: #6c757d;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
+.about-kicker {
+    display: inline-flex;
+    align-items: center;
 
-        .action-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
+    margin-bottom: 16px;
 
-        .btn-custom-green {
-            background-color: #1ba085;
-            color: #ffffff;
-            font-weight: 600;
-            padding: 0.75rem 2rem;
-            border-radius: 8px;
-            border: none;
-            transition: all 0.3s ease;
-        }
+    color: var(--about-accent);
 
-        .btn-custom-green:hover {
-            background-color: #16866f;
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
+    font-size: 13px;
+    font-weight: 800;
 
-        .btn-custom-yellow {
-            background-color: #ffc107;
-            color: #1a1a1a;
-            font-weight: 600;
-            padding: 0.75rem 2rem;
-            border-radius: 8px;
-            border: none;
-            transition: all 0.3s ease;
-        }
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
 
-        .btn-custom-yellow:hover {
-            background-color: #e0a800;
-            color: #1a1a1a;
-            transform: translateY(-2px);
-        }
+.about-title {
+    max-width: 680px;
 
-        /* ===========================================================
-    THEME 7 OFFSET INTRO SECTION STYLES (New Layout Customization)
-    ===========================================================*/
-        /* .theme-layered-offset .contribution-section {
-            background-color: #ffffff;
-        } */
+    margin: 0;
 
-        .theme-layered-offset .offset-intro-wrapper {
-            position: relative;
-            padding: 20px 0 20px 20px;
-        }
+    color: var(--about-heading);
 
-        /* Left side image grid framework matching the layout requested */
-        .theme-layered-offset .offset-img-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            position: relative;
-        }
+    font-size: clamp(2.2rem, 3.5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.13;
 
-        .theme-layered-offset .offset-img-box {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
+    letter-spacing: -1.5px;
+}
 
-        .theme-layered-offset .offset-img-box img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
+.about-title span {
+    color: var(--about-accent);
+}
 
-        .theme-layered-offset .offset-img-box:hover img {
-            transform: scale(1.03);
-        }
+.about-description {
+    max-width: 650px;
 
-        .theme-layered-offset .offset-img-box.full-width {
-            grid-column: span 2;
-        }
+    margin: 25px 0 0;
 
-        .theme-layered-offset .offset-img-box.full-width img {
-            height: 250px;
-        }
+    color: var(--about-text);
 
-        /* Scalloped Badge element matching design reference */
-        .theme-layered-offset .scalloped-badge {
-            position: absolute;
-            bottom: -20px;
-            left: -20px;
-            background: #ffffff;
-            width: 170px;
-            height: 170px;
-            border-radius: 35% 65% 60% 40% / 40% 45% 55% 60%;
-            box-shadow: 0 10px 30px rgba(243, 122, 31, 0.15);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 15px;
-            z-index: 3;
-            border: 2px dashed #f37a1f;
-        }
+    font-size: 0.98rem;
+    line-height: 1.85;
+}
 
-        .theme-layered-offset .scalloped-badge i {
-            font-size: 2rem;
-            color: #f37a1f;
-            margin-bottom: 5px;
-        }
 
-        .theme-layered-offset .scalloped-badge span {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #2d3748;
-            line-height: 1.2;
-        }
+/* ==========================================================
+   MEDIA
+========================================================== */
 
-        /* Offset Theme Intro Content Adjustments */
-        .theme-layered-offset .contribution-section .section-subtitle {
-            color: #f37a1f;
-        }
+.about-media {
+    position: relative;
 
-        .theme-layered-offset .contribution-section .section-title span {
-            color: #f37a1f;
-        }
+    min-height: 570px;
+}
 
-        .theme-layered-offset .contribution-section .btn-custom-offset-primary {
-            background-color: #f37a1f;
-            color: #ffffff;
-            font-weight: 600;
-            padding: 0.75rem 2rem;
-            border-radius: 12px;
-            border: none;
-            transition: all 0.3s ease;
-        }
+.about-image {
+    position: absolute;
 
-        .theme-layered-offset .contribution-section .btn-custom-offset-primary:hover {
-            background-color: #d9630d;
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
+    overflow: hidden;
 
-        .theme-layered-offset .contribution-section .btn-custom-offset-secondary {
-            background-color: #3dbbd3;
-            color: #ffffff;
-            font-weight: 600;
-            padding: 0.75rem 2rem;
-            border-radius: 12px;
-            border: none;
-            transition: all 0.3s ease;
-        }
+    z-index: 3;
+}
 
-        .theme-layered-offset .contribution-section .btn-custom-offset-secondary:hover {
-            background-color: #29a0b7;
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
+.about-image img {
+    display: block;
 
-        @media (max-width: 991.98px) {
-            .image-composition-wrapper {
-                padding-left: 0;
-                margin-bottom: 3rem;
-            }
+    width: 100%;
+    height: 100%;
 
-            .content-wrapper {
-                padding-left: 0;
-            }
+    object-fit: cover;
 
-            .theme-layered-offset .scalloped-badge {
-                width: 140px;
-                height: 140px;
-                bottom: -10px;
-                left: 10px;
-            }
-        }
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.035);
+}
+
+.about-image-primary {
+    top: 20px;
+    left: 0;
+
+    width: 78%;
+    height: 440px;
+
+    border-radius: 24px;
+}
+
+.about-image-secondary {
+    right: 0;
+    bottom: 15px;
+
+    width: 58%;
+    height: 310px;
+
+    border: 8px solid #ffffff;
+    border-radius: 22px;
+
+    z-index: 5;
+
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.13);
+}
+
+.about-image-tertiary {
+    display: none;
+}
+
+
+/* ==========================================================
+   DECORATIVE SHAPE
+========================================================== */
+
+.about-media-shape {
+    position: absolute;
+
+    z-index: 0;
+}
+
+
+/* ==========================================================
+   FLOATING STAT
+========================================================== */
+
+.about-stat-card {
+    position: absolute;
+
+    z-index: 7;
+
+    display: none;
+
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px 25px;
+
+    background: var(--about-accent);
+
+    color: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow: 0 18px 35px rgba(15,23,42,.14);
+}
+
+.about-stat-card strong {
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+.about-stat-text span,
+.about-stat-text small {
+    display: block;
+}
+
+.about-stat-text span {
+    font-weight: 800;
+}
+
+.about-stat-text small {
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    opacity: .85;
+}
+
+
+/* ==========================================================
+   PLAY BUTTON
+========================================================== */
+
+.about-play-btn {
+    display: none;
+
+    position: absolute;
+
+    z-index: 8;
+
+    width: 82px;
+    height: 82px;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    background: var(--about-accent);
+
+    border: 10px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 30px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.2);
+}
+
+.about-play-btn:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.about-feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0,1fr));
+
+    gap: 18px 24px;
+
+    margin-top: 30px;
+}
+
+.about-feature-item {
+    display: flex;
+
+    gap: 13px;
+
+    align-items: flex-start;
+}
+
+.about-feature-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--about-accent);
+
+    background: color-mix(in srgb, var(--about-accent) 10%, white);
+
+    border-radius: 50%;
+
+    font-size: 17px;
+}
+
+.about-feature-item h5 {
+    margin: 0 0 4px;
+
+    color: var(--about-heading);
+
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.about-feature-item p {
+    margin: 0;
+
+    color: var(--about-text);
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+
+/* ==========================================================
+   MISSION / VISION
+========================================================== */
+
+.about-mission-grid {
+    display: none;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+.about-mission-card {
+    position: relative;
+
+    padding: 27px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+}
+
+.about-mission-number {
+    position: absolute;
+
+    top: 10px;
+    right: 18px;
+
+    color: rgba(0,0,0,.045);
+
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.about-mission-card h4 {
+    position: relative;
+
+    margin-bottom: 13px;
+
+    color: var(--about-heading);
+
+    font-size: 1.45rem;
+}
+
+.about-mission-card p {
+    position: relative;
+
+    color: var(--about-text);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.about-mission-card ul {
+    position: relative;
+
+    margin: 18px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.about-mission-card li {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 9px;
+
+    color: var(--about-heading);
+
+    font-size: 12px;
+}
+
+.about-mission-card li i {
+    color: var(--about-accent);
+}
+
+
+/* ==========================================================
+   ACTION AREA
+========================================================== */
+
+.about-action-row {
+    display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+.about-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.about-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 50px;
+
+    padding: 0 24px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 750;
+
+    transition: .25s ease;
+}
+
+.about-btn-primary {
+    color: #ffffff;
+
+    background: var(--about-accent);
+
+    border: 1px solid var(--about-accent);
+
+    border-radius: 8px;
+}
+
+.about-btn-primary:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.about-btn-secondary {
+    color: var(--about-heading);
+
+    background: transparent;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 8px;
+}
+
+.about-btn-secondary:hover {
+    color: var(--about-accent);
+}
+
+
+/* ==========================================================
+   FOUNDER
+========================================================== */
+
+.about-founder {
+    display: none;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.about-founder img {
+    width: 52px;
+    height: 52px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.about-founder strong,
+.about-founder span {
+    display: block;
+}
+
+.about-founder strong {
+    color: var(--about-heading);
+
+    font-size: 13px;
+}
+
+.about-founder span {
+    margin-top: 3px;
+
+    color: var(--about-accent);
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.about-contact-info {
+    display: none;
+
+    padding-left: 20px;
+
+    border-left: 1px solid #e2e8f0;
+}
+
+.about-contact-info span,
+.about-contact-info strong {
+    display: block;
+}
+
+.about-contact-info span {
+    color: var(--about-accent);
+
+    font-size: 11px;
+}
+
+.about-contact-info strong {
+    margin-top: 4px;
+
+    color: var(--about-heading);
+
+    font-size: 15px;
+}
+
+
+/* ==========================================================
+   ==========================================================
+   THEME 1 — EMERALD BLOCK
+   Double overlapping images + clean content
+   Reference style: your Islamic Center screenshot
+   ==========================================================
+========================================================== */
+
+.theme-emerald-block .about-showcase-section {
+    --about-accent: #1ba085;
+    --about-heading: #171717;
+    --about-text: #6b7280;
+
+    background: #ffffff;
+}
+
+.theme-emerald-block .about-feature-grid,
+.theme-emerald-block .about-mission-grid,
+.theme-emerald-block .about-founder,
+.theme-emerald-block .about-contact-info {
+    display: none;
+}
+
+.theme-emerald-block .about-media {
+    min-height: 590px;
+}
+
+.theme-emerald-block .about-image-primary {
+    top: 40px;
+
+    width: 82%;
+    height: 430px;
+
+    border-radius: 20px;
+}
+
+.theme-emerald-block .about-image-secondary {
+    width: 61%;
+    height: 310px;
+
+    right: 0;
+    bottom: 15px;
+
+    border-width: 7px;
+
+    border-radius: 18px;
+}
+
+.theme-emerald-block .about-media::after {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    right: 8%;
+
+    width: 13px;
+    height: 140px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #1ba085 0 50%,
+            #ffc107 50%
+        );
+}
+
+.theme-emerald-block .about-title span {
+    display: inline;
+
+    color: inherit;
+}
+
+.theme-emerald-block .about-btn-primary {
+    min-width: 145px;
+}
+
+.theme-emerald-block .about-btn-secondary {
+    color: #111827;
+
+    background: #ffc107;
+
+    border-color: #ffc107;
+
+    min-width: 145px;
+}
+
+
+/* ==========================================================
+   THEME 2 — CURVED SCALLOPED
+   Content LEFT / image RIGHT
+   Large photo + small photo + experience badge
+========================================================== */
+
+.theme-curved-scalloped .about-showcase-section {
+    --about-accent: #e51b23;
+    --about-heading: #172033;
+    --about-text: #737b88;
+
+    background: #ffffff;
+}
+
+.theme-curved-scalloped .about-showcase-row {
+    flex-direction: row-reverse;
+}
+
+.theme-curved-scalloped .about-media {
+    min-height: 565px;
+}
+
+.theme-curved-scalloped .about-image-primary {
+    width: 82%;
+    height: 500px;
+
+    left: auto;
+    right: 0;
+
+    border-radius: 30px;
+}
+
+.theme-curved-scalloped .about-image-secondary {
+    width: 42%;
+    height: 230px;
+
+    left: 0;
+    right: auto;
+
+    top: 80px;
+    bottom: auto;
+
+    border-radius: 22px;
+
+    border: 7px solid #ffffff;
+}
+
+.theme-curved-scalloped .about-stat-card {
+    display: flex;
+
+    left: 0;
+    bottom: 16px;
+
+    width: 320px;
+
+    border-radius: 20px;
+
+    background: #e7080b;
+}
+
+.theme-curved-scalloped .about-stat-card strong {
+    font-size: 3.2rem;
+}
+
+.theme-curved-scalloped .about-feature-grid {
+    margin-top: 30px;
+}
+
+.theme-curved-scalloped .about-feature-icon {
+    width: 24px;
+    height: 24px;
+
+    flex-basis: 24px;
+
+    margin-top: 2px;
+
+    color: #ffffff;
+
+    background: #e7080b;
+
+    font-size: 12px;
+}
+
+.theme-curved-scalloped .about-feature-item p {
+    display: none;
+}
+
+.theme-curved-scalloped .about-feature-item h5 {
+    font-size: 14px;
+}
+
+.theme-curved-scalloped .about-founder,
+.theme-curved-scalloped .about-contact-info {
+    display: flex;
+}
+
+.theme-curved-scalloped .about-buttons {
+    display: none;
+}
+
+
+/* ==========================================================
+   THEME 3 — DEFAULT / CLEAN GRID
+   Three-image collage
+========================================================== */
+
+.theme-default .about-showcase-section {
+    --about-accent: #07947d;
+    --about-heading: #082c24;
+    --about-text: #6b7280;
+
+    background: #ffffff;
+}
+
+.theme-default .about-media {
+    min-height: 610px;
+}
+
+.theme-default .about-image-primary {
+    top: 0;
+    left: 16%;
+
+    width: 73%;
+    height: 285px;
+
+    border-radius: 18px;
+}
+
+.theme-default .about-image-secondary {
+    left: 0;
+    bottom: 20px;
+
+    width: 48%;
+    height: 280px;
+
+    border: 0;
+
+    border-radius: 18px;
+
+    box-shadow: none;
+}
+
+.theme-default .about-image-tertiary {
+    display: block;
+
+    right: 0;
+    bottom: 0;
+
+    width: 48%;
+    height: 300px;
+
+    border-radius: 18px;
+}
+
+.theme-default .about-stat-card {
+    display: flex;
+
+    left: 25%;
+    bottom: 5px;
+
+    background: #ffb800;
+
+    color: #102c25;
+
+    border: 7px solid #ffffff;
+
+    box-shadow: none;
+}
+
+.theme-default .about-stat-card strong {
+    font-size: 2.8rem;
+}
+
+.theme-default .about-media-shape {
+    left: 5%;
+    bottom: 0;
+
+    width: 170px;
+    height: 120px;
+
+    opacity: .23;
+
+    background-image:
+        radial-gradient(#0b6656 2px, transparent 2px);
+
+    background-size: 20px 20px;
+}
+
+.theme-default .about-feature-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 430px;
+}
+
+.theme-default .about-feature-item p {
+    display: none;
+}
+
+.theme-default .about-feature-icon {
+    color: #ffb800;
+
+    background: transparent;
+
+    border: 1px solid #e5e7eb;
+}
+
+.theme-default .about-btn-secondary {
+    display: none;
+}
+
+
+/* ==========================================================
+   THEME 4 — MODERN DARK
+   Layered B&W images + strong statistic
+========================================================== */
+
+.theme-modern-dark .about-showcase-section {
+    --about-accent: #06b6d4;
+    --about-heading: #f8fafc;
+    --about-text: #94a3b8;
+    --about-surface: #0b0f19;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(6,182,212,.08),
+            transparent 35%
+        ),
+        #0b0f19;
+}
+
+.theme-modern-dark .about-image-primary img,
+.theme-modern-dark .about-image-secondary img {
+    filter: grayscale(1);
+}
+
+.theme-modern-dark .about-media {
+    min-height: 600px;
+}
+
+.theme-modern-dark .about-image-primary {
+    top: 0;
+    left: 30%;
+
+    width: 56%;
+    height: 330px;
+
+    border:
+        6px solid #111827;
+
+    border-radius: 10px;
+}
+
+.theme-modern-dark .about-image-secondary {
+    left: 8%;
+    bottom: 0;
+
+    width: 78%;
+    height: 350px;
+
+    border:
+        6px solid #111827;
+
+    border-radius: 10px;
+}
+
+.theme-modern-dark .about-stat-card {
+    display: flex;
+
+    top: 40px;
+    left: 0;
+
+    width: 220px;
+    height: 260px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06b6d4,
+            #2563eb
+        );
+
+    border-radius: 22px;
+}
+
+.theme-modern-dark .about-stat-card strong {
+    font-size: 4.4rem;
+}
+
+.theme-modern-dark .about-stat-card strong::after {
+    content: "%";
+}
+
+.theme-modern-dark .about-stat-card strong {
+    font-size: 0;
+}
+
+.theme-modern-dark .about-stat-card strong::before {
+    content: "90";
+
+    font-size: 4.4rem;
+}
+
+.theme-modern-dark .about-feature-item {
+    padding: 15px;
+
+    background: #111827;
+
+    border:
+        1px solid #1f2937;
+
+    border-radius: 10px;
+}
+
+.theme-modern-dark .about-feature-item p {
+    display: none;
+}
+
+.theme-modern-dark .about-btn-secondary {
+    color: #06b6d4;
+
+    border-color: rgba(6,182,212,.35);
+}
+
+
+/* ==========================================================
+   THEME 5 — VIBRANT FLOATING CARDS
+   Organic background + dual floating images
+========================================================== */
+
+.theme-vibrant-cards .about-showcase-section {
+    --about-accent: #4f46e5;
+    --about-heading: #334155;
+    --about-text: #64748b;
+
+    background: #ffffff;
+}
+
+.theme-vibrant-cards .about-media {
+    min-height: 550px;
+}
+
+.theme-vibrant-cards .about-media-shape {
+    display: block;
+
+    width: 78%;
+    height: 530px;
+
+    top: 0;
+    left: 12%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e0e7ff,
+            #ede9fe
+        );
+
+    border-radius:
+        46% 54% 42% 58% /
+        36% 39% 61% 64%;
+
+    transform: rotate(-7deg);
+}
+
+.theme-vibrant-cards .about-image-primary {
+    top: 60px;
+    left: 0;
+
+    width: 62%;
+    height: 380px;
+
+    border-radius: 16px;
+}
+
+.theme-vibrant-cards .about-image-secondary {
+    width: 42%;
+    height: 335px;
+
+    right: 0;
+    bottom: 25px;
+
+    border: 0;
+
+    border-radius: 14px;
+}
+
+.theme-vibrant-cards .about-feature-grid {
+    grid-template-columns: 1fr;
+}
+
+.theme-vibrant-cards .about-feature-item {
+    padding: 13px 15px;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+.theme-vibrant-cards .about-feature-item p {
+    display: none;
+}
+
+.theme-vibrant-cards .about-feature-icon {
+    border-radius: 10px;
+
+    color: #4f46e5;
+
+    background: #eef2ff;
+}
+
+.theme-vibrant-cards .about-btn-primary {
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed
+        );
+}
+
+
+/* ==========================================================
+   THEME 6 — ELEGANT SERIF
+   Luxury mission / vision design
+========================================================== */
+
+.theme-elegant-serif .about-showcase-section {
+    --about-accent: #d4af37;
+    --about-heading: #2c2a29;
+    --about-text: #776f67;
+
+    background: #f5f1e9;
+}
+
+.theme-elegant-serif .about-media {
+    min-height: 610px;
+}
+
+.theme-elegant-serif .about-image-primary {
+    width: 92%;
+    height: 580px;
+
+    border-radius: 4px;
+}
+
+.theme-elegant-serif .about-image-secondary,
+.theme-elegant-serif .about-image-tertiary {
+    display: none;
+}
+
+.theme-elegant-serif .about-stat-card {
+    display: flex;
+
+    left: 30px;
+    bottom: 20px;
+
+    width: 340px;
+
+    background: rgba(44,42,41,.88);
+
+    border:
+        1px solid rgba(212,175,55,.55);
+
+    border-radius: 0;
+
+    backdrop-filter: blur(12px);
+}
+
+.theme-elegant-serif .about-title {
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+.theme-elegant-serif .about-title span {
+    color: #d4af37;
+}
+
+.theme-elegant-serif .about-feature-grid {
+    display: none;
+}
+
+.theme-elegant-serif .about-mission-grid {
+    display: grid;
+}
+
+.theme-elegant-serif .about-mission-card {
+    border:
+        1px solid #dfd5c4;
+
+    border-radius: 0;
+}
+
+.theme-elegant-serif .about-mission-card h4 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.55rem;
+}
+
+.theme-elegant-serif .about-btn-primary {
+    border-radius: 0;
+
+    background: #d4af37;
+}
+
+.theme-elegant-serif .about-btn-secondary {
+    border-radius: 0;
+}
+
+
+/* ==========================================================
+   THEME 7 — LAYERED OFFSET
+   Overlap photos + orange accent + video
+========================================================== */
+
+.theme-layered-offset .about-showcase-section {
+    --about-accent: #f37a1f;
+    --about-heading: #29292d;
+    --about-text: #737373;
+
+    background: #ffffff;
+}
+
+.theme-layered-offset .about-media {
+    min-height: 610px;
+}
+
+.theme-layered-offset .about-image-primary {
+    top: 0;
+    left: 0;
+
+    width: 79%;
+    height: 475px;
+
+    border-radius: 20px;
+}
+
+.theme-layered-offset .about-image-secondary {
+    right: 0;
+    bottom: 0;
+
+    width: 60%;
+    height: 300px;
+
+    border:
+        7px solid #ffffff;
+
+    border-radius: 18px;
+}
+
+.theme-layered-offset .about-play-btn {
+    display: flex;
+
+    left: 35%;
+    bottom: 190px;
+
+    width: 100px;
+    height: 100px;
+
+    background: #f37a1f;
+}
+
+.theme-layered-offset .about-feature-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 480px;
+}
+
+.theme-layered-offset .about-feature-item {
+    padding-bottom: 13px;
+
+    border-bottom:
+        1px solid #ececec;
+}
+
+.theme-layered-offset .about-feature-item:nth-child(n+3) {
+    display: none;
+}
+
+.theme-layered-offset .about-feature-icon {
+    color: #f37a1f;
+
+    background:
+        rgba(243,122,31,.1);
+
+    border-radius: 12px;
+}
+.theme-layered-offset .about-buttons{
+    display: none;
+}
+.theme-layered-offset .about-founder {
+    display: flex;
+}
+
+.theme-layered-offset .about-contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-layered-offset .about-btn-secondary {
+    display: none;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 991.98px) {
+
+    .about-showcase-section {
+        padding: 75px 0;
+    }
+
+    .about-media {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .about-content {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+    .theme-curved-scalloped .about-showcase-row {
+        flex-direction: row;
+    }
+
+    .theme-curved-scalloped .about-content {
+        margin-top: 25px;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+
+    .about-showcase-section {
+        padding: 60px 0;
+    }
+
+    .about-title {
+        font-size: 2.3rem;
+
+        letter-spacing: -1px;
+    }
+
+    .about-description {
+        margin-top: 18px;
+    }
+
+    .about-feature-grid,
+    .about-mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-media,
+    .theme-emerald-block .about-media,
+    .theme-curved-scalloped .about-media,
+    .theme-default .about-media,
+    .theme-modern-dark .about-media,
+    .theme-vibrant-cards .about-media,
+    .theme-elegant-serif .about-media,
+    .theme-layered-offset .about-media {
+        min-height: 500px;
+    }
+
+    .about-action-row {
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+    .about-showcase-section {
+        padding: 50px 0;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-media,
+    .theme-emerald-block .about-media,
+    .theme-curved-scalloped .about-media,
+    .theme-default .about-media,
+    .theme-modern-dark .about-media,
+    .theme-vibrant-cards .about-media,
+    .theme-elegant-serif .about-media,
+    .theme-layered-offset .about-media {
+        min-height: 430px;
+    }
+
+    /* Generic image reset for mobile */
+
+    .about-image-primary {
+        width: 88% !important;
+        height: 330px !important;
+
+        left: 0 !important;
+        right: auto !important;
+        top: 0 !important;
+    }
+
+    .about-image-secondary {
+        width: 55% !important;
+        height: 200px !important;
+
+        right: 0 !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: 15px !important;
+    }
+
+
+    /* Theme 3 needs third image */
+
+    .theme-default .about-image-primary {
+        width: 100% !important;
+        height: 220px !important;
+    }
+
+    .theme-default .about-image-secondary {
+        width: 48% !important;
+        height: 190px !important;
+    }
+
+    .theme-default .about-image-tertiary {
+        width: 48%;
+        height: 190px;
+
+        right: 0;
+        bottom: 15px;
+    }
+
+
+    /* Dark */
+
+    .theme-modern-dark .about-stat-card {
+        width: 150px;
+        height: 150px;
+
+        top: 20px;
+
+        padding: 18px;
+    }
+
+    .theme-modern-dark .about-stat-card strong::before {
+        font-size: 2.8rem;
+    }
+
+
+    /* Luxury */
+
+    .theme-elegant-serif .about-image-primary {
+        width: 100% !important;
+        height: 410px !important;
+    }
+
+    .theme-elegant-serif .about-stat-card {
+        left: 15px;
+        right: 15px;
+
+        width: auto;
+
+        bottom: 20px;
+    }
+
+
+    /* Offset */
+
+    .theme-layered-offset .about-play-btn {
+        width: 75px;
+        height: 75px;
+
+        left: 28%;
+        bottom: 135px;
+    }
+
+
+    .about-founder,
+    .about-contact-info {
+        width: 100%;
+    }
+
+    .about-contact-info {
+        padding-left: 0;
+
+        border-left: 0;
+    }
+}

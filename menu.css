@@ -1,0 +1,1139 @@
+
+
+    /* ==========================================================================
+        4A. RESPONSIVE MULTI-THEME MENU SECTION
+        One HTML structure; all 7 layouts are controlled by the existing body theme class.
+        ========================================================================== */
+    .menu-section {
+        --menu-accent: #1ba085;
+        --menu-accent-2: #ffc107;
+        --menu-top-bg: #ffffff;
+        --menu-top-color: #4b5563;
+        --menu-main-bg: #ffffff;
+        --menu-main-color: #111827;
+        --menu-main-muted: #667085;
+        --menu-border: #edf0f3;
+        --menu-action-bg: var(--menu-accent);
+        --menu-action-color: #ffffff;
+        --menu-radius: 8px;
+        position: relative;
+        z-index: 1030;
+        background: var(--menu-main-bg);
+        border-bottom: 1px solid var(--menu-border);
+        font-family: var(--font-family);
+    }
+
+    .menu-section a {
+        text-decoration: none;
+    }
+
+    .menu-topbar {
+        display: none;
+        background: var(--menu-top-bg);
+        color: var(--menu-top-color);
+        border-bottom: 1px solid var(--menu-border);
+    }
+
+    .menu-topbar-inner {
+        min-height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .menu-top-brand,
+    .menu-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        min-width: max-content;
+    }
+
+    .menu-top-brand {
+        display: none;
+    }
+
+    .menu-brand-mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--menu-accent);
+        color: #ffffff;
+        font-size: 1.35rem;
+        flex: 0 0 auto;
+    }
+
+    .menu-brand-copy {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.05;
+    }
+
+    .menu-brand-copy strong {
+        color: var(--menu-main-color);
+        font-size: 1.55rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+    }
+
+    .menu-brand-copy small {
+        color: var(--menu-main-muted);
+        font-size: 0.68rem;
+        font-weight: 600;
+        margin-top: 0.25rem;
+        letter-spacing: 0.35px;
+    }
+
+    .menu-topbar-contact {
+        display: flex;
+        align-items: center;
+        gap: clamp(1.25rem, 3vw, 3.8rem);
+        flex: 1;
+    }
+
+    .menu-contact-item {
+        display: none;
+        align-items: center;
+        gap: 0.65rem;
+        color: inherit;
+        white-space: nowrap;
+    }
+
+    .menu-contact-item > i {
+        color: var(--menu-accent);
+        font-size: 1.15rem;
+    }
+
+    .menu-contact-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.15;
+    }
+
+    .menu-contact-text strong {
+        color: inherit;
+        font-size: 0.82rem;
+        font-weight: 700;
+    }
+
+    .menu-contact-text small {
+        color: inherit;
+        opacity: 0.72;
+        font-size: 0.76rem;
+        margin-top: 0.25rem;
+    }
+
+    .menu-social {
+        display: none;
+        align-items: center;
+        gap: 0.85rem;
+    }
+
+    .menu-social a {
+        color: inherit;
+        font-size: 1rem;
+        line-height: 1;
+        transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .menu-social a:hover {
+        color: var(--menu-accent);
+        transform: translateY(-1px);
+    }
+
+    .menu-mainbar {
+        background: var(--menu-main-bg);
+        padding: 0;
+        min-height: 82px;
+    }
+
+    .menu-mainbar > .container {
+        min-height: inherit;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-section .navbar-brand {
+        margin-right: 2rem;
+        padding: 0;
+    }
+
+    .menu-grid-trigger {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid currentColor;
+        color: var(--menu-main-color);
+        flex: 0 0 auto;
+        font-size: 1.1rem;
+    }
+
+    .menu-section .menu-nav {
+        gap: clamp(0.2rem, 1.2vw, 1.35rem);
+        align-items: center;
+    }
+
+    .menu-section .menu-nav .nav-link {
+        color: var(--menu-main-color) !important;
+        font-size: 0.92rem;
+        font-weight: 600;
+        padding: 1rem 0.45rem;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .menu-section .menu-nav .nav-link:hover,
+    .menu-section .menu-nav .nav-link.active {
+        color: var(--menu-accent) !important;
+    }
+
+    .menu-link-caret {
+        font-size: 0.68rem;
+        margin-left: 0.18rem;
+        opacity: 0.72;
+        transition: transform 0.2s ease;
+    }
+
+    /* Shared dropdown system: same HTML, theme-dependent styling */
+    .menu-section {
+        --dropdown-bg: #ffffff;
+        --dropdown-text: #26313d;
+        --dropdown-muted: #667085;
+        --dropdown-border: #e8edf2;
+        --dropdown-hover-bg: #f4faf8;
+        --dropdown-radius: 10px;
+        --dropdown-shadow: 0 14px 35px rgba(15, 23, 42, 0.12);
+    }
+
+    .menu-section .menu-nav .dropdown-toggle::after {
+        display: none;
+    }
+
+    .menu-section .menu-nav .dropdown-toggle.show .menu-link-caret {
+        transform: rotate(180deg);
+    }
+
+    .menu-section .dropdown-menu {
+        min-width: 220px;
+        padding: 0.55rem;
+        margin-top: 0;
+        background: var(--dropdown-bg);
+        border: 1px solid var(--dropdown-border);
+        border-radius: var(--dropdown-radius);
+        box-shadow: var(--dropdown-shadow);
+    }
+
+    .menu-section .dropdown-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        color: var(--dropdown-text);
+        font-size: 0.86rem;
+        font-weight: 600;
+        padding: 0.68rem 0.8rem;
+        border-radius: calc(var(--dropdown-radius) - 4px);
+        transition: color 0.2s ease, background-color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .menu-section .dropdown-item i {
+        color: var(--dropdown-muted);
+        font-size: 0.72rem;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .menu-section .dropdown-item:hover,
+    .menu-section .dropdown-item:focus,
+    .menu-section .dropdown-item.active {
+        color: var(--menu-accent);
+        background: var(--dropdown-hover-bg);
+        padding-left: 0.95rem;
+    }
+
+    .menu-section .dropdown-item:hover i,
+    .menu-section .dropdown-item:focus i {
+        color: var(--menu-accent);
+        transform: translateX(2px);
+    }
+
+    .menu-section .dropdown-divider {
+        border-color: var(--dropdown-border);
+        margin: 0.35rem 0;
+    }
+
+    /* Theme 1 dropdown: clean white panel over the emerald navigation bar */
+    .theme-emerald-block .menu-section {
+        --dropdown-bg: #ffffff;
+        --dropdown-text: #19332f;
+        --dropdown-muted: #78908b;
+        --dropdown-border: #dcece8;
+        --dropdown-hover-bg: #eaf8f4;
+        --dropdown-radius: 7px;
+        --dropdown-shadow: 0 16px 34px rgba(4, 86, 74, 0.22);
+    }
+
+    /* Theme 2 dropdown: soft rounded consulting style */
+    .theme-curved-scalloped .menu-section {
+        --dropdown-bg: #ffffff;
+        --dropdown-text: #22252a;
+        --dropdown-muted: #8a9099;
+        --dropdown-border: #eceff1;
+        --dropdown-hover-bg: #f1fbf8;
+        --dropdown-radius: 18px;
+        --dropdown-shadow: 0 18px 45px rgba(24, 35, 40, 0.13);
+    }
+
+    /* Theme 3 dropdown: crisp bordered grid style */
+    .theme-default .menu-section {
+        --dropdown-bg: #ffffff;
+        --dropdown-text: #18212b;
+        --dropdown-muted: #77808a;
+        --dropdown-border: #e2e7ec;
+        --dropdown-hover-bg: #f5f7f9;
+        --dropdown-radius: 5px;
+        --dropdown-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
+    }
+
+    /* Theme 4 dropdown: dark glass panel */
+    .theme-modern-dark .menu-section {
+        --dropdown-bg: rgba(17, 24, 39, 0.98);
+        --dropdown-text: #e5e7eb;
+        --dropdown-muted: #6b7280;
+        --dropdown-border: rgba(6, 182, 212, 0.34);
+        --dropdown-hover-bg: rgba(6, 182, 212, 0.11);
+        --dropdown-radius: 10px;
+        --dropdown-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
+    }
+
+    /* Theme 5 dropdown: floating purple card */
+    .theme-vibrant-cards .menu-section {
+        --dropdown-bg: #ffffff;
+        --dropdown-text: #28324a;
+        --dropdown-muted: #8b91a4;
+        --dropdown-border: #ecebff;
+        --dropdown-hover-bg: #f4f2ff;
+        --dropdown-radius: 16px;
+        --dropdown-shadow: 0 20px 45px rgba(79, 70, 229, 0.18);
+    }
+
+    /* Theme 6 dropdown: ivory and gold luxury panel */
+    .theme-elegant-serif .menu-section {
+        --dropdown-bg: #fffdf8;
+        --dropdown-text: #342f2b;
+        --dropdown-muted: #9a8f80;
+        --dropdown-border: #d9c596;
+        --dropdown-hover-bg: #f8f1df;
+        --dropdown-radius: 0px;
+        --dropdown-shadow: 0 14px 32px rgba(90, 68, 25, 0.14);
+    }
+
+    .theme-elegant-serif .menu-section .dropdown-item {
+        font-family: 'Playfair Display', serif;
+    }
+
+    /* Theme 7 dropdown: orange-accented business panel */
+    .theme-layered-offset .menu-section {
+        --dropdown-bg: #ffffff;
+        --dropdown-text: #252a31;
+        --dropdown-muted: #8a9096;
+        --dropdown-border: #ececec;
+        --dropdown-hover-bg: #fff1ec;
+        --dropdown-radius: 4px;
+        --dropdown-shadow: 0 16px 36px rgba(255, 71, 25, 0.16);
+    }
+
+    /* Multi-level dropdown / nested submenu system */
+    .menu-section .dropdown-submenu {
+        position: relative;
+    }
+
+    .menu-section .dropdown-submenu-toggle {
+        cursor: pointer;
+    }
+
+    .menu-section .dropdown-submenu-toggle .submenu-caret {
+        font-size: 0.7rem;
+        color: var(--dropdown-muted);
+        margin-left: auto;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .menu-section .dropdown-submenu-toggle[aria-expanded="true"] .submenu-caret {
+        color: var(--menu-accent);
+    }
+
+    .menu-section .dropdown-submenu > .dropdown-menu {
+        top: -0.55rem;
+        left: calc(100% + 0.35rem);
+        margin: 0;
+    }
+
+    .menu-section .dropdown-submenu.submenu-open-left > .dropdown-menu {
+        left: auto;
+        right: calc(100% + 0.35rem);
+    }
+
+    .menu-section .dropdown-menu .dropdown-header {
+        color: var(--dropdown-muted);
+        font-size: 0.69rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.55rem 0.8rem 0.3rem;
+    }
+
+    @media (min-width: 992px) {
+        .menu-section .menu-nav .dropdown:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .menu-section .menu-nav .dropdown:hover > .dropdown-toggle .menu-link-caret {
+            transform: rotate(180deg);
+        }
+
+        .menu-section .dropdown-submenu:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .menu-section .dropdown-submenu:hover > .dropdown-submenu-toggle .submenu-caret {
+            color: var(--menu-accent);
+            transform: translateX(2px);
+        }
+    }
+
+    .menu-actions {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+    }
+
+    .menu-icon-action {
+        display: none;
+        width: 38px;
+        height: 38px;
+        align-items: center;
+        justify-content: center;
+        color: var(--menu-main-muted);
+        font-size: 1.05rem;
+    }
+
+    .menu-support {
+        display: none;
+        align-items: center;
+        gap: 0.8rem;
+        padding-left: 1.25rem;
+        border-left: 1px solid var(--menu-border);
+        color: var(--menu-main-color);
+        min-width: max-content;
+    }
+
+    .menu-support-icon {
+        width: 48px;
+        height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: var(--menu-accent);
+        color: #ffffff;
+        font-size: 1.25rem;
+        flex: 0 0 auto;
+    }
+
+    .menu-support-copy {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.15;
+    }
+
+    .menu-support-label {
+        color: var(--menu-main-muted);
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+    }
+
+    .support-label-call {
+        display: none;
+    }
+
+    .menu-support-number {
+        color: var(--menu-main-color);
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.15px;
+    }
+
+    .menu-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-height: 46px;
+        padding: 0.72rem 1.35rem;
+        border: 0;
+        border-radius: var(--menu-radius);
+        background: var(--menu-action-bg);
+        color: var(--menu-action-color) !important;
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.25px;
+        transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+        white-space: nowrap;
+    }
+
+    .menu-cta:hover {
+        transform: translateY(-1px);
+        opacity: 0.94;
+    }
+
+    .menu-cta .cta-label-touch,
+    .menu-cta .cta-label-consult,
+    .menu-cta .cta-label-luxury {
+        display: none;
+    }
+
+    .menu-section .navbar-toggler {
+        border: 1px solid var(--menu-border);
+        border-radius: 8px;
+        padding: 0.45rem 0.55rem;
+    }
+
+    .menu-section .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    /* --------------------------------------------------------------------------
+       THEME 1 - Emerald: logo/info band + solid emerald navigation band
+       Inspired by the two-row teal reference.
+       -------------------------------------------------------------------------- */
+    .theme-emerald-block .menu-section {
+        --menu-accent: #0c8f8d;
+        --menu-top-bg: #ffffff;
+        --menu-top-color: #1f2937;
+        --menu-main-bg: #108f8e;
+        --menu-main-color: #ffffff;
+        --menu-main-muted: rgba(255,255,255,0.72);
+        --menu-border: rgba(15, 118, 110, 0.15);
+        --menu-action-bg: #283243;
+        --menu-action-color: #ffffff;
+        --menu-radius: 7px;
+    }
+
+    .theme-emerald-block .menu-topbar {
+        display: block;
+        border-top: 2px solid var(--menu-accent);
+    }
+
+    .theme-emerald-block .menu-topbar-inner {
+        min-height: 104px;
+    }
+
+    .theme-emerald-block .menu-top-brand {
+        display: inline-flex;
+        margin-right: auto;
+    }
+
+    .theme-emerald-block .menu-top-brand .menu-brand-copy strong,
+    .theme-emerald-block .menu-top-brand .menu-brand-copy small {
+        color: #18202a;
+    }
+
+    .theme-emerald-block .menu-topbar-contact {
+        flex: 0 1 auto;
+        justify-content: flex-end;
+    }
+
+    .theme-emerald-block .contact-hours,
+    .theme-emerald-block .contact-online,
+    .theme-emerald-block .contact-address {
+        display: flex;
+    }
+
+    .theme-emerald-block .menu-mainbar {
+        min-height: 78px;
+    }
+
+    .theme-emerald-block .menu-mainbar .menu-brand {
+        display: none;
+    }
+
+    .theme-emerald-block .menu-grid-trigger {
+        display: inline-flex;
+        color: #ffffff;
+        border-color: rgba(255,255,255,0.55);
+        margin-right: 1rem;
+    }
+
+    .theme-emerald-block .menu-section .menu-nav {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+
+    .theme-emerald-block .menu-section .menu-nav .nav-link {
+        color: rgba(255,255,255,0.92) !important;
+    }
+
+    .theme-emerald-block .menu-section .menu-nav .nav-link:hover,
+    .theme-emerald-block .menu-section .menu-nav .nav-link.active {
+        color: #ffffff !important;
+    }
+
+    .theme-emerald-block .menu-cta .cta-label-start {
+        display: none;
+    }
+
+    .theme-emerald-block .menu-cta .cta-label-touch {
+        display: inline;
+    }
+
+    /* --------------------------------------------------------------------------
+       THEME 2 - Curved: clean single row + prominent rounded call panel
+       Inspired by the BizConsult reference.
+       -------------------------------------------------------------------------- */
+    .theme-curved-scalloped .menu-section {
+        --menu-accent: #1ba085;
+        --menu-main-bg: #ffffff;
+        --menu-main-color: #1f2937;
+        --menu-main-muted: #667085;
+        --menu-border: #eeeeee;
+        --menu-radius: 50px;
+    }
+
+    .theme-curved-scalloped .menu-mainbar {
+        min-height: 104px;
+    }
+
+    .theme-curved-scalloped .menu-brand-mark {
+        width: 54px;
+        height: 54px;
+        border-radius: 18px 8px 18px 8px;
+        box-shadow: inset 0 0 0 3px rgba(255,255,255,0.45);
+    }
+
+    .theme-curved-scalloped .menu-brand-copy strong {
+        font-size: 1.7rem;
+    }
+
+    .theme-curved-scalloped .menu-support {
+        display: flex;
+        border-left: 0;
+        padding-left: 0.6rem;
+    }
+
+    .theme-curved-scalloped .menu-support-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+    }
+
+    .theme-curved-scalloped .support-label-default {
+        display: none;
+    }
+
+    .theme-curved-scalloped .support-label-call {
+        display: inline;
+    }
+
+    .theme-curved-scalloped .menu-support-number {
+        font-size: 1.15rem;
+    }
+
+    .theme-curved-scalloped .menu-cta {
+        display: none;
+    }
+
+    /* --------------------------------------------------------------------------
+       THEME 3 - Grid/default: slim info bar + structured blue support header
+       Inspired by the BLO reference.
+       -------------------------------------------------------------------------- */
+    .theme-default .menu-section {
+        --menu-accent: #3569dd;
+        --menu-top-bg: #ffffff;
+        --menu-top-color: #51586b;
+        --menu-main-bg: #ffffff;
+        --menu-main-color: #14213b;
+        --menu-main-muted: #5d6475;
+        --menu-border: #ececec;
+    }
+
+    .theme-default .menu-topbar {
+        display: block;
+    }
+
+    .theme-default .menu-topbar-inner {
+        min-height: 54px;
+    }
+
+    .theme-default .contact-email,
+    .theme-default .contact-location {
+        display: flex;
+    }
+
+    .theme-default .menu-social-top {
+        display: flex;
+        color: #51586b;
+    }
+
+    .theme-default .menu-mainbar {
+        min-height: 118px;
+    }
+
+    .theme-default .menu-brand-mark {
+        border-radius: 4px;
+        background: transparent;
+        color: var(--menu-accent);
+        font-size: 2.2rem;
+        width: 58px;
+        height: 58px;
+    }
+
+
+    .theme-default .menu-brand-copy strong {
+        font-size: 2rem;
+        color: #14213b;
+    }
+
+    .theme-default .menu-support {
+        display: flex;
+    }
+
+    .theme-default .menu-support-icon {
+        border-radius: 2px;
+    }
+
+    .theme-default .menu-cta {
+        display: none;
+    }
+
+    /* --------------------------------------------------------------------------
+       THEME 4 - Modern dark: single dark bar + uppercase navigation + social icons
+       Inspired by the black consulting reference.
+       -------------------------------------------------------------------------- */
+    .theme-modern-dark .menu-section {
+        --menu-accent: #22d3ee;
+        --menu-main-bg: #101318;
+        --menu-main-color: #ffffff;
+        --menu-main-muted: #a6afbd;
+        --menu-border: #252b34;
+    }
+
+    .theme-modern-dark .menu-mainbar {
+        min-height: 112px;
+    }
+
+    .theme-modern-dark .menu-brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 7px;
+        background: var(--menu-accent);
+        color: #101318;
+    }
+
+    .theme-modern-dark .menu-brand-copy strong {
+        color: #ffffff;
+        font-size: 1.65rem;
+        text-transform: lowercase;
+        letter-spacing: -0.8px;
+    }
+
+    .theme-modern-dark .menu-brand-copy small {
+        display: none;
+    }
+
+    .theme-modern-dark .menu-section .menu-nav .nav-link {
+        color: #ffffff !important;
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.35px;
+    }
+
+    .theme-modern-dark .menu-section .menu-nav .nav-link:hover,
+    .theme-modern-dark .menu-section .menu-nav .nav-link.active {
+        color: var(--menu-accent) !important;
+    }
+
+    .theme-modern-dark .menu-social-main {
+        display: flex;
+        color: #ffffff;
+        margin-left: 0.75rem;
+    }
+
+    .theme-modern-dark .menu-support,
+    .theme-modern-dark .menu-cta {
+        display: none;
+    }
+
+    .theme-modern-dark .menu-section .navbar-toggler {
+        border-color: #303844;
+    }
+
+    .theme-modern-dark .menu-section .navbar-toggler-icon {
+        filter: invert(1);
+    }
+
+    /* --------------------------------------------------------------------------
+       THEME 5 - Vibrant: dark utility strip + bright clean main navigation
+       Inspired by the Creote dark-top / white-main reference.
+       -------------------------------------------------------------------------- */
+    .theme-vibrant-cards .menu-section {
+        --menu-accent: #5b50e6;
+        --menu-top-bg: #293140;
+        --menu-top-color: #ffffff;
+        --menu-main-bg: #ffffff;
+        --menu-main-color: #1f2937;
+        --menu-main-muted: #6b7280;
+        --menu-border: #eceef3;
+        --menu-action-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        --menu-action-color: #ffffff;
+        --menu-radius: 14px;
+    }
+
+    .theme-vibrant-cards .menu-topbar {
+        display: block;
+    }
+
+    .theme-vibrant-cards .menu-topbar-inner {
+        min-height: 58px;
+    }
+
+    .theme-vibrant-cards .contact-location,
+    .theme-vibrant-cards .contact-email,
+    .theme-vibrant-cards .contact-phone {
+        display: flex;
+    }
+
+    .theme-vibrant-cards .contact-phone {
+        margin-left: auto;
+    }
+
+    .theme-vibrant-cards .menu-mainbar {
+        min-height: 106px;
+    }
+
+    .theme-vibrant-cards .menu-brand-mark {
+        border-radius: 14px;
+        box-shadow: 0 8px 20px rgba(79,70,229,0.2);
+    }
+
+    .theme-vibrant-cards .menu-cta {
+        box-shadow: 0 8px 20px rgba(79,70,229,0.22);
+    }
+
+    /* --------------------------------------------------------------------------
+       THEME 6 - Elegant serif: restrained cream/gold luxury navigation
+       A seventh-layout-compatible luxury interpretation of the references.
+       -------------------------------------------------------------------------- */
+    .theme-elegant-serif .menu-section {
+        --menu-accent: #c7a43b;
+        --menu-top-bg: #2c2a29;
+        --menu-top-color: #f6f0e8;
+        --menu-main-bg: #faf8f5;
+        --menu-main-color: #2c2a29;
+        --menu-main-muted: #8c857b;
+        --menu-border: #e7dfd4;
+        --menu-action-bg: #c7a43b;
+        --menu-action-color: #ffffff;
+        --menu-radius: 0px;
+    }
+
+    .theme-elegant-serif .menu-topbar {
+        display: block;
+    }
+
+    .theme-elegant-serif .menu-topbar-inner {
+        min-height: 46px;
+    }
+
+    .theme-elegant-serif .contact-hours,
+    .theme-elegant-serif .contact-email {
+        display: flex;
+    }
+
+    .theme-elegant-serif .menu-social-top {
+        display: flex;
+        color: #f6f0e8;
+    }
+
+    .theme-elegant-serif .menu-mainbar {
+        min-height: 110px;
+        border-bottom: 1px solid #d9caa9;
+    }
+
+    .theme-elegant-serif .menu-brand-mark {
+        border-radius: 0;
+        background: transparent;
+        color: var(--menu-accent);
+        border: 1px solid var(--menu-accent);
+    }
+
+    .theme-elegant-serif .menu-brand-copy strong {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .theme-elegant-serif .menu-section .menu-nav .nav-link {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+    }
+
+    .theme-elegant-serif .menu-cta {
+        font-family: 'Inter', sans-serif;
+        border: 1px solid #c7a43b;
+    }
+
+    .theme-elegant-serif .menu-cta .cta-label-start {
+        display: none;
+    }
+
+    .theme-elegant-serif .menu-cta .cta-label-luxury {
+        display: inline;
+    }
+
+    /* --------------------------------------------------------------------------
+       THEME 7 - Layered offset: orange utility strip + white action navigation
+       Inspired by the Finbuzz reference.
+       -------------------------------------------------------------------------- */
+    .theme-layered-offset .menu-section {
+        --menu-accent: #ff4719;
+        --menu-top-bg: #ff3f13;
+        --menu-top-color: #ffffff;
+        --menu-main-bg: #ffffff;
+        --menu-main-color: #20252d;
+        --menu-main-muted: #747b85;
+        --menu-border: #ececec;
+        --menu-action-bg: #ff4719;
+        --menu-action-color: #ffffff;
+        --menu-radius: 4px;
+    }
+
+    .theme-layered-offset .menu-topbar {
+        display: block;
+    }
+
+    .theme-layered-offset .menu-topbar-inner {
+        min-height: 54px;
+    }
+
+    .theme-layered-offset .contact-location,
+    .theme-layered-offset .contact-email,
+    .theme-layered-offset .contact-phone {
+        display: flex;
+    }
+
+    .theme-layered-offset .contact-phone {
+        margin-left: auto;
+    }
+
+    .theme-layered-offset .menu-social-top {
+        display: flex;
+        color: #ffffff;
+        padding-left: 1rem;
+        border-left: 1px solid rgba(255,255,255,0.45);
+    }
+
+    .theme-layered-offset .menu-mainbar {
+        min-height: 112px;
+    }
+
+    .theme-layered-offset .menu-brand-mark {
+        border-radius: 2px;
+        background: linear-gradient(135deg, #ff4719, #f37a1f);
+    }
+
+    .theme-layered-offset .menu-search,
+    .theme-layered-offset .menu-cart {
+        display: inline-flex;
+    }
+
+    .theme-layered-offset .menu-support {
+        display: none;
+    }
+
+    .theme-layered-offset .menu-cta {
+        min-height: 50px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        box-shadow: 0 8px 20px rgba(255,71,25,0.18);
+    }
+
+    .theme-layered-offset .menu-cta .cta-label-start {
+        display: none;
+    }
+
+    .theme-layered-offset .menu-cta .cta-label-consult {
+        display: inline;
+    }
+
+    /* Responsive menu behavior shared by all seven themes */
+    @media (max-width: 1199.98px) {
+        .menu-section .menu-nav {
+            gap: 0.25rem;
+        }
+
+        .menu-section .menu-nav .nav-link {
+            font-size: 0.84rem;
+            padding-left: 0.35rem;
+            padding-right: 0.35rem;
+        }
+
+        .menu-support-copy {
+            display: none;
+        }
+
+        .menu-support {
+            padding-left: 0.75rem;
+        }
+
+        .theme-emerald-block .menu-topbar-contact {
+            gap: 1.5rem;
+        }
+
+        .theme-emerald-block .contact-address {
+            display: none;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .menu-topbar {
+            display: none !important;
+        }
+
+        .menu-mainbar,
+        .theme-emerald-block .menu-mainbar,
+        .theme-default .menu-mainbar,
+        .theme-modern-dark .menu-mainbar,
+        .theme-vibrant-cards .menu-mainbar,
+        .theme-elegant-serif .menu-mainbar,
+        .theme-layered-offset .menu-mainbar,
+        .theme-curved-scalloped .menu-mainbar {
+            min-height: 74px;
+        }
+
+        .theme-emerald-block .menu-mainbar .menu-brand {
+            display: inline-flex;
+        }
+
+        .theme-emerald-block .menu-mainbar .menu-brand-copy strong,
+        .theme-emerald-block .menu-mainbar .menu-brand-copy small {
+            color: #ffffff;
+        }
+
+        .theme-emerald-block .menu-grid-trigger {
+            display: none;
+        }
+
+        .menu-brand-mark {
+            width: 40px !important;
+            height: 40px !important;
+            font-size: 1.1rem !important;
+        }
+
+        .menu-brand-copy strong {
+            font-size: 1.35rem !important;
+        }
+
+        .menu-section .navbar-collapse {
+            width: 100%;
+            padding: 1rem 0 1.15rem;
+            border-top: 1px solid var(--menu-border);
+            margin-top: 0.85rem;
+        }
+
+        .menu-section .menu-nav {
+            align-items: stretch;
+            margin: 0 !important;
+            gap: 0;
+        }
+
+        .menu-section .menu-nav .nav-link {
+            padding: 0.6rem 0 !important;
+        }
+
+        .menu-actions {
+            width: 100%;
+            margin-left: 0;
+            padding-top: 0.85rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .menu-social-main {
+            margin-left: 0 !important;
+        }
+
+        .menu-support {
+            border-left: 0;
+            padding-left: 0;
+        }
+
+        .theme-curved-scalloped .menu-support-copy,
+        .theme-default .menu-support-copy {
+            display: flex;
+        }
+
+        .theme-emerald-block .menu-section .navbar-toggler {
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .theme-emerald-block .menu-section .navbar-toggler-icon {
+            filter: invert(1);
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .menu-section .dropdown-menu {
+            position: static !important;
+            transform: none !important;
+            width: 100%;
+            min-width: 0;
+            margin: 0 0 0.45rem;
+            padding: 0.35rem;
+            box-shadow: none;
+        }
+
+        .menu-section .dropdown-item {
+            padding: 0.62rem 0.75rem;
+        }
+
+        .menu-section .dropdown-submenu > .dropdown-menu {
+            display: none;
+            margin: 0.2rem 0 0.4rem 0.75rem;
+            width: calc(100% - 0.75rem);
+            border-left: 2px solid var(--menu-accent);
+            border-radius: max(0px, calc(var(--dropdown-radius) - 3px));
+        }
+
+        .menu-section .dropdown-submenu > .dropdown-menu.show {
+            display: block;
+        }
+
+        .menu-section .dropdown-submenu-toggle[aria-expanded="true"] .submenu-caret {
+            transform: rotate(90deg);
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .menu-section .navbar-brand {
+            margin-right: 0.75rem;
+        }
+
+        .menu-brand-copy small {
+            display: none;
+        }
+
+        .menu-actions {
+            gap: 0.6rem;
+        }
+    }

@@ -1,0 +1,719 @@
+/* ==========================================================================
+        5. WORK PROCESS / STEP SECTION STYLES (MATCHING REFERENCE DESIGNS)
+        ========================================================================== */
+    .work-process-section {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+        background-color: transparent;
+    }
+
+    .process-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+
+    .process-tag {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ff5722;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+    }
+
+    .process-heading {
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        font-weight: 800;
+        color: #0f172a;
+        letter-spacing: -0.5px;
+        margin-bottom: 1rem;
+    }
+
+    .process-subtext {
+        font-size: 1rem;
+        color: #475569;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    /* Process Flow Container Styles */
+    .process-step-card {
+        text-align: center;
+        padding: 1.5rem 1rem;
+        position: relative;
+    }
+
+    .process-icon-box {
+        width: 90px;
+        height: 90px;
+        background-color: #ff5722;
+        color: #ffffff;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        margin: 0 auto 1.5rem auto;
+        box-shadow: 0 10px 25px rgba(255, 87, 34, 0.25);
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    .process-badge-num {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: #ffffff;
+        color: #ff5722;
+        font-size: 0.75rem;
+        font-weight: 800;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border: 2px solid #ff5722;
+    }
+
+    .process-step-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 0.5rem;
+    }
+
+    .process-step-subtitle {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #ff5722;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .process-step-desc {
+        font-size: 0.925rem;
+        color: #475569;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Dynamic Theme Variations for Steps via CSS Variables / Classes */
+    .theme-curved-scalloped .process-icon-box { background-color: #1ba085; box-shadow: 0 10px 25px rgba(27, 160, 133, 0.25); }
+    .theme-curved-scalloped .process-badge-num, .theme-curved-scalloped .process-step-subtitle { color: #1ba085; border-color: #1ba085; }
+    .theme-curved-scalloped .process-tag { color: #1ba085; }
+
+    .theme-modern-dark .process-icon-box { background-color: #06b6d4; color: #0b0f19; box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3); }
+    .theme-modern-dark .process-badge-num, .theme-modern-dark .process-step-subtitle { color: #06b6d4; border-color: #06b6d4; }
+    .theme-modern-dark .process-tag { color: #06b6d4; }
+
+    .theme-vibrant-cards .process-icon-box { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3); }
+    .theme-vibrant-cards .process-badge-num, .theme-vibrant-cards .process-step-subtitle { color: #4f46e5; border-color: #4f46e5; }
+    .theme-vibrant-cards .process-tag { color: #4f46e5; }
+
+    .theme-elegant-serif .process-icon-box { background-color: #d4af37; box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3); }
+    .theme-elegant-serif .process-badge-num, .theme-elegant-serif .process-step-subtitle { color: #d4af37; border-color: #d4af37; }
+    .theme-elegant-serif .process-tag { color: #d4af37; }
+
+    .theme-layered-offset .process-icon-box { background-color: #f37a1f; box-shadow: 0 10px 25px rgba(243, 122, 31, 0.3); }
+    .theme-layered-offset .process-badge-num, .theme-layered-offset .process-step-subtitle { color: #f37a1f; border-color: #f37a1f; }
+    .theme-layered-offset .process-tag { color: #f37a1f; }
+
+    /* ==========================================================================
+        6. STATS SECTION & CARDS
+        ========================================================================== */
+    .stats-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stats-section .container {
+        background-color: #1ba085;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.4s ease, border-radius 0.4s ease;
+    }
+
+    .stat-card {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        backdrop-filter: none;
+        padding: 80px 0;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .stat-number {
+        font-size: 3.2rem;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.95rem;
+        color: #ffffff;
+        margin: 0;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* end layout   */
+    /* ==========================================================================
+   THEME: CURVED & SCALLOPED (Card-Box Layout with Large Watermark Numbers)
+   ========================================================================== */
+
+.theme-curved-scalloped.work-process-section {
+    background-color: #eef2f3; /* Light grey-teal background matching reference */
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adjust grid row layout to handle 4 steps nicely or wrap nicely */
+.theme-curved-scalloped .row {
+    row-gap: 2rem;
+}
+
+/* Card Container */
+.theme-curved-scalloped .process-step-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 3rem 2rem 2.5rem 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+    text-align: left; /* Align text to the left like the reference */
+    height: 100%;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.theme-curved-scalloped .process-step-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Hide original top icon box and turn it into a decorative divider line */
+.theme-curved-scalloped .process-icon-box {
+    display: none; /* Hide the default orange/teal icon box from HTML */
+}
+
+/* Repurpose subtitle area or create a custom underline effect */
+.theme-curved-scalloped .process-step-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f2522;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+/* Creating the green horizontal separator bar under the title */
+.theme-curved-scalloped .process-step-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #1ba085;
+    margin-top: 1rem;
+    border-radius: 2px;
+}
+
+/* Hide subtitle since it's not part of this layout style, or style it as a description prefix */
+.theme-curved-scalloped .process-step-subtitle {
+    display: none; 
+}
+
+/* Description Text */
+.theme-curved-scalloped .process-step-desc {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Large Background Watermark Numbers (01, 02, 03, 04) */
+.theme-curved-scalloped .process-step-card::before {
+    content: attr(data-step); /* We can pull this or use CSS counters/classes */
+    position: absolute;
+    bottom: -10px;
+    right: 15px;
+    font-size: 7rem;
+    font-weight: 900;
+    color: rgba(27, 160, 133, 0.12);
+    line-height: 1;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Fallback hardcoded numbers matching badge-num content if data attribute isn't set */
+.theme-curved-scalloped .col-12:nth-child(1) .process-step-card::before { content: "01"; }
+.theme-curved-scalloped .col-12:nth-child(2) .process-step-card::before { content: "02"; }
+.theme-curved-scalloped .col-12:nth-child(3) .process-step-card::before { content: "03"; }
+.theme-curved-scalloped .col-12:nth-child(4) .process-step-card::before { content: "04"; }
+
+/* Hide the badge inside the hidden icon box */
+.theme-curved-scalloped .process-badge-num {
+    display: none;
+}
+
+/* Header typography modifications */
+.theme-curved-scalloped .process-tag {
+    color: #1ba085;
+    background: rgba(27, 160, 133, 0.1);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+}
+
+.theme-curved-scalloped .process-heading {
+    color: #0f2522;
+    font-weight: 800;
+}
+
+
+/* end layout  */
+
+.theme-clean-grid .work-process-section {
+    padding: 80px 0;
+    background-color: #fff;
+    font-family: inherit;
+}
+
+.theme-clean-grid .process-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.theme-clean-grid .process-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #7367f0;
+    background: rgba(115, 103, 240, 0.1);
+    padding: 6px 14px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+.theme-clean-grid .process-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.theme-clean-grid .process-subtext {
+    color: #6c757d;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.theme-clean-grid .process-step-card {
+    text-align: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+
+.theme-clean-grid .process-icon-box {
+    width: 140px;
+    height: 140px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.theme-clean-grid .process-icon-box i {
+    font-size: 40px;
+    color: #7367f0;
+}
+
+.theme-clean-grid .process-badge-num {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    background: #7367f0;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: lowercase;
+}
+
+.theme-clean-grid .process-step-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fcf8f2;
+    margin-bottom: 8px;
+}
+
+.theme-clean-grid .process-step-subtitle {
+    display: none; /* Hidden to match the minimalist screenshot design, remove if needed */
+}
+
+.theme-clean-grid .process-step-desc {
+    color: #fcf8f2;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* end layout  */
+.theme-clean-grid .work-process-section {
+    padding: 80px 0;
+}
+
+ .theme-clean-grid .process-step-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px 25px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    z-index: 2;
+}
+
+/* Creates the layered solid background box behind the card */
+.theme-clean-grid .process-step-card::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0.85;
+}
+
+/* Dynamic background tones per card index */
+.theme-clean-grid .col-12:nth-child(1) .process-step-card::before { background-color: #6a994e; }
+.theme-clean-grid .col-12:nth-child(2) .process-step-card::before { background-color: #bc6c25; }
+.theme-clean-grid .col-12:nth-child(3) .process-step-card::before { background-color: #dda15e; }
+.theme-clean-grid .col-12:nth-child(4) .process-step-card::before { background-color: #588157; }
+
+.theme-clean-grid .process-icon-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme-clean-grid .process-icon-box i {
+    font-size: 55px;
+    color: #333;
+}
+
+.process-step-card .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 30px;
+}
+/* ==========================================================================
+   WORK PROCESS SECTION (.theme-layered-offset)
+   ========================================================================== */
+
+.work-process-section {
+    padding: 100px 0;
+}
+
+.process-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 70px;
+}
+
+.process-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ff5722;
+    margin-bottom: 12px;
+}
+
+.process-heading {
+    font-size: 38px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.process-subtext {
+    font-size: 15px;
+    color: #777777;
+    line-height: 1.6;
+}
+
+/* Card Styling with Bottom Line & Layered Offset Support */
+.theme-layered-offset .process-step-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 60px 25px 35px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0px 1px rgb(0 0 0 / 20%);
+    margin-top: 45px; 
+    border-bottom: 3px solid transparent;
+}
+
+/* Floating Icon Box with Top Semi-Circle Arc */
+.theme-layered-offset .process-icon-box {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 84px;
+    height: 84px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Creating the semi-circle colored top border around the icon */
+.theme-layered-offset .process-icon-box::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: inherit;
+    border-left-color: inherit;
+    transform: rotate(45deg);
+}
+
+.theme-layered-offset .process-icon-box i {
+    font-size: 26px;
+    color: #333333;
+    z-index: 1;
+}
+
+/* Typography & Content Layout */
+.theme-layered-offset .process-step-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.theme-layered-offset .process-step-subtitle {
+    display: none; /* Hidden to match clean screenshot layout, or can be repurposed */
+}
+
+.theme-layered-offset .process-step-desc {
+    font-size: 14px;
+    color: #777777;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Reusing .process-badge-num as the bottom colored STEP tag box */
+.theme-layered-offset .process-badge-num {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding: 6px 18px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+/* Dynamic Step Colors & Bottom Accents */
+/* Step 1: Orange */
+.theme-layered-offset .col-12:nth-child(1) .process-icon-box { color: #ff5722; }
+.theme-layered-offset .col-12:nth-child(1) .process-step-card { border-bottom-color: #ff5722; }
+.theme-layered-offset .col-12:nth-child(1) .process-badge-num { background-color: #ff5722; 
+    top: 235px;
+    position: absolute;
+    border-color: #ff5722;
+    padding: 15px 50px;
+    left: -5px;
+    display: flex; }
+
+/* Step 2: Green */
+.theme-layered-offset .col-12:nth-child(2) .process-icon-box { color: #8bc34a; }
+.theme-layered-offset .col-12:nth-child(2) .process-step-card { border-bottom-color: #8bc34a; }
+.theme-layered-offset .col-12:nth-child(2) .process-badge-num { background-color: #8bc34a; 
+    top: 235px;
+    position: absolute;
+    border-color: #8bc34a;
+    padding: 15px 50px;
+    left: -5px;
+    display: flex; }
+
+/* Step 3: Blue */
+.theme-layered-offset .col-12:nth-child(3) .process-icon-box { color: #2196f3; }
+.theme-layered-offset .col-12:nth-child(3) .process-step-card { border-bottom-color: #2196f3; }
+.theme-layered-offset .col-12:nth-child(3) .process-badge-num {     
+    background-color: #2196f3;
+    top: 235px;
+    position: absolute;
+    border-color: #2196f3;
+    padding: 15px 50px;
+    left: -5px;
+    display: flex; }
+
+/* Step 4: Purple / Default fallback */
+.theme-layered-offset .col-12:nth-child(4) .process-icon-box { color: #9c27b0; }
+.theme-layered-offset .col-12:nth-child(4) .process-step-card { border-bottom-color: #9c27b0; }
+.theme-layered-offset .col-12:nth-child(4) .process-badge-num { background-color: #9c27b0; 
+    top: 235px;
+    position: absolute;
+    border-color: #9c27b0;
+    padding: 15px 50px;
+    left: -5px;
+    display: flex; }
+
+
+
+
+    /* end section  */
+
+    .theme-elegant-serif {
+    background-color: #f8f9fc;
+    padding: 80px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.theme-elegant-serif .container {
+    max-width: 1200px;
+}
+
+.theme-elegant-serif .process-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.theme-elegant-serif .process-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6c757d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.theme-elegant-serif .process-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.theme-elegant-serif .process-subtext {
+    font-size: 15px;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Wrapper Card Container simulating the look in the screenshot */
+
+.theme-elegant-serif .process-step-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    height: 100%;
+}
+
+/* Icon Box Top */
+.theme-elegant-serif .process-icon-box {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 25px auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background: #f1f5f9;
+    color: #333333;
+    position: relative;
+}
+
+/* Color variations for icons matching steps */
+.theme-elegant-serif .col-12:nth-child(1) .process-icon-box { color: #84cc16; background: #ecfccb; }
+.theme-elegant-serif .col-12:nth-child(2) .process-icon-box { color: #10b981; background: #d1fae5; }
+.theme-elegant-serif .col-12:nth-child(3) .process-icon-box { color: #06b6d4; background: #cffafe; }
+.theme-elegant-serif .col-12:nth-child(4) .process-icon-box { color: #3b82f6; background: #dbeafe; }
+
+.theme-elegant-serif .process-badge-num {
+    display: none; /* Replaced by the ribbon look below */
+}
+
+/* Middle Connected Gradient Ribbon / Bar Elements */
+.theme-elegant-serif .process-step-card::before {
+    content: attr(data-step);
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding: 14px 10px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Step ribbon colors matching screenshot layout */
+.theme-elegant-serif .col-12:nth-child(1) .process-step-card::before { background: linear-gradient(135deg, #a3e635, #84cc16); content: "STEP 01"; }
+.theme-elegant-serif .col-12:nth-child(2) .process-step-card::before { background: linear-gradient(135deg, #34d399, #10b981); content: "STEP 02"; }
+.theme-elegant-serif .col-12:nth-child(3) .process-step-card::before { background: linear-gradient(135deg, #22d3ee, #06b6d4); content: "STEP 03"; }
+.theme-elegant-serif .col-12:nth-child(4) .process-step-card::before { background: linear-gradient(135deg, #60a5fa, #3b82f6); content: "STEP 04"; }
+
+/* Typography */
+.theme-elegant-serif .process-step-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.theme-elegant-serif .process-step-subtitle {
+    display: none; /* Hide old subtitle to strictly match reference structure */
+}
+
+.theme-elegant-serif .process-step-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
