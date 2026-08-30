@@ -22,6 +22,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme
 <!-- Magnific Popup CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
+<link rel="stylesheet" href="menu.css">
+<link rel="stylesheet" href="page-header.css">
 <link rel="stylesheet" href="about.css">
 <link rel="stylesheet" href="feature.css">
 <link rel="stylesheet" href="testimonial.css">
@@ -36,6 +38,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme
 <link rel="stylesheet" href="footer.css">
 <link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="faq.css">
+<link rel="stylesheet" href="steps.css">
+<link rel="stylesheet" href="why-choose.css">
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <style>
@@ -134,13 +138,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme
     transform: translateY(-1px);
 }
 
-.theme-emerald-block .navbar-toggler {
+/* .theme-emerald-block .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.4);
 }
 
 .theme-emerald-block .navbar-toggler-icon {
     filter: invert(1);
-}
+} */
 
 .theme-emerald-block .cta-btn-1 {
     display: inline-flex !important;
@@ -644,7 +648,7 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease, font-size 0.3s ease;
 }
 
-.site-header {
+/* .site-header {
     background-color: var(--header-bg);
     border-bottom: var(--header-border);
     transition: background-color 0.4s ease, border 0.4s ease;
@@ -665,7 +669,7 @@ body {
 .nav-link:hover,
 .nav-link.active {
     color: var(--nav-link-hover, var(--text-main)) !important;
-}
+} */
 
 .btn-theme {
     background: var(--btn-bg);
@@ -933,142 +937,589 @@ body {
 </div>
 </div>
 
-<!-- HEADER SECTION -->
-<header class="site-header sticky-top">
-<nav class="navbar navbar-expand-lg py-3">
-    <div class="container">
-        <a class="navbar-brand fs-4" href="#">EduPulse</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Instructors</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-            </ul>
-            <a href="#" class="btn btn-theme px-4 py-2">Get Started</a>
+<!-- HEADER / MENU SECTION
+     Single HTML markup. The existing body theme class changes the complete menu layout. -->
+<header class="site-header menu-section sticky-top">
+
+    <!-- Optional utility / information row. CSS shows the correct content per theme. -->
+    <div class="menu-topbar">
+        <div class="container">
+            <div class="menu-topbar-inner">
+                <a class="menu-top-brand" href="#" aria-label="EduPulse home">
+                    <span class="menu-brand-mark"><i class="bi bi-mortarboard-fill"></i></span>
+                    <span class="menu-brand-copy">
+                        <strong>EduPulse</strong>
+                        <small>Learning Platform</small>
+                    </span>
+                </a>
+
+                <div class="menu-topbar-contact">
+                    <a class="menu-contact-item contact-location" href="#">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span class="menu-contact-text">
+                            <strong>Location</strong>
+                            <small>Durham Street, FL 33010</small>
+                        </span>
+                    </a>
+
+                    <a class="menu-contact-item contact-email" href="mailto:support@edupulse.com">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span class="menu-contact-text">
+                            <strong>Email</strong>
+                            <small>support@edupulse.com</small>
+                        </span>
+                    </a>
+
+                    <span class="menu-contact-item contact-hours">
+                        <i class="bi bi-calendar2-week"></i>
+                        <span class="menu-contact-text">
+                            <strong>8:00AM - 6:00PM</strong>
+                            <small>Monday to Saturday</small>
+                        </span>
+                    </span>
+
+                    <span class="menu-contact-item contact-online">
+                        <i class="bi bi-headset"></i>
+                        <span class="menu-contact-text">
+                            <strong>Online Services 24/7</strong>
+                            <small>+1 (555) 009-8877</small>
+                        </span>
+                    </span>
+
+                    <span class="menu-contact-item contact-address">
+                        <i class="bi bi-map"></i>
+                        <span class="menu-contact-text">
+                            <strong>Central Learning Hub</strong>
+                            <small>New York, NY 941</small>
+                        </span>
+                    </span>
+
+                    <a class="menu-contact-item contact-phone" href="tel:+15550098877">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span class="menu-contact-text">
+                            <strong>Hotline Number</strong>
+                            <small>+1 (555) 009-8877</small>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="menu-social menu-social-top" aria-label="Social links">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+
+    <!-- Main navigation row shared by every theme. -->
+    <nav class="navbar navbar-expand-lg menu-mainbar">
+        <div class="container">
+            <a class="menu-grid-trigger" href="#" aria-label="Open all sections">
+                <i class="bi bi-grid-fill"></i>
+            </a>
+
+            <a class="navbar-brand menu-brand" href="#" aria-label="EduPulse home">
+                <span class="menu-brand-mark"><i class="bi bi-mortarboard-fill"></i></span>
+                <span class="menu-brand-copy">
+                    <strong>EduPulse</strong>
+                    <small>Learning Platform</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav menu-nav mx-auto mb-0">
+                    <!-- HOME: first level + second/third level dropdowns -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Home <i class="bi bi-chevron-down menu-link-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Home 1</a></li>
+                            <li><a class="dropdown-item" href="#">Home 2</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    More Home Pages <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Home 3</a></li>
+                                    <li><a class="dropdown-item" href="#">Home 4</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                            Landing Pages <i class="bi bi-chevron-right submenu-caret"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Course Landing</a></li>
+                                            <li><a class="dropdown-item" href="#">Instructor Landing</a></li>
+                                            <li><a class="dropdown-item" href="#">Scholarship Landing</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- COURSES: multiple nested groups -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses <i class="bi bi-chevron-down menu-link-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">All Courses</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    Course Layouts <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Course Grid</a></li>
+                                    <li><a class="dropdown-item" href="#">Course List</a></li>
+                                    <li><a class="dropdown-item" href="#">Course Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    Course Details <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Standard Course</a></li>
+                                    <li><a class="dropdown-item" href="#">Video Course</a></li>
+                                    <li><a class="dropdown-item" href="#">Live Course</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    Categories <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Programming</a></li>
+                                    <li><a class="dropdown-item" href="#">Business</a></li>
+                                    <li><a class="dropdown-item" href="#">Design</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Instructors</a></li>
+
+                    <!-- ABOUT: nested company/team/career menus -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About <i class="bi bi-chevron-down menu-link-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    Company <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                                    <li><a class="dropdown-item" href="#">Mission &amp; Vision</a></li>
+                                    <li><a class="dropdown-item" href="#">Our History</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    Our Team <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Leadership</a></li>
+                                    <li><a class="dropdown-item" href="#">Instructors</a></li>
+                                    <li><a class="dropdown-item" href="#">Advisors</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    Career <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Open Positions</a></li>
+                                    <li><a class="dropdown-item" href="#">Internship</a></li>
+                                    <li><a class="dropdown-item" href="#">Life at EduPulse</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- BLOG: multi-level layouts, single blog and details -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Blog <i class="bi bi-chevron-down menu-link-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    Blog Layouts <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Blog Grid</a></li>
+                                    <li><a class="dropdown-item" href="#">Blog List</a></li>
+                                    <li><a class="dropdown-item" href="#">Blog Masonry</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    Single Blog <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Standard Post</a></li>
+                                    <li><a class="dropdown-item" href="#">Full Width Post</a></li>
+                                    <li><a class="dropdown-item" href="#">Video Post</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                    Blog Details <i class="bi bi-chevron-right submenu-caret"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Left Sidebar</a></li>
+                                    <li><a class="dropdown-item" href="#">Right Sidebar</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-submenu-toggle" href="#" aria-expanded="false">
+                                            Post Formats <i class="bi bi-chevron-right submenu-caret"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Image Post</a></li>
+                                            <li><a class="dropdown-item" href="#">Gallery Post</a></li>
+                                            <li><a class="dropdown-item" href="#">Audio Post</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Blog Category</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="menu-actions">
+                    <div class="menu-social menu-social-main" aria-label="Social links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+
+                    <a class="menu-icon-action menu-search" href="#" aria-label="Search"><i class="bi bi-search"></i></a>
+                    <a class="menu-icon-action menu-cart" href="#" aria-label="Cart"><i class="bi bi-cart-fill"></i></a>
+
+                    <a class="menu-support" href="tel:+15550098877">
+                        <span class="menu-support-icon"><i class="bi bi-telephone-fill"></i></span>
+                        <span class="menu-support-copy">
+                            <span class="menu-support-label support-label-default">Contact for support</span>
+                            <span class="menu-support-label support-label-call">Call Now</span>
+                            <span class="menu-support-number">+1 (555) 009-8877</span>
+                        </span>
+                    </a>
+
+                    <a href="#" class="menu-cta">
+                        <i class="bi bi-chat-left-text"></i>
+                        <span class="cta-label-start">Get Started</span>
+                        <span class="cta-label-touch">Get In Touch</span>
+                        <span class="cta-label-consult">Get Consulting</span>
+                        <span class="cta-label-luxury">Explore Courses</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 </header>
 
 <main>
 
-<!-- ==========================================================================
-INTRO / ABOUT SECTION (Switches dynamically based on Theme 1 vs Theme 7 Offset)
-========================================================================== -->
-<section class="contribution-section py-5">
+    <!-- =========================================================
+     INNER PAGE HEADER / BREADCRUMB
+     Single HTML for all 7 themes
+========================================================== -->
+<section class="inner-page-header">
+    <div class="inner-page-header-bg"></div>
+    <div class="inner-page-header-overlay"></div>
+
+    <!-- Decorative Elements -->
+    <div class="page-header-decoration decoration-one"></div>
+    <div class="page-header-decoration decoration-two"></div>
+    <div class="page-header-decoration decoration-three"></div>
+
     <div class="container">
+        <div class="inner-page-header-content">
 
-        <!-- Standard / Theme 1 Layout Container -->
-        <div class="standard-intro-content">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div class="image-composition-wrapper">
-                        <div class="accent-bar-vertical"></div>
-                        <div class="image-box primary-image">
-                            <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80"
-                                alt="Islamic Center Exterior">
-                        </div>
-                        <div class="image-box secondary-image shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80"
-                                alt="Masjid Interior">
-                        </div>
-                    </div>
-                </div>
+            <span class="page-header-eyebrow">
+                Welcome to EduPulse
+            </span>
 
-                <div class="col-lg-6">
-                    <div class="content-wrapper">
-                        <span class="section-subtitle">ISLAMIC CENTER OF DELTONA</span>
-                        <h2 class="section-title">Your Contribution Creates Generations of Worship Tomorrow</h2>
+            <h1 class="page-header-title">
+                About Us
+            </h1>
 
-                        <p class="section-desc">
-                            The Islamic Center of Deltona is a welcoming masjid and community center serving
-                            Muslims in Deltona, DeBary, Orange City, Sanford and nearby Central Florida
-                            communities.
-                        </p>
+            <p class="page-header-description">
+                Learn more about our company, our mission and the people behind our success.
+            </p>
 
-                        <p class="section-desc">
-                            Located at 420 Summerhaven Dr. DeBary, FL 32713, our masjid offers five daily
-                            prayers, Friday Jumu'ah prayer, Islamic classes, community gatherings, Ramadan
-                            programs, Eid salah, Janaza services, and burial support through the graveyard next
-                            to the masjid.
-                        </p>
+            <nav class="page-breadcrumb" aria-label="breadcrumb">
+                <a href="#">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span>Home</span>
+                </a>
 
-                        <p class="section-desc">
-                            Join us for prayer, learning, brotherhood, sisterhood and service to the community.
-                        </p>
+                <span class="breadcrumb-separator">
+                    <i class="bi bi-chevron-right"></i>
+                </span>
 
-                        <div class="action-buttons">
-                            <a href="#" class="btn btn-custom-green">Read More</a>
-                            <a href="#" class="btn btn-custom-yellow">Donate Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <span class="breadcrumb-current">
+                    About Us
+                </span>
+            </nav>
+
         </div>
-
-        <!-- Theme 7: Offset Layout Intro Container (Hidden by default, shown when Theme 7 is active) -->
-        <div class="offset-intro-content d-none">
-            <div class="row align-items-center g-5">
-                <!-- Left Column: Layered Offset Grid with Scalloped Badge -->
-                <div class="col-lg-6">
-                    <div class="offset-intro-wrapper">
-                        <div class="offset-img-grid">
-                            <div class="offset-img-box">
-                                <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80"
-                                    alt="Construction Work">
-                            </div>
-                            <div class="offset-img-box">
-                                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80"
-                                    alt="Roofing Professional">
-                            </div>
-                            <div class="offset-img-box full-width">
-                                <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80"
-                                    alt="Framing & Carpentry">
-                            </div>
-                        </div>
-                        <!-- Scalloped Badge Overlay -->
-                        <div class="scalloped-badge">
-                            <i class="bi bi-patch-check-fill"></i>
-                            <span>Licensed & Certified Experts</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Content & Offset Buttons -->
-                <div class="col-lg-6">
-                    <div class="content-wrapper">
-                        <span class="section-subtitle">WELCOME TO OUR FIRM</span>
-                        <h2 class="section-title">Your Local <span>Roofing & Remodeling</span> Experts</h2>
-
-                        <p class="section-desc">
-                            Welcome to Sunlite Roofing & Remodeling Services, your one-stop shop for
-                            comprehensive roofing and remodeling services. We specialize in both residential
-                            roofing and remodeling, offering various types of services for new construction and
-                            existing buildings.
-                        </p>
-
-                        <p class="section-desc">
-                            You can get roofing services including new and replacement roofing to ensure that
-                            your building stays protected from the elements. We understand that your time and
-                            money are valuable, so we work efficiently and effectively to ensure completed
-                            projects.
-                        </p>
-
-                        <div class="action-buttons">
-                            <a href="#" class="btn btn-custom-offset-primary">About Us</a>
-                            <a href="#" class="btn btn-custom-offset-secondary">Our Services</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
+
+
+
+
+
+
+
+<!-- =========================================================
+    ABOUT US SECTION
+    Single HTML structure for all 7 themes
+========================================================= -->
+<section class="about-showcase-section">
+    <div class="container">
+        <div class="row align-items-center g-5 about-showcase-row">
+
+            <!-- =================================================
+                IMAGE / MEDIA SIDE
+            ================================================== -->
+            <div class="col-12 col-lg-6 about-media-col">
+                <div class="about-media">
+
+                    <!-- Decorative Shape -->
+                    <div class="about-media-shape"></div>
+
+                    <!-- Main Image -->
+                    <div class="about-image about-image-primary">
+                        <img
+                            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+                            alt="Professional Business Team"
+                        >
+                    </div>
+
+                    <!-- Secondary Image -->
+                    <div class="about-image about-image-secondary">
+                        <img
+                            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=700&q=85"
+                            alt="Business Meeting"
+                        >
+                    </div>
+
+                    <!-- Third Image -->
+                    <div class="about-image about-image-tertiary">
+                        <img
+                            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=85"
+                            alt="Professional Consultant"
+                        >
+                    </div>
+
+                    <!-- Floating Stat -->
+                    <div class="about-stat-card">
+                        <strong>25+</strong>
+
+                        <div class="about-stat-text">
+                            <span>Years</span>
+                            <small>Professional Experience</small>
+                        </div>
+                    </div>
+
+                    <!-- Play Button -->
+                    <a href="#" class="about-play-btn" aria-label="Play company video">
+                        <i class="bi bi-play-fill"></i>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- =================================================
+                CONTENT SIDE
+            ================================================== -->
+            <div class="col-12 col-lg-6 about-content-col">
+                <div class="about-content">
+
+                    <span class="about-kicker">
+                        About Our Company
+                    </span>
+
+                    <h2 class="about-title">
+                        We Build Better Business Solutions
+                        <span>For Your Success</span>
+                    </h2>
+
+                    <p class="about-description">
+                        We help businesses grow through innovative ideas,
+                        professional services and reliable solutions. Our team
+                        combines experience, creativity and technology to deliver
+                        measurable results for every client.
+                    </p>
+
+                    <!-- =========================================
+                        FEATURES
+                    ========================================== -->
+                    <div class="about-feature-grid">
+
+                        <div class="about-feature-item">
+                            <span class="about-feature-icon">
+                                <i class="bi bi-check2"></i>
+                            </span>
+
+                            <div>
+                                <h5>Trusted by thousands</h5>
+                                <p>Reliable service and professional support.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-feature-item">
+                            <span class="about-feature-icon">
+                                <i class="bi bi-bar-chart"></i>
+                            </span>
+
+                            <div>
+                                <h5>Business Growth</h5>
+                                <p>Solutions designed for long-term success.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-feature-item">
+                            <span class="about-feature-icon">
+                                <i class="bi bi-award"></i>
+                            </span>
+
+                            <div>
+                                <h5>Expert Team</h5>
+                                <p>Experienced people dedicated to your goals.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-feature-item">
+                            <span class="about-feature-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </span>
+
+                            <div>
+                                <h5>Secure Process</h5>
+                                <p>Transparent, secure and dependable service.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                        MISSION / VISION
+                    ========================================== -->
+                    <div class="about-mission-grid">
+
+                        <div class="about-mission-card">
+                            <span class="about-mission-number">01</span>
+
+                            <h4>Our Mission</h4>
+
+                            <p>
+                                Empower businesses through innovative solutions,
+                                outstanding service and sustainable growth.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Innovation & Excellence
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Customer Focus
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Business Growth
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="about-mission-card">
+                            <span class="about-mission-number">02</span>
+
+                            <h4>Our Vision</h4>
+
+                            <p>
+                                Become a trusted global business partner by
+                                creating meaningful and transformative solutions.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Global Leadership
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Transformative Impact
+                                </li>
+                                <li>
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Sustainable Success
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                        ACTION / EXTRA INFORMATION
+                    ========================================== -->
+                    <div class="about-action-row">
+
+                        <div class="about-buttons">
+                            <a href="#" class="about-btn about-btn-primary">
+                                Discover More
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                            <a href="#" class="about-btn about-btn-secondary">
+                                Our Services
+                            </a>
+                        </div>
+
+                        <!-- Founder -->
+                        <div class="about-founder">
+                            <img
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"
+                                alt="CEO"
+                            >
+
+                            <div>
+                                <strong>Andrew David</strong>
+                                <span>CEO & Founder</span>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="about-contact-info">
+                            <span>Call us anytime</span>
+                            <strong>+1 555 214 5812</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 <!-- ==========================================================================
 2. STATS SECTION
@@ -1184,60 +1635,369 @@ INTRO / ABOUT SECTION (Switches dynamically based on Theme 1 vs Theme 7 Offset)
     </section>
 
 
-<!-- ==========================================================================
-3. services section
-========================================================================== -->
 
-<section class="services-section">
+
+
+
+
+    <!-- =========================================================
+    SERVICES SECTION
+    Single HTML structure for all 7 themes
+    Place directly below Pricing section
+========================================================= -->
+<section class="services-showcase-section">
+
     <div class="container">
-        
-        <!-- Section Header -->
-        <div class="text-center mb-5">
-            <span class="section-subtitle">Services</span>
-               <h2 class="section-title">Our Professional Services</h2>
-        </div>
-        <!-- Services Grid -->
-        <div class="services-grid">
 
-            <!-- Service Item 1 -->
-            <article class="service-card">
-                <div class="service-image">
-                    <img src="https://picsum.photos/600/400?random=1" alt="Web Development" loading="lazy">
-                </div>
-                <div class="service-content">
-                    <h3>Web Development</h3>
-                    <p>Build scalable, robust, and lightning-fast web applications using modern architectures and frameworks.</p>
-                    <a href="#service-details" class="read-more">Read More &rarr;</a>
-                </div>
-            </article>
+        <!-- =========================
+            SECTION HEADING
+        ========================== -->
+        <div class="services-heading-wrap">
 
-            <!-- Service Item 2 -->
-            <article class="service-card">
-                <div class="service-image">
-                    <img src="https://picsum.photos/600/400?random=2" alt="UI/UX Design" loading="lazy">
-                </div>
-                <div class="service-content">
-                    <h3>UI/UX Design</h3>
-                    <p>Create intuitive, user-centered digital interfaces optimized for engagement, usability, and cross-device appeal.</p>
-                    <a href="#service-details" class="read-more">Read More &rarr;</a>
-                </div>
-            </article>
+            <div class="services-heading-left">
+                <span class="services-kicker">
+                    Our Services
+                </span>
 
-            <!-- Service Item 3 -->
-            <article class="service-card">
-                <div class="service-image">
-                    <img src="https://picsum.photos/600/400?random=3" alt="Digital Marketing" loading="lazy">
-                </div>
-                <div class="service-content">
-                    <h3>Digital Marketing</h3>
-                    <p>Expand your digital footprint and drive qualified conversions with performance-focused strategies.</p>
-                    <a href="#service-details" class="read-more">Read More &rarr;</a>
-                </div>
-            </article>
+                <h2 class="services-title">
+                    Professional Solutions
+                    <span>For Your Business</span>
+                </h2>
+            </div>
+
+            <div class="services-heading-right">
+                <p class="services-heading-text">
+                    We provide reliable, scalable and professional solutions
+                    designed to help your business grow, operate efficiently
+                    and achieve long-term success.
+                </p>
+            </div>
+
+            <!-- Large background heading -->
+            <span class="services-big-text">
+                Services
+            </span>
 
         </div>
+
+
+        <!-- =========================
+            SERVICES GRID
+        ========================== -->
+        <div class="row g-4 services-grid">
+
+            <!-- SERVICE 01 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 service-col">
+                <article class="service-card">
+
+                    <span class="service-number">01</span>
+
+                    <div class="service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=80"
+                            alt="Business Strategy"
+                        >
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            Business Strategy
+                        </h3>
+
+                        <p class="service-description">
+                            Build smarter strategies that improve productivity,
+                            efficiency and sustainable business growth.
+                        </p>
+
+                        <a href="#" class="service-link">
+                            <span>Read More</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+
+            <!-- SERVICE 02 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 service-col">
+                <article class="service-card">
+
+                    <span class="service-number">02</span>
+
+                    <div class="service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+                            alt="Strategy and Planning"
+                        >
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            Strategy & Planning
+                        </h3>
+
+                        <p class="service-description">
+                            Transform ideas into practical plans using research,
+                            analysis and results-driven approaches.
+                        </p>
+
+                        <a href="#" class="service-link">
+                            <span>Read More</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+
+            <!-- SERVICE 03 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 service-col">
+                <article class="service-card">
+
+                    <span class="service-number">03</span>
+
+                    <div class="service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=700&q=80"
+                            alt="Financial Planning"
+                        >
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            Financial Planning
+                        </h3>
+
+                        <p class="service-description">
+                            Manage resources effectively with dependable
+                            financial planning and performance analysis.
+                        </p>
+
+                        <a href="#" class="service-link">
+                            <span>Read More</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+
+            <!-- SERVICE 04 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 service-col">
+                <article class="service-card">
+
+                    <span class="service-number">04</span>
+
+                    <div class="service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80"
+                            alt="Business Support"
+                        >
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            Business Support
+                        </h3>
+
+                        <p class="service-description">
+                            Get dependable professional assistance whenever
+                            your organization needs expert support.
+                        </p>
+
+                        <a href="#" class="service-link">
+                            <span>Read More</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+
+            <!-- SERVICE 05 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 service-col">
+                <article class="service-card">
+
+                    <span class="service-number">05</span>
+
+                    <div class="service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=700&q=80"
+                            alt="Audit and Evaluation"
+                        >
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-clipboard-data"></i>
+                    </div>
+
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            Audit & Evaluation
+                        </h3>
+
+                        <p class="service-description">
+                            Measure performance, identify opportunities and make
+                            confident decisions using accurate insights.
+                        </p>
+
+                        <a href="#" class="service-link">
+                            <span>Read More</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+
+            <!-- SERVICE 06 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 service-col">
+                <article class="service-card">
+
+                    <span class="service-number">06</span>
+
+                    <div class="service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=700&q=80"
+                            alt="Consultancy"
+                        >
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            Consultancy & Advice
+                        </h3>
+
+                        <p class="service-description">
+                            Work with experienced consultants who understand
+                            your challenges and business objectives.
+                        </p>
+
+                        <a href="#" class="service-link">
+                            <span>Read More</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+
+            <!-- SERVICE 07 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 service-col">
+                <article class="service-card">
+
+                    <span class="service-number">07</span>
+
+                    <div class="service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=700&q=80"
+                            alt="Secure Solutions"
+                        >
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            Secure Solutions
+                        </h3>
+
+                        <p class="service-description">
+                            Protect critical operations with reliable processes,
+                            secure systems and professional standards.
+                        </p>
+
+                        <a href="#" class="service-link">
+                            <span>Read More</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+
+            <!-- SERVICE 08 -->
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 service-col">
+                <article class="service-card">
+
+                    <span class="service-number">08</span>
+
+                    <div class="service-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=700&q=80"
+                            alt="Digital Solutions"
+                        >
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-cloud-check"></i>
+                    </div>
+
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            Digital Solutions
+                        </h3>
+
+                        <p class="service-description">
+                            Modernize your organization using scalable digital
+                            platforms, automation and cloud technology.
+                        </p>
+
+                        <a href="#" class="service-link">
+                            <span>Read More</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </article>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+            BOTTOM BUTTON
+        ========================== -->
+        <div class="services-bottom-action">
+            <a href="#" class="services-all-btn">
+                <span>View All Services</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
     </div>
+
 </section>
+
 
 <!-- ==========================================================================
            PHOTO GALLERY SECTION
@@ -1399,6 +2159,59 @@ INTRO / ABOUT SECTION (Switches dynamically based on Theme 1 vs Theme 7 Offset)
         </div>
     </section>
 
+    <!-- ==========================================================================
+        WHY CHOOSE SECTION (Identical HTML matching reference design layout)
+        ========================================================================== -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Left Column: Content & Bullet Features -->
+                <div class="col-lg-6">
+                    <div class="why-choose-content">
+                        <span class="why-choose-subtitle">Just a Consultancy</span>
+                        <h2 class="why-choose-title">We know how to manage business globally</h2>
+
+                        <!-- Feature Item 1 -->
+                        <div class="feature-item-row">
+                            <div class="feature-icon-box">
+                                <i class="bi bi-briefcase"></i>
+                            </div>
+                            <div>
+                                <h4 class="feature-item-title">Best Business Consulting</h4>
+                                <p class="feature-item-desc">We specialize in helping businesses unlock their full potential through expert guidance,</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature Item 2 -->
+                        <div class="feature-item-row">
+                            <div class="feature-icon-box">
+                                <i class="bi bi-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="feature-item-title">24/7 Customer Support</h4>
+                                <p class="feature-item-desc">Our dedicated support team is available 24/7 to assist you with any questions or issues anytime.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center flex-wrap gap-3 pt-2">
+                            <a href="#" class="why-choose-action-btn">Contact Us</a>
+                            <a href="#" class="play-video-btn-wrapper" aria-label="Play Video">
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Dual Overlapping Image Composition -->
+                <div class="col-lg-6">
+                    <div class="why-choose-img-composition">
+                        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80" alt="Team meeting office view" class="why-choose-main-img">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80" alt="Consultant reviewing data" class="why-choose-floating-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
          <!-- ==========================================================================
@@ -1538,6 +2351,72 @@ INTRO / ABOUT SECTION (Switches dynamically based on Theme 1 vs Theme 7 Offset)
     </div>
 </section>
 
+
+    <!-- ==========================================================================
+        NEW WORK PROCESS / STEP SECTION (Integrated & Fully Dynamic)
+        ========================================================================== -->
+    <section class="work-process-section">
+        <div class="container">
+            <div class="heading-title text-center">
+                <div class="section-subtitle"> Workig Process</div>
+               <h2 class="testimonial-main-title">Way To Reach Success</h2>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Step 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="process-step-card">
+                        <div class="process-icon-box">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span class="process-badge-num">01</span>
+                        </div>
+                        <h4 class="process-step-title">Contract</h4>
+                        <div class="process-step-subtitle">First step of process</div>
+                        <p class="process-step-desc">Equal blame belongs to those who fail in their duty.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="process-step-card">
+                        <div class="process-icon-box">
+                            <i class="bi bi-bullseye"></i>
+                            <span class="process-badge-num">02</span>
+                        </div>
+                        <h4 class="process-step-title">Discussion</h4>
+                        <div class="process-step-subtitle">Our second easy step</div>
+                        <p class="process-step-desc">Indignation & dislike men who are so beguiled.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="process-step-card">
+                        <div class="process-icon-box">
+                            <i class="bi bi-rocket-takeoff"></i>
+                            <span class="process-badge-num">03</span>
+                        </div>
+                        <h4 class="process-step-title">Implement</h4>
+                        <div class="process-step-subtitle">Important third step</div>
+                        <p class="process-step-desc">Have to repudiated accepted wise always holds.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="process-step-card">
+                        <div class="process-icon-box">
+                            <i class="bi bi-gem"></i>
+                            <span class="process-badge-num">04</span>
+                        </div>
+                        <h4 class="process-step-title">Closure</h4>
+                        <div class="process-step-subtitle">Solution in final step</div>
+                        <p class="process-step-desc">Desire, that they cannot foresee the pain and bound.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
    <!-- ==========================================================================
         FAQ SECTION (Exact HTML structure matched to reference image design)
