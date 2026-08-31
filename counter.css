@@ -1,10 +1,7 @@
-.stats-section,
-    .testimonial-section,
+
     .cta-section {
         padding-top: var(--section-pt);
         padding-bottom: var(--section-pb);
-        margin-top: var(--section-mt);
-        margin-bottom: var(--section-mb);
         transition: padding 0.3s ease, margin 0.3s ease;
     }
 

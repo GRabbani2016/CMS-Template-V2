@@ -609,8 +609,8 @@ body.spacing-compact {
 }
 
 body.spacing-default {
-    --section-pt: 3.5rem;
-    --section-pb: 3.5rem;
+    --section-pt: 6.25rem;
+    --section-pb: 6.25rem;
     --section-mt: 1.5rem;
     --section-mb: 1.5rem;
     --card-py: 3rem;
@@ -647,29 +647,6 @@ body {
     color: var(--text-main);
     transition: background-color 0.4s ease, color 0.4s ease, font-size 0.3s ease;
 }
-
-/* .site-header {
-    background-color: var(--header-bg);
-    border-bottom: var(--header-border);
-    transition: background-color 0.4s ease, border 0.4s ease;
-}
-
-.navbar-brand {
-    color: var(--header-brand) !important;
-    font-weight: 800;
-    transition: color 0.4s ease;
-}
-
-.nav-link {
-    color: var(--nav-link-color, var(--text-muted)) !important;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--nav-link-hover, var(--text-main)) !important;
-} */
 
 .btn-theme {
     background: var(--btn-bg);
@@ -1277,11 +1254,6 @@ body {
 </section>
 
 
-
-
-
-
-
 <!-- =========================================================
     ABOUT US SECTION
     Single HTML structure for all 7 themes
@@ -1560,84 +1532,357 @@ body {
 </section>
 
 
-<!-- ==========================================================================
-        PRICING SECTION (Added as requested, matching template design layout)
-        ========================================================================== -->
-    <section class="pricing-section">
-        <div class="container">
-            <div class="text-center">
-                <div class="testimonial-badge">
-                    <i class="bi bi-book-half"></i> Pricing
-                </div>
-                <h2 class="testimonial-main-title">We've offred the best pricing for you</h2>
+<!-- =========================================================
+    PRICE / PRICING SECTION
+    ONE HTML STRUCTURE FOR ALL 7 THEMES
+========================================================= -->
+<section class="price-layout-section">
+    <div class="container">
+
+        <!-- ==========================
+            SECTION HEADER
+        =========================== -->
+        <div class="price-layout-header">
+
+            <div class="price-layout-heading">
+                <span class="price-layout-kicker">
+                    Pricing Plans
+                </span>
+
+                <h2 class="price-layout-title">
+                    Choose The Perfect
+                    <span>Plan For You</span>
+                </h2>
             </div>
-            
-            <div class="row g-4 align-items-stretch">
-                <!-- Free Plan -->
-                <div class="col-12 col-lg-4">
-                    <div class="pricing-card">
-                        <span class="plan-badge">Free</span>
-                        <div class="plan-price">$0<span>/mo</span></div>
-                        <p class="plan-desc">Free forever and can be upgraded.</p>
-                        <hr>
-                        <ul class="pricing-features-list">
-                            <li><i class="bi bi-check"></i> Up to 10 individual users</li>
-                            <li><i class="bi bi-check"></i> Basic reporting and analytics</li>
-                            <li><i class="bi bi-check"></i> Project Management</li>
-                            <li><i class="bi bi-check"></i> 20GB individual data each user</li>
-                            <li><i class="bi bi-check"></i> Basic chat and email support</li>
-                        </ul>
-                        <a href="#" class="pricing-btn">Try for Free</a>
-                        <div class="pricing-footer-note">Free forever and can be upgraded.</div>
-                    </div>
+
+            <div class="price-layout-header-side">
+
+                <p class="price-layout-description">
+                    Flexible and transparent pricing for businesses of every
+                    size. Select the plan that matches your requirements and
+                    upgrade whenever you need.
+                </p>
+
+                <div class="price-layout-toggle">
+                    <span>Monthly</span>
+
+                    <label class="price-switch">
+                        <input type="checkbox">
+                        <span class="price-switch-slider"></span>
+                    </label>
+
+                    <span>Yearly</span>
                 </div>
 
-                <!-- Agency Plan (Popular / Featured) -->
-                <div class="col-12 col-lg-4">
-                    <div class="pricing-card featured-card">
-                        <span class="popular-tag">Popular</span>
-                        <span class="plan-badge">Agency</span>
-                        <div class="plan-price">$99<span>/mo</span></div>
-                        <p class="plan-desc">Value for money and can be upgraded.</p>
-                        <hr>
-                        <ul class="pricing-features-list">
-                            <li><i class="bi bi-check"></i> Up to 10 individual users</li>
-                            <li><i class="bi bi-check"></i> Basic reporting and analytics</li>
-                            <li><i class="bi bi-check"></i> Project Management</li>
-                            <li><i class="bi bi-check"></i> 20GB individual data each user</li>
-                            <li><i class="bi bi-check"></i> Basic chat and email support</li>
-                        </ul>
-                        <a href="#" class="pricing-btn">Try for Free</a>
-                        <div class="pricing-footer-note">Value for money and can be upgraded.</div>
-                    </div>
-                </div>
-
-                <!-- Pro Plan -->
-                <div class="col-12 col-lg-4">
-                    <div class="pricing-card">
-                        <span class="plan-badge">Pro</span>
-                        <div class="plan-price">$49<span>/mo</span></div>
-                        <p class="plan-desc">All other plans features and options.</p>
-                        <hr>
-                        <ul class="pricing-features-list">
-                            <li><i class="bi bi-check"></i> Up to 10 individual users</li>
-                            <li><i class="bi bi-check"></i> Basic reporting and analytics</li>
-                            <li><i class="bi bi-check"></i> Project Management</li>
-                            <li><i class="bi bi-check"></i> 20GB individual data each user</li>
-                            <li><i class="bi bi-check"></i> Basic chat and email support</li>
-                        </ul>
-                        <a href="#" class="pricing-btn">Try for Free</a>
-                        <div class="pricing-footer-note">All other plans features and options.</div>
-                    </div>
-                </div>
             </div>
+
         </div>
-    </section>
 
 
+        <!-- ==========================
+            PRICING GRID
+        =========================== -->
+        <div class="row g-4 price-layout-grid">
+
+            <!-- PLAN 01 -->
+            <div class="col-12 col-md-6 col-xl-3 price-plan-col">
+                <article class="price-plan-card">
+
+                    <span class="price-card-badge">
+                        Starter
+                    </span>
+
+                    <div class="price-card-head">
+
+                        <div class="price-card-icon">
+                            <i class="bi bi-rocket-takeoff"></i>
+                        </div>
+
+                        <span class="price-card-eyebrow">
+                            Starter Package
+                        </span>
+
+                        <h3 class="price-card-title">
+                            Basic Plan
+                        </h3>
+
+                        <p class="price-card-intro">
+                            Essential tools for individuals and small projects.
+                        </p>
+
+                        <div class="price-card-price">
+                            <span class="price-currency">$</span>
+                            <strong>8.99</strong>
+                            <span class="price-duration">/mo</span>
+                        </div>
+
+                    </div>
+
+                    <div class="price-card-body">
+
+                        <ul class="price-card-features">
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Standard Features
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                10GB Storage
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Basic Reporting
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Email Support
+                            </li>
+                            <li class="disabled">
+                                <i class="bi bi-x-lg"></i>
+                                Advanced Analytics
+                            </li>
+                        </ul>
+
+                        <a href="#" class="price-card-button">
+                            <span>Choose Plan</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                        <small class="price-card-note">
+                            No setup fee. Cancel anytime.
+                        </small>
+
+                    </div>
+
+                </article>
+            </div>
 
 
+            <!-- PLAN 02 -->
+            <div class="col-12 col-md-6 col-xl-3 price-plan-col">
+                <article class="price-plan-card">
 
+                    <span class="price-card-badge">
+                        Popular
+                    </span>
+
+                    <div class="price-card-head">
+
+                        <div class="price-card-icon">
+                            <i class="bi bi-stars"></i>
+                        </div>
+
+                        <span class="price-card-eyebrow">
+                            Most Popular
+                        </span>
+
+                        <h3 class="price-card-title">
+                            Professional
+                        </h3>
+
+                        <p class="price-card-intro">
+                            Perfect for teams and fast-growing businesses.
+                        </p>
+
+                        <div class="price-card-price">
+                            <span class="price-currency">$</span>
+                            <strong>29.99</strong>
+                            <span class="price-duration">/mo</span>
+                        </div>
+
+                    </div>
+
+                    <div class="price-card-body">
+
+                        <ul class="price-card-features">
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                All Basic Features
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                100GB Storage
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Advanced Reporting
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Priority Support
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Advanced Analytics
+                            </li>
+                        </ul>
+
+                        <a href="#" class="price-card-button">
+                            <span>Choose Plan</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                        <small class="price-card-note">
+                            Best choice for growing teams.
+                        </small>
+
+                    </div>
+
+                </article>
+            </div>
+
+
+            <!-- PLAN 03 -->
+            <div class="col-12 col-md-6 col-xl-3 price-plan-col">
+                <article class="price-plan-card price-featured">
+
+                    <span class="price-card-badge">
+                        Recommended
+                    </span>
+
+                    <div class="price-card-head">
+
+                        <div class="price-card-icon">
+                            <i class="bi bi-gem"></i>
+                        </div>
+
+                        <span class="price-card-eyebrow">
+                            Advanced Package
+                        </span>
+
+                        <h3 class="price-card-title">
+                            Business
+                        </h3>
+
+                        <p class="price-card-intro">
+                            Powerful performance for established companies.
+                        </p>
+
+                        <div class="price-card-price">
+                            <span class="price-currency">$</span>
+                            <strong>49.99</strong>
+                            <span class="price-duration">/mo</span>
+                        </div>
+
+                    </div>
+
+                    <div class="price-card-body">
+
+                        <ul class="price-card-features">
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                All Professional Features
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                500GB Storage
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Unlimited Projects
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Premium Support
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Team Management
+                            </li>
+                        </ul>
+
+                        <a href="#" class="price-card-button">
+                            <span>Choose Plan</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                        <small class="price-card-note">
+                            Recommended for professional teams.
+                        </small>
+
+                    </div>
+
+                </article>
+            </div>
+
+
+            <!-- PLAN 04 -->
+            <div class="col-12 col-md-6 col-xl-3 price-plan-col">
+                <article class="price-plan-card">
+
+                    <span class="price-card-badge">
+                        Enterprise
+                    </span>
+
+                    <div class="price-card-head">
+
+                        <div class="price-card-icon">
+                            <i class="bi bi-buildings"></i>
+                        </div>
+
+                        <span class="price-card-eyebrow">
+                            Enterprise Package
+                        </span>
+
+                        <h3 class="price-card-title">
+                            Enterprise
+                        </h3>
+
+                        <p class="price-card-intro">
+                            Complete solutions for large organizations.
+                        </p>
+
+                        <div class="price-card-price">
+                            <span class="price-currency">$</span>
+                            <strong>89.99</strong>
+                            <span class="price-duration">/mo</span>
+                        </div>
+
+                    </div>
+
+                    <div class="price-card-body">
+
+                        <ul class="price-card-features">
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Unlimited Projects
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Unlimited Storage
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Dedicated Manager
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                24/7 Priority Support
+                            </li>
+                            <li>
+                                <i class="bi bi-check-lg"></i>
+                                Custom Integration
+                            </li>
+                        </ul>
+
+                        <a href="#" class="price-card-button">
+                            <span>Choose Plan</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                        <small class="price-card-note">
+                            Contact us for custom requirements.
+                        </small>
+
+                    </div>
+
+                </article>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 
     <!-- =========================================================
@@ -2063,246 +2308,796 @@ body {
         </section>
 
 
-        <!-- ==========================================================================
-        3. TEAM SECTION (Added Matching Target Layout & Design)
-        ========================================================================== -->
-    <section class="team-section">
-        <div class="container text-center">
-            <span class="section-subtitle">Meet Our Team</span>
-            <h2 class="section-title">We Have a Professional<br>Consulting Team</h2>
-            
-            <div class="row g-4 text-start">
-                <!-- Team Member 1 -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="team-card">
-                        <div class="team-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Team Member">
-                        </div>
-                        <div class="team-card-body">
-                            <div>
-                                <h4 class="team-name text-center">Jack Mehoff</h4>
-                                <p class="team-role text-center">Engineer</p>
+
+<!-- =========================================================
+    TEAM SECTION
+    Single HTML structure for all 7 themes
+    Place directly below Gallery section
+========================================================= -->
+<section class="team-showcase-section">
+   <div class="container">
+      <!-- =========================
+            SECTION HEADER
+        ========================== -->
+      <div class="team-section-header">
+         <div class="team-heading-content">
+            <span class="team-kicker"> Our Team </span>
+
+            <h2 class="team-section-title">
+               Meet Our Expert
+               <span>Team</span>
+            </h2>
+         </div>
+
+         <div class="team-heading-description">
+            <p>
+               Meet the experienced professionals behind our success. Our team
+               combines knowledge, creativity and commitment to deliver
+               outstanding results.
+            </p>
+
+            <a href="#" class="team-view-all-btn">
+               <span>See All Members</span>
+               <i class="bi bi-arrow-right"></i>
+            </a>
+         </div>
+
+         <span class="team-large-title"> TEAM </span>
+      </div>
+
+      <!-- =========================
+            TEAM GRID
+        ========================== -->
+      <div class="row g-4 team-grid">
+         <!-- MEMBER 01 -->
+         <div class="col-12 col-sm-6 col-lg-4 col-xl-3 team-col">
+            <article class="team-card">
+               <div class="team-image-wrap">
+                  <img
+                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=85"
+                     alt="James Johnson"
+                     class="team-image"
+                  />
+
+                  <div class="team-image-accent"></div>
+
+                  <!-- Social -->
+                  <div class="team-socials">
+                     <a href="#" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                     </a>
+
+                     <a href="#" aria-label="Twitter">
+                        <i class="bi bi-twitter-x"></i>
+                     </a>
+
+                     <a href="#" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                     </a>
+
+                     <a href="#" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                     </a>
+                  </div>
+
+                  <!-- Share -->
+                  <button class="team-share-btn" type="button">
+                     <i class="bi bi-share-fill"></i>
+                  </button>
+               </div>
+
+               <div class="team-content">
+                  <h3 class="team-member-name">James Johnson</h3>
+
+                  <span class="team-member-role">
+                     Chief Executive Officer
+                  </span>
+
+                  <a href="mailto:james@example.com" class="team-member-email">
+                     <i class="bi bi-envelope"></i>
+                     james@example.com
+                  </a>
+
+                  <a href="#" class="team-profile-link">
+                     <span>View Profile</span>
+                     <i class="bi bi-arrow-up-right"></i>
+                  </a>
+               </div>
+            </article>
+         </div>
+
+         <!-- MEMBER 02 -->
+         <div class="col-12 col-sm-6 col-lg-4 col-xl-3 team-col">
+            <article class="team-card">
+               <div class="team-image-wrap">
+                  <img
+                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=85"
+                     alt="Amelia Watson"
+                     class="team-image"
+                  />
+
+                  <div class="team-image-accent"></div>
+
+                  <div class="team-socials">
+                     <a href="#">
+                        <i class="bi bi-facebook"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-linkedin"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-instagram"></i>
+                     </a>
+                  </div>
+
+                  <button class="team-share-btn" type="button">
+                     <i class="bi bi-share-fill"></i>
+                  </button>
+               </div>
+
+               <div class="team-content">
+                  <h3 class="team-member-name">Amelia Watson</h3>
+
+                  <span class="team-member-role"> Operations Manager </span>
+
+                  <a href="mailto:amelia@example.com" class="team-member-email">
+                     <i class="bi bi-envelope"></i>
+                     amelia@example.com
+                  </a>
+
+                  <a href="#" class="team-profile-link">
+                     <span>View Profile</span>
+                     <i class="bi bi-arrow-up-right"></i>
+                  </a>
+               </div>
+            </article>
+         </div>
+
+         <!-- MEMBER 03 -->
+         <div class="col-12 col-sm-6 col-lg-4 col-xl-3 team-col">
+            <article class="team-card">
+               <div class="team-image-wrap">
+                  <img
+                     src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85"
+                     alt="Thomas Brown"
+                     class="team-image"
+                  />
+
+                  <div class="team-image-accent"></div>
+
+                  <div class="team-socials">
+                     <a href="#">
+                        <i class="bi bi-facebook"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-linkedin"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-instagram"></i>
+                     </a>
+                  </div>
+
+                  <button class="team-share-btn" type="button">
+                     <i class="bi bi-share-fill"></i>
+                  </button>
+               </div>
+
+               <div class="team-content">
+                  <h3 class="team-member-name">Thomas Brown</h3>
+
+                  <span class="team-member-role"> Project Manager </span>
+
+                  <a href="mailto:thomas@example.com" class="team-member-email">
+                     <i class="bi bi-envelope"></i>
+                     thomas@example.com
+                  </a>
+
+                  <a href="#" class="team-profile-link">
+                     <span>View Profile</span>
+                     <i class="bi bi-arrow-up-right"></i>
+                  </a>
+               </div>
+            </article>
+         </div>
+
+         <!-- MEMBER 04 -->
+         <div class="col-12 col-sm-6 col-lg-4 col-xl-3 team-col">
+            <article class="team-card">
+               <div class="team-image-wrap">
+                  <img
+                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=85"
+                     alt="John Taylor"
+                     class="team-image"
+                  />
+
+                  <div class="team-image-accent"></div>
+
+                  <div class="team-socials">
+                     <a href="#">
+                        <i class="bi bi-facebook"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-linkedin"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-instagram"></i>
+                     </a>
+                  </div>
+
+                  <button class="team-share-btn" type="button">
+                     <i class="bi bi-share-fill"></i>
+                  </button>
+               </div>
+
+               <div class="team-content">
+                  <h3 class="team-member-name">John Taylor</h3>
+
+                  <span class="team-member-role"> Technical Director </span>
+
+                  <a href="mailto:john@example.com" class="team-member-email">
+                     <i class="bi bi-envelope"></i>
+                     john@example.com
+                  </a>
+
+                  <a href="#" class="team-profile-link">
+                     <span>View Profile</span>
+                     <i class="bi bi-arrow-up-right"></i>
+                  </a>
+               </div>
+            </article>
+         </div>
+
+         <!-- MEMBER 05 -->
+         <div class="col-12 col-sm-6 col-lg-4 col-xl-3 team-col">
+            <article class="team-card">
+               <div class="team-image-wrap">
+                  <img
+                     src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=700&q=85"
+                     alt="Sophia Miller"
+                     class="team-image"
+                  />
+
+                  <div class="team-image-accent"></div>
+
+                  <div class="team-socials">
+                     <a href="#">
+                        <i class="bi bi-facebook"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-linkedin"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-instagram"></i>
+                     </a>
+                  </div>
+
+                  <button class="team-share-btn" type="button">
+                     <i class="bi bi-share-fill"></i>
+                  </button>
+               </div>
+
+               <div class="team-content">
+                  <h3 class="team-member-name">Sophia Miller</h3>
+
+                  <span class="team-member-role"> Product Designer </span>
+
+                  <a href="mailto:sophia@example.com" class="team-member-email">
+                     <i class="bi bi-envelope"></i>
+                     sophia@example.com
+                  </a>
+
+                  <a href="#" class="team-profile-link">
+                     <span>View Profile</span>
+                     <i class="bi bi-arrow-up-right"></i>
+                  </a>
+               </div>
+            </article>
+         </div>
+
+         <!-- MEMBER 06 -->
+         <div class="col-12 col-sm-6 col-lg-4 col-xl-3 team-col">
+            <article class="team-card">
+               <div class="team-image-wrap">
+                  <img
+                     src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85"
+                     alt="William White"
+                     class="team-image"
+                  />
+
+                  <div class="team-image-accent"></div>
+
+                  <div class="team-socials">
+                     <a href="#">
+                        <i class="bi bi-facebook"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-linkedin"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-instagram"></i>
+                     </a>
+                  </div>
+
+                  <button class="team-share-btn" type="button">
+                     <i class="bi bi-share-fill"></i>
+                  </button>
+               </div>
+
+               <div class="team-content">
+                  <h3 class="team-member-name">William White</h3>
+
+                  <span class="team-member-role"> Senior Consultant </span>
+
+                  <a
+                     href="mailto:william@example.com"
+                     class="team-member-email"
+                  >
+                     <i class="bi bi-envelope"></i>
+                     william@example.com
+                  </a>
+
+                  <a href="#" class="team-profile-link">
+                     <span>View Profile</span>
+                     <i class="bi bi-arrow-up-right"></i>
+                  </a>
+               </div>
+            </article>
+         </div>
+
+         <!-- MEMBER 07 -->
+         <div class="col-12 col-sm-6 col-lg-4 col-xl-3 team-col">
+            <article class="team-card">
+               <div class="team-image-wrap">
+                  <img
+                     src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=85"
+                     alt="Laura Evelyn"
+                     class="team-image"
+                  />
+
+                  <div class="team-image-accent"></div>
+
+                  <div class="team-socials">
+                     <a href="#">
+                        <i class="bi bi-facebook"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-linkedin"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-instagram"></i>
+                     </a>
+                  </div>
+
+                  <button class="team-share-btn" type="button">
+                     <i class="bi bi-share-fill"></i>
+                  </button>
+               </div>
+
+               <div class="team-content">
+                  <h3 class="team-member-name">Laura Evelyn</h3>
+
+                  <span class="team-member-role"> Marketing Director </span>
+
+                  <a href="mailto:laura@example.com" class="team-member-email">
+                     <i class="bi bi-envelope"></i>
+                     laura@example.com
+                  </a>
+
+                  <a href="#" class="team-profile-link">
+                     <span>View Profile</span>
+                     <i class="bi bi-arrow-up-right"></i>
+                  </a>
+               </div>
+            </article>
+         </div>
+
+         <!-- MEMBER 08 -->
+         <div class="col-12 col-sm-6 col-lg-4 col-xl-3 team-col">
+            <article class="team-card">
+               <div class="team-image-wrap">
+                  <img
+                     src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=700&q=85"
+                     alt="Henry Wilson"
+                     class="team-image"
+                  />
+
+                  <div class="team-image-accent"></div>
+
+                  <div class="team-socials">
+                     <a href="#">
+                        <i class="bi bi-facebook"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-linkedin"></i>
+                     </a>
+                     <a href="#">
+                        <i class="bi bi-instagram"></i>
+                     </a>
+                  </div>
+
+                  <button class="team-share-btn" type="button">
+                     <i class="bi bi-share-fill"></i>
+                  </button>
+               </div>
+
+               <div class="team-content">
+                  <h3 class="team-member-name">Henry Wilson</h3>
+
+                  <span class="team-member-role"> Business Consultant </span>
+
+                  <a href="mailto:henry@example.com" class="team-member-email">
+                     <i class="bi bi-envelope"></i>
+                     henry@example.com
+                  </a>
+
+                  <a href="#" class="team-profile-link">
+                     <span>View Profile</span>
+                     <i class="bi bi-arrow-up-right"></i>
+                  </a>
+               </div>
+            </article>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!-- =========================================================
+     WHY CHOOSE US
+     ONE HTML FOR ALL THEMES
+
+     Supported:
+     theme-clean-grid
+     theme-default
+     theme-emerald-block
+     theme-curved-scalloped
+     theme-vibrant-cards
+     theme-elegant-serif
+     theme-layered-offset
+     theme-modern-dark
+========================================================= -->
+<section class="wc-section">
+    <div class="container">
+        <div class="row align-items-center wc-row">
+            <div class="col-12 col-lg-6 wc-content-col">
+                <span class="wc-bg-title">Business Goal</span>
+                <div class="wc-content">
+                    <span class="wc-kicker">Why Choose Us</span>
+                    <h2 class="wc-title">We Know How To Manage <span>Business Globally</span></h2>
+                    <p class="wc-description">We provide strategic business solutions designed to improve performance, simplify operations and create sustainable growth for modern organizations.</p>
+                    <div class="row g-3 wc-features">
+                        <div class="col-12 col-sm-6 wc-feature-col">
+                            <div class="wc-feature">
+                                <div class="wc-feature-icon">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <div class="wc-feature-content">
+                                    <h3>Best Business Consulting</h3>
+                                    <p>Expert guidance and practical strategies designed to improve your business.</p>
+                                </div>
                             </div>
-                            <div class="team-socials">
-                                <a href="#" class="team-social-icon"><i class="bi bi-facebook"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-twitter"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-instagram"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-google"></i></a>
+                        </div>
+                        <div class="col-12 col-sm-6 wc-feature-col">
+                            <div class="wc-feature">
+                                <div class="wc-feature-icon">
+                                    <i class="bi bi-headset"></i>
+                                </div>
+                                <div class="wc-feature-content">
+                                    <h3>24/7 Customer Support</h3>
+                                    <p>Reliable assistance whenever your organization needs professional support.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 wc-feature-col">
+                            <div class="wc-feature">
+                                <div class="wc-feature-icon">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                </div>
+                                <div class="wc-feature-content">
+                                    <h3>Strategic Planning</h3>
+                                    <p>Result-focused planning built around performance, efficiency and growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 wc-feature-col">
+                            <div class="wc-feature">
+                                <div class="wc-feature-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <div class="wc-feature-content">
+                                    <h3>Proven Experience</h3>
+                                    <p>Experienced professionals delivering dependable solutions across industries.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Team Member 2 -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="team-card">
-                        <div class="team-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Team Member">
-                        </div>
-                        <div class="team-card-body">
-                            <div>
-                                <h4 class="team-name text-center">Sarah Jenkins</h4>
-                                <p class="team-role text-center">Consultant</p>
-                            </div>
-                            <div class="team-socials">
-                                <a href="#" class="team-social-icon"><i class="bi bi-facebook"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-twitter"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-instagram"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-google"></i></a>
-                            </div>
-                        </div>
+                    <div class="wc-actions">
+                        <a href="#" class="wc-btn"><span>Contact Us</span><i class="bi bi-arrow-right"></i></a>
+                        <a href="#" class="wc-play-text" aria-label="Play video"><i class="bi bi-play-fill"></i></a>
                     </div>
                 </div>
-
-                <!-- Team Member 3 -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="team-card">
-                        <div class="team-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Team Member">
-                        </div>
-                        <div class="team-card-body">
-                            <div>
-                                <h4 class="team-name text-center">David Miller</h4>
-                                <p class="team-role text-center">Senior Advisor</p>
-                            </div>
-                            <div class="team-socials">
-                                <a href="#" class="team-social-icon"><i class="bi bi-facebook"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-twitter"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-instagram"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-google"></i></a>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-12 col-lg-6 wc-visual-col">
+                <div class="wc-visual">
+                    <span class="wc-shape wc-shape-1"></span>
+                    <span class="wc-shape wc-shape-2"></span>
+                    <span class="wc-shape wc-shape-3"></span>
+                    <div class="wc-main-image">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Business consulting">
                     </div>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="team-card">
-                        <div class="team-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Team Member">
+                    <div class="wc-secondary-image">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=700&q=80" alt="Business discussion">
+                    </div>
+                    <a href="#" class="wc-image-play" aria-label="Play video"><i class="bi bi-play-fill"></i></a>
+                    <div class="wc-floating-card">
+                        <div class="wc-avatar-group">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80" alt="Client">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Client">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Client">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Client">
+                            <span>+</span>
                         </div>
-                        <div class="team-card-body">
-                            <div>
-                                <h4 class="team-name text-center">Emily Watson</h4>
-                                <p class="team-role text-center">Lead Architect</p>
-                            </div>
-                            <div class="team-socials">
-                                <a href="#" class="team-social-icon"><i class="bi bi-facebook"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-twitter"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-instagram"></i></a>
-                                <a href="#" class="team-social-icon"><i class="bi bi-google"></i></a>
-                            </div>
-                        </div>
+                        <strong>2563+</strong>
+                        <p>Global Active Clients</p>
+                    </div>
+                    <div class="wc-brand-card">
+                        <i class="bi bi-stars"></i>
+                        <span>Trusted Company</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- =========================================================
+    TESTIMONIAL SECTION
+    SINGLE HTML FOR ALL 7 THEMES
+========================================================= -->
+<section class="tm-testimonial-section">
+    <div class="container">
 
-    <!-- ==========================================================================
-        WHY CHOOSE SECTION (Identical HTML matching reference design layout)
-        ========================================================================== -->
-    <section class="why-choose-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <!-- Left Column: Content & Bullet Features -->
-                <div class="col-lg-6">
-                    <div class="why-choose-content">
-                        <span class="why-choose-subtitle">Just a Consultancy</span>
-                        <h2 class="why-choose-title">We know how to manage business globally</h2>
+        <!-- Section Heading -->
+        <div class="tm-testimonial-header">
 
-                        <!-- Feature Item 1 -->
-                        <div class="feature-item-row">
-                            <div class="feature-icon-box">
-                                <i class="bi bi-briefcase"></i>
-                            </div>
-                            <div>
-                                <h4 class="feature-item-title">Best Business Consulting</h4>
-                                <p class="feature-item-desc">We specialize in helping businesses unlock their full potential through expert guidance,</p>
-                            </div>
-                        </div>
+            <div class="tm-testimonial-heading">
+                <span class="tm-testimonial-kicker">
+                    <i class="bi bi-book-half"></i>
+                    <span>Testimonials</span>
+                </span>
 
-                        <!-- Feature Item 2 -->
-                        <div class="feature-item-row">
-                            <div class="feature-icon-box">
-                                <i class="bi bi-headset"></i>
-                            </div>
-                            <div>
-                                <h4 class="feature-item-title">24/7 Customer Support</h4>
-                                <p class="feature-item-desc">Our dedicated support team is available 24/7 to assist you with any questions or issues anytime.</p>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center flex-wrap gap-3 pt-2">
-                            <a href="#" class="why-choose-action-btn">Contact Us</a>
-                            <a href="#" class="play-video-btn-wrapper" aria-label="Play Video">
-                                <i class="bi bi-play-fill"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Dual Overlapping Image Composition -->
-                <div class="col-lg-6">
-                    <div class="why-choose-img-composition">
-                        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80" alt="Team meeting office view" class="why-choose-main-img">
-                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80" alt="Consultant reviewing data" class="why-choose-floating-img">
-                    </div>
-                </div>
+                <h2 class="services-title">
+                    What Our Clients
+                    <span>Say About Us</span>
+                </h2>
             </div>
+
+            <div class="tm-testimonial-header-text">
+                <p>
+                    Our clients trust us for professional service, reliable
+                    solutions and consistent support. Here is what they say
+                    about their experience working with our team.
+                </p>
+            </div>
+
+            <!-- Used only in some layouts -->
+            <span class="tm-testimonial-bg-title">
+                Reviews
+            </span>
+
         </div>
-    </section>
 
 
-         <!-- ==========================================================================
-        TESTIMONIALS SECTION (Generated match based on reference layout)
-        ========================================================================== -->
-    <section class="testimonial-section">
-        <div class="container text-center">
-            <div class="testimonial-badge">
-                <i class="bi bi-book-half"></i> Testimonials
+        <!-- Testimonials -->
+        <div class="row g-4 tm-testimonial-row">
+
+            <!-- =================================================
+                 ITEM 01
+            ================================================== -->
+            <div class="col-12 col-md-6 col-lg-4 tm-testimonial-col">
+                <article class="tm-testimonial-card">
+
+                    <div class="tm-testimonial-quote">
+                        <i class="bi bi-quote"></i>
+                    </div>
+
+                    <div class="tm-testimonial-person">
+
+                        <div class="tm-testimonial-avatar">
+                            <img
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=85"
+                                alt="Emma Johnson">
+                        </div>
+
+                        <div class="tm-testimonial-person-info">
+                            <h3>Emma Johnson</h3>
+                            <span>Chief Executive Officer</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tm-testimonial-content">
+
+                        <h4 class="tm-testimonial-review-title">
+                            Excellent Professional Service
+                        </h4>
+
+                        <p>
+                            Working with this team has been an excellent
+                            experience. Their professional approach, their professional approach,
+                            communication and attention to detail helped us
+                            achieve better results than expected.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tm-testimonial-rating">
+
+                        <div class="tm-testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+
+                        <span class="tm-testimonial-score">
+                            4.8 (8k)
+                        </span>
+
+                    </div>
+
+                </article>
             </div>
-            <h2 class="testimonial-main-title">Students Say’s About Us!</h2>
-            
-            <div class="row g-4 text-start">
-                <!-- Testimonial 1 -->
-                <div class="col-12 col-md-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote-icon">“</div>
-                        <h4 class="testimonial-card-title">Join the Future of Education</h4>
-                        <p class="testimonial-card-text">Innovative technologies such as AI and VR are enhancing online education, making it more interactive and effective, preparing students for the challenges of tomorrow.</p>
-                        <div class="testimonial-stars">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <span class="testimonial-rating-text">4.9 (10k)</span>
-                        </div>
-                        <div class="testimonial-divider"></div>
-                        <div class="testimonial-author-wrapper">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="David Lee" class="testimonial-avatar">
-                            <div>
-                                <h5 class="testimonial-author-name">David Lee</h5>
-                                <p class="testimonial-author-role">Full-time Professional</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Testimonial 2 -->
-                <div class="col-12 col-md-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote-icon">“</div>
-                        <h4 class="testimonial-card-title">Expand Your Horizons</h4>
-                        <p class="testimonial-card-text">With diverse course offerings and expert instructors, online education empowers learners to explore new fields and develop essential skills for the modern workforce.</p>
-                        <div class="testimonial-stars">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class="testimonial-rating-text">4.8 (8k)</span>
-                        </div>
-                        <div class="testimonial-divider"></div>
-                        <div class="testimonial-author-wrapper">
-                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Emily Chen" class="testimonial-avatar">
-                            <div>
-                                <h5 class="testimonial-author-name">Emily Chen</h5>
-                                <p class="testimonial-author-role">Career Changer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Testimonial 3 -->
-                <div class="col-12 col-md-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-quote-icon">“</div>
-                        <h4 class="testimonial-card-title">Transform Your Career</h4>
-                        <p class="testimonial-card-text">Online certifications and degrees provide opportunities for advancement and can significantly enhance job prospects in competitive markets.</p>
-                        <div class="testimonial-stars">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <span class="testimonial-rating-text">4.6 (5k)</span>
-                        </div>
-                        <div class="testimonial-divider"></div>
-                        <div class="testimonial-author-wrapper">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Michael Brown" class="testimonial-avatar">
-                            <div>
-                                <h5 class="testimonial-author-name">Michael Brown</h5>
-                                <p class="testimonial-author-role">Aspiring Professional</p>
-                            </div>
-                        </div>
+            <!-- =================================================
+                 ITEM 02
+            ================================================== -->
+            <div class="col-12 col-md-6 col-lg-4 tm-testimonial-col">
+                <article class="tm-testimonial-card">
+
+                    <div class="tm-testimonial-quote">
+                        <i class="bi bi-quote"></i>
                     </div>
-                </div>
+
+                    <div class="tm-testimonial-person">
+
+                        <div class="tm-testimonial-avatar">
+                            <img
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=85"
+                                alt="Daniel Smith">
+                        </div>
+
+                        <div class="tm-testimonial-person-info">
+                            <h3>Daniel Smith</h3>
+                            <span>Business Director</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tm-testimonial-content">
+
+                        <h4 class="tm-testimonial-review-title">
+                            Reliable Business Partner
+                        </h4>
+
+                        <p>
+                            The entire process was smooth and transparent.
+                            They understood our requirements quickly and
+                            provided practical, scalable and reliable
+                            solutions for our business.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tm-testimonial-rating">
+
+                        <div class="tm-testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+
+                        <span class="tm-testimonial-score">
+                            4.9 (5k)
+                        </span>
+
+                    </div>
+
+                </article>
             </div>
+
+
+            <!-- =================================================
+                 ITEM 03
+            ================================================== -->
+            <div class="col-12 col-md-6 col-lg-4 tm-testimonial-col">
+                <article class="tm-testimonial-card">
+
+                    <div class="tm-testimonial-quote">
+                        <i class="bi bi-quote"></i>
+                    </div>
+
+                    <div class="tm-testimonial-person">
+
+                        <div class="tm-testimonial-avatar">
+                            <img
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=85"
+                                alt="Alex Morgan">
+                        </div>
+
+                        <div class="tm-testimonial-person-info">
+                            <h3>Alex Morgan</h3>
+                            <span>Project Manager</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tm-testimonial-content">
+
+                        <h4 class="tm-testimonial-review-title">
+                            Strong Communication
+                        </h4>
+
+                        <p>
+                            Their team was responsive throughout the project.
+                            Every milestone was clearly explained,  Every milestone was clearly explained delivered
+                            on time and handled with a strong focus on quality.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tm-testimonial-rating">
+
+                        <div class="tm-testimonial-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+
+                        <span class="tm-testimonial-score">
+                            4.9 (10k)
+                        </span>
+
+                    </div>
+
+                </article>
+            </div>
+
         </div>
-    </section>
 
+    </div>
+</section>
 <!-- ==========================================================================
 4. CALL TO ACTION (CTA) SECTION
 ========================================================================== -->
