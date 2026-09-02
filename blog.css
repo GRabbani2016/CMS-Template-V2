@@ -1,296 +1,752 @@
-
-    /* ==========================================================================
-   BASE & SHARED BLOG STYLES (Matching your reference layout)
-   ========================================================================== */
-
-/* ==========================================================================
-   1. LAYOUT: DEFAULT MINIMALIST
-   ========================================================================== */
-.theme-default {
-    --blog-bg: #f8fafc;
-    --card-bg: transparent;
-    --card-border: none;
-    --card-radius: 0px;
-    --img-radius: 20px;
-    --badge-bg: #ffffff;
-    --badge-color: #111827;
-    --badge-radius: 14px;
-    --cat-bg: #f1f5f9;
-    --cat-color: #475569;
-    --cat-border: 1px solid #e2e8f0;
-    --cat-radius: 50px;
-    --title-color: #111827;
-    --sub-color: #5c677d;
-    --btn-bg: #1a1a1a;
-    --btn-color: #ffffff;
-    --btn-radius: 50px;
+/* ========================================================== BLOG SECTION — BASE ========================================================== */
+ .blogx-section {
+     --blog-accent: #138f88;
+     --blog-heading: #132c31;
+     --blog-text: #707980;
+     --blog-bg: #ffffff;
+     --blog-card: #ffffff;
+     --blog-border: #e7ebee;
+     position: relative;
+     overflow: hidden;
+     padding: 100px 0;
+     background: var(--blog-bg);
+     font-family: var(--font-family, "Inter", sans-serif);
 }
-
-/* ==========================================================================
-   2. LAYOUT: EMERALD SOLID BLOCK
-   ========================================================================== */
-.theme-emerald-block {
-    --blog-bg: #16866f;
-    --card-bg: #1ba085;
-    --card-border: 1px solid rgba(255, 255, 255, 0.2);
-    --card-radius: 0px;
-    --img-radius: 0px;
-    --badge-bg: #ffffff;
-    --badge-color: #111827;
-    --badge-radius: 0px;
-    --cat-bg: rgba(255, 255, 255, 0.2);
-    --cat-color: #ffffff;
-    --cat-border: none;
-    --cat-radius: 0px;
-    --title-color: #ffffff;
-    --sub-color: #ffffff;
-    --btn-bg: #ffffff;
-    --btn-color: #1ba085;
-    --btn-radius: 0px;
+/* ========================================================== HEADER ========================================================== */
+ .blogx-header {
+     display: flex;
+     align-items: flex-end;
+     justify-content: space-between;
+     gap: 40px;
+     margin-bottom: 55px;
 }
-
-/* ==========================================================================
-   3. LAYOUT: CURVED SCALLOPED PILLS
-   ========================================================================== */
-.theme-curved-scalloped {
-    --blog-bg: #fdfbf7;
-    --card-bg: #f5f0e6;
-    --card-border: 2px dashed #1ba085;
-    --card-radius: 40px;
-    --img-radius: 30px;
-    --badge-bg: #ffffff;
-    --badge-color: #111827;
-    --badge-radius: 50px;
-    --cat-bg: #1ba085;
-    --cat-color: #ffffff;
-    --cat-border: none;
-    --cat-radius: 50px;
-    --title-color: #1a1a1a;
-    --sub-color: #1ba085;
-    --btn-bg: #1ba085;
-    --btn-color: #ffffff;
-    --btn-radius: 50px;
+ .blogx-heading {
+     max-width: 720px;
 }
-
-/* ==========================================================================
-   4. LAYOUT: MODERN DARK GLASSMORPHISM
-   ========================================================================== */
-.theme-modern-dark {
-    --blog-bg: #0f172a;
-    --card-bg: rgba(17, 24, 39, 0.75);
-    --card-border: 1px solid rgba(6, 182, 212, 0.3);
-    --card-radius: 16px;
-    --img-radius: 12px;
-    --badge-bg: rgba(15, 23, 42, 0.9);
-    --badge-color: #f3f4f6;
-    --badge-radius: 10px;
-    --cat-bg: rgba(6, 182, 212, 0.15);
-    --cat-color: #06b6d4;
-    --cat-border: 1px solid rgba(6, 182, 212, 0.3);
-    --cat-radius: 8px;
-    --title-color: #f3f4f6;
-    --sub-color: #06b6d4;
-    --btn-bg: #06b6d4;
-    --btn-color: #0f172a;
-    --btn-radius: 8px;
+ .blogx-kicker {
+     display: inline-flex;
+     align-items: center;
+     margin-bottom: 13px;
+     color: var(--blog-accent);
+     font-size: 12px;
+     font-weight: 800;
+     letter-spacing: 2px;
+     text-transform: uppercase;
 }
-
-/* ==========================================================================
-   5. LAYOUT: VIBRANT FLOATING CARDS
-   ========================================================================== */
-.theme-vibrant-cards {
-    --blog-bg: #f8fafc;
-    --card-bg: #ffffff;
-    --card-border: 1px solid #e2e8f0;
-    --card-radius: 24px;
-    --img-radius: 16px;
-    --badge-bg: #ffffff;
-    --badge-color: #111827;
-    --badge-radius: 12px;
-    --cat-bg: #eef2ff;
-    --cat-color: #4f46e5;
-    --cat-border: none;
-    --cat-radius: 50px;
-    --title-color: #1e293b;
-    --sub-color: #4f46e5;
-    --btn-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-    --btn-color: #ffffff;
-    --btn-radius: 50px;
+ .blogx-title {
+     margin: 0;
+     color: var(--blog-heading);
+     font-size: clamp(2.5rem, 4vw, 4rem);
+     font-weight: 800;
+     line-height: 1.1;
+     letter-spacing: -1.5px;
 }
-
-/* ==========================================================================
-   6. LAYOUT: LUXURY GOLD SERIF FRAME
-   ========================================================================== */
-.theme-elegant-serif {
-    --blog-bg: #faf8f5;
-    --card-bg: #ffffff;
-    --card-border: 2px solid #d4af37;
-    --card-radius: 4px;
-    --img-radius: 0px;
-    --badge-bg: #ffffff;
-    --badge-color: #2c2a29;
-    --badge-radius: 0px;
-    --cat-bg: #fdfbf7;
-    --cat-color: #d4af37;
-    --cat-border: 1px solid #d4af37;
-    --cat-radius: 0px;
-    --title-color: #2c2a29;
-    --sub-color: #d4af37;
-    --btn-bg: transparent;
-    --btn-color: #d4af37;
-    --btn-radius: 0px;
+ .blogx-title span {
+     display: none;
 }
-
-/* ==========================================================================
-   7. LAYOUT: LAYERED OFFSET FRAMES
-   ========================================================================== */
-.theme-layered-offset {
-    --blog-bg: #f8fafc;
-    --card-bg: #f5f5f7;
-    --card-border: none;
-    --card-radius: 20px;
-    --img-radius: 12px;
-    --badge-bg: #ffffff;
-    --badge-color: #111827;
-    --badge-radius: 10px;
-    --cat-bg: #fed7aa;
-    --cat-color: #9a3412;
-    --cat-border: none;
-    --cat-radius: 6px;
-    --title-color: #2d3748;
-    --sub-color: #f37a1f;
-    --btn-bg: #f37a1f;
-    --btn-color: #ffffff;
-    --btn-radius: 8px;
+ .blogx-description {
+     max-width: 620px;
+     margin: 22px 0 0;
+     color: var(--blog-text);
+     font-size: .94rem;
+     line-height: 1.8;
 }
-
-
-/* ==========================================================================
-   CORE STRUCTURAL & SPACING RULES (Driven by CSS Variables)
-   ========================================================================== */
-
-.blog-section {
-    background-color: var(--blog-bg);
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    transition: background-color 0.4s ease;
+/* ========================================================== ALL BLOG BUTTON ========================================================== */
+ .blogx-all-btn {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     gap: 13px;
+     min-height: 55px;
+     padding: 0 27px;
+     color: #ffffff;
+     background: var(--blog-accent);
+     border-radius: 7px;
+     text-decoration: none;
+     font-size: 13px;
+     font-weight: 750;
+     transition: .3s ease;
 }
-
-.blog-section .section-subtitle {
-    display: inline-block;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    color: var(--sub-color);
+ .blogx-all-btn:hover {
+     color: #ffffff;
+     transform: translateY(-3px);
 }
-
-.blog-section .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--title-color);
+/* ========================================================== CARD ========================================================== */
+ .blogx-card {
+     position: relative;
+     height: 100%;
+     overflow: hidden;
+     background: var(--blog-card);
+     border: 1px solid var(--blog-border);
+     transition: transform .3s ease, box-shadow .3s ease;
 }
-
-.blog-section .card {
-    background-color: var(--card-bg);
-    border-radius: var(--card-radius);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
-    transition: all 0.3s ease;
+ .blogx-card:hover {
+     transform: translateY(-5px);
 }
-
-.theme-emerald-block .blog-section {
-    border-radius: 24px;
-    margin: 3rem 1.5rem;
+/* ========================================================== IMAGE ========================================================== */
+ .blogx-image {
+     position: relative;
+     overflow: hidden;
+     height: 290px;
 }
-
-.blog-section .position-relative {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--img-radius);
-    margin-bottom: 1.5rem;
+ .blogx-image img {
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: transform .5s ease;
 }
-
-.blog-section .card-img-top {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: var(--img-radius);
+ .blogx-card:hover .blogx-image img {
+     transform: scale(1.05);
 }
-
-.blog-section .date-badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: var(--badge-bg);
-    color: var(--badge-color);
-    padding: 10px 14px;
-    border-radius: var(--badge-radius);
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    z-index: 2;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+/* ========================================================== DATE ========================================================== */
+ .blogx-date {
+     position: absolute;
+     z-index: 5;
+     top: 24px;
+     left: 24px;
+     min-width: 70px;
+     padding: 13px 11px;
+     color: #ffffff;
+     background: var(--blog-accent);
+     text-align: center;
+     border-radius: 5px;
 }
-
-.blog-section .date-badge .day {
-    font-size: 1.35rem;
-    font-weight: 800;
-    line-height: 1;
+ .blogx-date strong {
+     display: block;
+     font-size: 1.5rem;
+     line-height: 1;
 }
-
-.blog-section .date-badge .month-year {
-    font-size: 0.75rem;
-    font-weight: 700;
-    line-height: 1.2;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
+ .blogx-date span {
+     display: block;
+     margin-top: 5px;
+     font-size: .72rem;
+     font-weight: 800;
+     text-transform: uppercase;
 }
-
-
-.blog-section .category-badge {
-    display: inline-block;
-    background-color: var(--cat-bg);
-    color: var(--cat-color);
-    border: var(--cat-border);
-    border-radius: var(--cat-radius);
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
+ .blogx-date small {
+     display: none;
 }
-
-.blog-section .card-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--title-color);
-    line-height: 1.45;
-    margin-bottom: 0;
+/* ========================================================== CATEGORY ========================================================== */
+ .blogx-category {
+     display: none;
+     position: absolute;
+     z-index: 5;
+     left: 25px;
+     bottom: 25px;
+     padding: 7px 13px;
+     color: var(--blog-heading);
+     background: #ffffff;
+     border-radius: 5px;
+     font-size: .78rem;
 }
-
-.blog-section .btn-read-more {
-    background: var(--btn-bg);
-    color: var(--btn-color);
-    border-radius: var(--btn-radius);
-    font-size: 0.85rem;
-    font-weight: 700;
-    padding: 0.75rem 1.6rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: none;
+/* ========================================================== BODY ========================================================== */
+ .blogx-card-body {
+     padding: 27px 28px 30px;
 }
-
-.theme-elegant-serif .blog-section .section-subtitle,
-.theme-elegant-serif .blog-section .section-title,
-.theme-elegant-serif .blog-section .card-title,
-.theme-elegant-serif .blog-section .category-badge,
-.theme-elegant-serif .blog-section .btn-read-more {
-    font-family: 'Playfair Display', serif;
+ .blogx-meta {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     gap: 16px;
+     color: var(--blog-text);
+     font-size: .78rem;
 }
-
-.theme-elegant-serif .blog-section .btn-read-more {
-    border-bottom: 1px solid #d4af37;
-    padding: 0;
+ .blogx-meta span {
+     display: inline-flex;
+     align-items: center;
+     gap: 6px;
+}
+ .blogx-meta i {
+     color: var(--blog-accent);
+}
+ .blogx-card-title {
+     margin: 17px 0 0;
+     font-size: 1.35rem;
+     font-weight: 750;
+     line-height: 1.35;
+}
+ .blogx-card-title a {
+     color: var(--blog-heading);
+     text-decoration: none;
+}
+ .blogx-excerpt {
+     margin: 15px 0 0;
+     color: var(--blog-text);
+     font-size: .86rem;
+     line-height: 1.7;
+}
+/* ========================================================== READ MORE ========================================================== */
+ .blogx-readmore {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     margin-top: 21px;
+     color: var(--blog-heading);
+     text-decoration: none;
+     font-size: .82rem;
+     font-weight: 750;
+}
+ .blogx-readmore i {
+     color: var(--blog-accent);
+     transition: transform .25s ease;
+}
+ .blogx-readmore:hover i {
+     transform: translateX(5px);
+}
+/* ========================================================== COMPACT ITEMS ========================================================== */
+ .blogx-compact-list {
+     display: none;
+}
+ .blogx-compact-item {
+     background: var(--blog-card);
+}
+ .blogx-compact-image img {
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+ .blogx-compact-content h3 {
+     margin: 14px 0 0;
+     font-size: 1.15rem;
+     line-height: 1.4;
+}
+ .blogx-compact-content h3 a {
+     color: var(--blog-heading);
+     text-decoration: none;
+}
+/* ========================================================== ========================================================== 01 — CLEAN GRID Reference: Latest Updates heading left + button right + 3 soft cards ========================================================== ========================================================== */
+ :is( .theme-clean-grid .blogx-section, .blogx-section.theme-clean-grid, .theme-default .blogx-section, .blogx-section.theme-default ) {
+     --blog-accent: #3854bb;
+     --blog-heading: #31384e;
+     --blog-text: #747a87;
+     --blog-bg: #ffffff;
+     --blog-card: #eefbff;
+}
+ .theme-clean-grid .blogx-kicker, .theme-default .blogx-kicker, .blogx-section.theme-clean-grid .blogx-kicker, .blogx-section.theme-default .blogx-kicker {
+     color: #58c4e5;
+     letter-spacing: 4px;
+}
+ .theme-clean-grid .blogx-header, .theme-default .blogx-header, .blogx-section.theme-clean-grid .blogx-header, .blogx-section.theme-default .blogx-header {
+     align-items: center;
+     margin-bottom: 65px;
+}
+ .theme-clean-grid .blogx-all-btn, .theme-default .blogx-all-btn, .blogx-section.theme-clean-grid .blogx-all-btn, .blogx-section.theme-default .blogx-all-btn {
+     min-width: 180px;
+     background: linear-gradient( 110deg, #3442b8, #5cd7ed );
+}
+ .theme-clean-grid .blogx-card, .theme-default .blogx-card, .blogx-section.theme-clean-grid .blogx-card, .blogx-section.theme-default .blogx-card {
+     border: 0;
+     border-radius: 9px;
+}
+ .theme-clean-grid .blogx-image, .theme-default .blogx-image, .blogx-section.theme-clean-grid .blogx-image, .blogx-section.theme-default .blogx-image {
+     height: 250px;
+}
+ .theme-clean-grid .blogx-card-body, .theme-default .blogx-card-body, .blogx-section.theme-clean-grid .blogx-card-body, .blogx-section.theme-default .blogx-card-body {
+     padding: 27px 30px 32px;
+}
+ .theme-clean-grid .blogx-excerpt, .theme-default .blogx-excerpt, .blogx-section.theme-clean-grid .blogx-excerpt, .blogx-section.theme-default .blogx-excerpt {
+     display: none;
+}
+ .theme-clean-grid .blogx-date, .theme-default .blogx-date, .blogx-section.theme-clean-grid .blogx-date, .blogx-section.theme-default .blogx-date {
+     background: #3854bb;
+}
+/* ========================================================== 02 — EMERALD BLOCK Reference: Latest Blog with 2 large + side list ========================================================== */
+ :is( .theme-emerald-block .blogx-section, .blogx-section.theme-emerald-block ) {
+     --blog-accent: #148d89;
+     --blog-heading: #0d2529;
+     --blog-text: #69777b;
+     background: #ffffff;
+}
+ .theme-emerald-block .blogx-header, .blogx-section.theme-emerald-block .blogx-header {
+     align-items: flex-start;
+}
+ .theme-emerald-block .blogx-title, .blogx-section.theme-emerald-block .blogx-title {
+     font-size: clamp(2.5rem, 3.5vw, 3.7rem);
+}
+ .theme-emerald-block .blogx-description, .blogx-section.theme-emerald-block .blogx-description {
+     display: none;
+}
+ .theme-emerald-block .blogx-all-btn, .blogx-section.theme-emerald-block .blogx-all-btn {
+     color: #111111;
+     background: transparent;
+     font-size: 1.4rem;
+}
+ .theme-emerald-block .blogx-all-btn i, .blogx-section.theme-emerald-block .blogx-all-btn i {
+     width: 58px;
+     height: 58px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     color: #148d89;
+     background: #effafa;
+     border-radius: 50%;
+}
+ .theme-emerald-block .blogx-main-row, .blogx-section.theme-emerald-block .blogx-main-row {
+     width: 67%;
+}
+ .theme-emerald-block .blogx-post-col, .blogx-section.theme-emerald-block .blogx-post-col {
+     flex: 0 0 50%;
+     max-width: 50%;
+}
+ .theme-emerald-block .blogx-post-col:nth-child(3), .blogx-section.theme-emerald-block .blogx-post-col:nth-child(3) {
+     display: none;
+}
+ .theme-emerald-block .blogx-content, .blogx-section.theme-emerald-block .blogx-content {
+     position: relative;
+}
+ .theme-emerald-block .blogx-compact-list, .blogx-section.theme-emerald-block .blogx-compact-list {
+     display: grid;
+     position: absolute;
+     right: 0;
+     top: 0;
+     width: 31%;
+     gap: 20px;
+}
+ .theme-emerald-block .blogx-card, .blogx-section.theme-emerald-block .blogx-card, .theme-emerald-block .blogx-compact-item, .blogx-section.theme-emerald-block .blogx-compact-item {
+     border: 0;
+     border-radius: 14px;
+     box-shadow: 0 10px 30px rgba(15, 23, 42, .06);
+}
+ .theme-emerald-block .blogx-image, .blogx-section.theme-emerald-block .blogx-image {
+     height: 300px;
+     border-radius: 14px 14px 0 0;
+}
+ .theme-emerald-block .blogx-date, .blogx-section.theme-emerald-block .blogx-date {
+     left: auto;
+     right: 24px;
+     color: #148d89;
+     background: #ffffff;
+}
+ .theme-emerald-block .blogx-date span, .blogx-section.theme-emerald-block .blogx-date span {
+     display: inline;
+}
+ .theme-emerald-block .blogx-compact-item, .blogx-section.theme-emerald-block .blogx-compact-item {
+     padding: 27px;
+}
+ .theme-emerald-block .blogx-compact-image, .blogx-section.theme-emerald-block .blogx-compact-image {
+     display: none;
+}
+/* ========================================================== 03 — LAYERED OFFSET Reference: orange consulting blog cards ========================================================== */
+ :is( .theme-layered-offset .blogx-section, .blogx-section.theme-layered-offset ) {
+     --blog-accent: #ff4d27;
+     --blog-heading: #121212;
+     --blog-text: #5e5e5e;
+     background: #ffffff;
+}
+ .theme-layered-offset .blogx-header, .blogx-section.theme-layered-offset .blogx-header {
+     align-items: center;
+}
+ .theme-layered-offset .blogx-kicker, .blogx-section.theme-layered-offset .blogx-kicker {
+     color: #ff4d27;
+}
+ .theme-layered-offset .blogx-kicker::before, .blogx-section.theme-layered-offset .blogx-kicker::before {
+     content: "〰";
+     margin-right: 8px;
+}
+ .theme-layered-offset .blogx-description, .blogx-section.theme-layered-offset .blogx-description {
+     display: none;
+}
+ .theme-layered-offset .blogx-all-btn, .blogx-section.theme-layered-offset .blogx-all-btn {
+     border-radius: 0;
+     background: #ff4d27;
+}
+ .theme-layered-offset .blogx-card, .blogx-section.theme-layered-offset .blogx-card {
+     overflow: visible;
+     margin-top: 20px;
+     border: 1px solid #e9e9e9;
+}
+ .theme-layered-offset .blogx-image, .blogx-section.theme-layered-offset .blogx-image {
+     width: calc(100% - 60px);
+     height: 285px;
+     margin: -22px auto 0;
+     border-top: 3px solid #ff4d27;
+}
+ .theme-layered-offset .blogx-date, .blogx-section.theme-layered-offset .blogx-date {
+     display: none;
+}
+ .theme-layered-offset .blogx-category, .blogx-section.theme-layered-offset .blogx-category {
+     display: none;
+}
+ .theme-layered-offset .blogx-meta, .blogx-section.theme-layered-offset .blogx-meta {
+     padding-bottom: 14px;
+     border-bottom: 1px solid #ececec;
+}
+ .theme-layered-offset .blogx-excerpt, .blogx-section.theme-layered-offset .blogx-excerpt {
+     display: block;
+}
+/* ========================================================== 04 — ELEGANT SERIF Elegant editorial blog layout ========================================================== */
+ :is( .theme-elegant-serif .blogx-section, .blogx-section.theme-elegant-serif ) {
+     --blog-accent: #c04c3d;
+     --blog-heading: #252321;
+     --blog-text: #77716c;
+     background: #fbfaf8;
+}
+ .theme-elegant-serif .blogx-header, .blogx-section.theme-elegant-serif .blogx-header {
+     display: block;
+     text-align: center;
+}
+ .theme-elegant-serif .blogx-heading, .blogx-section.theme-elegant-serif .blogx-heading {
+     margin: auto;
+}
+ .theme-elegant-serif .blogx-title, .blogx-section.theme-elegant-serif .blogx-title, .theme-elegant-serif .blogx-card-title, .blogx-section.theme-elegant-serif .blogx-card-title {
+     font-family: "Playfair Display", serif;
+}
+ .theme-elegant-serif .blogx-title, .blogx-section.theme-elegant-serif .blogx-title {
+     font-weight: 600;
+}
+ .theme-elegant-serif .blogx-title span, .blogx-section.theme-elegant-serif .blogx-title span {
+     display: block;
+}
+ .theme-elegant-serif .blogx-header-action, .blogx-section.theme-elegant-serif .blogx-header-action {
+     margin-top: 25px;
+}
+ .theme-elegant-serif .blogx-all-btn, .blogx-section.theme-elegant-serif .blogx-all-btn {
+     color: #c04c3d;
+     background: transparent;
+     border: 1px solid #c04c3d;
+}
+ .theme-elegant-serif .blogx-card, .blogx-section.theme-elegant-serif .blogx-card {
+     border: 0;
+     background: transparent;
+}
+ .theme-elegant-serif .blogx-image, .blogx-section.theme-elegant-serif .blogx-image {
+     height: 310px;
+}
+ .theme-elegant-serif .blogx-card-body, .blogx-section.theme-elegant-serif .blogx-card-body {
+     padding: 27px 5px;
+}
+ .theme-elegant-serif .blogx-date, .blogx-section.theme-elegant-serif .blogx-date {
+     top: auto;
+     left: 0;
+     bottom: 0;
+     background: #c04c3d;
+     border-radius: 0;
+}
+ .theme-elegant-serif .blogx-meta, .blogx-section.theme-elegant-serif .blogx-meta {
+     margin-top: 15px;
+}
+/* ========================================================== 05 — VIBRANT CARDS Reference: blue Insights cards with content overlay ========================================================== */
+ :is( .theme-vibrant-cards .blogx-section, .blogx-section.theme-vibrant-cards ) {
+     --blog-accent: #2656f4;
+     --blog-heading: #101b3c;
+     --blog-text: #677082;
+     background: #f4f6fa;
+}
+ .theme-vibrant-cards .blogx-header, .blogx-section.theme-vibrant-cards .blogx-header {
+     align-items: center;
+}
+ .theme-vibrant-cards .blogx-kicker, .blogx-section.theme-vibrant-cards .blogx-kicker {
+     padding: 7px 15px;
+     color: #2656f4;
+     border: 1px solid #2656f4;
+     border-radius: 30px;
+}
+ .theme-vibrant-cards .blogx-title span, .blogx-section.theme-vibrant-cards .blogx-title span {
+     display: block;
+     color: #2656f4;
+}
+ .theme-vibrant-cards .blogx-description, .blogx-section.theme-vibrant-cards .blogx-description {
+     display: none;
+}
+ .theme-vibrant-cards .blogx-all-btn, .blogx-section.theme-vibrant-cards .blogx-all-btn {
+     border-radius: 30px;
+     background: linear-gradient( 110deg, #1424bc, #3359ff );
+}
+ .theme-vibrant-cards .blogx-card, .blogx-section.theme-vibrant-cards .blogx-card {
+     min-height: 540px;
+     overflow: hidden;
+     border: 0;
+     border-radius: 15px;
+     background: #ffffff;
+}
+ .theme-vibrant-cards .blogx-image, .blogx-section.theme-vibrant-cards .blogx-image {
+     height: 100%;
+}
+ .theme-vibrant-cards .blogx-image::after, .blogx-section.theme-vibrant-cards .blogx-image::after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: linear-gradient( 180deg, rgba(12, 26, 65, .05), rgba(11, 25, 65, .45) );
+}
+ .theme-vibrant-cards .blogx-card-body, .blogx-section.theme-vibrant-cards .blogx-card-body {
+     position: absolute;
+     z-index: 8;
+     left: 20px;
+     right: 20px;
+     bottom: 18px;
+     padding: 27px;
+     background: #ffffff;
+     border-radius: 12px;
+}
+ .theme-vibrant-cards .blogx-category, .blogx-section.theme-vibrant-cards .blogx-category {
+     display: block;
+     z-index: 10;
+     left: 55px;
+     bottom: 190px;
+     color: #101b3c;
+     border: 1px solid #d9dde7;
+}
+ .theme-vibrant-cards .blogx-date, .blogx-section.theme-vibrant-cards .blogx-date {
+     top: auto;
+     left: auto;
+     right: 45px;
+     bottom: 173px;
+     color: #101b3c;
+     background: #f5f9ff;
+     border-radius: 7px;
+     z-index: 10;
+}
+ .theme-vibrant-cards .blogx-date span, .blogx-section.theme-vibrant-cards .blogx-date span {
+     padding: 4px 8px;
+     color: #ffffff;
+     background: #2656f4;
+     border-radius: 3px;
+}
+ .theme-vibrant-cards .blogx-meta, .theme-vibrant-cards .blogx-excerpt, .blogx-section.theme-vibrant-cards .blogx-meta, .blogx-section.theme-vibrant-cards .blogx-excerpt {
+     display: none;
+}
+ .theme-vibrant-cards .blogx-readmore i, .blogx-section.theme-vibrant-cards .blogx-readmore i {
+     width: 34px;
+     height: 34px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     color: #ffffff;
+     background: #2656f4;
+     border-radius: 50%;
+}
+/* ========================================================== 06 — CURVED SCALLOPED Horizontal editorial / event-like blog cards ========================================================== */
+ :is( .theme-curved-scalloped .blogx-section, .blogx-section.theme-curved-scalloped ) {
+     --blog-accent: #198c86;
+     --blog-heading: #12292c;
+     --blog-text: #737b7e;
+     background: #fafafa;
+}
+ .theme-curved-scalloped .blogx-heading {
+     margin: auto;
+}
+ .theme-curved-scalloped .blogx-header, .blogx-section.theme-curved-scalloped .blogx-header {
+     display: block;
+     text-align: center;
+}
+ .theme-curved-scalloped .blogx-title span, .blogx-section.theme-curved-scalloped .blogx-title span {
+     display: inline;
+     color: #198c86;
+}
+ .theme-curved-scalloped .blogx-description, .theme-curved-scalloped .blogx-header-action, .blogx-section.theme-curved-scalloped .blogx-description, .blogx-section.theme-curved-scalloped .blogx-header-action {
+     display: none;
+}
+ .theme-curved-scalloped .blogx-main-row, .blogx-section.theme-curved-scalloped .blogx-main-row {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 28px;
+}
+ .theme-curved-scalloped .blogx-post-col, .blogx-section.theme-curved-scalloped .blogx-post-col {
+     width: auto;
+     max-width: none;
+}
+ .theme-curved-scalloped .blogx-card, .blogx-section.theme-curved-scalloped .blogx-card {
+     display: grid;
+     grid-template-columns: 42% 58%;
+     min-height: 230px;
+     padding: 20px;
+     border: 0;
+     border-radius: 14px;
+     box-shadow: 0 8px 30px rgba(20, 40, 45, .06);
+}
+ .theme-curved-scalloped .blogx-image, .blogx-section.theme-curved-scalloped .blogx-image {
+     height: 100%;
+     border-radius: 10px;
+}
+ .theme-curved-scalloped .blogx-card-body, .blogx-section.theme-curved-scalloped .blogx-card-body {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 18px 25px;
+}
+ .theme-curved-scalloped .blogx-date, .theme-curved-scalloped .blogx-category, .theme-curved-scalloped .blogx-excerpt, .blogx-section.theme-curved-scalloped .blogx-date, .blogx-section.theme-curved-scalloped .blogx-category, .blogx-section.theme-curved-scalloped .blogx-excerpt {
+     display: none;
+}
+ .theme-curved-scalloped .blogx-card-title, .blogx-section.theme-curved-scalloped .blogx-card-title {
+     font-size: 1.3rem;
+}
+/* third item spans width */
+ .theme-curved-scalloped .blogx-post-col:nth-child(3), .blogx-section.theme-curved-scalloped .blogx-post-col:nth-child(3) {
+     grid-column: 1 / -1;
+     width: 50%;
+     margin: auto;
+}
+/* ========================================================== 07 — MODERN DARK ========================================================== */
+ :is( .theme-modern-dark .blogx-section, .blogx-section.theme-modern-dark ) {
+     --blog-accent: #20c7d9;
+     --blog-heading: #ffffff;
+     --blog-text: #98a7b7;
+     --blog-card: #0d1b2b;
+     --blog-border: rgba(255,255,255,.07);
+     background: radial-gradient( circle at 85% 0%, rgba(32,199,217,.1), transparent 30% ), linear-gradient( 135deg, #06101a, #081522 );
+}
+ .theme-modern-dark .blogx-kicker, .blogx-section.theme-modern-dark .blogx-kicker {
+     color: #20c7d9;
+}
+ .theme-modern-dark .blogx-title, .blogx-section.theme-modern-dark .blogx-title {
+     color: #ffffff;
+}
+ .theme-modern-dark .blogx-title span, .blogx-section.theme-modern-dark .blogx-title span {
+     display: block;
+     color: #20c7d9;
+}
+ .theme-modern-dark .blogx-description, .blogx-section.theme-modern-dark .blogx-description {
+     color: #98a7b7;
+}
+ .theme-modern-dark .blogx-all-btn, .blogx-section.theme-modern-dark .blogx-all-btn {
+     color: #06121e;
+     background: #20c7d9;
+     border-radius: 30px;
+}
+ .theme-modern-dark .blogx-card, .blogx-section.theme-modern-dark .blogx-card {
+     overflow: hidden;
+     border: 1px solid rgba(255,255,255,.07);
+     border-radius: 16px;
+     background: linear-gradient( 145deg, rgba(255,255,255,.055), rgba(255,255,255,.025) );
+     box-shadow: 0 20px 50px rgba(0,0,0,.15);
+}
+ .theme-modern-dark .blogx-image, .blogx-section.theme-modern-dark .blogx-image {
+     height: 260px;
+}
+ .theme-modern-dark .blogx-image::after, .blogx-section.theme-modern-dark .blogx-image::after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: linear-gradient( 180deg, transparent, rgba(4,13,23,.45) );
+}
+ .theme-modern-dark .blogx-date, .blogx-section.theme-modern-dark .blogx-date {
+     color: #06121e;
+     background: #20c7d9;
+}
+ .theme-modern-dark .blogx-meta, .theme-modern-dark .blogx-excerpt, .blogx-section.theme-modern-dark .blogx-meta, .blogx-section.theme-modern-dark .blogx-excerpt {
+     color: #98a7b7;
+}
+ .theme-modern-dark .blogx-card-title a, .blogx-section.theme-modern-dark .blogx-card-title a {
+     color: #ffffff;
+}
+ .theme-modern-dark .blogx-readmore, .blogx-section.theme-modern-dark .blogx-readmore {
+     color: #ffffff;
+}
+ .theme-modern-dark .blogx-readmore i, .blogx-section.theme-modern-dark .blogx-readmore i {
+     width: 34px;
+     height: 34px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     color: #06121e;
+     background: #20c7d9;
+     border-radius: 50%;
+}
+/* ========================================================== RESPONSIVE ========================================================== */
+ @media (max-width: 1199.98px) {
+     .blogx-image {
+         height: 250px;
+    }
+     .theme-emerald-block .blogx-main-row, .blogx-section.theme-emerald-block .blogx-main-row {
+         width: 66%;
+    }
+     .theme-emerald-block .blogx-compact-list, .blogx-section.theme-emerald-block .blogx-compact-list {
+         width: 32%;
+    }
+}
+/* ========================================================== TABLET ========================================================== */
+ @media (max-width: 991.98px) {
+     .blogx-section {
+         padding: 80px 0;
+    }
+     .blogx-header {
+         align-items: flex-start;
+    }
+    /* emerald becomes normal grid */
+     .theme-emerald-block .blogx-main-row, .blogx-section.theme-emerald-block .blogx-main-row {
+         width: 100%;
+    }
+     .theme-emerald-block .blogx-post-col, .blogx-section.theme-emerald-block .blogx-post-col {
+         flex: 0 0 50%;
+         max-width: 50%;
+    }
+     .theme-emerald-block .blogx-compact-list, .blogx-section.theme-emerald-block .blogx-compact-list {
+         position: static;
+         width: 100%;
+         grid-template-columns: repeat(2, 1fr);
+         margin-top: 25px;
+    }
+    /* curved */
+     .theme-curved-scalloped .blogx-main-row, .blogx-section.theme-curved-scalloped .blogx-main-row {
+         grid-template-columns: 1fr;
+    }
+     .theme-curved-scalloped .blogx-post-col:nth-child(3), .blogx-section.theme-curved-scalloped .blogx-post-col:nth-child(3) {
+         grid-column: auto;
+         width: 100%;
+    }
+}
+/* ========================================================== MOBILE ========================================================== */
+ @media (max-width: 767.98px) {
+     .blogx-section {
+         padding: 65px 0;
+    }
+     .blogx-header {
+         display: block;
+         margin-bottom: 40px;
+    }
+     .blogx-header-action {
+         margin-top: 25px;
+    }
+     .blogx-title {
+         font-size: 2.3rem;
+    }
+    /* emerald */
+     .theme-emerald-block .blogx-post-col, .blogx-section.theme-emerald-block .blogx-post-col {
+         flex: 0 0 100%;
+         max-width: 100%;
+    }
+     .theme-emerald-block .blogx-compact-list, .blogx-section.theme-emerald-block .blogx-compact-list {
+         grid-template-columns: 1fr;
+    }
+    /* curved */
+     .theme-curved-scalloped .blogx-card, .blogx-section.theme-curved-scalloped .blogx-card {
+         grid-template-columns: 1fr;
+    }
+     .theme-curved-scalloped .blogx-image, .blogx-section.theme-curved-scalloped .blogx-image {
+         height: 250px;
+         border-radius: 35px 10px 35px 10px;
+    }
+    /* vibrant */
+     .theme-vibrant-cards .blogx-card, .blogx-section.theme-vibrant-cards .blogx-card {
+         min-height: 500px;
+    }
+}
+/* ========================================================== SMALL MOBILE ========================================================== */
+ @media (max-width: 575.98px) {
+     .blogx-section {
+         padding: 55px 0;
+    }
+     .blogx-title {
+         font-size: 2rem;
+    }
+     .blogx-description {
+         font-size: .88rem;
+    }
+     .blogx-image {
+         height: 230px;
+    }
+     .blogx-card-body {
+         padding: 24px 22px;
+    }
+     .blogx-card-title {
+         font-size: 1.2rem;
+    }
+     .theme-vibrant-cards .blogx-category, .blogx-section.theme-vibrant-cards .blogx-category {
+         left: 35px;
+    }
+     .theme-vibrant-cards .blogx-date, .blogx-section.theme-vibrant-cards .blogx-date {
+         right: 35px;
+    }
 }

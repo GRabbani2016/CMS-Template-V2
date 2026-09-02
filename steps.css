@@ -1,719 +1,1114 @@
-/* ==========================================================================
-        5. WORK PROCESS / STEP SECTION STYLES (MATCHING REFERENCE DESIGNS)
-        ========================================================================== */
-    .work-process-section {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-        background-color: transparent;
+/* ========================================================================== WORKING PROCESS / STEPS SECTION ONE HTML - SEVEN THEME LAYOUTS 1. theme-emerald-block 2. theme-curved-scalloped 3. theme-default / theme-clean-grid 4. theme-modern-dark 5. theme-vibrant-cards 6. theme-elegant-serif 7. theme-layered-offset ========================================================================== */
+/* ========================================================================== BASE ========================================================================== */
+ .steps-section {
+     position: relative;
+     padding: 100px 0;
+     overflow: hidden;
+     isolation: isolate;
+}
+ .steps-section .container {
+     position: relative;
+     z-index: 2;
+}
+/* Heading */
+ .steps-section .steps-head {
+     width: min(780px, 100%);
+     margin: 0 auto 70px;
+     text-align: center;
+}
+ .steps-section .steps-kicker {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     gap: 9px;
+     margin-bottom: 16px;
+     font-size: 0.88rem;
+     font-weight: 700;
+     letter-spacing: 0.7px;
+     text-transform: uppercase;
+}
+ .steps-section .steps-kicker i {
+     font-size: 1.15rem;
+}
+ .steps-section .steps-title {
+     margin: 0 0 18px;
+     font-size: clamp(2rem, 4.5vw, 3.5rem);
+     font-weight: 800;
+     line-height: 1.12;
+     letter-spacing: -1.5px;
+}
+ .steps-section .steps-description {
+     width: min(650px, 100%);
+     margin: 0 auto;
+     font-size: 1rem;
+     line-height: 1.8;
+}
+/* Main layout */
+ .steps-section .steps-layout {
+     position: relative;
+}
+ .steps-section .process-track {
+     position: relative;
+     display: grid;
+     grid-template-columns: repeat(4, minmax(0, 1fr));
+     gap: 32px;
+}
+/* Step */
+ .steps-section .process-step {
+     min-width: 0;
+     position: relative;
+     text-align: center;
+}
+ .steps-section .step-visual {
+     position: relative;
+     width: fit-content;
+     margin: 0 auto;
+}
+/* Image */
+ .steps-section .step-image {
+     width: 190px;
+     height: 190px;
+     overflow: hidden;
+     border-radius: 50%;
+}
+ .steps-section .step-image img {
+     width: 100%;
+     height: 100%;
+     display: block;
+     object-fit: cover;
+     transition: transform 0.45s ease;
+}
+ .steps-section .process-step:hover .step-image img {
+     transform: scale(1.055);
+}
+/* Icon */
+ .steps-section .step-icon {
+     display: none;
+}
+/* Number */
+ .steps-section .step-number {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+ .steps-section .step-number span {
+     display: block;
+}
+ .steps-section .step-number small {
+     display: block;
+}
+/* Content */
+ .steps-section .step-content {
+     position: relative;
+     z-index: 3;
+     margin-top: 28px;
+}
+ .steps-section .step-label {
+     display: none;
+}
+ .steps-section .step-content h3 {
+     margin: 0 0 13px;
+     font-size: 1.35rem;
+     line-height: 1.3;
+     font-weight: 750;
+}
+ .steps-section .step-content p {
+     margin: 0 auto;
+     max-width: 290px;
+     font-size: 0.93rem;
+     line-height: 1.75;
+}
+/* Connector */
+ .steps-section .step-arrow {
+     display: none;
+}
+/* Modern dark extra panel hidden by default */
+ .steps-section .steps-feature-panel {
+     display: none;
+}
+/* ========================================================================== 1. EMERALD BLOCK Reference: Circular photographs + alternating wave process layout ========================================================================== */
+ .theme-emerald-block .steps-section {
+     background: #ffffff;
+     color: #102a2a;
+}
+ .theme-emerald-block .steps-section .steps-kicker {
+     color: #147e79;
+}
+ .theme-emerald-block .steps-section .steps-kicker::before, .theme-emerald-block .steps-section .steps-kicker::after {
+     content: "";
+     width: 70px;
+     height: 1px;
+     background: linear-gradient( 90deg, transparent, #147e79 );
+}
+ .theme-emerald-block .steps-section .steps-kicker::after {
+     transform: scaleX(-1);
+}
+ .theme-emerald-block .steps-section .steps-title {
+     color: #0b2426;
+}
+ .theme-emerald-block .steps-section .steps-description {
+     color: #6b7c80;
+}
+/* Wavy dotted connection */
+ .theme-emerald-block .steps-section .process-track::before {
+     content: "";
+     position: absolute;
+     z-index: 0;
+     top: 75px;
+     left: 8%;
+     right: 8%;
+     height: 240px;
+     background-image: url("data:image/svg+xml,%3Csvg width='1200' height='250' viewBox='0 0 1200 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 110 C170 110 240 220 400 220 C560 220 620 70 780 70 C940 70 1000 180 1180 180' fill='none' stroke='%237e8b8d' stroke-width='2' stroke-dasharray='7 8'/%3E%3C/svg%3E");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     pointer-events: none;
+}
+ .theme-emerald-block .steps-section .process-step {
+     z-index: 2;
+}
+ .theme-emerald-block .steps-section .process-step:nth-child(2), .theme-emerald-block .steps-section .process-step:nth-child(4) {
+     transform: translateY(70px);
+}
+ .theme-emerald-block .steps-section .step-image {
+     width: 210px;
+     height: 210px;
+     border: 7px solid #ffffff;
+     box-shadow: 0 15px 35px rgba(12, 55, 55, 0.08);
+}
+ .theme-emerald-block .steps-section .step-number {
+     position: absolute;
+     z-index: 4;
+     top: -10px;
+     left: -9px;
+     width: 72px;
+     height: 72px;
+     border-radius: 50%;
+     color: #ffffff;
+     background: #147e79;
+     box-shadow: 0 8px 24px rgba(20, 126, 121, 0.25);
+}
+ .theme-emerald-block .steps-section .step-number span {
+     font-size: 1.7rem;
+     line-height: 1;
+     font-weight: 600;
+}
+ .theme-emerald-block .steps-section .step-number small {
+     display: none;
+}
+ .theme-emerald-block .steps-section .step-content h3 {
+     color: #071f22;
+     font-size: 1.42rem;
+}
+ .theme-emerald-block .steps-section .step-content p {
+     color: #768589;
+}
+/* ========================================================================== 2. CURVED SCALLOPED Reference: Large circular cards + dotted number badge + curved arrows ========================================================================== */
+ .theme-curved-scalloped .steps-section {
+     background: #ffffff;
+}
+ .theme-curved-scalloped .steps-section .steps-kicker {
+     color: #1ba085;
+     text-transform: none;
+     font-size: 1rem;
+}
+ .theme-curved-scalloped .steps-section .steps-title {
+     color: #161b1d;
+}
+ .theme-curved-scalloped .steps-section .steps-description {
+     color: #737b80;
+}
+/* Screenshot-inspired 3 step layout */
+ .theme-curved-scalloped .steps-section .process-track {
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+     gap: 110px;
+     max-width: 1320px;
+     margin: 0 auto;
+}
+ .theme-curved-scalloped .steps-section .process-step:nth-child(4) {
+     display: none;
+}
+/* Giant circle */
+ .theme-curved-scalloped .steps-section .process-step {
+     width: 100%;
+     max-width: 345px;
+     aspect-ratio: 1;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 75px 42px 42px;
+     background: #ffffff;
+     border-radius: 50%;
+     box-shadow: 0 25px 70px rgba(15, 23, 42, 0.07);
+}
+/* Hide image/icon */
+ .theme-curved-scalloped .steps-section .step-image, .theme-curved-scalloped .steps-section .step-icon {
+     display: none;
+}
+/* Number badge */
+ .theme-curved-scalloped .steps-section .step-visual {
+     position: absolute;
+     z-index: 5;
+     top: -48px;
+     right: 16px;
+     width: 104px;
+     height: 104px;
+}
+ .theme-curved-scalloped .steps-section .step-visual::before {
+     content: "";
+     position: absolute;
+     inset: -9px;
+     border: 2px dashed #1ba085;
+     border-radius: 50%;
+}
+ .theme-curved-scalloped .steps-section .step-number {
+     position: absolute;
+     inset: 0;
+     border-radius: 50%;
+     color: #ffffff;
+     background: linear-gradient( 135deg, #16866f, #24b896 );
+     box-shadow: 0 12px 25px rgba(27, 160, 133, 0.25);
+}
+ .theme-curved-scalloped .steps-section .step-number span {
+     font-size: 1.7rem;
+     font-weight: 800;
+     line-height: 1;
+}
+ .theme-curved-scalloped .steps-section .step-number small {
+     margin-top: 5px;
+     font-size: 0.72rem;
+     font-weight: 700;
+}
+/* Content */
+ .theme-curved-scalloped .steps-section .step-content {
+     margin: 0;
+}
+ .theme-curved-scalloped .steps-section .step-content h3 {
+     color: #12191b;
+     font-size: 1.55rem;
+     font-weight: 800;
+}
+ .theme-curved-scalloped .steps-section .step-content p {
+     color: #7a8285;
+     font-size: 0.95rem;
+}
+/* Curved arrows */
+ .theme-curved-scalloped .steps-section .step-arrow {
+     position: absolute;
+     z-index: 4;
+     top: 48%;
+     right: -92px;
+     width: 75px;
+     height: 45px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #1ba085;
+     font-size: 2.6rem;
+     transform: rotate(-8deg);
+}
+ .theme-curved-scalloped .steps-section .process-step:nth-child(2) .step-arrow {
+     transform: rotate(8deg);
+}
+ .theme-curved-scalloped .steps-section .process-step:nth-child(3) .step-arrow {
+     display: none;
+}
+/* ========================================================================== 3. CLEAN GRID Supports current .theme-default and optional .theme-clean-grid Reference: Four connected colored process blocks ========================================================================== */
+ .theme-default .steps-section, .theme-clean-grid .steps-section {
+     background: #ffffff;
+}
+ .theme-default .steps-section .steps-kicker, .theme-clean-grid .steps-section .steps-kicker {
+     color: #334155;
+}
+ .theme-default .steps-section .steps-title, .theme-clean-grid .steps-section .steps-title {
+     color: #111827;
+}
+ .theme-default .steps-section .steps-description, .theme-clean-grid .steps-section .steps-description {
+     color: #64748b;
+}
+/* Main process box */
+ .theme-default .steps-section .process-track, .theme-clean-grid .steps-section .process-track {
+     gap: 0;
+     padding: 28px 18px 34px;
+     background: #ffffff;
+     border: 1px solid #edf1f4;
+     border-radius: 24px;
+     box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+}
+ .theme-default .steps-section .process-step, .theme-clean-grid .steps-section .process-step {
+     padding: 0 18px 22px;
+     border-right: 1px solid #edf1f4;
+}
+ .theme-default .steps-section .process-step:last-child, .theme-clean-grid .steps-section .process-step:last-child {
+     border-right: 0;
+}
+/* Icon circle */
+ .theme-default .steps-section .step-image, .theme-clean-grid .steps-section .step-image {
+     display: none;
+}
+ .theme-default .steps-section .step-icon, .theme-clean-grid .steps-section .step-icon {
+     width: 78px;
+     height: 78px;
+     display: grid;
+     place-items: center;
+     margin: 0 auto 18px;
+     border-radius: 50%;
+     font-size: 2rem;
+     box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+ .theme-default .steps-section .process-step:nth-child(1) .step-icon, .theme-clean-grid .steps-section .process-step:nth-child(1) .step-icon {
+     color: #638d00;
+     background: #d9f883;
+}
+ .theme-default .steps-section .process-step:nth-child(2) .step-icon, .theme-clean-grid .steps-section .process-step:nth-child(2) .step-icon {
+     color: #087d64;
+     background: #a3ecd7;
+}
+ .theme-default .steps-section .process-step:nth-child(3) .step-icon, .theme-clean-grid .steps-section .process-step:nth-child(3) .step-icon {
+     color: #00768a;
+     background: #9ce8ef;
+}
+ .theme-default .steps-section .process-step:nth-child(4) .step-icon, .theme-clean-grid .steps-section .process-step:nth-child(4) .step-icon {
+     color: #236093;
+     background: #b8ddef;
+}
+/* Hide floating number */
+ .theme-default .steps-section .step-number, .theme-clean-grid .steps-section .step-number {
+     display: none;
+}
+/* Continuous step ribbon */
+ .theme-default .steps-section .step-content, .theme-clean-grid .steps-section .step-content {
+     margin-top: 0;
+}
+ .theme-default .steps-section .step-label, .theme-clean-grid .steps-section .step-label {
+     min-height: 61px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 -18px 24px;
+     color: #ffffff;
+     font-size: 0.92rem;
+     font-weight: 800;
+     letter-spacing: 0.6px;
+     clip-path: polygon( 0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%, 14px 50% );
+}
+ .theme-default .steps-section .process-step:first-child .step-label, .theme-clean-grid .steps-section .process-step:first-child .step-label {
+     clip-path: polygon( 0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100% );
+     border-radius: 12px 0 0 12px;
+}
+ .theme-default .steps-section .process-step:last-child .step-label, .theme-clean-grid .steps-section .process-step:last-child .step-label {
+     clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 100%, 14px 50% );
+     border-radius: 0 12px 12px 0;
+}
+/* Ribbon colors */
+ .theme-default .steps-section .process-step:nth-child(1) .step-label, .theme-clean-grid .steps-section .process-step:nth-child(1) .step-label {
+     background: linear-gradient( 135deg, #9bd41f, #b1e632 );
+}
+ .theme-default .steps-section .process-step:nth-child(2) .step-label, .theme-clean-grid .steps-section .process-step:nth-child(2) .step-label {
+     background: linear-gradient( 135deg, #32c7a0, #2fd3ae );
+}
+ .theme-default .steps-section .process-step:nth-child(3) .step-label, .theme-clean-grid .steps-section .process-step:nth-child(3) .step-label {
+     background: linear-gradient( 135deg, #2ec5d2, #36cadc );
+}
+ .theme-default .steps-section .process-step:nth-child(4) .step-label, .theme-clean-grid .steps-section .process-step:nth-child(4) .step-label {
+     background: linear-gradient( 135deg, #2496cb, #3ba9dc );
+}
+ .theme-default .steps-section .step-content h3, .theme-clean-grid .steps-section .step-content h3 {
+     color: #202b35;
+     font-size: 1rem;
+}
+ .theme-default .steps-section .step-content p, .theme-clean-grid .steps-section .step-content p {
+     color: #788490;
+     font-size: 0.82rem;
+}
+/* ========================================================================== 4. MODERN DARK Reference: Vertical process cards + right content / media panel ========================================================================== */
+ .theme-modern-dark .steps-section {
+     background: radial-gradient( circle at 90% 5%, rgba(6, 182, 212, 0.12), transparent 25% ), #070d18;
+     color: #ffffff;
+}
+/* Hide standard header because right panel becomes heading */
+ .theme-modern-dark .steps-section .steps-head {
+     display: none;
+}
+/* Two column section */
+ .theme-modern-dark .steps-section .steps-layout {
+     display: grid;
+     grid-template-columns: minmax(0, 1.08fr) minmax(390px, 0.92fr);
+     gap: 70px;
+     align-items: center;
+}
+/* 3 vertical process cards */
+ .theme-modern-dark .steps-section .process-track {
+     grid-template-columns: 1fr;
+     gap: 25px;
+}
+ .theme-modern-dark .steps-section .process-step:nth-child(4) {
+     display: none;
+}
+ .theme-modern-dark .steps-section .process-step {
+     min-height: 180px;
+     display: grid;
+     grid-template-columns: 100px 1fr;
+     align-items: center;
+     gap: 30px;
+     padding: 30px 34px;
+     text-align: left;
+     background: linear-gradient( 135deg, rgba(17, 24, 39, 0.93), rgba(14, 26, 43, 0.8) );
+     border: 1px solid rgba(6, 182, 212, 0.18);
+     border-radius: 22px;
+     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+ .theme-modern-dark .steps-section .process-step:hover {
+     transform: translateX(8px);
+     border-color: rgba(34, 211, 238, 0.6);
+     box-shadow: 0 20px 55px rgba(6, 182, 212, 0.11);
+}
+/* Icon */
+ .theme-modern-dark .steps-section .step-image {
+     display: none;
+}
+ .theme-modern-dark .steps-section .step-icon {
+     width: 92px;
+     height: 92px;
+     display: grid;
+     place-items: center;
+     border-radius: 50%;
+     color: #22d3ee;
+     font-size: 2rem;
+     background: rgba(6, 182, 212, 0.09);
+     border: 1px solid rgba(34, 211, 238, 0.38);
+     box-shadow: inset 0 0 25px rgba(6, 182, 212, 0.06);
+}
+/* Small number */
+ .theme-modern-dark .steps-section .step-number {
+     position: absolute;
+     z-index: 4;
+     top: 50%;
+     right: -14px;
+     width: 42px;
+     height: 42px;
+     transform: translateY(-50%);
+     border-radius: 50%;
+     color: #061119;
+     background: #22d3ee;
+     border: 5px solid #070d18;
+}
+ .theme-modern-dark .steps-section .step-number span {
+     font-size: 0.77rem;
+     font-weight: 800;
+}
+ .theme-modern-dark .steps-section .step-number small {
+     display: none;
+}
+/* Text */
+ .theme-modern-dark .steps-section .step-content {
+     margin: 0;
+}
+ .theme-modern-dark .steps-section .step-label {
+     display: none;
+}
+ .theme-modern-dark .steps-section .step-content h3 {
+     color: #f8fafc;
+     font-size: 1.4rem;
+}
+ .theme-modern-dark .steps-section .step-content p {
+     max-width: none;
+     color: #9ca9ba;
+     font-size: 0.9rem;
+}
+/* Right panel */
+ .theme-modern-dark .steps-section .steps-feature-panel {
+     display: block;
+}
+ .theme-modern-dark .steps-section .feature-badge {
+     width: fit-content;
+     display: flex;
+     align-items: center;
+     gap: 9px;
+     margin-bottom: 25px;
+     padding: 8px 15px;
+     border: 1px solid rgba(34, 211, 238, 0.5);
+     border-radius: 50px;
+     color: #22d3ee;
+     font-size: 0.79rem;
+     font-weight: 700;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+}
+ .theme-modern-dark .steps-section .feature-badge > span {
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     background: #22d3ee;
+     box-shadow: 0 0 12px rgba(34, 211, 238, 0.75);
+}
+ .theme-modern-dark .steps-section .steps-feature-panel > h2 {
+     max-width: 550px;
+     margin: 0 0 25px;
+     color: #f8fafc;
+     font-size: clamp( 2.4rem, 4.5vw, 4.4rem );
+     line-height: 1.05;
+     font-weight: 700;
+     letter-spacing: -2px;
+}
+ .theme-modern-dark .steps-section .steps-feature-panel h2 strong {
+     display: block;
+     color: #22d3ee;
+     font-weight: inherit;
+}
+ .theme-modern-dark .steps-section .steps-feature-panel > p {
+     max-width: 570px;
+     margin: 0 0 30px;
+     color: #a5b1c2;
+     font-size: 1rem;
+     line-height: 1.75;
+}
+/* Button */
+ .theme-modern-dark .steps-section .steps-feature-btn {
+     width: fit-content;
+     display: inline-flex;
+     align-items: center;
+     gap: 13px;
+     margin-bottom: 38px;
+     padding: 9px 10px 9px 22px;
+     color: #061119;
+     background: linear-gradient( 135deg, #22d3ee, #38bdf8 );
+     border-radius: 50px;
+     text-decoration: none;
+     font-weight: 700;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ .theme-modern-dark .steps-section .steps-feature-btn:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 14px 30px rgba(34, 211, 238, 0.2);
+}
+ .theme-modern-dark .steps-section .steps-feature-btn span {
+     width: 36px;
+     height: 36px;
+     display: grid;
+     place-items: center;
+     border-radius: 50%;
+     color: #061119;
+     background: #ffffff;
+}
+/* Image */
+ .theme-modern-dark .steps-section .steps-feature-media {
+     position: relative;
+     overflow: hidden;
+     border-radius: 18px;
+     border: 1px solid rgba(34, 211, 238, 0.18);
+}
+ .theme-modern-dark .steps-section .steps-feature-media img {
+     width: 100%;
+     height: 290px;
+     display: block;
+     object-fit: cover;
+}
+ .theme-modern-dark .steps-section .steps-play-btn {
+     position: absolute;
+     z-index: 3;
+     top: 50%;
+     left: 50%;
+     width: 74px;
+     height: 74px;
+     display: grid;
+     place-items: center;
+     transform: translate(-50%, -50%);
+     border-radius: 50%;
+     color: #ffffff;
+     background: rgba(15, 23, 42, 0.68);
+     backdrop-filter: blur(8px);
+     font-size: 2rem;
+     border: 1px solid rgba(255, 255, 255, 0.26);
+}
+/* ========================================================================== 5. VIBRANT CARDS Reference: Large pastel circles + circular portrait on top ========================================================================== */
+ .theme-vibrant-cards .steps-section {
+     min-height: 800px;
+     background: linear-gradient( 180deg, #ffffff, #fbfcff );
+}
+ .theme-vibrant-cards .steps-section .steps-kicker {
+     color: #14a996;
+}
+ .theme-vibrant-cards .steps-section .steps-title {
+     color: #151827;
+}
+ .theme-vibrant-cards .steps-section .steps-description {
+     color: #667085;
+}
+/* Wavy path behind circles */
+ .theme-vibrant-cards .steps-section::after {
+     content: "";
+     position: absolute;
+     z-index: 0;
+     left: -5%;
+     right: -5%;
+     bottom: 75px;
+     height: 310px;
+     opacity: 0.45;
+     background-image: url("data:image/svg+xml,%3Csvg width='1600' height='300' viewBox='0 0 1600 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 140 C200 360 470 360 650 160 C810 -20 980 0 1120 130 C1280 280 1430 250 1600 90' stroke='%23dce1e9' stroke-width='4' fill='none'/%3E%3C/svg%3E");
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+/* Four large circles */
+ .theme-vibrant-cards .steps-section .process-track {
+     gap: 22px;
+     align-items: center;
+}
+ .theme-vibrant-cards .steps-section .process-step {
+     width: 100%;
+     max-width: 295px;
+     aspect-ratio: 1;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 88px 31px 34px;
+     border-radius: 50%;
+     border: 1px dashed rgba(79, 70, 229, 0.26);
+}
+ .theme-vibrant-cards .steps-section .process-step:nth-child(1) {
+     background: #eefaf6;
+     border-color: #6cd9c1;
+}
+ .theme-vibrant-cards .steps-section .process-step:nth-child(2) {
+     background: #eef7ff;
+     border-color: #7ec8f7;
+     transform: translateY(85px);
+}
+ .theme-vibrant-cards .steps-section .process-step:nth-child(3) {
+     background: #f5f0ff;
+     border-color: #a98def;
+}
+ .theme-vibrant-cards .steps-section .process-step:nth-child(4) {
+     background: #fff9e9;
+     border-color: #f1b65b;
+     transform: translateY(85px);
+}
+/* Top photo */
+ .theme-vibrant-cards .steps-section .step-visual {
+     position: absolute;
+     top: -62px;
+     left: 50%;
+     transform: translateX(-50%);
+}
+ .theme-vibrant-cards .steps-section .step-image {
+     width: 116px;
+     height: 116px;
+     border: 8px solid #ffffff;
+     box-shadow: 0 12px 32px rgba(15, 23, 42, 0.11);
+}
+ .theme-vibrant-cards .steps-section .step-icon, .theme-vibrant-cards .steps-section .step-number {
+     display: none;
+}
+ .theme-vibrant-cards .steps-section .step-content {
+     margin: 0;
+}
+ .theme-vibrant-cards .steps-section .step-label {
+     display: none;
+}
+ .theme-vibrant-cards .steps-section .step-content h3 {
+     max-width: 230px;
+     margin: 0 auto 15px;
+     color: #181b28;
+     font-size: 1.3rem;
+}
+ .theme-vibrant-cards .steps-section .step-content p {
+     color: #657185;
+     font-size: 0.88rem;
+}
+/* ========================================================================== 6. ELEGANT SERIF Reference: Minimal circular icons + dotted connecting line + step pill ========================================================================== */
+ .theme-elegant-serif .steps-section {
+     background: #faf8f5;
+}
+ .theme-elegant-serif .steps-section .steps-kicker {
+     color: #b68f28;
+}
+ .theme-elegant-serif .steps-section .steps-title {
+     color: #2c2924;
+}
+ .theme-elegant-serif .steps-section .steps-description {
+     color: #817a70;
+}
+/* Three item minimal process */
+ .theme-elegant-serif .steps-section .process-track {
+     grid-template-columns: repeat( 3, minmax(0, 1fr) );
+     gap: 120px;
+     max-width: 1150px;
+     margin: 0 auto;
+}
+ .theme-elegant-serif .steps-section .process-step:nth-child(4) {
+     display: none;
+}
+ .theme-elegant-serif .steps-section .step-image {
+     display: none;
+}
+ .theme-elegant-serif .steps-section .step-icon {
+     width: 118px;
+     height: 118px;
+     display: grid;
+     place-items: center;
+     margin: 0 auto;
+     border-radius: 50%;
+     color: #b68f28;
+     background: #ffffff;
+     border: 1px solid rgba(212, 175, 55, 0.3);
+     font-size: 2rem;
+     box-shadow: 0 14px 35px rgba(70, 58, 35, 0.10);
+}
+/* Small pill badge */
+ .theme-elegant-serif .steps-section .step-number {
+     position: absolute;
+     right: -9px;
+     bottom: -2px;
+     min-width: 48px;
+     height: 25px;
+     padding: 0 9px;
+     color: #ffffff;
+     background: #b68f28;
+     border-radius: 50px;
+     border: 4px solid #faf8f5;
+}
+ .theme-elegant-serif .steps-section .step-number span {
+     font-family: 'Inter', sans-serif;
+     font-size: 0.67rem;
+     font-weight: 700;
+}
+ .theme-elegant-serif .steps-section .step-number small {
+     display: none;
+}
+/* Connector dotted line */
+ .theme-elegant-serif .steps-section .step-arrow {
+     position: absolute;
+     top: 58px;
+     right: -121px;
+     width: 123px;
+     display: block;
+     border-top: 2px dotted rgba(182, 143, 40, 0.65);
+}
+ .theme-elegant-serif .steps-section .step-arrow i {
+     display: none;
+}
+ .theme-elegant-serif .steps-section .process-step:nth-child(3) .step-arrow {
+     display: none;
+}
+/* Text */
+ .theme-elegant-serif .steps-section .step-content h3 {
+     color: #2c2924;
+     font-size: 1.28rem;
+}
+ .theme-elegant-serif .steps-section .step-content p {
+     color: #827a70;
+     font-family: 'Inter', sans-serif;
+     font-size: 0.87rem;
+}
+/* ========================================================================== 7. LAYERED OFFSET Reference: Three large cards + center offset + arrow circles + faded numbers ========================================================================== */
+ .theme-layered-offset .steps-section {
+     background: linear-gradient( 180deg, #f2f6f6 0%, #edf2f2 100% );
+}
+ .theme-layered-offset .steps-section .steps-kicker {
+     color: #f37a1f;
+}
+ .theme-layered-offset .steps-section .steps-kicker::before {
+     content: "";
+     width: 10px;
+     height: 10px;
+     transform: rotate(45deg);
+     background: #f37a1f;
+}
+ .theme-layered-offset .steps-section .steps-title {
+     color: #18393a;
+}
+ .theme-layered-offset .steps-section .steps-description {
+     color: #627d7e;
+}
+/* 3 cards */
+ .theme-layered-offset .steps-section .process-track {
+     grid-template-columns: repeat( 3, minmax(0, 1fr) );
+     gap: 32px;
+     max-width: 1320px;
+     margin: 0 auto;
+     align-items: center;
+}
+ .theme-layered-offset .steps-section .process-step:nth-child(4) {
+     display: none;
+}
+ .theme-layered-offset .steps-section .process-step {
+     min-height: 355px;
+     display: flex;
+     align-items: center;
+     padding: 50px 42px 85px;
+     text-align: left;
+     background: #ffffff;
+     border-radius: 20px;
+     box-shadow: 0 17px 45px rgba(40, 69, 69, 0.07);
+     overflow: visible;
+}
+ .theme-layered-offset .steps-section .process-step:nth-child(2) {
+     transform: translateY(-42px);
+}
+/* No image/icon */
+ .theme-layered-offset .steps-section .step-image, .theme-layered-offset .steps-section .step-icon {
+     display: none;
+}
+/* Giant faded number */
+ .theme-layered-offset .steps-section .step-visual {
+     position: absolute;
+     right: 9px;
+     bottom: -8px;
+     margin: 0;
+}
+ .theme-layered-offset .steps-section .step-number {
+     display: block;
+     background: linear-gradient( 180deg, rgba(243, 122, 31, 0.82), rgba(243, 122, 31, 0.03) );
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+     font-family: 'Inter', sans-serif;
+     font-size: 7.3rem;
+     font-weight: 800;
+     line-height: 0.9;
+     pointer-events: none;
+}
+ .theme-layered-offset .steps-section .step-number small {
+     display: none;
+}
+ .theme-layered-offset .steps-section .step-content {
+     margin: 0;
+     position: relative;
+     z-index: 3;
+}
+ .theme-layered-offset .steps-section .step-content::before {
+     content: "";
+     display: block;
+     width: 90px;
+     height: 3px;
+     margin-bottom: 27px;
+     background: linear-gradient( 90deg, #f37a1f, rgba(243, 122, 31, 0.08) );
+}
+ .theme-layered-offset .steps-section .step-content h3 {
+     color: #173638;
+     font-size: 1.6rem;
+     font-weight: 750;
+}
+ .theme-layered-offset .steps-section .step-content p {
+     max-width: 310px;
+     margin: 0;
+     color: #587374;
+     font-size: 0.95rem;
+}
+/* Connector button */
+ .theme-layered-offset .steps-section .step-arrow {
+     position: absolute;
+     z-index: 10;
+     top: 50%;
+     right: -48px;
+     width: 58px;
+     height: 58px;
+     display: grid;
+     place-items: center;
+     transform: translateY(-50%);
+     border-radius: 50%;
+     color: #f37a1f;
+     background: #ffffff;
+     border: 8px solid #edf2f2;
+     box-shadow: 0 8px 20px rgba(28, 59, 59, 0.08);
+     font-size: 1.3rem;
+}
+ .theme-layered-offset .steps-section .process-step:nth-child(3) .step-arrow {
+     display: none;
+}
+/* ========================================================================== TABLET ========================================================================== */
+ @media (max-width: 1199.98px) {
+    /* Emerald */
+     .theme-emerald-block .steps-section .process-track {
+         gap: 22px;
     }
-
-    .process-header {
-        text-align: center;
-        margin-bottom: 3.5rem;
+     .theme-emerald-block .steps-section .step-image {
+         width: 180px;
+         height: 180px;
     }
-
-    .process-tag {
-        font-size: 0.85rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #ff5722;
-        margin-bottom: 0.5rem;
-        display: inline-block;
+    /* Curved */
+     .theme-curved-scalloped .steps-section .process-track {
+         gap: 70px;
     }
-
-    .process-heading {
-        font-size: clamp(2rem, 3.5vw, 2.8rem);
-        font-weight: 800;
-        color: #0f172a;
-        letter-spacing: -0.5px;
-        margin-bottom: 1rem;
+     .theme-curved-scalloped .steps-section .process-step {
+         max-width: 300px;
     }
-
-    .process-subtext {
-        font-size: 1rem;
-        color: #475569;
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.6;
+     .theme-curved-scalloped .steps-section .step-arrow {
+         right: -66px;
+         width: 55px;
     }
-
-    /* Process Flow Container Styles */
-    .process-step-card {
-        text-align: center;
-        padding: 1.5rem 1rem;
-        position: relative;
+    /* Modern Dark */
+     .theme-modern-dark .steps-section .steps-layout {
+         grid-template-columns: minmax(0, 1fr) minmax(330px, 0.8fr);
+         gap: 45px;
     }
-
-    .process-icon-box {
-        width: 90px;
-        height: 90px;
-        background-color: #ff5722;
-        color: #ffffff;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.2rem;
-        margin: 0 auto 1.5rem auto;
-        box-shadow: 0 10px 25px rgba(255, 87, 34, 0.25);
-        position: relative;
-        transition: transform 0.3s ease;
+    /* Vibrant */
+     .theme-vibrant-cards .steps-section .process-step {
+         max-width: 250px;
+         padding: 75px 23px 26px;
     }
-
-    .process-badge-num {
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        background-color: #ffffff;
-        color: #ff5722;
-        font-size: 0.75rem;
-        font-weight: 800;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        border: 2px solid #ff5722;
+     .theme-vibrant-cards .steps-section .step-image {
+         width: 100px;
+         height: 100px;
     }
-
-    .process-step-title {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: #0f172a;
-        margin-bottom: 0.5rem;
+    /* Elegant */
+     .theme-elegant-serif .steps-section .process-track {
+         gap: 80px;
     }
-
-    .process-step-subtitle {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #ff5722;
-        margin-bottom: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+     .theme-elegant-serif .steps-section .step-arrow {
+         right: -82px;
+         width: 84px;
     }
-
-    .process-step-desc {
-        font-size: 0.925rem;
-        color: #475569;
-        line-height: 1.6;
-        margin: 0;
+    /* Offset */
+     .theme-layered-offset .steps-section .process-step {
+         padding: 45px 32px 80px;
     }
-
-    /* Dynamic Theme Variations for Steps via CSS Variables / Classes */
-    .theme-curved-scalloped .process-icon-box { background-color: #1ba085; box-shadow: 0 10px 25px rgba(27, 160, 133, 0.25); }
-    .theme-curved-scalloped .process-badge-num, .theme-curved-scalloped .process-step-subtitle { color: #1ba085; border-color: #1ba085; }
-    .theme-curved-scalloped .process-tag { color: #1ba085; }
-
-    .theme-modern-dark .process-icon-box { background-color: #06b6d4; color: #0b0f19; box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3); }
-    .theme-modern-dark .process-badge-num, .theme-modern-dark .process-step-subtitle { color: #06b6d4; border-color: #06b6d4; }
-    .theme-modern-dark .process-tag { color: #06b6d4; }
-
-    .theme-vibrant-cards .process-icon-box { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3); }
-    .theme-vibrant-cards .process-badge-num, .theme-vibrant-cards .process-step-subtitle { color: #4f46e5; border-color: #4f46e5; }
-    .theme-vibrant-cards .process-tag { color: #4f46e5; }
-
-    .theme-elegant-serif .process-icon-box { background-color: #d4af37; box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3); }
-    .theme-elegant-serif .process-badge-num, .theme-elegant-serif .process-step-subtitle { color: #d4af37; border-color: #d4af37; }
-    .theme-elegant-serif .process-tag { color: #d4af37; }
-
-    .theme-layered-offset .process-icon-box { background-color: #f37a1f; box-shadow: 0 10px 25px rgba(243, 122, 31, 0.3); }
-    .theme-layered-offset .process-badge-num, .theme-layered-offset .process-step-subtitle { color: #f37a1f; border-color: #f37a1f; }
-    .theme-layered-offset .process-tag { color: #f37a1f; }
-
-    /* ==========================================================================
-        6. STATS SECTION & CARDS
-        ========================================================================== */
-    .stats-section {
-        position: relative;
-        overflow: hidden;
+}
+/* ========================================================================== TABLET / MOBILE ========================================================================== */
+ @media (max-width: 991.98px) {
+     .steps-section {
+         padding: 80px 0;
     }
-
-    .stats-section .container {
-        background-color: #1ba085;
-        border-radius: 20px;
-        position: relative;
-        overflow: hidden;
-        transition: background-color 0.4s ease, border-radius 0.4s ease;
+     .steps-section .steps-head {
+         margin-bottom: 55px;
     }
-
-    .stat-card {
-        background: transparent;
-        border: none;
-        border-radius: 0;
-        backdrop-filter: none;
-        padding: 80px 0;
-        text-align: center;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 2;
+    /* ---------------------------------------------------------- Emerald ---------------------------------------------------------- */
+     .theme-emerald-block .steps-section .process-track {
+         grid-template-columns: repeat( 2, minmax(0, 1fr) );
+         gap: 60px 35px;
     }
-
-    .stat-number {
-        font-size: 3.2rem;
-        font-weight: 800;
-        color: #ffffff;
-        line-height: 1.1;
-        margin-bottom: 0.5rem;
+     .theme-emerald-block .steps-section .process-track::before {
+         display: none;
     }
-
-    .stat-label {
-        font-size: 0.95rem;
-        color: #ffffff;
-        margin: 0;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+     .theme-emerald-block .steps-section .process-step:nth-child(2), .theme-emerald-block .steps-section .process-step:nth-child(4) {
+         transform: none;
     }
-
-
-    /* end layout   */
-    /* ==========================================================================
-   THEME: CURVED & SCALLOPED (Card-Box Layout with Large Watermark Numbers)
-   ========================================================================== */
-
-.theme-curved-scalloped.work-process-section {
-    background-color: #eef2f3; /* Light grey-teal background matching reference */
-    padding: 5rem 1rem;
-    position: relative;
-    overflow: hidden;
+    /* ---------------------------------------------------------- Curved ---------------------------------------------------------- */
+     .theme-curved-scalloped .steps-section .process-track {
+         grid-template-columns: 1fr;
+         gap: 85px;
+    }
+     .theme-curved-scalloped .steps-section .step-arrow {
+         display: none;
+    }
+    /* ---------------------------------------------------------- Clean Grid ---------------------------------------------------------- */
+     .theme-default .steps-section .process-track, .theme-clean-grid .steps-section .process-track {
+         grid-template-columns: repeat( 2, minmax(0, 1fr) );
+         gap: 30px;
+         padding: 30px;
+    }
+     .theme-default .steps-section .process-step, .theme-clean-grid .steps-section .process-step {
+         border: 1px solid #edf1f4;
+         border-radius: 15px;
+         padding: 25px 18px;
+    }
+     .theme-default .steps-section .step-label, .theme-clean-grid .steps-section .step-label {
+         margin: 0 0 22px;
+         clip-path: none !important;
+         border-radius: 10px !important;
+    }
+    /* ---------------------------------------------------------- Modern Dark ---------------------------------------------------------- */
+     .theme-modern-dark .steps-section .steps-layout {
+         grid-template-columns: 1fr;
+    }
+     .theme-modern-dark .steps-section .steps-feature-panel {
+         margin-top: 30px;
+    }
+    /* ---------------------------------------------------------- Vibrant ---------------------------------------------------------- */
+     .theme-vibrant-cards .steps-section {
+         min-height: auto;
+    }
+     .theme-vibrant-cards .steps-section::after {
+         display: none;
+    }
+     .theme-vibrant-cards .steps-section .process-track {
+         grid-template-columns: repeat( 2, minmax(0, 1fr) );
+         gap: 100px 30px;
+    }
+     .theme-vibrant-cards .steps-section .process-step:nth-child(2), .theme-vibrant-cards .steps-section .process-step:nth-child(4) {
+         transform: none;
+    }
+    /* ---------------------------------------------------------- Elegant ---------------------------------------------------------- */
+     .theme-elegant-serif .steps-section .process-track {
+         grid-template-columns: 1fr;
+         gap: 65px;
+    }
+     .theme-elegant-serif .steps-section .step-arrow {
+         display: none;
+    }
+    /* ---------------------------------------------------------- Offset ---------------------------------------------------------- */
+     .theme-layered-offset .steps-section .process-track {
+         grid-template-columns: 1fr;
+         max-width: 650px;
+         gap: 30px;
+    }
+     .theme-layered-offset .steps-section .process-step:nth-child(2) {
+         transform: none;
+    }
+     .theme-layered-offset .steps-section .step-arrow {
+         display: none;
+    }
 }
-
-/* Adjust grid row layout to handle 4 steps nicely or wrap nicely */
-.theme-curved-scalloped .row {
-    row-gap: 2rem;
-}
-
-/* Card Container */
-.theme-curved-scalloped .process-step-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 3rem 2rem 2.5rem 2rem;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
-    position: relative;
-    overflow: hidden;
-    text-align: left; /* Align text to the left like the reference */
-    height: 100%;
-    transition: transform 0.3s ease;
-    border: none;
-}
-
-.theme-curved-scalloped .process-step-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Hide original top icon box and turn it into a decorative divider line */
-.theme-curved-scalloped .process-icon-box {
-    display: none; /* Hide the default orange/teal icon box from HTML */
-}
-
-/* Repurpose subtitle area or create a custom underline effect */
-.theme-curved-scalloped .process-step-title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #0f2522;
-    margin-bottom: 1rem;
-    letter-spacing: -0.5px;
-}
-
-/* Creating the green horizontal separator bar under the title */
-.theme-curved-scalloped .process-step-title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #1ba085;
-    margin-top: 1rem;
-    border-radius: 2px;
-}
-
-/* Hide subtitle since it's not part of this layout style, or style it as a description prefix */
-.theme-curved-scalloped .process-step-subtitle {
-    display: none; 
-}
-
-/* Description Text */
-.theme-curved-scalloped .process-step-desc {
-    font-size: 0.95rem;
-    color: #4a5568;
-    line-height: 1.7;
-    margin-top: 1rem;
-    position: relative;
-    z-index: 2;
-}
-
-/* Large Background Watermark Numbers (01, 02, 03, 04) */
-.theme-curved-scalloped .process-step-card::before {
-    content: attr(data-step); /* We can pull this or use CSS counters/classes */
-    position: absolute;
-    bottom: -10px;
-    right: 15px;
-    font-size: 7rem;
-    font-weight: 900;
-    color: rgba(27, 160, 133, 0.12);
-    line-height: 1;
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* Fallback hardcoded numbers matching badge-num content if data attribute isn't set */
-.theme-curved-scalloped .col-12:nth-child(1) .process-step-card::before { content: "01"; }
-.theme-curved-scalloped .col-12:nth-child(2) .process-step-card::before { content: "02"; }
-.theme-curved-scalloped .col-12:nth-child(3) .process-step-card::before { content: "03"; }
-.theme-curved-scalloped .col-12:nth-child(4) .process-step-card::before { content: "04"; }
-
-/* Hide the badge inside the hidden icon box */
-.theme-curved-scalloped .process-badge-num {
-    display: none;
-}
-
-/* Header typography modifications */
-.theme-curved-scalloped .process-tag {
-    color: #1ba085;
-    background: rgba(27, 160, 133, 0.1);
-    padding: 0.35rem 1rem;
-    border-radius: 50px;
-}
-
-.theme-curved-scalloped .process-heading {
-    color: #0f2522;
-    font-weight: 800;
-}
-
-
-/* end layout  */
-
-.theme-clean-grid .work-process-section {
-    padding: 80px 0;
-    background-color: #fff;
-    font-family: inherit;
-}
-
-.theme-clean-grid .process-header {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 60px;
-}
-
-.theme-clean-grid .process-tag {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 700;
-    color: #7367f0;
-    background: rgba(115, 103, 240, 0.1);
-    padding: 6px 14px;
-    border-radius: 50px;
-    margin-bottom: 15px;
-}
-
-.theme-clean-grid .process-heading {
-    font-size: 32px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-.theme-clean-grid .process-subtext {
-    color: #6c757d;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.theme-clean-grid .process-step-card {
-    text-align: center;
-    position: relative;
-    padding: 0 10px;
-}
-
-
-.theme-clean-grid .process-icon-box {
-    width: 140px;
-    height: 140px;
-    background: #ffffff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 30px;
-    position: relative;
-    z-index: 2;
-}
-
-.theme-clean-grid .process-icon-box i {
-    font-size: 40px;
-    color: #7367f0;
-}
-
-.theme-clean-grid .process-badge-num {
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
-    background: #7367f0;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 20px;
-    text-transform: lowercase;
-}
-
-.theme-clean-grid .process-step-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #fcf8f2;
-    margin-bottom: 8px;
-}
-
-.theme-clean-grid .process-step-subtitle {
-    display: none; /* Hidden to match the minimalist screenshot design, remove if needed */
-}
-
-.theme-clean-grid .process-step-desc {
-    color: #fcf8f2;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* end layout  */
-.theme-clean-grid .work-process-section {
-    padding: 80px 0;
-}
-
- .theme-clean-grid .process-step-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 35px 25px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    z-index: 2;
-}
-
-/* Creates the layered solid background box behind the card */
-.theme-clean-grid .process-step-card::before {
-    content: "";
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    z-index: -1;
-    opacity: 0.85;
-}
-
-/* Dynamic background tones per card index */
-.theme-clean-grid .col-12:nth-child(1) .process-step-card::before { background-color: #6a994e; }
-.theme-clean-grid .col-12:nth-child(2) .process-step-card::before { background-color: #bc6c25; }
-.theme-clean-grid .col-12:nth-child(3) .process-step-card::before { background-color: #dda15e; }
-.theme-clean-grid .col-12:nth-child(4) .process-step-card::before { background-color: #588157; }
-
-.theme-clean-grid .process-icon-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.theme-clean-grid .process-icon-box i {
-    font-size: 55px;
-    color: #333;
-}
-
-.process-step-card .btn-outline-light {
-    border-color: rgba(255, 255, 255, 0.4);
-    color: #fff;
-    background: rgba(0, 0, 0, 0.15);
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 30px;
-}
-/* ==========================================================================
-   WORK PROCESS SECTION (.theme-layered-offset)
-   ========================================================================== */
-
-.work-process-section {
-    padding: 100px 0;
-}
-
-.process-header {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 70px;
-}
-
-.process-tag {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #ff5722;
-    margin-bottom: 12px;
-}
-
-.process-heading {
-    font-size: 38px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-}
-
-.process-subtext {
-    font-size: 15px;
-    color: #777777;
-    line-height: 1.6;
-}
-
-/* Card Styling with Bottom Line & Layered Offset Support */
-.theme-layered-offset .process-step-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 60px 25px 35px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 0px 1px rgb(0 0 0 / 20%);
-    margin-top: 45px; 
-    border-bottom: 3px solid transparent;
-}
-
-/* Floating Icon Box with Top Semi-Circle Arc */
-.theme-layered-offset .process-icon-box {
-    position: absolute;
-    top: -45px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 84px;
-    height: 84px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
-/* Creating the semi-circle colored top border around the icon */
-.theme-layered-offset .process-icon-box::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: inherit;
-    border-left-color: inherit;
-    transform: rotate(45deg);
-}
-
-.theme-layered-offset .process-icon-box i {
-    font-size: 26px;
-    color: #333333;
-    z-index: 1;
-}
-
-/* Typography & Content Layout */
-.theme-layered-offset .process-step-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #222222;
-    margin-bottom: 15px;
-}
-
-.theme-layered-offset .process-step-subtitle {
-    display: none; /* Hidden to match clean screenshot layout, or can be repurposed */
-}
-
-.theme-layered-offset .process-step-desc {
-    font-size: 14px;
-    color: #777777;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-/* Reusing .process-badge-num as the bottom colored STEP tag box */
-.theme-layered-offset .process-badge-num {
-    display: inline-block;
-    position: relative;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #ffffff;
-    padding: 6px 18px;
-    border-radius: 2px;
-    text-transform: uppercase;
-}
-
-/* Dynamic Step Colors & Bottom Accents */
-/* Step 1: Orange */
-.theme-layered-offset .col-12:nth-child(1) .process-icon-box { color: #ff5722; }
-.theme-layered-offset .col-12:nth-child(1) .process-step-card { border-bottom-color: #ff5722; }
-.theme-layered-offset .col-12:nth-child(1) .process-badge-num { background-color: #ff5722; 
-    top: 235px;
-    position: absolute;
-    border-color: #ff5722;
-    padding: 15px 50px;
-    left: -5px;
-    display: flex; }
-
-/* Step 2: Green */
-.theme-layered-offset .col-12:nth-child(2) .process-icon-box { color: #8bc34a; }
-.theme-layered-offset .col-12:nth-child(2) .process-step-card { border-bottom-color: #8bc34a; }
-.theme-layered-offset .col-12:nth-child(2) .process-badge-num { background-color: #8bc34a; 
-    top: 235px;
-    position: absolute;
-    border-color: #8bc34a;
-    padding: 15px 50px;
-    left: -5px;
-    display: flex; }
-
-/* Step 3: Blue */
-.theme-layered-offset .col-12:nth-child(3) .process-icon-box { color: #2196f3; }
-.theme-layered-offset .col-12:nth-child(3) .process-step-card { border-bottom-color: #2196f3; }
-.theme-layered-offset .col-12:nth-child(3) .process-badge-num {     
-    background-color: #2196f3;
-    top: 235px;
-    position: absolute;
-    border-color: #2196f3;
-    padding: 15px 50px;
-    left: -5px;
-    display: flex; }
-
-/* Step 4: Purple / Default fallback */
-.theme-layered-offset .col-12:nth-child(4) .process-icon-box { color: #9c27b0; }
-.theme-layered-offset .col-12:nth-child(4) .process-step-card { border-bottom-color: #9c27b0; }
-.theme-layered-offset .col-12:nth-child(4) .process-badge-num { background-color: #9c27b0; 
-    top: 235px;
-    position: absolute;
-    border-color: #9c27b0;
-    padding: 15px 50px;
-    left: -5px;
-    display: flex; }
-
-
-
-
-    /* end section  */
-
-    .theme-elegant-serif {
-    background-color: #f8f9fc;
-    padding: 80px 0;
-    font-family: 'Inter', sans-serif;
-}
-
-.theme-elegant-serif .container {
-    max-width: 1200px;
-}
-
-.theme-elegant-serif .process-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.theme-elegant-serif .process-tag {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #6c757d;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.theme-elegant-serif .process-heading {
-    font-size: 32px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-}
-
-.theme-elegant-serif .process-subtext {
-    font-size: 15px;
-    color: #6c757d;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Main Wrapper Card Container simulating the look in the screenshot */
-
-.theme-elegant-serif .process-step-card {
-    background: #ffffff;
-    padding: 30px 20px;
-    text-align: center;
-    position: relative;
-    height: 100%;
-}
-
-/* Icon Box Top */
-.theme-elegant-serif .process-icon-box {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 25px auto;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    background: #f1f5f9;
-    color: #333333;
-    position: relative;
-}
-
-/* Color variations for icons matching steps */
-.theme-elegant-serif .col-12:nth-child(1) .process-icon-box { color: #84cc16; background: #ecfccb; }
-.theme-elegant-serif .col-12:nth-child(2) .process-icon-box { color: #10b981; background: #d1fae5; }
-.theme-elegant-serif .col-12:nth-child(3) .process-icon-box { color: #06b6d4; background: #cffafe; }
-.theme-elegant-serif .col-12:nth-child(4) .process-icon-box { color: #3b82f6; background: #dbeafe; }
-
-.theme-elegant-serif .process-badge-num {
-    display: none; /* Replaced by the ribbon look below */
-}
-
-/* Middle Connected Gradient Ribbon / Bar Elements */
-.theme-elegant-serif .process-step-card::before {
-    content: attr(data-step);
-    display: block;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #ffffff;
-    padding: 14px 10px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* Step ribbon colors matching screenshot layout */
-.theme-elegant-serif .col-12:nth-child(1) .process-step-card::before { background: linear-gradient(135deg, #a3e635, #84cc16); content: "STEP 01"; }
-.theme-elegant-serif .col-12:nth-child(2) .process-step-card::before { background: linear-gradient(135deg, #34d399, #10b981); content: "STEP 02"; }
-.theme-elegant-serif .col-12:nth-child(3) .process-step-card::before { background: linear-gradient(135deg, #22d3ee, #06b6d4); content: "STEP 03"; }
-.theme-elegant-serif .col-12:nth-child(4) .process-step-card::before { background: linear-gradient(135deg, #60a5fa, #3b82f6); content: "STEP 04"; }
-
-/* Typography */
-.theme-elegant-serif .process-step-title {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #1e293b;
-    margin-bottom: 8px;
-}
-
-.theme-elegant-serif .process-step-subtitle {
-    display: none; /* Hide old subtitle to strictly match reference structure */
-}
-
-.theme-elegant-serif .process-step-desc {
-    font-size: 13px;
-    color: #64748b;
-    line-height: 1.6;
-    margin: 0;
+/* ========================================================================== MOBILE ========================================================================== */
+ @media (max-width: 575.98px) {
+     .steps-section {
+         padding: 65px 0;
+    }
+     .steps-section .steps-head {
+         margin-bottom: 48px;
+    }
+     .steps-section .steps-title {
+         font-size: 2rem;
+         letter-spacing: -0.7px;
+    }
+     .steps-section .steps-description {
+         font-size: 0.92rem;
+    }
+    /* ---------------------------------------------------------- Emerald ---------------------------------------------------------- */
+     .theme-emerald-block .steps-section .process-track {
+         grid-template-columns: 1fr;
+    }
+    /* ---------------------------------------------------------- Clean Grid ---------------------------------------------------------- */
+     .theme-default .steps-section .process-track, .theme-clean-grid .steps-section .process-track {
+         grid-template-columns: 1fr;
+         padding: 20px;
+    }
+    /* ---------------------------------------------------------- Modern Dark ---------------------------------------------------------- */
+     .theme-modern-dark .steps-section .process-step {
+         grid-template-columns: 1fr;
+         gap: 20px;
+         text-align: center;
+         padding: 30px 25px;
+    }
+     .theme-modern-dark .steps-section .step-visual {
+         margin: 0 auto;
+    }
+     .theme-modern-dark .steps-section .step-number {
+         right: -10px;
+    }
+     .theme-modern-dark .steps-section .step-content p {
+         margin: 0 auto;
+    }
+     .theme-modern-dark .steps-section .steps-feature-panel > h2 {
+         font-size: 2.5rem;
+    }
+     .theme-modern-dark .steps-section .steps-feature-media img {
+         height: 230px;
+    }
+    /* ---------------------------------------------------------- Vibrant ---------------------------------------------------------- */
+     .theme-vibrant-cards .steps-section .process-track {
+         grid-template-columns: 1fr;
+    }
+    /* ---------------------------------------------------------- Offset ---------------------------------------------------------- */
+     .theme-layered-offset .steps-section .process-step {
+         min-height: 325px;
+         padding: 40px 28px 75px;
+    }
+     .theme-layered-offset .steps-section .step-number {
+         font-size: 6rem;
+    }
 }

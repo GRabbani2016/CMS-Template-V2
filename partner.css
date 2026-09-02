@@ -1,601 +1,415 @@
-/* ==========================================================
-   TRUSTED PARTNERS - BASE
-========================================================== */
-
-.trusted-partners-section {
-    position: relative;
-    padding: 70px 0;
-    overflow: hidden;
-    background: #ffffff;
-}
-
-.partners-heading {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 55px;
-}
-
-.partners-heading::before,
-.partners-heading::after {
-    content: "";
-    height: 1px;
-    flex: 1;
-    background: #dfe3e8;
-}
-
-.partners-heading span {
-    display: none;
-}
-
-.partners-heading h2 {
-    margin: 0;
-    white-space: nowrap;
-    font-size: 38px;
-    font-weight: 800;
-    color: #171717;
-}
-
-.trusted-partners-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
-}
-
-.partner-item {
-    min-height: 95px;
-    padding: 20px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    text-decoration: none;
-    color: inherit;
-    transition: all .35s ease;
-}
-
-.partner-logo {
-    width: 58px;
-    height: 58px;
-    flex: 0 0 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    transition: all .35s ease;
-}
-
-.partner-content {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.05;
-}
-
-.partner-content strong {
-    font-size: 27px;
-    font-weight: 800;
-    color: #888;
-    transition: all .35s ease;
-}
-
-.partner-content small {
-    margin-top: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #999;
-    letter-spacing: .2px;
-    transition: all .35s ease;
-}
-
-
-/* ==========================================================
-   DESIGN 1 - EMERALD
-   Clean horizontal logo strip
-========================================================== */
-
-.theme-emerald-block .trusted-partners-section {
-    background: #ffffff;
-}
-
-.theme-emerald-block .partners-heading h2 {
-    color: #1a1a1a;
-}
-
-.theme-emerald-block .partner-item {
-    border-right: 1px solid #eeeeee;
-}
-
-.theme-emerald-block .partner-item:last-child {
-    border-right: 0;
-}
-
-.theme-emerald-block .partner-logo {
-    color: #1ba085;
-}
-
-.theme-emerald-block .partner-item:hover {
-    transform: translateY(-5px);
-}
-
-.theme-emerald-block .partner-item:hover .partner-content strong {
-    color: #1ba085;
-}
-
-
-/* ==========================================================
-   DESIGN 2 - CURVED
-   Soft circular logo containers
-========================================================== */
-
-.theme-curved-scalloped .trusted-partners-section {
-    background: #faf8f2;
-}
-
-.theme-curved-scalloped .partners-heading {
-    justify-content: center;
-}
-
-.theme-curved-scalloped .partners-heading::before,
-.theme-curved-scalloped .partners-heading::after {
-    max-width: 100px;
-    flex: 1;
-}
-
-.theme-curved-scalloped .partners-heading h2 {
-    font-size: 34px;
-}
-
-.theme-curved-scalloped .partner-item {
-    flex-direction: column;
-    text-align: center;
-    border: 0;
-    position: relative;
-}
-
-.theme-curved-scalloped .partner-logo {
-    width: 82px;
-    height: 82px;
-    border-radius: 50%;
-    background: #f1eadc;
-    color: #1ba085;
-    font-size: 32px;
-    box-shadow: inset 0 0 0 1px #e5dccb;
-}
-
-.theme-curved-scalloped .partner-content strong {
-    font-size: 23px;
-    color: #333;
-}
-
-.theme-curved-scalloped .partner-content small {
-    color: #8c857b;
-}
-
-.theme-curved-scalloped .partner-item:hover .partner-logo {
-    transform: scale(1.08) rotate(5deg);
-    background: #1ba085;
-    color: #ffffff;
-}
-
-
-/* ==========================================================
-   DESIGN 3 - MINIMAL GRID
-   Sharp editorial grid
-========================================================== */
-
-.theme-default .trusted-partners-section {
-    background: #ffffff;
-}
-
-.theme-default .partners-heading {
-    margin-bottom: 40px;
-}
-
-.theme-default .partners-heading h2 {
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.theme-default .trusted-partners-grid {
-    border-top: 1px solid #e5e7eb;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.theme-default .partner-item {
-    min-height: 125px;
-    border-right: 1px solid #e5e7eb;
-}
-
-.theme-default .partner-item:last-child {
-    border-right: 0;
-}
-
-.theme-default .partner-logo {
-    color: #555;
-}
-
-.theme-default .partner-content strong {
-    color: #333;
-    font-size: 22px;
-}
-
-.theme-default .partner-content small {
-    color: #999;
-}
-
-.theme-default .partner-item:hover {
-    background: #f8f9fa;
-}
-
-.theme-default .partner-item:hover .partner-logo {
-    color: #111;
-}
-
-
-/* ==========================================================
-   DESIGN 4 - MODERN DARK
-   Neon glass partner cards
-========================================================== */
-
-.theme-modern-dark .trusted-partners-section {
-    background:
-        radial-gradient(circle at 20% 50%, rgba(6,182,212,.08), transparent 30%),
-        #0b0f19;
-}
-
-.theme-modern-dark .partners-heading h2 {
-    color: #ffffff;
-}
-
-.theme-modern-dark .partners-heading::before,
-.theme-modern-dark .partners-heading::after {
-    background: #263244;
-}
-
-.theme-modern-dark .trusted-partners-grid {
-    gap: 15px;
-}
-
-.theme-modern-dark .partner-item {
-    min-height: 120px;
-    border: 1px solid rgba(6,182,212,.2);
-    border-radius: 16px;
-    background: rgba(17,24,39,.7);
-    backdrop-filter: blur(12px);
-}
-
-.theme-modern-dark .partner-logo {
-    color: #06b6d4;
-}
-
-.theme-modern-dark .partner-content strong {
-    color: #f3f4f6;
-}
-
-.theme-modern-dark .partner-content small {
-    color: #9ca3af;
-}
-
-.theme-modern-dark .partner-item:hover {
-    transform: translateY(-7px);
-    border-color: #06b6d4;
-    box-shadow: 0 12px 35px rgba(6,182,212,.15);
-}
-
-.theme-modern-dark .partner-item:hover .partner-logo {
-    text-shadow: 0 0 15px rgba(6,182,212,.8);
-}
-
-
-/* ==========================================================
-   DESIGN 5 - VIBRANT FLOATING
-   Colorful floating cards
-========================================================== */
-
-.theme-vibrant-cards .trusted-partners-section {
-    background: #f8fafc;
-}
-
-.theme-vibrant-cards .partners-heading {
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.theme-vibrant-cards .partners-heading::before,
-.theme-vibrant-cards .partners-heading::after {
-    display: none;
-}
-
-.theme-vibrant-cards .partners-heading span {
-    display: block;
-    padding: 6px 15px;
-    border-radius: 50px;
-    background: rgba(79,70,229,.1);
-    color: #4f46e5;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.theme-vibrant-cards .partners-heading h2 {
-    font-size: 38px;
-}
-
-.theme-vibrant-cards .trusted-partners-grid {
-    gap: 20px;
-}
-
-.theme-vibrant-cards .partner-item {
-    min-height: 150px;
-    flex-direction: column;
-    border: 1px solid #e2e8f0;
-    border-radius: 24px;
-    background: #ffffff;
-    box-shadow: 0 12px 30px rgba(79,70,229,.08);
-}
-
-.theme-vibrant-cards .partner-logo {
-    width: 65px;
-    height: 65px;
-    border-radius: 20px;
-    background: linear-gradient(135deg,#4f46e5,#7c3aed);
-    color: #ffffff;
-}
-
-.theme-vibrant-cards .partner-content {
-    text-align: center;
-}
-
-.theme-vibrant-cards .partner-content strong {
-    color: #1e293b;
-    font-size: 21px;
-}
-
-.theme-vibrant-cards .partner-content small {
-    color: #64748b;
-}
-
-.theme-vibrant-cards .partner-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(79,70,229,.16);
-}
-
-
-/* ==========================================================
-   DESIGN 6 - LUXURY
-   Gold editorial layout
-========================================================== */
-
-.theme-elegant-serif .trusted-partners-section {
-    background: #faf8f5;
-}
-
-.theme-elegant-serif .partners-heading h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    font-weight: 600;
-    color: #2c2a29;
-}
-
-.theme-elegant-serif .partners-heading::before,
-.theme-elegant-serif .partners-heading::after {
-    background: #d4af37;
-}
-
-.theme-elegant-serif .trusted-partners-grid {
-    gap: 18px;
-}
-
-.theme-elegant-serif .partner-item {
-    min-height: 150px;
-    border: 1px solid #e4d7b7;
-    background: #ffffff;
-    position: relative;
-}
-
-.theme-elegant-serif .partner-item::before {
-    content: "";
-    position: absolute;
-    inset: 6px;
-    border: 1px solid rgba(212,175,55,.3);
-    pointer-events: none;
-}
-
-.theme-elegant-serif .partner-logo {
-    color: #d4af37;
-}
-
-.theme-elegant-serif .partner-content strong {
-    font-family: 'Playfair Display', serif;
-    color: #2c2a29;
-    font-size: 24px;
-}
-
-.theme-elegant-serif .partner-content small {
-    color: #8c857b;
-}
-
-.theme-elegant-serif .partner-item:hover {
-    transform: scale(1.025);
-    box-shadow: 0 10px 30px rgba(212,175,55,.12);
-}
-
-
-/* ==========================================================
-   DESIGN 7 - LAYERED OFFSET
-   Modern asymmetric cards
-========================================================== */
-
-.theme-layered-offset .trusted-partners-section {
-    background: #ffffff;
-}
-
-.theme-layered-offset .partners-heading {
-    justify-content: flex-start;
-}
-
-.theme-layered-offset .partners-heading h2 {
-    color: #2d3748;
-}
-
-.theme-layered-offset .partners-heading::before {
-    display: none;
-}
-
-.theme-layered-offset .partners-heading::after {
-    background: #f37a1f;
-    opacity: .25;
-}
-
-.theme-layered-offset .trusted-partners-grid {
-    gap: 20px;
-}
-
-.theme-layered-offset .partner-item {
-    min-height: 145px;
-    border-radius: 20px;
-    background: #f5f5f7;
-    position: relative;
-    overflow: visible;
-}
-
-.theme-layered-offset .partner-item:nth-child(1) {
-    --partner-accent: #f37a1f;
-}
-
-.theme-layered-offset .partner-item:nth-child(2) {
-    --partner-accent: #3dbbd3;
-}
-
-.theme-layered-offset .partner-item:nth-child(3) {
-    --partner-accent: #e8336d;
-}
-
-.theme-layered-offset .partner-item:nth-child(4) {
-    --partner-accent: #8e44ad;
-}
-
-.theme-layered-offset .partner-item:nth-child(5) {
-    --partner-accent: #27ae60;
-}
-
-.theme-layered-offset .partner-item::before {
-    content: "";
-    position: absolute;
-    inset: -7px;
-    border: 2px solid var(--partner-accent);
-    border-radius: 22px;
-    z-index: -1;
-    transition: all .3s ease;
-}
-
-.theme-layered-offset .partner-item::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 20px;
-    width: 55px;
-    height: 8px;
-    background: var(--partner-accent);
-    border-radius: 0 0 8px 8px;
-}
-
-.theme-layered-offset .partner-logo {
-    color: var(--partner-accent);
-}
-
-.theme-layered-offset .partner-content strong {
-    color: #2d3748;
-    font-size: 21px;
-}
-
-.theme-layered-offset .partner-content small {
-    color: #718096;
-}
-
-.theme-layered-offset .partner-item:hover {
-    transform: translateY(-8px);
-}
-
-.theme-layered-offset .partner-item:hover::before {
-    transform: translate(5px, 5px);
-}
-
-
-/* ==========================================================
-   RESPONSIVE
-========================================================== */
-
-@media (max-width: 1199.98px) {
-
-    .trusted-partners-grid {
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 20px;
+/* ========================================================== PARTNER SECTION BASE ========================================================== */
+ .partner-section {
+     --partner-accent: #168f83;
+     --partner-heading: #17212b;
+     --partner-text: #747b84;
+     --partner-bg: #ffffff;
+     --partner-card-bg: #ffffff;
+     --partner-border: #e9ecef;
+     position: relative;
+     overflow: hidden;
+     padding: 90px 0;
+     background: var(--partner-bg);
+     font-family: var(--font-family, "Inter", sans-serif);
+}
+ .partner-section .container {
+     position: relative;
+     z-index: 2;
+}
+/* ========================================================== HEADER ========================================================== */
+ .partner-header {
+     position: relative;
+     max-width: 850px;
+     margin: 0 auto 60px;
+     text-align: center;
+}
+ .partner-subtitle {
+     display: inline-block;
+     margin-bottom: 10px;
+     color: var(--partner-accent);
+     font-size: 12px;
+     font-weight: 800;
+     letter-spacing: 1.7px;
+     text-transform: uppercase;
+}
+ .partner-title {
+     margin: 0;
+     color: var(--partner-heading);
+     font-size: clamp(2rem, 3.5vw, 3.4rem);
+     font-weight: 800;
+     line-height: 1.15;
+     letter-spacing: -1.3px;
+}
+ .partner-description {
+     max-width: 680px;
+     margin: 16px auto 0;
+     color: var(--partner-text);
+     font-size: .9rem;
+     line-height: 1.8;
+}
+ .partner-header-line {
+     display: none;
+}
+/* ========================================================== PARTNER ITEM ========================================================== */
+ .partner-row {
+     position: relative;
+}
+ .partner-col {
+     min-width: 0;
+}
+ .partner-item {
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     min-height: 145px;
+     padding: 30px;
+     text-decoration: none;
+     transition: background .3s ease, border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+/* ========================================================== REAL LOGO IMAGE ========================================================== */
+ .partner-logo {
+     display: block;
+     width: auto;
+     max-width: 155px;
+     height: auto;
+     max-height: 62px;
+     object-fit: contain;
+     transition: opacity .3s ease, filter .3s ease, transform .3s ease;
+}
+/* default gray logo appearance */
+ .partner-item .partner-logo {
+     filter: grayscale(1);
+     opacity: .58;
+}
+ .partner-item:hover .partner-logo {
+     filter: grayscale(0);
+     opacity: 1;
+     transform: scale(1.04);
+}
+/* ========================================================== ========================================================== 01 — CLEAN GRID / DEFAULT Reference: title between two lines + plain divided logo row ========================================================== ========================================================== */
+ :is( .theme-clean-grid .partner-section, .partner-section.theme-clean-grid, .theme-default .partner-section, .partner-section.theme-default ) {
+     --partner-heading: #171717;
+     --partner-text: #858585;
+     padding: 75px 0;
+     background: #ffffff;
+}
+ .theme-clean-grid .partner-subtitle, .theme-default .partner-subtitle, .partner-section.theme-clean-grid .partner-subtitle, .partner-section.theme-default .partner-subtitle {
+     display: none;
+}
+ .theme-clean-grid .partner-description, .theme-default .partner-description, .partner-section.theme-clean-grid .partner-description, .partner-section.theme-default .partner-description {
+     display: none;
+}
+ .theme-clean-grid .partner-header, .theme-default .partner-header, .partner-section.theme-clean-grid .partner-header, .partner-section.theme-default .partner-header {
+     max-width: none;
+     margin-bottom: 55px;
+}
+ .theme-clean-grid .partner-title, .theme-default .partner-title, .partner-section.theme-clean-grid .partner-title, .partner-section.theme-default .partner-title {
+     position: relative;
+     display: inline-block;
+     padding: 0 38px;
+     background: #ffffff;
+     font-size: 2.6rem;
+}
+ .theme-clean-grid .partner-header::before, .theme-default .partner-header::before, .partner-section.theme-clean-grid .partner-header::before, .partner-section.theme-default .partner-header::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 50%;
+     height: 1px;
+     background: #dfe2e5;
+}
+ .theme-clean-grid .partner-item, .theme-default .partner-item, .partner-section.theme-clean-grid .partner-item, .partner-section.theme-default .partner-item {
+     min-height: 145px;
+     border-right: 1px solid #eceeef;
+}
+ .theme-clean-grid .partner-col:last-child .partner-item, .theme-default .partner-col:last-child .partner-item, .partner-section.theme-clean-grid .partner-col:last-child .partner-item, .partner-section.theme-default .partner-col:last-child .partner-item {
+     border-right: 0;
+}
+ .theme-clean-grid .partner-logo, .theme-default .partner-logo, .partner-section.theme-clean-grid .partner-logo, .partner-section.theme-default .partner-logo {
+     max-width: 150px;
+     max-height: 56px;
+     filter: grayscale(1);
+     opacity: .5;
+}
+/* ========================================================== 02 — EMERALD BLOCK LARGE CLEAN LOGO CARDS ========================================================== */
+ :is( .theme-emerald-block .partner-section, .partner-section.theme-emerald-block ) {
+     --partner-accent: #168f88;
+     --partner-heading: #102d31;
+}
+ .theme-emerald-block .partner-description, .partner-section.theme-emerald-block .partner-description {
+     display: none;
+}
+ .theme-emerald-block .partner-row, .partner-section.theme-emerald-block .partner-row {
+     gap: 20px;
+}
+ .theme-emerald-block .partner-item, .partner-section.theme-emerald-block .partner-item {
+     min-height: 170px;
+     background: #ffffff;
+     border: 1px solid #edf0ef;
+     border-radius: 14px;
+     box-shadow: 0 12px 35px rgba(15, 23, 42, .05);
+}
+ .theme-emerald-block .partner-item:hover, .partner-section.theme-emerald-block .partner-item:hover {
+     transform: translateY(-6px);
+     border-color: rgba(22, 143, 136, .28);
+     box-shadow: 0 18px 40px rgba(15, 23, 42, .09);
+}
+ .theme-emerald-block .partner-logo, .partner-section.theme-emerald-block .partner-logo {
+     max-width: 165px;
+     max-height: 64px;
+}
+/* ========================================================== 03 — LAYERED OFFSET OFFSET CARDS + NUMBER ========================================================== */
+ :is( .theme-layered-offset .partner-section, .partner-section.theme-layered-offset ) {
+     --partner-accent: #ff4d27;
+     --partner-heading: #171717;
+     background: #ffffff;
+}
+ .theme-layered-offset .partner-header, .partner-section.theme-layered-offset .partner-header {
+     text-align: left;
+     max-width: none;
+     margin-bottom: 55px;
+}
+ .theme-layered-offset .partner-description, .partner-section.theme-layered-offset .partner-description {
+     max-width: 550px;
+     margin-left: 0;
+}
+ .theme-layered-offset .partner-row, .partner-section.theme-layered-offset .partner-row {
+     gap: 16px;
+}
+ .theme-layered-offset .partner-item, .partner-section.theme-layered-offset .partner-item {
+     min-height: 165px;
+     background: #f7f7f7;
+     border-bottom: 4px solid #ff4d27;
+}
+ .theme-layered-offset .partner-item::before, .partner-section.theme-layered-offset .partner-item::before {
+     content: "";
+     position: absolute;
+     left: 8px;
+     top: 8px;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     border: 1px solid #ececec;
+     transition: .3s ease;
+}
+ .theme-layered-offset .partner-item:hover::before, .partner-section.theme-layered-offset .partner-item:hover::before {
+     left: 13px;
+     top: 13px;
+}
+ .theme-layered-offset .partner-logo, .partner-section.theme-layered-offset .partner-logo {
+     max-width: 150px;
+     max-height: 60px;
+}
+/* ========================================================== 04 — ELEGANT SERIF LUXURY MINIMAL LOGO STRIP ========================================================== */
+ :is( .theme-elegant-serif .partner-section, .partner-section.theme-elegant-serif ) {
+     --partner-accent: #7256ba;
+     --partner-heading: #292624;
+     --partner-text: #7b7570;
+}
+ .theme-elegant-serif .partner-subtitle, .partner-section.theme-elegant-serif .partner-subtitle {
+     color: #7256ba;
+}
+ .theme-elegant-serif .partner-title, .partner-section.theme-elegant-serif .partner-title {
+     font-family: "Playfair Display", serif;
+     font-weight: 600;
+     letter-spacing: -.5px;
+}
+ .theme-elegant-serif .partner-description, .partner-section.theme-elegant-serif .partner-description {
+     font-family: "Playfair Display", serif;
+}
+ .theme-elegant-serif .partner-item, .partner-section.theme-elegant-serif .partner-item {
+     min-height: 130px;
+     border-top: 1px solid #dedbd6;
+     border-bottom: 1px solid #dedbd6;
+}
+ .theme-elegant-serif .partner-col + .partner-col .partner-item, .partner-section.theme-elegant-serif .partner-col + .partner-col .partner-item {
+     border-left: 1px solid #dedbd6;
+}
+ .theme-elegant-serif .partner-logo, .partner-section.theme-elegant-serif .partner-logo {
+     max-width: 145px;
+     max-height: 58px;
+     filter: grayscale(1);
+     opacity: .48;
+}
+ .theme-elegant-serif .partner-item:hover, .partner-section.theme-elegant-serif .partner-item:hover {
+     background: #ffffff;
+}
+/* ========================================================== 05 — VIBRANT CARDS COLORFUL FLOATING LOGO CARDS ========================================================== */
+ :is( .theme-vibrant-cards .partner-section, .partner-section.theme-vibrant-cards ) {
+     --partner-accent: #1179e8;
+     --partner-heading: #17233b;
+     background: linear-gradient( 180deg, #f5f9ff, #ffffff );
+}
+ .theme-vibrant-cards .partner-row, .partner-section.theme-vibrant-cards .partner-row {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 22px;
+}
+ .theme-vibrant-cards .partner-col, .partner-section.theme-vibrant-cards .partner-col {
+     width: auto;
+}
+ .theme-vibrant-cards .partner-item, .partner-section.theme-vibrant-cards .partner-item {
+     min-height: 150px;
+     background: #ffffff;
+     border: 1px solid #e4ecf7;
+     border-radius: 20px;
+     box-shadow: 0 12px 30px rgba(31, 76, 145, .06);
+}
+ .theme-vibrant-cards .partner-col:nth-child(2n) .partner-item, .partner-section.theme-vibrant-cards .partner-col:nth-child(2n) .partner-item {
+     transform: translateY(18px);
+}
+ .theme-vibrant-cards .partner-col:nth-child(2n) .partner-item:hover, .partner-section.theme-vibrant-cards .partner-col:nth-child(2n) .partner-item:hover {
+     transform: translateY(10px) scale(1.02);
+}
+ .theme-vibrant-cards .partner-item:hover, .partner-section.theme-vibrant-cards .partner-item:hover {
+     transform: translateY(-6px) scale(1.02);
+     border-color: rgba(17, 121, 232, .3);
+}
+ .theme-vibrant-cards .partner-item .partner-logo, .partner-section.theme-vibrant-cards .partner-item .partner-logo {
+     filter: none;
+     opacity: .78;
+}
+/* ========================================================== 06 — CURVED SCALLOPED CURVED / PILL LOGO SYSTEM ========================================================== */
+ :is( .theme-curved-scalloped .partner-section, .partner-section.theme-curved-scalloped ) {
+     --partner-accent: #299779;
+     --partner-heading: #153b65;
+     background: #f5f7f6;
+}
+ .theme-curved-scalloped .partner-header, .partner-section.theme-curved-scalloped .partner-header {
+     margin-bottom: 50px;
+}
+ .theme-curved-scalloped .partner-row, .partner-section.theme-curved-scalloped .partner-row {
+     display: flex;
+     align-items: center;
+     gap: 14px;
+}
+ .theme-curved-scalloped .partner-item, .partner-section.theme-curved-scalloped .partner-item {
+     min-height: 115px;
+     background: #ffffff;
+     border: 1px solid #e5e9e7;
+     border-radius: 10px;
+}
+ .theme-curved-scalloped .partner-col:nth-child(even) .partner-item, .partner-section.theme-curved-scalloped .partner-col:nth-child(even) .partner-item {
+     border-radius: 18px 60px 18px 60px;
+}
+ .theme-curved-scalloped .partner-item:hover, .partner-section.theme-curved-scalloped .partner-item:hover {
+     background: #299779;
+     transform: translateY(-5px);
+}
+ .theme-curved-scalloped .partner-item:hover .partner-logo, .partner-section.theme-curved-scalloped .partner-item:hover .partner-logo {
+     filter: brightness(0) invert(1);
+     opacity: 1;
+}
+/* ========================================================== 07 — MODERN DARK DARK GLASS PARTNER BLOCKS ========================================================== */
+ :is( .theme-modern-dark .partner-section, .partner-section.theme-modern-dark ) {
+     --partner-accent: #20c7d9;
+     --partner-heading: #ffffff;
+     --partner-text: #98a7b8;
+     background: radial-gradient( circle at 80% 10%, rgba(32, 199, 217, .1), transparent 30% ), linear-gradient( 135deg, #07101b, #081724 );
+}
+ .theme-modern-dark .partner-subtitle, .partner-section.theme-modern-dark .partner-subtitle {
+     color: #20c7d9;
+}
+ .theme-modern-dark .partner-title, .partner-section.theme-modern-dark .partner-title {
+     color: #ffffff;
+}
+ .theme-modern-dark .partner-description, .partner-section.theme-modern-dark .partner-description {
+     color: #98a7b8;
+}
+ .theme-modern-dark .partner-row, .partner-section.theme-modern-dark .partner-row {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 18px;
+}
+ .theme-modern-dark .partner-col, .partner-section.theme-modern-dark .partner-col {
+     width: auto;
+}
+ .theme-modern-dark .partner-item, .partner-section.theme-modern-dark .partner-item {
+     min-height: 145px;
+     background: rgba(255, 255, 255, .035);
+     border: 1px solid rgba(255, 255, 255, .08);
+     border-radius: 15px;
+}
+ .theme-modern-dark .partner-item:hover, .partner-section.theme-modern-dark .partner-item:hover {
+     background: rgba(32, 199, 217, .08);
+     border-color: rgba(32, 199, 217, .3);
+     transform: translateY(-5px);
+}
+ .theme-modern-dark .partner-logo, .partner-section.theme-modern-dark .partner-logo {
+     filter: grayscale(1) brightness(0) invert(1);
+     opacity: .55;
+}
+ .theme-modern-dark .partner-item:hover .partner-logo, .partner-section.theme-modern-dark .partner-item:hover .partner-logo {
+     filter: brightness(0) invert(1);
+     opacity: 1;
+}
+/* ========================================================== RESPONSIVE ========================================================== */
+ @media (max-width: 991.98px) {
+     .partner-section {
+         padding: 75px 0;
     }
-
-    .partner-item {
-        border-right: 0 !important;
+     .partner-row .partner-col {
+         flex: 0 0 33.333%;
+         max-width: 33.333%;
     }
-
+     .theme-vibrant-cards .partner-row, .partner-section.theme-vibrant-cards .partner-row, .theme-modern-dark .partner-row, .partner-section.theme-modern-dark .partner-row {
+         grid-template-columns: repeat(2, 1fr);
+    }
+     .theme-vibrant-cards .partner-col, .partner-section.theme-vibrant-cards .partner-col, .theme-modern-dark .partner-col, .partner-section.theme-modern-dark .partner-col {
+         max-width: none;
+    }
+     .theme-curved-scalloped .partner-row, .partner-section.theme-curved-scalloped .partner-row {
+         flex-wrap: wrap;
+    }
 }
-
-@media (max-width: 767.98px) {
-
-    .trusted-partners-section {
-        padding: 50px 0;
+ @media (max-width: 767.98px) {
+     .partner-header {
+         margin-bottom: 40px;
     }
-
-    .partners-heading {
-        gap: 15px;
-        margin-bottom: 35px;
+     .partner-title {
+         font-size: 2rem;
     }
-
-    .partners-heading h2 {
-        font-size: 28px !important;
+     .partner-row .partner-col {
+         flex: 0 0 50%;
+         max-width: 50%;
     }
-
-    .trusted-partners-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+     .theme-clean-grid .partner-title, .theme-default .partner-title, .partner-section.theme-clean-grid .partner-title, .partner-section.theme-default .partner-title {
+         padding: 0 20px;
+         font-size: 2rem;
     }
-
-    .partner-item {
-        min-height: 120px;
-        padding: 15px;
+     .theme-vibrant-cards .partner-row, .partner-section.theme-vibrant-cards .partner-row, .theme-modern-dark .partner-row, .partner-section.theme-modern-dark .partner-row {
+         grid-template-columns: repeat(2, 1fr);
     }
-
-    .partner-logo {
-        width: 48px;
-        height: 48px;
-        flex-basis: 48px;
-        font-size: 24px;
+     .theme-vibrant-cards .partner-col, .partner-section.theme-vibrant-cards .partner-col, .theme-modern-dark .partner-col, .partner-section.theme-modern-dark .partner-col {
+         max-width: none;
     }
-
-    .partner-content strong {
-        font-size: 18px !important;
-    }
-
-    .partner-content small {
-        font-size: 10px;
-    }
-
 }
-
-@media (max-width: 480px) {
-
-    .trusted-partners-grid {
-        grid-template-columns: 1fr;
+ @media (max-width: 575.98px) {
+     .partner-section {
+         padding: 55px 0;
     }
-
-    .partners-heading::before,
-    .partners-heading::after {
-        display: none;
+     .partner-row .partner-col {
+         flex: 0 0 100%;
+         max-width: 100%;
     }
-
-    .partner-item {
-        flex-direction: row !important;
+     .partner-item {
+         min-height: 120px;
     }
-
+     .partner-logo {
+         max-width: 145px;
+         max-height: 55px;
+    }
+     .theme-vibrant-cards .partner-row, .partner-section.theme-vibrant-cards .partner-row, .theme-modern-dark .partner-row, .partner-section.theme-modern-dark .partner-row {
+         grid-template-columns: 1fr;
+    }
+     .theme-vibrant-cards .partner-col:nth-child(2n) .partner-item, .partner-section.theme-vibrant-cards .partner-col:nth-child(2n) .partner-item {
+         transform: none;
+    }
+     .theme-clean-grid .partner-item, .theme-default .partner-item, .partner-section.theme-clean-grid .partner-item, .partner-section.theme-default .partner-item {
+         border-right: 0;
+         border-bottom: 1px solid #eceeef;
+    }
 }

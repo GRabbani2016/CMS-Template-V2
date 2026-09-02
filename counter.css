@@ -1,204 +1,516 @@
-
-    .cta-section {
-        padding-top: var(--section-pt);
-        padding-bottom: var(--section-pb);
-        transition: padding 0.3s ease, margin 0.3s ease;
+/* ========================================================================== COUNTER SECTION BASE ========================================================================== */
+ .counter-section {
+     position: relative;
+     padding: 70px 0;
+     overflow: hidden;
+}
+ .counter-section .container {
+     position: relative;
+     z-index: 2;
+}
+ .counter-wrap {
+     position: relative;
+     display: grid;
+     grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+ .counter-box {
+     position: relative;
+     min-width: 0;
+}
+ .counter-info {
+     position: relative;
+     z-index: 3;
+}
+ .counter-number {
+     margin: 0;
+     font-weight: 800;
+     line-height: 1;
+     white-space: nowrap;
+}
+ .counter-number span {
+     display: inline;
+}
+ .counter-info p {
+     margin: 0;
+}
+ .counter-icon {
+     position: relative;
+     z-index: 3;
+}
+/* ========================================================================== 1. EMERALD BLOCK Exact style: full green rounded panel / 4 equal columns / vertical divider / wave ========================================================================== */
+ .theme-emerald-block .counter-section {
+     padding: 60px 0;
+     background: #ffffff;
+}
+ .theme-emerald-block .counter-wrap {
+     overflow: hidden;
+     background: #20ad98;
+     border-radius: 30px;
+}
+/* Background wave */
+ .theme-emerald-block .counter-wrap::before {
+     content: "";
+     position: absolute;
+     z-index: 0;
+     top: 25px;
+     left: 38%;
+     width: 650px;
+     height: 350px;
+     opacity: 0.11;
+     transform: rotate(17deg);
+     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 700 350' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.4'%3E%3Cpath d='M20 25 C160 -15 205 80 330 85 C455 90 495 180 680 210'/%3E%3Cpath d='M20 35 C160 -5 205 90 330 95 C455 100 495 190 680 220'/%3E%3Cpath d='M20 45 C160 5 205 100 330 105 C455 110 495 200 680 230'/%3E%3Cpath d='M20 55 C160 15 205 110 330 115 C455 120 495 210 680 240'/%3E%3Cpath d='M20 65 C160 25 205 120 330 125 C455 130 495 220 680 250'/%3E%3Cpath d='M20 75 C160 35 205 130 330 135 C455 140 495 230 680 260'/%3E%3Cpath d='M20 85 C160 45 205 140 330 145 C455 150 495 240 680 270'/%3E%3Cpath d='M20 95 C160 55 205 150 330 155 C455 160 495 250 680 280'/%3E%3C/g%3E%3C/svg%3E");
+     background-repeat: no-repeat;
+     background-size: contain;
+     pointer-events: none;
+}
+ .theme-emerald-block .counter-box {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 30px;
+     text-align: center;
+     border-right: 2px solid rgba(255, 255, 255, 0.23);
+}
+ .theme-emerald-block .counter-box:last-child {
+     border-right: 0;
+}
+ .theme-emerald-block .counter-icon {
+     display: none;
+}
+ .theme-emerald-block .counter-number {
+     color: #ffffff;
+     font-size: clamp( 3.6rem, 5vw, 5rem );
+     font-weight: 800;
+     letter-spacing: -2px;
+}
+ .theme-emerald-block .counter-suffix {
+     color: #ffffff;
+}
+ .theme-emerald-block .counter-info p {
+     margin-top: 26px;
+     color: #ffffff;
+     font-size: 1.03rem;
+     font-weight: 700;
+}
+/* ========================================================================== 2. CURVED SCALLOPED Reference: huge cream bottom circles + highlighted dotted second circle ========================================================================== */
+ .theme-curved-scalloped .counter-section {
+     padding: 130px 0 100px;
+}
+ .theme-curved-scalloped .counter-wrap {
+     align-items: center;
+}
+ .theme-curved-scalloped .counter-box {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+}
+/* Cream circles */
+ .theme-curved-scalloped .counter-box::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: -97px;
+    width: 325px;
+    height: 325px;
+    background: #ffffff;
+    border: 27px solid #f3f0e5;
+    border-radius: 50%;
+}
+/* highlight ring */
+ .theme-curved-scalloped .counter-icon {
+     display: none;
+}
+ .theme-curved-scalloped .counter-info {
+     margin-top: -30px;
+}
+ .theme-curved-scalloped .counter-number {
+     color: #161616;
+     font-size: clamp( 4rem, 5.3vw, 5.5rem );
+     font-weight: 500;
+     letter-spacing: -4px;
+}
+ .theme-curved-scalloped .counter-suffix {
+     color: #ffc400;
+}
+ .theme-curved-scalloped .counter-info p {
+     margin-top: 16px;
+     color: #596573;
+     font-size: 1.02rem;
+     font-weight: 600;
+}
+/* ========================================================================== 3. CLEAN GRID / DEFAULT Reference: pure white background + large numbers + thin vertical separators ========================================================================== */
+ .theme-default .counter-section, .theme-clean-grid .counter-section {
+     padding: 78px 0;
+     background: #ffffff;
+}
+ .theme-default .counter-wrap, .theme-clean-grid .counter-wrap {
+     align-items: stretch;
+}
+ .theme-default .counter-box, .theme-clean-grid .counter-box {
+     min-height: 175px;
+     display: flex;
+     align-items: center;
+     padding: 10px 50px;
+}
+ .theme-default .counter-box:not(:last-child)::after, .theme-clean-grid .counter-box:not(:last-child)::after {
+     content: "";
+     position: absolute;
+     right: 0;
+     top: 17%;
+     width: 1px;
+     height: 66%;
+     background: #ededed;
+}
+ .theme-default .counter-icon, .theme-clean-grid .counter-icon {
+     display: none;
+}
+ .theme-default .counter-number, .theme-clean-grid .counter-number {
+     color: #161616;
+     font-size: clamp( 4rem, 5vw, 5.25rem );
+     font-weight: 500;
+     letter-spacing: -4px;
+}
+ .theme-default .counter-suffix, .theme-clean-grid .counter-suffix {
+     color: #ffc000;
+}
+ .theme-default .counter-info p, .theme-clean-grid .counter-info p {
+     margin-top: 24px;
+     color: #596573;
+     font-size: 1.03rem;
+     font-weight: 600;
+}
+/* ========================================================================== 4. MODERN DARK Reference: charcoal background / red outline icons / white numbers ========================================================================== */
+ .theme-modern-dark .counter-section {
+     padding: 70px 0;
+     background: #252628;
+}
+ .theme-modern-dark .counter-wrap {
+     gap: 10px;
+}
+ .theme-modern-dark .counter-box {
+     min-height: 210px;
+     display: grid;
+     grid-template-columns: 105px minmax(0, 1fr);
+     align-items: center;
+     column-gap: 28px;
+     padding: 25px 20px;
+}
+ .theme-modern-dark .counter-icon {
+     width: 100px;
+     height: 100px;
+     display: grid;
+     place-items: center;
+     color: #e63735;
+     font-size: 4.2rem;
+     line-height: 1;
+}
+ .theme-modern-dark .counter-number {
+     color: #ffffff;
+     font-size: clamp( 3.2rem, 4.5vw, 4.4rem );
+     font-weight: 800;
+     letter-spacing: -2px;
+}
+ .theme-modern-dark .counter-suffix {
+     color: #ffffff;
+}
+ .theme-modern-dark .counter-info p {
+     margin-top: 25px;
+     color: #929294;
+     font-size: 1rem;
+     font-weight: 700;
+}
+/* ========================================================================== 5. VIBRANT CARDS Reference: pale cards / offset background card / blue outline icon ========================================================================== */
+ .theme-vibrant-cards .counter-section {
+     padding: 75px 0;
+     background: #ffffff;
+}
+ .theme-vibrant-cards .counter-wrap {
+     gap: 30px;
+}
+ .theme-vibrant-cards .counter-box {
+     min-height: 260px;
+     padding: 53px 40px;
+     background: #f1f4fb;
+}
+ 
+ .theme-vibrant-cards .counter-box::before {
+     content: "";
+     position: absolute;
+     z-index: -1;
+     top: 10px;
+     left: 10px;
+     width: 100%;
+     height: 100%;
+     background: rgb(244 248 255 / 65%);
+}
+ .theme-vibrant-cards .counter-box::after {
+     content: "";
+     position: absolute;
+     z-index: -1;
+     top: -10px;
+     left: -10px;
+     width: 100%;
+     height: 100%;
+     background: rgb(244 248 255 / 65%);
+}
+ .theme-vibrant-cards .counter-icon {
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     color: #1469d5;
+     font-size: 3.4rem;
+}
+.theme-vibrant-cards .counter-info {
+    margin-top: 30px;
+    
+ }
+ .theme-vibrant-cards .counter-number {
+     color: #0e1837;
+     font-size: clamp(2.4rem, 4vw, 4rem);
+     font-weight: 800;
+     letter-spacing: -2px;
+}
+ .theme-vibrant-cards .counter-suffix {
+     color: #0e1837;
+}
+ .theme-vibrant-cards .counter-info p {
+     margin-top: 22px;
+     color: #777e89;
+     font-size: 1.12rem;
+     font-weight: 700;
+}
+/* ========================================================================== 6. ELEGANT SERIF Reference: dark background image + red outline circles + white counters ========================================================================== */
+ .theme-elegant-serif .counter-section {
+     padding: 55px 0;
+     min-height: 420px;
+     display: flex;
+     align-items: center;
+     background: linear-gradient( rgba(2, 7, 10, 0.90), rgba(2, 7, 10, 0.94) ), url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=85");
+     background-size: cover;
+     background-position: center;
+     font-family: 'Inter', sans-serif;
+}
+ .theme-elegant-serif .counter-wrap {
+     align-items: center;
+}
+ .theme-elegant-serif .counter-box {
+     min-height: 300px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+ .theme-elegant-serif .counter-box:not(:last-child)::after {
+     content: "";
+     position: absolute;
+     right: 0;
+     top: 34%;
+     height: 105px;
+     border-right: 1px dashed rgba(255, 255, 255, 0.35);
+}
+ .theme-elegant-serif .counter-icon {
+     width: 125px;
+     height: 125px;
+     display: grid;
+     place-items: center;
+     margin-bottom: 35px;
+     color: #ef4d2d;
+     background: rgba(239, 77, 45, 0.045);
+     border: 1px dashed rgba(239, 77, 45, 0.9);
+     border-radius: 50%;
+     font-size: 3.1rem;
+}
+ .theme-elegant-serif .counter-number {
+     color: #ffffff;
+     font-family: 'Inter', sans-serif;
+     font-size: clamp( 3.4rem, 4.4vw, 4.65rem );
+     font-weight: 800;
+     letter-spacing: -2px;
+}
+ .theme-elegant-serif .counter-suffix {
+     color: #ffffff;
+}
+ .theme-elegant-serif .counter-info p {
+     margin-top: 30px;
+     color: #ffffff;
+     font-family: 'Inter', sans-serif;
+     font-size: 1.05rem;
+     font-weight: 500;
+}
+/* ========================================================================== 7. LAYERED OFFSET Reference: gray panel / white narrow number boxes / teal bottom line ========================================================================== */
+ .theme-layered-offset .counter-section {
+     padding: 70px 0;
+     background: #ffffff;
+}
+ .theme-layered-offset .counter-wrap {
+     min-height: 310px;
+     align-items: center;
+     padding: 48px 80px;
+     background: #f8f8f8;
+     border-bottom: 4px solid #258a8d;
+     border-radius: 10px 10px 5px 5px;
+     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
+}
+ .theme-layered-offset .counter-box {
+     display: flex;
+     justify-content: center;
+     padding: 20px 25px;
+}
+ .theme-layered-offset .counter-icon {
+     display: none;
+}
+ .theme-layered-offset .counter-info {
+     min-width: 150px;
+     min-height: 210px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 25px 28px;
+     background: #ffffff;
+}
+ .theme-layered-offset .counter-number {
+     color: #24898c;
+     font-size: clamp( 3.5rem, 4.5vw, 4.7rem );
+     font-weight: 700;
+     letter-spacing: -3px;
+}
+ .theme-layered-offset .counter-suffix {
+     color: #24898c;
+}
+ .theme-layered-offset .counter-info p {
+     margin-top: 22px;
+     color: #72787d;
+     font-size: 0.92rem;
+     font-weight: 500;
+     white-space: nowrap;
+}
+/* ========================================================================== RESPONSIVE ========================================================================== */
+ @media (max-width: 1199.98px) {
+     .theme-vibrant-cards .counter-icon {
+         font-size: 2.8rem;
     }
-
-    .stats-section {
-        position: relative;
-        overflow: hidden;
+     .theme-vibrant-cards .counter-box {
+         padding: 50px 28px;
     }
-
-    .stats-section .container {
-        background-color: var(--section-bg);
-        border-radius: var(--section-radius);
-        position: relative;
-        overflow: hidden;
-        transition: background-color 0.4s ease, border-radius 0.4s ease;
+     .theme-modern-dark .counter-box {
+         grid-template-columns: 80px 1fr;
+         column-gap: 16px;
     }
-
-    .stats-section .container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: var(--bg-wave);
-        background-size: cover;
-        background-position: center;
-        pointer-events: none;
-        z-index: 0;
+     .theme-modern-dark .counter-icon {
+         width: 75px;
+         font-size: 3rem;
     }
-
-    .stat-card {
-        background: var(--card-bg);
-        border: var(--card-border);
-        border-radius: var(--card-radius);
-        backdrop-filter: var(--card-backdrop);
-        -webkit-backdrop-filter: var(--card-backdrop);
-        padding: 100px 0;
-        text-align: center;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-            box-shadow 0.3s ease,
-            border 0.3s ease,
-            padding 0.3s ease;
+     .theme-layered-offset .counter-wrap {
+         padding: 45px 35px;
     }
-
-    .theme-default .stat-card,
-    .theme-emerald-block .stat-card {
-        border-right: var(--card-border-right);
+}
+ @media (max-width: 991.98px) {
+     .counter-wrap {
+         grid-template-columns: repeat( 2, minmax(0, 1fr) );
     }
-
-    @media (min-width: 992px) {
-
-        .theme-default .col-lg-3:last-child .stat-card,
-        .theme-emerald-block .col-lg-3:last-child .stat-card {
-            border-right: none;
-        }
+    /* Emerald */
+     .theme-emerald-block .counter-box:nth-child(2) {
+         border-right: 0;
     }
-
-    .stat-card:hover {
-        transform: var(--card-hover-transform);
+     .theme-emerald-block .counter-box:nth-child(1), .theme-emerald-block .counter-box:nth-child(2) {
+         border-bottom: 2px solid rgba(255,255,255,0.2);
     }
-
-    .theme-modern-dark .stat-card:hover {
-        box-shadow: 0 10px 30px rgba(6, 182, 212, 0.25);
-        border-color: rgba(6, 182, 212, 0.6);
+    /* Curved */
+     .theme-curved-scalloped .counter-wrap {
+         row-gap: 120px;
     }
-
-    .stat-icon {
-        display: none;
-        font-size: 2.2rem;
-        margin-bottom: 0.5rem;
-        line-height: 1;
-        z-index: 2;
-        transition: color 0.3s ease, display 0.3s ease;
+    /* Clean */
+     .theme-default .counter-box:nth-child(2)::after, .theme-clean-grid .counter-box:nth-child(2)::after {
+         display: none;
     }
-
-    .theme-layered-offset .stat-icon {
-        display: inline-block;
+    /* Modern */
+     .theme-modern-dark .counter-box {
+         grid-template-columns: 90px 1fr;
     }
-
-    .stat-number {
-        font-size: 3.2rem;
-        font-weight: var(--stat-num-weight);
-        color: var(--stat-num-color);
-        background: var(--stat-num-gradient);
-        -webkit-background-clip: text;
-        background-clip: text;
-        line-height: 1.1;
-        margin-bottom: 0.5rem;
-        position: relative;
-        z-index: 2;
-        transition: color 0.3s ease;
+    /* Elegant */
+     .theme-elegant-serif .counter-box:nth-child(2)::after {
+         display: none;
     }
-
-    .stat-label {
-        font-size: 0.95rem;
-        color: var(--stat-num-color);
-        margin: 0;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        position: relative;
-        z-index: 2;
-        transition: color 0.3s ease;
+    /* Layered */
+     .theme-layered-offset .counter-wrap {
+         gap: 25px;
     }
-
-    /* Arch & Scalloped Circle Elements (Theme 2 Stats) */
-    .theme-curved-scalloped .stats-section .stat-card::before {
-        content: '';
-        position: absolute;
-        bottom: 25px;
-        width: 240px;
-        height: 240px;
-        background-color: var(--arch-bg);
-        border-radius: 50%;
-        z-index: 0;
-        transition: transform 0.3s ease, background-color 0.3s ease;
+}
+ @media (max-width: 575.98px) {
+     .counter-section {
+         padding: 55px 0;
     }
-
-    .theme-curved-scalloped .stats-section .col-lg-3:last-child .stat-card::after,
-    .theme-curved-scalloped .stats-section .stat-card:hover::after {
-        content: '';
-        position: absolute;
-        width: 250px;
-        height: 250px;
-        border: var(--highlight-border);
-        border-radius: 50%;
-        z-index: 1;
-        pointer-events: none;
-        transition: transform 0.3s ease;
+     .counter-wrap {
+         grid-template-columns: 1fr;
     }
-
-    .theme-curved-scalloped .stats-section .stat-card:hover::before {
-        transform: scale(1.05);
-        background-color: #ebe3d3;
+    /* Emerald */
+     .theme-emerald-block .counter-wrap {
+         border-radius: 22px;
     }
-
-    /* Layered Offset Frames Styles (Stats Section) */
-    .theme-layered-offset .stats-section .col-lg-3:nth-child(1) {
-        --accent-color: #f37a1f;
+     .theme-emerald-block .counter-box {
+         min-height: 220px;
+         border-right: 0;
+         border-bottom: 1px solid rgba(255,255,255,0.23);
     }
-
-    .theme-layered-offset .stats-section .col-lg-3:nth-child(2) {
-        --accent-color: #3dbbd3;
+     .theme-emerald-block .counter-box:nth-child(3) {
+         border-bottom: 1px solid rgba(255,255,255,0.23);
     }
-
-    .theme-layered-offset .stats-section .col-lg-3:nth-child(3) {
-        --accent-color: #e8336d;
+    /* Curved */
+     .theme-curved-scalloped .counter-wrap {
+         row-gap: 115px;
     }
-
-    .theme-layered-offset .stats-section .col-lg-3:nth-child(4) {
-        --accent-color: #8e44ad;
+     .theme-curved-scalloped .counter-box::before {
+         width: 280px;
+         height: 280px;
     }
-
-    .theme-layered-offset .stats-section .col-lg-3 {
-        position: relative;
-        padding: 15px 22px;
+     .theme-curved-scalloped .counter-box:nth-child(2)::after {
+         width: 315px;
+         height: 315px;
+         top: 15px;
     }
-
-    .theme-layered-offset .stats-section .col-lg-3::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 8px;
-        right: 8px;
-        bottom: 0;
-        border: 2.5px solid var(--accent-color);
-        border-radius: 20px;
-        z-index: 1;
-        pointer-events: none;
-        transition: all 0.3s ease;
+    /* Clean */
+     .theme-default .counter-box, .theme-clean-grid .counter-box {
+         justify-content: center;
+         text-align: center;
     }
-
-    .theme-layered-offset .stats-section .col-lg-3::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 8px;
-        width: 80px;
-        height: 80px;
-        border-left: 14px solid var(--accent-color);
-        border-bottom: 14px solid var(--accent-color);
-        border-bottom-left-radius: 20px;
-        z-index: 1;
-        pointer-events: none;
-        transition: all 0.3s ease;
+     .theme-default .counter-box::after, .theme-clean-grid .counter-box::after {
+         display: none;
     }
-
-    .theme-layered-offset .stat-label,
-    .theme-layered-offset .stat-icon {
-        color: var(--accent-color);
+    /* Dark */
+     .theme-modern-dark .counter-box {
+         grid-template-columns: 80px 1fr;
+         min-height: 155px;
+         padding: 20px 10px;
     }
-
-   
+     .theme-modern-dark .counter-icon {
+         width: 70px;
+         height: 70px;
+         font-size: 2.7rem;
+    }
+    /* Vibrant */
+     .theme-vibrant-cards .counter-wrap {
+         gap: 28px;
+    }
+    /* Elegant */
+     .theme-elegant-serif .counter-box {
+         padding: 45px 20px;
+         border-bottom: 1px dashed rgba(255,255,255,0.2);
+    }
+     .theme-elegant-serif .counter-box::after {
+         display: none;
+    }
+     .theme-elegant-serif .counter-box:last-child {
+         border-bottom: 0;
+    }
+    /* Layered */
+     .theme-layered-offset .counter-wrap {
+         padding: 35px 25px;
+    }
+     .theme-layered-offset .counter-info {
+         width: 100%;
+         max-width: 250px;
+         text-align: center;
+    }
+}

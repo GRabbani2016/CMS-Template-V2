@@ -1,1296 +1,765 @@
-/* ==========================================================
-   SERVICES SHOWCASE
-   BASE
-========================================================== */
-
-.services-showcase-section {
-    --service-accent: #1ba085;
-    --service-heading: #102e28;
-    --service-text: #69736f;
-    --service-bg: #ffffff;
-    --service-card-bg: #ffffff;
-    --service-border: #e8ecea;
-
-    position: relative;
-    overflow: hidden;
-
-    padding: 100px 0;
-
-    background: var(--service-bg);
-
-    font-family: var(--font-family, 'Inter', sans-serif);
+/* ========================================================== SERVICES SHOWCASE BASE ========================================================== */
+ .services-showcase-section {
+     --service-accent: #1ba085;
+     --service-heading: #102e28;
+     --service-text: #69736f;
+     --service-bg: #ffffff;
+     --service-card-bg: #ffffff;
+     --service-border: #e8ecea;
+     position: relative;
+     overflow: hidden;
+     padding: 100px 0;
+     background: var(--service-bg);
+     font-family: var(--font-family, 'Inter', sans-serif);
 }
-
-
-/* ==========================================================
-   HEADING
-========================================================== */
-
-.services-heading-wrap {
-    position: relative;
-
-    z-index: 2;
-
-    display: grid;
-    grid-template-columns: 1.15fr .85fr;
-
-    gap: 40px;
-
-    align-items: end;
-
-    margin-bottom: 60px;
+/* ========================================================== HEADING ========================================================== */
+ .services-heading-wrap {
+     position: relative;
+     z-index: 2;
+     display: grid;
+     grid-template-columns: 1.15fr .85fr;
+     gap: 40px;
+     align-items: end;
+     margin-bottom: 60px;
 }
-
-.services-heading-left,
-.services-heading-right {
-    position: relative;
-    z-index: 2;
+ .services-heading-left, .services-heading-right {
+     position: relative;
+     z-index: 2;
 }
-
-.services-kicker {
-    display: inline-flex;
-
-    align-items: center;
-
-    margin-bottom: 15px;
-
-    color: var(--service-accent);
-
-    font-size: 13px;
-    font-weight: 800;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
+ .services-kicker {
+     display: inline-flex;
+     align-items: center;
+     margin-bottom: 15px;
+     color: var(--service-accent);
+     font-size: 13px;
+     font-weight: 800;
+     letter-spacing: 1.5px;
+     text-transform: uppercase;
 }
-
-.services-title {
-    max-width: 680px;
-    margin: 0 auto;
-    color: var(--service-heading);
-    font-size: clamp(2.3rem, 4vw, 4rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -1.5px;
+ .services-title {
+     max-width: 680px;
+     margin: 0 auto;
+     color: var(--service-heading);
+     font-size: clamp(2.3rem, 4vw, 4rem);
+     font-weight: 800;
+     line-height: 1.1;
+     letter-spacing: -1.5px;
 }
-
-.services-title span {
-    color: var(--service-accent);
+ .services-title span {
+     color: var(--service-accent);
 }
-
-.services-heading-text {
-    max-width: 570px;
-
-    margin: 0;
-
-    color: var(--service-text);
-
-    font-size: 1rem;
-
-    line-height: 1.8;
+ .services-heading-text {
+     max-width: 570px;
+     margin: 0;
+     color: var(--service-text);
+     font-size: 1rem;
+     line-height: 1.8;
 }
-
-.services-big-text {
-    display: none;
-
-    position: absolute;
-
-    z-index: 0;
-
-    pointer-events: none;
-
-    color: transparent;
-
-    font-size: 8rem;
-    font-weight: 900;
-
-    line-height: 1;
-
-    -webkit-text-stroke: 1px rgba(15,23,42,.05);
+ .services-big-text {
+     display: none;
+     position: absolute;
+     z-index: 0;
+     pointer-events: none;
+     color: transparent;
+     font-size: 8rem;
+     font-weight: 900;
+     line-height: 1;
+     -webkit-text-stroke: 1px rgba(15,23,42,.05);
 }
-
-
-/* ==========================================================
-   GRID
-========================================================== */
-
-.services-grid {
-    position: relative;
-    z-index: 3;
+/* ========================================================== GRID ========================================================== */
+ .services-grid {
+     position: relative;
+     z-index: 3;
 }
-
-
-/* ==========================================================
-   CARD BASE
-========================================================== */
-
-.service-card {
-    position: relative;
-
-    height: 100%;
-    min-height: 335px;
-
-    overflow: hidden;
-
-    padding: 35px;
-
-    background: var(--service-card-bg);
-
-    border: 1px solid var(--service-border);
-
-    border-radius: 20px;
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease;
+/* ========================================================== CARD BASE ========================================================== */
+ .service-card {
+     position: relative;
+     height: 100%;
+     min-height: 335px;
+     overflow: hidden;
+     padding: 35px;
+    /* background: var(--service-card-bg);
+     */
+     border: 1px solid var(--service-border);
+     border-radius: 20px;
+     transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
-
-.service-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 20px 45px rgba(15,23,42,.08);
+ .service-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 20px 45px rgba(15,23,42,.08);
 }
-
-
 /* Number */
-
-.service-number {
-    display: block;
-
-    margin-bottom: 20px;
-
-    color: #dfe4e1;
-
-    font-size: 2rem;
-
-    font-weight: 800;
+ .service-number {
+     display: block;
+     margin-bottom: 20px;
+     color: #dfe4e1;
+     font-size: 2rem;
+     font-weight: 800;
 }
-
-
 /* Icon */
-
-.service-icon {
-    width: 68px;
-    height: 68px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 28px;
-
-    color: var(--service-accent);
-
-    background: #f3f7f5;
-
-    border-radius: 50%;
-
-    font-size: 29px;
-
-    transition: .3s ease;
+ .service-icon {
+     width: 68px;
+     height: 68px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 28px;
+     color: var(--service-accent);
+     background: #f3f7f5;
+     border-radius: 50%;
+     font-size: 29px;
+     transition: .3s ease;
 }
-
-.service-card:hover .service-icon {
-    color: #ffffff;
-
-    background: var(--service-accent);
+ .service-card:hover .service-icon {
+     color: #ffffff;
+     background: var(--service-accent);
 }
-
-
 /* Image hidden by default */
-
-.service-image {
-    display: none;
+ .service-image {
+     display: none;
 }
-
-.service-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
+ .service-image img {
+     width: 100%;
+     height: 100%;
+     display: block;
+     object-fit: cover;
 }
-
-
 /* Content */
-
-.service-content {
-    position: relative;
-    z-index: 3;
+ .service-content {
+     position: relative;
+     z-index: 3;
 }
-
-.service-title {
-    margin: 0 0 14px;
-
-    color: var(--service-heading);
-
-    font-size: 1.22rem;
-    font-weight: 750;
-
-    line-height: 1.35;
+ .service-title {
+     margin: 0 0 14px;
+     color: var(--service-heading);
+     font-size: 1.22rem;
+     font-weight: 750;
+     line-height: 1.35;
 }
-
-.service-description {
-    margin: 0 0 23px;
-
-    color: var(--service-text);
-
-    font-size: .9rem;
-
-    line-height: 1.7;
+ .service-description {
+     margin: 0 0 23px;
+     color: var(--service-text);
+     font-size: .9rem;
+     line-height: 1.7;
 }
-
-
 /* Link */
-
-.service-link {
-    position: relative;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    color: var(--service-heading);
-
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: 750;
-
-    transition: .25s ease;
-}
-
-.service-link::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -8px;
-
-    width: 30px;
-    height: 4px;
-
-    border-radius: 10px;
-
-    background: var(--service-accent);
-
-    transition: width .25s ease;
-}
-
-.service-link:hover {
-    color: var(--service-accent);
-}
-
-.service-link:hover::after {
-    width: 100%;
-}
-
-
-/* ==========================================================
-   BOTTOM BUTTON
-========================================================== */
-
-.services-bottom-action {
-    display: flex;
-
-    justify-content: center;
-
-    margin-top: 45px;
-}
-
-.services-all-btn {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    min-height: 52px;
-
-    padding: 0 28px;
-
-    color: #ffffff;
-
-    background: var(--service-accent);
-
-    border-radius: 8px;
-
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: 750;
-
-    transition: .25s ease;
-}
-
-.services-all-btn:hover {
-    color: #ffffff;
-
-    transform: translateY(-2px);
-}
-
-
-/* ==========================================================
-   THEME 1 — EMERALD BLOCK
-   3 LARGE NUMBERED CARDS
-   Similar to reference: Services Offer / affordable plans
-========================================================== */
-
-.theme-emerald-block .services-showcase-section {
-    --service-accent: #b8e75b;
-    --service-heading: #17382f;
-    --service-text: #727771;
-    --service-bg: #ffffff;
-}
-
-.theme-emerald-block .services-kicker {
-    padding: 8px 18px;
-
-    color: #17382f;
-
-    background: #b8e75b;
-
-    border-radius: 50px;
-
-    letter-spacing: 0;
-
-    text-transform: none;
-
-    font-size: 14px;
-}
-
-.theme-emerald-block .services-heading-wrap {
-    grid-template-columns: 1fr 1fr;
-
-    margin-bottom: 50px;
-}
-
-.theme-emerald-block .services-title span {
-    color: inherit;
-}
-
-.theme-emerald-block .service-col {
-    width: 33.333333%;
-}
-
-.theme-emerald-block .service-col:nth-child(n+4) {
-    display: none;
-}
-
-.theme-emerald-block .service-card {
-    min-height: 420px;
-
-    padding: 35px 38px;
-
-    border-color: #e1e5e2;
-
-    border-radius: 24px;
-}
-
-.theme-emerald-block .service-number {
-    position: absolute;
-
-    top: 25px;
-    left: 25px;
-
-    font-size: 2.5rem;
-}
-
-.theme-emerald-block .service-icon {
-    width: 120px;
-    height: 120px;
-
-    margin: 15px 0 45px 45px;
-
-    color: #17382f;
-
-    background: #f4f3ef;
-
-    font-size: 43px;
-}
-
-.theme-emerald-block .service-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: -90px;
-    left: -65px;
-
-    width: 185px;
-    height: 185px;
-
-    border: 1px solid #e6e8e6;
-
-    border-radius: 50%;
-}
-
-.theme-emerald-block .service-image {
-    display: none;
-}
-
-.theme-emerald-block .service-link::after {
-    background: #b8e75b;
-}
-
-
-/* ==========================================================
-   THEME 2 — CURVED SCALLOPED
-   6 SERVICES / BORDER GRID / RED ICONS
-========================================================== */
-
-.theme-curved-scalloped .services-showcase-section {
-    --service-accent: #e51b23;
-    --service-heading: #162033;
-    --service-text: #747b85;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #f8f8f8 50%,
-            #ffffff 100%
-        );
-}
-
-.theme-curved-scalloped .services-heading-wrap {
-    display: block;
-
-    text-align: center;
-
-    margin-bottom: 75px;
-}
-
-.theme-curved-scalloped .services-heading-right {
-    display: none;
-}
-
-.theme-curved-scalloped .services-big-text {
-    display: block;
-
-    left: 50%;
-    top: -60px;
-
-    transform: translateX(-50%);
-}
-
-.theme-curved-scalloped .services-title span {
-    color: inherit;
-}
-
-.theme-curved-scalloped .service-col {
-    width: 33.333333%;
-}
-
-.theme-curved-scalloped .service-col:nth-child(n+7) {
-    display: none;
-}
-
-.theme-curved-scalloped .services-grid {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-}
-
-.theme-curved-scalloped .service-card {
-    min-height: 280px;
-
-    padding: 40px;
-
-    border: 0;
-
-    border-right: 1px solid #e5e7eb;
-    border-bottom: 1px solid #e5e7eb;
-
-    border-radius: 0;
-
-    background: transparent;
-
-    box-shadow: none;
-}
-
-.theme-curved-scalloped .service-card:hover {
-    transform: none;
-
-    background: #ffffff;
-}
-
-.theme-curved-scalloped .service-number {
-    display: none;
-}
-
-.theme-curved-scalloped .service-icon {
-    width: auto;
-    height: auto;
-
-    justify-content: flex-start;
-
-    margin-bottom: 22px;
-
-    color: #e51b23;
-
-    background: transparent;
-
-    border-radius: 0;
-
-    font-size: 42px;
-}
-
-.theme-curved-scalloped .service-card:hover .service-icon {
-    color: #e51b23;
-
-    background: transparent;
-}
-
-.theme-curved-scalloped .service-link::after {
-    display: none;
-}
-
-.theme-curved-scalloped .service-link i {
-    width: 35px;
-    height: 35px;
-
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    order: -1;
-
-    background: #ffffff;
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 7px 18px rgba(0,0,0,.07);
-}
-
-
-/* ==========================================================
-   THEME 3 — DEFAULT / CLEAN GRID
-   FINANCE FEATURE CARDS
-========================================================== */
-
-.theme-default .services-showcase-section {
-    --service-accent: #078675;
-    --service-heading: #082c24;
-    --service-text: #747b77;
-}
-
-.theme-default .services-heading-wrap {
-    display: block;
-
-    max-width: 720px;
-
-    margin: 0 auto 55px;
-
-    text-align: center;
-}
-
-.theme-default .services-heading-right {
-    display: none;
-}
-
-.theme-default .services-title span {
-    display: block;
-
-    color: inherit;
-}
-
-.theme-default .service-col {
-    width: 33.333333%;
-}
-
-.theme-default .service-col:nth-child(n+7) {
-    display: none;
-}
-
-.theme-default .service-card {
-    min-height: 225px;
-
-    padding: 35px;
-
-    border-radius: 20px;
-
-    box-shadow: none;
-}
-
-.theme-default .service-number {
-    display: none;
-}
-
-.theme-default .service-icon {
-    width: auto;
-    height: 100%;
-
-    justify-content: flex-start;
-
-    float: left;
-
-    margin: 0 18px 0 0;
-
-    color: #078675;
-
-    background: transparent;
-
-    border-radius: 0;
-
-    font-size: 36px;
-}
-
-.theme-default .service-card:hover .service-icon {
-    color: #078675;
-
-    background: transparent;
-}
-
-.theme-default .service-link {
-    display: none;
-}
-
-.theme-default .service-card::after {
-    content: "";
-
-    position: absolute;
-
-    right: -10px;
-    bottom: -8px;
-
-    width: 120px;
-    height: 85px;
-
-    opacity: .07;
-
-    background:
-        linear-gradient(
-            140deg,
-            transparent 42%,
-            #078675 43% 48%,
-            transparent 49% 57%,
-            #078675 58% 63%,
-            transparent 64%
-        );
-}
-
-
-/* ==========================================================
-   THEME 4 — MODERN DARK
-   3 TALL TECHNOLOGY SERVICE CARDS
-========================================================== */
-
-.theme-modern-dark .services-showcase-section {
-    --service-accent: #06b6d4;
-    --service-heading: #f8fafc;
-    --service-text: #94a3b8;
-    --service-bg: #080d16;
-    --service-card-bg: #111827;
-    --service-border: #1f2937;
-}
-
-.theme-modern-dark .services-heading-wrap {
-    display: block;
-
-    max-width: 900px;
-
-    margin: 0 auto 65px;
-
-    text-align: center;
-}
-
-.theme-modern-dark .services-heading-right {
-    display: none;
-}
-
-.theme-modern-dark .services-title {
-    margin: auto;
-}
-
-.theme-modern-dark .services-title span {
-    color: #06b6d4;
-}
-
-.theme-modern-dark .service-col {
-    width: 33.333333%;
-}
-
-.theme-modern-dark .service-col:nth-child(n+4) {
-    display: none;
-}
-
-.theme-modern-dark .service-card {
-    min-height: 450px;
-
-    padding: 50px 38px;
-
-    text-align: center;
-
-    border:
-        1px solid rgba(6,182,212,.18);
-
-    border-radius: 18px;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(17,24,39,.95),
-            rgba(8,13,22,.95)
-        );
-}
-
-.theme-modern-dark .service-card:hover {
-    border-color: #06b6d4;
-
-    box-shadow:
-        0 20px 50px rgba(6,182,212,.13);
-}
-
-.theme-modern-dark .service-number {
-    position: absolute;
-
-    top: 25px;
-    right: 28px;
-
-    color: rgba(255,255,255,.05);
-
-    font-size: 4rem;
-}
-
-.theme-modern-dark .service-icon {
-    width: 95px;
-    height: 95px;
-
-    margin: 25px auto 35px;
-
-    color: #22d3ee;
-
-    background:
-        rgba(6,182,212,.08);
-
-    border:
-        1px solid rgba(6,182,212,.22);
-
-    font-size: 40px;
-}
-
-.theme-modern-dark .service-link {
-    margin-top: 12px;
-
-    color: #22d3ee;
-}
-
-.theme-modern-dark .service-link::after {
-    display: none;
-}
-
-.theme-modern-dark .services-all-btn {
-    border:
-        1px solid #06b6d4;
-
-    background: transparent;
-
-    color: #22d3ee;
-}
-
-
-/* ==========================================================
-   THEME 5 — VIBRANT CARDS
-   8 HOSTING / SOLUTION BOXES
-========================================================== */
-
-.theme-vibrant-cards .services-showcase-section {
-    --service-accent: #4f46e5;
-    --service-heading: #334155;
-    --service-text: #64748b;
-
-    background: #ffffff;
-}
-
-.theme-vibrant-cards .services-heading-wrap {
-    display: block;
-
-    max-width: 720px;
-
-    margin: 0 auto 60px;
-
-    text-align: center;
-}
-
-.theme-vibrant-cards .services-heading-right {
-    display: block;
-}
-
-.theme-vibrant-cards .services-heading-text {
-    margin: 20px auto 0;
-}
-
-.theme-vibrant-cards .services-title span {
-    color: inherit;
-}
-
-.theme-vibrant-cards .service-col {
-    width: 25%;
-}
-
-.theme-vibrant-cards .services-grid {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-}
-
-.theme-vibrant-cards .service-card {
-    min-height: 290px;
-
-    padding: 35px;
-
-    border: 0;
-    border-right: 1px solid #edf0f5;
-    border-bottom: 1px solid #edf0f5;
-
-    border-radius: 0;
-
-    box-shadow: none;
-}
-
-.theme-vibrant-cards .service-card:hover {
-    transform: none;
-
-    background: #f8fafc;
-}
-
-.theme-vibrant-cards .service-number {
-    display: none;
-}
-
-.theme-vibrant-cards .service-icon {
-    width: 58px;
-    height: 58px;
-
-    border-radius: 12px;
-
-    color: #4f46e5;
-
-    background:
-        linear-gradient(
-            135deg,
-            #d9fdf4,
-            #eee3ff
-        );
-}
-
-.theme-vibrant-cards .service-card:hover .service-icon {
-    color: #4f46e5;
-
-    background:
-        linear-gradient(
-            135deg,
-            #d9fdf4,
-            #eee3ff
-        );
-}
-
-.theme-vibrant-cards .service-link::after {
-    display: none;
-}
-
-
-/* ==========================================================
-   THEME 6 — ELEGANT SERIF
-   3 LARGE HORIZONTAL IMAGE SERVICES
-========================================================== */
-
-.theme-elegant-serif .services-showcase-section {
-    --service-accent: #d4af37;
-    --service-heading: #2c2a29;
-    --service-text: #766f68;
-    --service-bg: #faf8f5;
-}
-
-.theme-elegant-serif .services-heading-wrap {
-    display: block;
-
-    text-align: center;
-
-    margin-bottom: 55px;
-}
-
-.theme-elegant-serif .services-heading-right {
-    display: none;
-}
-
-.theme-elegant-serif .services-title {
-    margin: auto;
-
-    font-family: 'Playfair Display', serif;
-
-    font-weight: 600;
-}
-
-.theme-elegant-serif .services-title span {
-    color: #d4af37;
-}
-
-.theme-elegant-serif .service-col {
-    width: 100%;
-}
-
-.theme-elegant-serif .service-col:nth-child(n+4) {
-    display: none;
-}
-
-.theme-elegant-serif .services-grid {
-    gap: 24px;
-}
-
-.theme-elegant-serif .service-card {
-    display: grid;
-
-    grid-template-columns: 32% 68%;
-
-    min-height: 260px;
-
-    padding: 0;
-
-    border:
-        1px solid #e3ddd4;
-
-    border-radius: 8px;
-}
-
-.theme-elegant-serif .service-image {
-    display: block;
-
-    height: 100%;
-
-    overflow: hidden;
-}
-
-.theme-elegant-serif .service-image img {
-    min-height: 260px;
-}
-
-.theme-elegant-serif .service-content {
-    display: flex;
-
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 35px 45px;
-}
-
-.theme-elegant-serif .service-number,
-.theme-elegant-serif .service-icon {
-    display: none;
-}
-
-.theme-elegant-serif .service-title {
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.7rem;
-}
-
-.theme-elegant-serif .service-link {
-    color: #b59328;
-
-    font-family: 'Inter', sans-serif;
-}
-
-.theme-elegant-serif .service-link::after {
-    display: none;
-}
-
-.theme-elegant-serif .services-all-btn {
-    border-radius: 0;
-
-    background: #d4af37;
-}
-
-
-/* ==========================================================
-   THEME 7 — LAYERED OFFSET
-   6 ANGLED CARDS / ORANGE-RED ICONS
-========================================================== */
-
-.theme-layered-offset .services-showcase-section {
-    --service-accent: #f37a1f;
-    --service-heading: #29292d;
-    --service-text: #747474;
-
-    background:
-        linear-gradient(
-            135deg,
-            #fafafa,
-            #f1f2f4
-        );
-}
-
-.theme-layered-offset .services-showcase-section::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    opacity: .35;
-
-    background:
-        linear-gradient(
-            115deg,
-            transparent 0 25%,
-            rgba(255,255,255,.75) 25% 40%,
-            transparent 40% 62%,
-            rgba(255,255,255,.6) 62% 76%,
-            transparent 76%
-        );
-}
-
-.theme-layered-offset .services-heading-wrap {
-    display: block;
-
-    text-align: center;
-
-    margin-bottom: 70px;
-}
-
-.theme-layered-offset .services-heading-right {
-    display: none;
-}
-
-.theme-layered-offset .services-title {
-    max-width: 650px;
-
-    margin: auto;
-}
-
-.theme-layered-offset .services-title span {
-    color: #f37a1f;
-}
-
-.theme-layered-offset .service-col {
-    width: 33.333333%;
-}
-
-.theme-layered-offset .service-col:nth-child(n+7) {
-    display: none;
-}
-
-.theme-layered-offset .service-card {
-    min-height: 270px;
-
-    padding: 42px 35px;
-
-    text-align: center;
-
-    border: 0;
-
-    border-radius: 8px;
-
-    background: #ffffff;
-
-    clip-path:
-        polygon(
-            0 6%,
-            100% 0,
-            100% 94%,
-            0 100%
-        );
-}
-
-.theme-layered-offset .service-col:nth-child(even) .service-card {
-    clip-path:
-        polygon(
-            0 0,
-            100% 6%,
-            100% 100%,
-            0 94%
-        );
-}
-
-.theme-layered-offset .service-number {
-    display: none;
-}
-
-.theme-layered-offset .service-icon {
-    width: 68px;
-    height: 68px;
-
-    margin: 0 auto 25px;
-
-    color: #ffffff;
-
-    background: #f37a1f;
-
-    border-radius: 50%;
-
-    font-size: 28px;
-}
-
-.theme-layered-offset .service-card:hover .service-icon {
-    color: #ffffff;
-
-    background: #d95d09;
-}
-
-.theme-layered-offset .service-link {
-    display: none;
-}
-
-.theme-layered-offset .services-all-btn {
-    padding-left: 35px;
-    padding-right: 35px;
-
-    border-radius: 50px;
-
-    background: #f37a1f;
-}
-
-
-/* ==========================================================
-   RESPONSIVE — TABLET
-========================================================== */
-
-@media (max-width: 1199.98px) {
-
-    .theme-emerald-block .service-col,
-    .theme-curved-scalloped .service-col,
-    .theme-default .service-col,
-    .theme-modern-dark .service-col,
-    .theme-layered-offset .service-col {
-        width: 50%;
+ .service-link {
+     position: relative;
+     display: inline-flex;
+     align-items: center;
+     gap: 10px;
+     color: var(--service-heading);
+     text-decoration: none;
+     font-size: 13px;
+     font-weight: 750;
+     transition: .25s ease;
+}
+ .service-link::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -8px;
+     width: 30px;
+     height: 4px;
+     border-radius: 10px;
+     background: var(--service-accent);
+     transition: width .25s ease;
+}
+ .service-link:hover {
+     color: var(--service-accent);
+}
+ .service-link:hover::after {
+     width: 100%;
+}
+/* ========================================================== BOTTOM BUTTON ========================================================== */
+ .services-bottom-action {
+     display: flex;
+     justify-content: center;
+     margin-top: 45px;
+}
+ .services-all-btn {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     min-height: 52px;
+     padding: 0 28px;
+     color: #ffffff;
+     background: var(--service-accent);
+     border-radius: 8px;
+     text-decoration: none;
+     font-size: 13px;
+     font-weight: 750;
+     transition: .25s ease;
+}
+ .services-all-btn:hover {
+     color: #ffffff;
+     transform: translateY(-2px);
+}
+/* ========================================================== THEME 1 — EMERALD BLOCK 3 LARGE NUMBERED CARDS Similar to reference: Services Offer / affordable plans ========================================================== */
+ .theme-emerald-block .services-showcase-section {
+     --service-accent: #b8e75b;
+     --service-heading: #17382f;
+     --service-text: #727771;
+     --service-bg: #ffffff;
+}
+ .theme-emerald-block .services-kicker {
+     padding: 8px 18px;
+     color: #17382f;
+     background: #b8e75b;
+     border-radius: 50px;
+     letter-spacing: 0;
+     text-transform: none;
+     font-size: 14px;
+}
+ .theme-emerald-block .services-heading-wrap {
+     grid-template-columns: 1fr 1fr;
+     margin-bottom: 50px;
+}
+ .theme-emerald-block .services-title span {
+     color: inherit;
+}
+ .theme-emerald-block .service-col {
+     width: 33.333333%;
+}
+ .theme-emerald-block .service-col:nth-child(n+4) {
+     display: none;
+}
+ .theme-emerald-block .service-card {
+     min-height: 420px;
+     padding: 35px 38px;
+     border-color: #e1e5e2;
+     border-radius: 24px;
+}
+ .theme-emerald-block .service-number {
+     position: absolute;
+     top: 25px;
+     left: 25px;
+     font-size: 2.5rem;
+}
+ .theme-emerald-block .service-icon {
+     width: 120px;
+     height: 120px;
+     margin: 15px 0 45px 45px;
+     color: #17382f;
+     background: #f4f3ef;
+     font-size: 43px;
+}
+ .theme-emerald-block .service-card::before {
+     content: "";
+     position: absolute;
+     top: -90px;
+     left: -65px;
+     width: 185px;
+     height: 185px;
+     border: 1px solid #e6e8e6;
+     border-radius: 50%;
+}
+ .theme-emerald-block .service-image {
+     display: none;
+}
+ .theme-emerald-block .service-link::after {
+     background: #b8e75b;
+}
+/* ========================================================== THEME 2 — CURVED SCALLOPED 6 SERVICES / BORDER GRID / RED ICONS ========================================================== */
+ .theme-curved-scalloped .services-showcase-section {
+     --service-accent: #e51b23;
+     --service-heading: #162033;
+     --service-text: #747b85;
+     background: linear-gradient( 135deg, #ffffff 0%, #f8f8f8 50%, #ffffff 100% );
+}
+ .theme-curved-scalloped .services-heading-wrap {
+     display: block;
+     text-align: center;
+     margin-bottom: 75px;
+}
+ .theme-curved-scalloped .services-heading-right {
+     display: none;
+}
+ .theme-curved-scalloped .services-big-text {
+     display: block;
+     left: 50%;
+     top: -60px;
+     transform: translateX(-50%);
+}
+ .theme-curved-scalloped .services-title span {
+     color: inherit;
+}
+ .theme-curved-scalloped .service-col {
+     width: 33.333333%;
+}
+ .theme-curved-scalloped .service-col:nth-child(n+7) {
+     display: none;
+}
+ .theme-curved-scalloped .services-grid {
+     --bs-gutter-x: 0;
+     --bs-gutter-y: 0;
+}
+ .theme-curved-scalloped .service-card {
+     min-height: 280px;
+     padding: 40px;
+     border: 0;
+     border-right: 1px solid #e5e7eb;
+     border-bottom: 1px solid #e5e7eb;
+     border-radius: 0;
+     background: transparent;
+     box-shadow: none;
+}
+ .theme-curved-scalloped .service-card:hover {
+     transform: none;
+     background: #ffffff;
+}
+ .theme-curved-scalloped .service-number {
+     display: none;
+}
+ .theme-curved-scalloped .service-icon {
+     width: auto;
+     height: auto;
+     justify-content: flex-start;
+     margin-bottom: 22px;
+     color: #e51b23;
+     background: transparent;
+     border-radius: 0;
+     font-size: 42px;
+}
+ .theme-curved-scalloped .service-card:hover .service-icon {
+     color: #e51b23;
+     background: transparent;
+}
+ .theme-curved-scalloped .service-link::after {
+     display: none;
+}
+ .theme-curved-scalloped .service-link i {
+     width: 35px;
+     height: 35px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     order: -1;
+     background: #ffffff;
+     border-radius: 50%;
+     box-shadow: 0 7px 18px rgba(0,0,0,.07);
+}
+/* ========================================================== THEME 3 — DEFAULT / CLEAN GRID FINANCE FEATURE CARDS ========================================================== */
+ .theme-default .services-showcase-section {
+     --service-accent: #078675;
+     --service-heading: #082c24;
+     --service-text: #747b77;
+}
+ .theme-default .services-heading-wrap {
+     display: block;
+     max-width: 720px;
+     margin: 0 auto 55px;
+     text-align: center;
+}
+ .theme-default .services-heading-right {
+     display: none;
+}
+ .theme-default .services-title span {
+     display: block;
+     color: inherit;
+}
+ .theme-default .service-col {
+     width: 33.333333%;
+}
+ .theme-default .service-col:nth-child(n+7) {
+     display: none;
+}
+ .theme-default .service-card {
+     min-height: 225px;
+     padding: 35px;
+     border-radius: 20px;
+     box-shadow: none;
+}
+ .theme-default .service-number {
+     display: none;
+}
+ .theme-default .service-icon {
+     width: auto;
+     height: 100%;
+     justify-content: flex-start;
+     float: left;
+     margin: 0 18px 0 0;
+     color: #078675;
+     background: transparent;
+     border-radius: 0;
+     font-size: 36px;
+}
+ .theme-default .service-card:hover .service-icon {
+     color: #078675;
+     background: transparent;
+}
+ .theme-default .service-link {
+     display: none;
+}
+ .theme-default .service-card::after {
+     content: "";
+     position: absolute;
+     right: -10px;
+     bottom: -8px;
+     width: 120px;
+     height: 85px;
+     opacity: .07;
+     background: linear-gradient( 140deg, transparent 42%, #078675 43% 48%, transparent 49% 57%, #078675 58% 63%, transparent 64% );
+}
+/* ========================================================== THEME 4 — MODERN DARK 3 TALL TECHNOLOGY SERVICE CARDS ========================================================== */
+ .theme-modern-dark .services-showcase-section {
+     --service-accent: #06b6d4;
+     --service-heading: #f8fafc;
+     --service-text: #94a3b8;
+     --service-bg: #080d16;
+     --service-card-bg: #111827;
+     --service-border: #1f2937;
+}
+ .theme-modern-dark .services-heading-wrap {
+     display: block;
+     max-width: 900px;
+     margin: 0 auto 65px;
+     text-align: center;
+}
+ .theme-modern-dark .services-heading-right {
+     display: none;
+}
+ .theme-modern-dark .services-title {
+     margin: auto;
+}
+ .theme-modern-dark .services-title span {
+     color: #06b6d4;
+}
+ .theme-modern-dark .service-col {
+     width: 33.333333%;
+}
+ .theme-modern-dark .service-col:nth-child(n+4) {
+     display: none;
+}
+ .theme-modern-dark .service-card {
+     min-height: 450px;
+     padding: 50px 38px;
+     text-align: center;
+     border: 1px solid rgba(6,182,212,.18);
+     border-radius: 18px;
+     background: linear-gradient( 180deg, rgba(17,24,39,.95), rgba(8,13,22,.95) );
+}
+ .theme-modern-dark .service-card:hover {
+     border-color: #06b6d4;
+     box-shadow: 0 20px 50px rgba(6,182,212,.13);
+}
+ .theme-modern-dark .service-number {
+     position: absolute;
+     top: 25px;
+     right: 28px;
+     color: rgba(255,255,255,.05);
+     font-size: 4rem;
+}
+ .theme-modern-dark .service-icon {
+     width: 95px;
+     height: 95px;
+     margin: 25px auto 35px;
+     color: #22d3ee;
+     background: rgba(6,182,212,.08);
+     border: 1px solid rgba(6,182,212,.22);
+     font-size: 40px;
+}
+ .theme-modern-dark .service-link {
+     margin-top: 12px;
+     color: #22d3ee;
+}
+ .theme-modern-dark .service-link::after {
+     display: none;
+}
+ .theme-modern-dark .services-all-btn {
+     border: 1px solid #06b6d4;
+     background: transparent;
+     color: #22d3ee;
+}
+/* ========================================================== THEME 5 — VIBRANT CARDS 8 HOSTING / SOLUTION BOXES ========================================================== */
+ .theme-vibrant-cards .services-showcase-section {
+     --service-accent: #4f46e5;
+     --service-heading: #334155;
+     --service-text: #64748b;
+     background: #ffffff;
+}
+ .theme-vibrant-cards .services-heading-wrap {
+     display: block;
+     max-width: 720px;
+     margin: 0 auto 60px;
+     text-align: center;
+}
+ .theme-vibrant-cards .services-heading-right {
+     display: block;
+}
+ .theme-vibrant-cards .services-heading-text {
+     margin: 20px auto 0;
+}
+ .theme-vibrant-cards .services-title span {
+     color: inherit;
+}
+ .theme-vibrant-cards .service-col {
+     width: 25%;
+}
+ .theme-vibrant-cards .services-grid {
+     --bs-gutter-x: 0;
+     --bs-gutter-y: 0;
+}
+ .theme-vibrant-cards .service-card {
+     min-height: 290px;
+     padding: 35px;
+     border: 0;
+     border-right: 1px solid #edf0f5;
+     border-bottom: 1px solid #edf0f5;
+     border-radius: 0;
+     box-shadow: none;
+}
+ .theme-vibrant-cards .service-card:hover {
+     transform: none;
+     background: #f8fafc;
+}
+ .theme-vibrant-cards .service-number {
+     display: none;
+}
+ .theme-vibrant-cards .service-icon {
+     width: 58px;
+     height: 58px;
+     border-radius: 12px;
+     color: #4f46e5;
+     background: linear-gradient( 135deg, #d9fdf4, #eee3ff );
+}
+ .theme-vibrant-cards .service-card:hover .service-icon {
+     color: #4f46e5;
+     background: linear-gradient( 135deg, #d9fdf4, #eee3ff );
+}
+ .theme-vibrant-cards .service-link::after {
+     display: none;
+}
+/* ========================================================== THEME 6 — ELEGANT SERIF 3 LARGE HORIZONTAL IMAGE SERVICES ========================================================== */
+ .theme-elegant-serif .services-showcase-section {
+     --service-accent: #d4af37;
+     --service-heading: #2c2a29;
+     --service-text: #766f68;
+     --service-bg: #faf8f5;
+}
+ .theme-elegant-serif .services-heading-wrap {
+     display: block;
+     text-align: center;
+     margin-bottom: 55px;
+}
+ .theme-elegant-serif .services-heading-right {
+     display: none;
+}
+ .theme-elegant-serif .services-title {
+     margin: auto;
+     font-family: 'Playfair Display', serif;
+     font-weight: 600;
+}
+ .theme-elegant-serif .services-title span {
+     color: #d4af37;
+}
+ .theme-elegant-serif .service-col {
+     width: 100%;
+}
+ .theme-elegant-serif .service-col:nth-child(n+4) {
+     display: none;
+}
+ .theme-elegant-serif .services-grid {
+     gap: 24px;
+}
+ .theme-elegant-serif .service-card {
+     display: grid;
+     grid-template-columns: 32% 68%;
+     min-height: 260px;
+     padding: 0;
+     border: 1px solid #e3ddd4;
+     border-radius: 8px;
+}
+ .theme-elegant-serif .service-image {
+     display: block;
+     height: 100%;
+     overflow: hidden;
+}
+ .theme-elegant-serif .service-image img {
+     min-height: 260px;
+}
+ .theme-elegant-serif .service-content {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 35px 45px;
+}
+ .theme-elegant-serif .service-number, .theme-elegant-serif .service-icon {
+     display: none;
+}
+ .theme-elegant-serif .service-title {
+     font-family: 'Playfair Display', serif;
+     font-size: 1.7rem;
+}
+ .theme-elegant-serif .service-link {
+     color: #b59328;
+     font-family: 'Inter', sans-serif;
+}
+ .theme-elegant-serif .service-link::after {
+     display: none;
+}
+ .theme-elegant-serif .services-all-btn {
+     border-radius: 0;
+     background: #d4af37;
+}
+/* ========================================================== THEME 7 — LAYERED OFFSET 6 ANGLED CARDS / ORANGE-RED ICONS ========================================================== */
+ .theme-layered-offset .services-showcase-section {
+     --service-accent: #f37a1f;
+     --service-heading: #29292d;
+     --service-text: #747474;
+}
+ .theme-layered-offset .services-showcase-section::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     pointer-events: none;
+     opacity: .35;
+     background: linear-gradient( 115deg, transparent 0 25%, rgba(255,255,255,.75) 25% 40%, transparent 40% 62%, rgba(255,255,255,.6) 62% 76%, transparent 76% );
+}
+ .theme-layered-offset .services-heading-wrap {
+     display: block;
+     text-align: center;
+     margin-bottom: 70px;
+}
+ .theme-layered-offset .services-heading-right {
+     display: none;
+}
+ .theme-layered-offset .services-title {
+     max-width: 650px;
+     margin: auto;
+}
+ .theme-layered-offset .services-title span {
+     color: #f37a1f;
+}
+ .theme-layered-offset .service-col {
+     width: 33.333333%;
+}
+ .theme-layered-offset .service-col:nth-child(n+7) {
+     display: none;
+}
+ .theme-layered-offset .service-card {
+     min-height: 270px;
+     padding: 42px 35px;
+     text-align: center;
+     border: 0;
+     border-radius: 8px;
+     border: var(--service-border);
+     background: #f6f6f6;
+     clip-path: polygon( 0 6%, 100% 0, 100% 94%, 0 100% );
+}
+ .theme-layered-offset .service-col:nth-child(even) .service-card {
+     clip-path: polygon( 0 0, 100% 6%, 100% 100%, 0 94% );
+}
+ .theme-layered-offset .service-number {
+     display: none;
+}
+ .theme-layered-offset .service-icon {
+     width: 68px;
+     height: 68px;
+     margin: 0 auto 25px;
+     color: #ffffff;
+     background: #f37a1f;
+     border-radius: 50%;
+     font-size: 28px;
+}
+ .theme-layered-offset .service-card:hover .service-icon {
+     color: #ffffff;
+     background: #d95d09;
+}
+ .theme-layered-offset .service-link {
+     display: none;
+}
+ .theme-layered-offset .services-all-btn {
+     padding-left: 35px;
+     padding-right: 35px;
+     border-radius: 50px;
+     background: #f37a1f;
+}
+/* ========================================================== RESPONSIVE — TABLET ========================================================== */
+ @media (max-width: 1199.98px) {
+     .theme-emerald-block .service-col, .theme-curved-scalloped .service-col, .theme-default .service-col, .theme-modern-dark .service-col, .theme-layered-offset .service-col {
+         width: 50%;
     }
-
-    .theme-vibrant-cards .service-col {
-        width: 50%;
+     .theme-vibrant-cards .service-col {
+         width: 50%;
     }
 }
-
-
-/* ==========================================================
-   RESPONSIVE — MOBILE / TABLET
-========================================================== */
-
-@media (max-width: 991.98px) {
-
-    .services-showcase-section {
-        padding: 75px 0;
+/* ========================================================== RESPONSIVE — MOBILE / TABLET ========================================================== */
+ @media (max-width: 991.98px) {
+     .services-showcase-section {
+         padding: 75px 0;
     }
-
-    .services-heading-wrap {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-        margin-bottom: 45px;
+     .services-heading-wrap {
+         grid-template-columns: 1fr;
+         gap: 20px;
+         margin-bottom: 45px;
     }
-
-    .services-heading-text {
-        max-width: 650px;
+     .services-heading-text {
+         max-width: 650px;
     }
-
-    .theme-emerald-block .services-heading-wrap {
-        grid-template-columns: 1fr;
+     .theme-emerald-block .services-heading-wrap {
+         grid-template-columns: 1fr;
     }
-
-    .theme-elegant-serif .service-card {
-        grid-template-columns: 40% 60%;
+     .theme-elegant-serif .service-card {
+         grid-template-columns: 40% 60%;
     }
 }
-
-
-/* ==========================================================
-   RESPONSIVE — SMALL
-========================================================== */
-
-@media (max-width: 767.98px) {
-
-    .services-showcase-section {
-        padding: 60px 0;
+/* ========================================================== RESPONSIVE — SMALL ========================================================== */
+ @media (max-width: 767.98px) {
+     .services-showcase-section {
+         padding: 60px 0;
     }
-
-    .services-title {
-        font-size: 2.35rem;
+     .services-title {
+         font-size: 2.35rem;
     }
-
-    .services-heading-wrap {
-        margin-bottom: 35px;
+     .services-heading-wrap {
+         margin-bottom: 35px;
     }
-
-    .theme-emerald-block .service-col,
-    .theme-curved-scalloped .service-col,
-    .theme-default .service-col,
-    .theme-modern-dark .service-col,
-    .theme-vibrant-cards .service-col,
-    .theme-layered-offset .service-col {
-        width: 100%;
+     .theme-emerald-block .service-col, .theme-curved-scalloped .service-col, .theme-default .service-col, .theme-modern-dark .service-col, .theme-vibrant-cards .service-col, .theme-layered-offset .service-col {
+         width: 100%;
     }
-
-    .theme-elegant-serif .service-card {
-        grid-template-columns: 1fr;
+     .theme-elegant-serif .service-card {
+         grid-template-columns: 1fr;
     }
-
-    .theme-elegant-serif .service-image {
-        height: 240px;
+     .theme-elegant-serif .service-image {
+         height: 240px;
     }
-
-    .theme-elegant-serif .service-image img {
-        min-height: 240px;
+     .theme-elegant-serif .service-image img {
+         min-height: 240px;
     }
-
-    .theme-elegant-serif .service-content {
-        padding: 30px;
+     .theme-elegant-serif .service-content {
+         padding: 30px;
     }
 }
-
-
-/* ==========================================================
-   RESPONSIVE — PHONE
-========================================================== */
-
-@media (max-width: 575.98px) {
-
-    .services-showcase-section {
-        padding: 50px 0;
+/* ========================================================== RESPONSIVE — PHONE ========================================================== */
+ @media (max-width: 575.98px) {
+     .services-showcase-section {
+         padding: 50px 0;
     }
-
-    .services-title {
-        font-size: 2rem;
-
-        letter-spacing: -1px;
+     .services-title {
+         font-size: 2rem;
+         letter-spacing: -1px;
     }
-
-    .services-heading-text {
-        font-size: .9rem;
+     .services-heading-text {
+         font-size: .9rem;
     }
-
-    .service-card {
-        padding: 28px;
-
-        min-height: auto;
+     .service-card {
+         padding: 28px;
+         min-height: auto;
     }
-
-    .theme-emerald-block .service-card {
-        min-height: 370px;
+     .theme-emerald-block .service-card {
+         min-height: 370px;
     }
-
-    .theme-emerald-block .service-icon {
-        width: 95px;
-        height: 95px;
-
-        margin-left: 30px;
+     .theme-emerald-block .service-icon {
+         width: 95px;
+         height: 95px;
+         margin-left: 30px;
     }
-
-    .theme-modern-dark .service-card {
-        min-height: 390px;
+     .theme-modern-dark .service-card {
+         min-height: 390px;
     }
-
-    .services-big-text {
-        font-size: 5rem;
+     .services-big-text {
+         font-size: 5rem;
     }
 }

@@ -1,0 +1,1948 @@
+/* ==========================================================================
+   MAIN HERO BASE
+   ========================================================================== */
+
+.main-hero-section {
+  position: relative;
+  z-index: 1;
+
+  min-height: 760px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+.main-hero-section *,
+.main-hero-section *::before,
+.main-hero-section *::after {
+  box-sizing: border-box;
+}
+
+.main-hero-section a {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   BACKGROUND MEDIA
+   ========================================================================== */
+
+.main-hero-media {
+  position: absolute;
+
+  z-index: -10;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.main-hero-video {
+  position: absolute;
+
+  z-index: 1;
+
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: translate(-50%, -50%) scale(1.02);
+
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+}
+
+.main-hero-bg {
+  position: absolute;
+
+  z-index: 1;
+
+  inset: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-hero-overlay {
+  position: absolute;
+
+  z-index: 3;
+
+  inset: 0;
+}
+
+/* ==========================================================================
+   HERO WRAPPER
+   ========================================================================== */
+
+.main-hero-wrapper {
+  position: relative;
+
+  min-height: 760px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(420px, 0.9fr);
+
+  align-items: center;
+
+  gap: 60px;
+
+  padding: 80px 0;
+}
+
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+
+.main-hero-content {
+  position: relative;
+
+  z-index: 20;
+}
+
+.main-hero-subtitle {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+}
+
+.subtitle-symbol {
+  display: inline-block;
+
+  animation: heroSubtitleStar 2.4s ease-in-out infinite;
+}
+
+@keyframes heroSubtitleStar {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(90deg) scale(1.35);
+
+    opacity: 0.6;
+  }
+}
+
+/* ==========================================================================
+   TITLE
+   ========================================================================== */
+
+.main-hero-title {
+  margin: 0 0 25px;
+
+  font-size: clamp(3.3rem, 5.4vw, 4.9rem);
+
+  line-height: 1.02;
+
+  font-weight: 800;
+
+  letter-spacing: -3px;
+}
+
+.hero-title-line {
+  display: block;
+}
+
+/* ==========================================================================
+   DESCRIPTION
+   ========================================================================== */
+
+.main-hero-description {
+  max-width: 650px;
+
+  margin: 0 0 30px;
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   EVENT META
+   ========================================================================== */
+
+.main-hero-event-meta {
+  display: none;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 28px;
+
+  margin-bottom: 25px;
+}
+
+.main-hero-event-meta span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 0.82rem;
+}
+
+/* ==========================================================================
+   COUNTDOWN
+   ========================================================================== */
+
+.main-hero-countdown {
+  display: none;
+
+  align-items: center;
+
+  width: fit-content;
+
+  margin-bottom: 35px;
+
+  padding: 14px 20px;
+}
+
+.countdown-box {
+  min-width: 67px;
+
+  text-align: center;
+}
+
+.countdown-box strong {
+  display: block;
+
+  font-size: 1.4rem;
+}
+
+.countdown-box span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 0.62rem;
+}
+
+.countdown-colon {
+  padding: 0 5px;
+
+  font-size: 1.4rem;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.main-hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+.main-hero-btn {
+  position: relative;
+
+  min-height: 55px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  padding: 0 29px;
+
+  overflow: hidden;
+
+  font-size: 0.78rem;
+
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease, color 0.35s ease,
+    background 0.35s ease;
+}
+
+.main-hero-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -110%;
+
+  width: 70%;
+  height: 100%;
+
+  transform: skewX(-25deg);
+
+  background: rgba(255, 255, 255, 0.25);
+
+  transition: left 0.55s ease;
+}
+
+.main-hero-btn:hover::before {
+  left: 140%;
+}
+
+.main-hero-btn:hover {
+  transform: translateY(-5px);
+}
+
+.hero-btn-arrow {
+  position: relative;
+
+  z-index: 2;
+
+  transition: transform 0.3s ease;
+}
+
+.main-hero-btn:hover .hero-btn-arrow {
+  transform: translate(4px, -3px);
+}
+
+.main-hero-btn > span:first-child {
+  position: relative;
+
+  z-index: 2;
+}
+
+/* ==========================================================================
+   WATCH VIDEO
+   ========================================================================== */
+
+.main-hero-watch {
+  display: none;
+
+  align-items: center;
+
+  gap: 13px;
+
+  font-weight: 700;
+}
+
+.main-hero-play {
+  position: relative;
+
+  width: 55px;
+  height: 55px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  transition: transform 0.35s ease;
+}
+
+.main-hero-play::before,
+.main-hero-play::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -9px;
+
+  border: 1px solid currentColor;
+
+  border-radius: inherit;
+
+  opacity: 0.35;
+
+  animation: heroPlayPulse 2.3s ease-out infinite;
+}
+
+.main-hero-play::after {
+  animation-delay: 1.15s;
+}
+
+@keyframes heroPlayPulse {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.main-hero-watch:hover .main-hero-play {
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   STATS
+   ========================================================================== */
+
+.main-hero-stats {
+  display: none;
+
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 42px;
+}
+
+.main-hero-stats div strong {
+  display: block;
+
+  font-size: 1.35rem;
+}
+
+.main-hero-stats div span {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 0.65rem;
+}
+
+.hero-stat-line {
+  width: 1px;
+  height: 35px;
+}
+
+/* ==========================================================================
+   VISUAL
+   ========================================================================== */
+
+.main-hero-visual {
+  position: relative;
+
+  z-index: 10;
+
+  min-height: 620px;
+}
+
+/* ==========================================================================
+   PERSON IMAGES
+   ========================================================================== */
+
+.main-hero-person {
+  position: absolute;
+
+  display: none;
+
+  z-index: 5;
+
+  max-width: 100%;
+
+  user-select: none;
+
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.2));
+}
+
+.main-hero-visual:hover .main-hero-person {
+  transform: translateY(-7px) scale(1.015);
+}
+
+/* ==========================================================================
+   ORBITS
+   ========================================================================== */
+
+.hero-orbit {
+  position: absolute;
+
+  display: none;
+
+  z-index: 3;
+
+  border-radius: 50%;
+}
+
+.hero-orbit-large {
+  width: 590px;
+  height: 590px;
+
+  top: 10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.hero-orbit-small {
+  width: 470px;
+  height: 470px;
+
+  top: 70px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+/* ==========================================================================
+   CIRCLE IMAGE
+   ========================================================================== */
+
+.hero-circle-image {
+  position: absolute;
+
+  z-index: 5;
+
+  display: none;
+
+  top: 50%;
+  left: 50%;
+
+  width: 515px;
+  height: 515px;
+
+  overflow: hidden;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+}
+
+.hero-circle-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.hero-circle-image:hover img {
+  transform: scale(1.06);
+}
+
+/* ==========================================================================
+   ELEGANT IMAGE
+   ========================================================================== */
+
+.hero-elegant-image {
+  position: absolute;
+
+  display: none;
+
+  inset: 20px;
+
+  overflow: hidden;
+}
+
+.hero-elegant-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.hero-elegant-image:hover img {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   LAYERED IMAGE
+   ========================================================================== */
+
+.hero-layered-image {
+  position: absolute;
+
+  z-index: 4;
+
+  display: none;
+
+  top: 70px;
+  right: 25px;
+  bottom: 70px;
+  left: 35px;
+
+  overflow: hidden;
+}
+
+.hero-layered-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.hero-layered-image:hover img {
+  transform: scale(1.06);
+}
+
+/* ==========================================================================
+   SPEAKER RIBBON
+   ========================================================================== */
+
+.hero-speaker-ribbon {
+  position: absolute;
+
+  z-index: 20;
+
+  display: none;
+
+  right: -40px;
+  bottom: 20px;
+
+  min-width: 360px;
+
+  padding: 25px 40px;
+
+  text-align: center;
+
+  transition: transform 0.4s ease;
+}
+
+.hero-speaker-ribbon:hover {
+  transform: translateY(-8px);
+}
+
+.hero-speaker-ribbon small,
+.hero-speaker-ribbon strong {
+  display: block;
+}
+
+.hero-speaker-ribbon strong {
+  margin-top: 4px;
+
+  font-size: 1.7rem;
+}
+
+/* ==========================================================================
+   FLOATING CARDS
+   ========================================================================== */
+
+.hero-floating-card {
+  position: absolute;
+
+  z-index: 30;
+
+  display: none;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 17px;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.floating-card-icon {
+  flex: 0 0 auto;
+
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+}
+
+.hero-floating-card small,
+.hero-floating-card strong {
+  display: block;
+}
+
+.hero-floating-card small {
+  font-size: 0.6rem;
+}
+
+.hero-floating-card strong {
+  margin-top: 3px;
+
+  font-size: 0.95rem;
+}
+
+.floating-card-one {
+  top: 20%;
+  left: -35px;
+
+  animation: heroCardFloatOne 5s ease-in-out infinite;
+}
+
+.floating-card-two {
+  right: -25px;
+  bottom: 20%;
+
+  animation: heroCardFloatTwo 6s ease-in-out infinite;
+}
+
+@keyframes heroCardFloatOne {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -15px;
+  }
+}
+
+@keyframes heroCardFloatTwo {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 9px -12px;
+  }
+}
+
+.hero-floating-card:hover {
+  animation-play-state: paused;
+
+  transform: translateY(-7px) scale(1.04);
+}
+
+/* ==========================================================================
+   VIDEO PREVIEW
+   ========================================================================== */
+
+.hero-video-preview {
+  position: absolute;
+
+  z-index: 30;
+
+  display: none;
+
+  left: -45px;
+  bottom: 10px;
+
+  width: 280px;
+  height: 175px;
+
+  overflow: hidden;
+}
+
+.hero-video-preview img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.65s ease;
+}
+
+.hero-video-preview:hover img {
+  transform: scale(1.08);
+}
+
+.video-preview-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.32);
+
+  transition: background 0.35s ease;
+}
+
+.hero-video-preview:hover .video-preview-overlay {
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.video-preview-play {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  transition: transform 0.3s ease;
+}
+
+.hero-video-preview:hover .video-preview-play {
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+/* ==========================================================================
+   EDUCATION OBJECTS
+   ========================================================================== */
+
+.hero-education-object {
+  position: absolute;
+
+  z-index: 6;
+
+  display: none;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+.education-object-one {
+  width: 160px;
+
+  right: 14%;
+  bottom: 5%;
+
+  animation: academicFloatOne 7s ease-in-out infinite;
+}
+
+.education-object-two {
+  width: 95px;
+
+  left: 15%;
+  top: 15%;
+
+  animation: academicFloatTwo 6s ease-in-out infinite;
+}
+
+.education-object-three {
+  width: 80px;
+
+  right: 7%;
+  top: 16%;
+
+  animation: academicFloatOne 8s ease-in-out infinite reverse;
+}
+
+@keyframes academicFloatOne {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+
+  50% {
+    transform: translateY(-25px) rotate(5deg);
+  }
+}
+
+@keyframes academicFloatTwo {
+  0%,
+  100% {
+    transform: translateY(0) rotate(4deg);
+  }
+
+  50% {
+    transform: translateY(20px) rotate(-5deg);
+  }
+}
+
+/* ==========================================================================
+   GENERAL DECORATIONS
+   ========================================================================== */
+
+.main-hero-glow,
+.main-hero-star,
+.main-hero-circle {
+  position: absolute;
+
+  pointer-events: none;
+}
+
+.main-hero-glow {
+  display: none;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+}
+
+.main-hero-star {
+  display: none;
+}
+
+.main-hero-circle {
+  display: none;
+}
+
+/* ==========================================================================
+   ==========================================================================
+   THEME 1 - EMERALD BLOCK
+   CORPORATE / REOBIZ STYLE
+   ==========================================================================
+   ========================================================================== */
+
+.theme-emerald-block .main-hero-section {
+  color: #ffffff;
+
+  background: #071c34;
+}
+
+.theme-emerald-block .main-hero-bg {
+  background: linear-gradient(
+      90deg,
+      rgba(4, 22, 44, 0.96),
+      rgba(8, 29, 55, 0.85)
+    ),
+    url("/template/assets/img/hero/corporate-bg.webp") center / cover no-repeat;
+}
+
+.theme-emerald-block .main-hero-overlay {
+  background: radial-gradient(
+    circle at 75% 40%,
+    rgba(35, 83, 130, 0.3),
+    transparent 40%
+  );
+}
+
+.theme-emerald-block .main-hero-wrapper {
+  grid-template-columns:
+    1fr
+    0.82fr;
+}
+
+.theme-emerald-block .main-hero-subtitle {
+  color: rgb(24 32 42);
+}
+
+.theme-emerald-block .main-hero-title {
+  color: rgb(24 32 42);
+}
+
+.theme-emerald-block .main-hero-title {
+  font-size: 0;
+}
+
+.theme-emerald-block .main-hero-title::before {
+  content: "Business Theme";
+  display: block;
+  font-size: clamp(3.8rem, 5.5vw, 4.9rem);
+  line-height: 1;
+}
+
+.theme-emerald-block .main-hero-description {
+  color: rgb(24 32 42);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.theme-emerald-block .hero-btn-primary {
+  color: #ffffff;
+    background: #1ba085;
+    box-shadow: 0 5px 15px #1ba08566;
+}
+
+.theme-emerald-block .hero-btn-secondary,
+.theme-emerald-block .main-hero-watch,
+.theme-emerald-block .main-hero-stats {
+  display: none;
+}
+
+.theme-emerald-block .hero-person-corporate {
+  display: block;
+
+  right: 0;
+  bottom: -80px;
+
+  width: 95%;
+}
+
+/* ==========================================================================
+   THEME 2 - CURVED SCALLOPED
+   CONFERENCE / EVENT
+   ========================================================================== */
+
+.theme-curved-scalloped .main-hero-section {
+  color: #050608;
+  background: #050608;
+}
+
+.theme-curved-scalloped .main-hero-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.78)),
+    url("/template/assets/img/hero/conference-bg.webp") center / cover no-repeat;
+}
+
+.theme-curved-scalloped .main-hero-subtitle {
+  padding: 5px 11px;
+
+  color: #ffffff;
+
+  background: #4146da;
+}
+
+.theme-curved-scalloped .main-hero-title {
+  font-size: 0;
+}
+
+.theme-curved-scalloped .main-hero-title::before {
+  content: "Conference 2026";
+
+  display: block;
+
+  color: var(--about-heading);
+
+  font-size: clamp(3rem, 4.5vw, 4.5rem);
+
+  line-height: 1;
+}
+
+.theme-curved-scalloped .main-hero-description {
+  display: none;
+}
+
+.theme-curved-scalloped .main-hero-event-meta {
+  display: flex;
+
+  color: #050608;
+}
+
+.theme-curved-scalloped .main-hero-event-meta b {
+  color: #ff4929;
+}
+
+.theme-curved-scalloped .main-hero-countdown {
+  display: flex;
+
+  color: #ffffff;
+
+  border: 1px solid #4449df;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  backdrop-filter: blur(9px);
+}
+
+.theme-curved-scalloped .countdown-box span {
+  color: #ff4b2a;
+}
+
+.theme-curved-scalloped .hero-btn-primary {
+  color: #ffffff;
+
+  background: #ff4b27;
+}
+
+.theme-curved-scalloped .hero-btn-secondary {
+  color: #ffffff;
+
+  background: #4148d8;
+}
+
+.theme-curved-scalloped .hero-person-conference {
+  display: block;
+
+  width: 92%;
+
+  right: -20px;
+  bottom: -35px;
+}
+
+.theme-curved-scalloped .main-hero-visual::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: -1;
+
+  top: -160px;
+  right: -190px;
+
+  width: 520px;
+  height: 850px;
+
+  transform: rotate(26deg);
+
+  background: linear-gradient(
+    135deg,
+    #ff4b27 0%,
+    #ff4b27 48%,
+    #393bd1 48%,
+    #2d2e9f 100%
+  );
+}
+
+.theme-curved-scalloped .hero-speaker-ribbon {
+  display: block;
+
+  color: #ffffff;
+
+  background: linear-gradient(100deg, #ff4b27, #ff341b);
+
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+}
+
+/* ==========================================================================
+   THEME 3 - CLEAN GRID
+   FIRST BAPTIST CHURCH STYLE
+   FULL BACKGROUND VIDEO
+   ========================================================================== */
+
+.theme-clean-grid .main-hero-section {
+  min-height: 720px;
+
+  color: #ffffff;
+
+  background: #08110f;
+}
+
+/* SHOW VIDEO */
+
+.theme-clean-grid .main-hero-video {
+  opacity: 1;
+
+  visibility: visible;
+
+  animation: churchVideoZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes churchVideoZoom {
+  0% {
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+/* hide image background */
+
+.theme-clean-grid .main-hero-bg {
+  display: none;
+}
+
+/* dark transparent overlay */
+
+.theme-clean-grid .main-hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 30, 30, 0.32),
+    rgba(0, 10, 8, 0.62)
+  );
+}
+
+/* centered layout */
+
+.theme-clean-grid .main-hero-wrapper {
+  min-height: 720px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.theme-clean-grid .main-hero-content {
+  width: min(900px, 100%);
+}
+
+.theme-clean-grid .main-hero-subtitle {
+  color: #95d34b;
+}
+
+.theme-clean-grid .main-hero-title {
+  font-size: 0;
+
+  color: #ffffff;
+}
+
+.theme-clean-grid .main-hero-title::before {
+  content: "First Baptist Church of Lake Alfred";
+
+  display: block;
+
+  max-width: 900px;
+
+  color: #ffffff;
+
+  font-size: clamp(3.1rem, 5vw, 5rem);
+
+  line-height: 1.12;
+
+  text-transform: uppercase;
+}
+
+.theme-clean-grid .main-hero-description {
+  max-width: 600px;
+
+  margin: 0 auto 30px;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-clean-grid .main-hero-actions {
+  justify-content: center;
+}
+
+.theme-clean-grid .hero-btn-primary {
+  color: #ffffff;
+
+  background: #8dcc43;
+
+  border-radius: 50px;
+
+  box-shadow: 0 14px 35px rgba(141, 204, 67, 0.3);
+}
+
+.theme-clean-grid .hero-btn-primary:hover {
+  box-shadow: 0 20px 45px rgba(141, 204, 67, 0.45);
+}
+
+.theme-clean-grid .hero-btn-secondary {
+  display: none;
+}
+
+.theme-clean-grid .main-hero-visual,
+.theme-clean-grid .main-hero-watch {
+  display: none;
+}
+
+/* moving highlight */
+
+.theme-clean-grid .main-hero-section::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: 4;
+
+  top: -60%;
+  left: -35%;
+
+  width: 35%;
+  height: 220%;
+
+  opacity: 0.07;
+
+  transform: rotate(20deg);
+
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+
+  animation: churchLightSweep 11s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes churchLightSweep {
+  0%,
+  30% {
+    left: -40%;
+  }
+
+  75%,
+  100% {
+    left: 140%;
+  }
+}
+
+/* ==========================================================================
+   THEME 4 - VIBRANT CARDS
+   EDUCATION / ACADEMIC
+   ========================================================================== */
+
+.theme-vibrant-cards .main-hero-section {
+  color: #171717;
+
+  background: radial-gradient(circle at 50% 35%, #ffffff, #e6f2ff 48%, #bedcff);
+}
+
+.theme-vibrant-cards .main-hero-wrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.theme-vibrant-cards .main-hero-content {
+  width: min(1050px, 100%);
+}
+
+.theme-vibrant-cards .main-hero-subtitle {
+  color: #1789f3;
+
+  font-size: 1.6rem;
+
+  font-weight: 500;
+
+  text-transform: none;
+
+  letter-spacing: 0;
+}
+
+.theme-vibrant-cards .subtitle-symbol {
+  display: none;
+}
+
+.theme-vibrant-cards .main-hero-title {
+  color: #181818;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  text-transform: uppercase;
+}
+
+.theme-vibrant-cards .hero-title-line-one::before {
+  content: "To Your Academic";
+}
+
+.theme-vibrant-cards .hero-title-line-one {
+  font-size: 0;
+}
+
+.theme-vibrant-cards .hero-title-line-one::before {
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  font-weight: 800;
+}
+
+.theme-vibrant-cards .hero-title-line-two::before {
+  content: "Adventure Today";
+}
+
+.theme-vibrant-cards .hero-title-line-two {
+  font-size: 0;
+}
+
+.theme-vibrant-cards .hero-title-line-two::before {
+  font-size: clamp(2.4rem, 4vw, 4rem);
+
+  font-weight: 400;
+}
+
+.theme-vibrant-cards .main-hero-description {
+  max-width: 950px;
+
+  margin: 0 auto 30px;
+
+  color: #687990;
+}
+
+.theme-vibrant-cards .main-hero-actions {
+  justify-content: center;
+}
+
+.theme-vibrant-cards .main-hero-btn {
+  border-radius: 50px;
+}
+
+.theme-vibrant-cards .hero-btn-primary {
+  color: #ffffff;
+
+  background: #188af5;
+}
+
+.theme-vibrant-cards .hero-btn-secondary {
+  color: #ffffff;
+
+  background: #1c1c1c;
+}
+
+.theme-vibrant-cards .main-hero-visual {
+  display: none;
+}
+
+.theme-vibrant-cards .hero-education-object {
+  display: block;
+}
+
+/* ==========================================================================
+   THEME 5 - MODERN DARK
+   BLACK / ORANGE BUSINESS
+   ========================================================================== */
+
+.theme-modern-dark .main-hero-section {
+  color: #ffffff;
+
+  background: linear-gradient(90deg, #030405, #050708 58%, #10191c);
+}
+
+.theme-modern-dark .main-hero-bg {
+  opacity: 0.18;
+
+  background: url("/template/assets/img/hero/business-building.webp") right
+    center / cover no-repeat;
+}
+
+.theme-modern-dark .main-hero-subtitle {
+  color: #ff4c26;
+}
+
+.theme-modern-dark .main-hero-title {
+  color: #ffffff;
+}
+
+.theme-modern-dark .main-hero-description {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.theme-modern-dark .hero-btn-primary {
+  color: #ffffff;
+
+  background: #ff4b26;
+}
+
+.theme-modern-dark .hero-btn-secondary {
+  display: none;
+}
+
+.theme-modern-dark .main-hero-watch {
+  display: inline-flex;
+
+  color: #ffffff;
+}
+
+.theme-modern-dark .main-hero-play {
+  color: #000000;
+
+  background: #ffffff;
+}
+
+.theme-modern-dark .hero-circle-image {
+  display: block;
+
+  border: 12px solid #121416;
+}
+
+.theme-modern-dark .hero-orbit-large {
+  display: block;
+
+  border: 5px solid #ff4b26;
+
+  animation: businessOrbitRotate 17s linear infinite;
+}
+
+.theme-modern-dark .hero-orbit-large::after {
+  content: "";
+
+  position: absolute;
+
+  right: -16px;
+  bottom: 70px;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  background: #ff4b26;
+
+  box-shadow: 0 0 30px rgba(255, 75, 38, 0.5);
+}
+
+@keyframes businessOrbitRotate {
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.theme-modern-dark .main-hero-star {
+  display: block;
+
+  color: #ff4b26;
+
+  font-size: 1.5rem;
+
+  animation: businessStar 2.5s ease-in-out infinite;
+}
+
+.theme-modern-dark .star-one {
+  left: 11%;
+  top: 20%;
+}
+
+.theme-modern-dark .star-two {
+  left: 49%;
+  top: 31%;
+}
+
+.theme-modern-dark .star-three {
+  right: 9%;
+  bottom: 5%;
+}
+
+@keyframes businessStar {
+  50% {
+    transform: rotate(30deg) scale(1.4);
+
+    opacity: 0.45;
+  }
+}
+
+/* ==========================================================================
+   THEME 6 - ELEGANT SERIF
+   PREMIUM BUSINESS
+   ========================================================================== */
+
+.theme-elegant-serif .main-hero-section {
+  color: #172238;
+
+  background: linear-gradient(120deg, #f6f0e8, #ffffff 68%);
+}
+
+.theme-elegant-serif .main-hero-subtitle {
+  color: #b68c58;
+}
+
+.theme-elegant-serif .main-hero-title {
+  color: #172238;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 500;
+}
+
+.theme-elegant-serif .hero-title-line-two {
+  color: #b68c58;
+
+  font-style: italic;
+}
+
+.theme-elegant-serif .main-hero-description {
+  color: #697381;
+}
+
+.theme-elegant-serif .hero-btn-primary {
+  color: #ffffff;
+
+  background: #172238;
+}
+
+.theme-elegant-serif .hero-btn-secondary {
+  color: #172238;
+
+  background: transparent;
+
+  border: 1px solid #d5c1a8;
+}
+
+.theme-elegant-serif .main-hero-stats {
+  display: flex;
+}
+
+.theme-elegant-serif .hero-stat-line {
+  background: #ded3c6;
+}
+
+.theme-elegant-serif .main-hero-stats strong {
+  color: #b68c58;
+
+  font-family: Georgia, serif;
+}
+
+.theme-elegant-serif .main-hero-stats span {
+  color: #757d88;
+}
+
+.theme-elegant-serif .hero-elegant-image {
+  display: block;
+
+  border-radius: 260px 260px 35px 35px;
+
+  box-shadow: 0 30px 70px rgba(40, 30, 20, 0.13);
+}
+
+.theme-elegant-serif .hero-elegant-image img {
+  border-radius: inherit;
+}
+
+.theme-elegant-serif .hero-floating-card {
+  display: flex;
+
+  color: #172238;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid rgba(182, 140, 88, 0.16);
+
+  border-radius: 13px;
+
+  box-shadow: 0 18px 45px rgba(30, 24, 15, 0.1);
+
+  backdrop-filter: blur(12px);
+}
+
+.theme-elegant-serif .floating-card-icon {
+  color: #ffffff;
+
+  background: #b68c58;
+
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+   THEME 7 - LAYERED OFFSET
+   MODERN CORPORATE / TECHNOLOGY
+   ========================================================================== */
+
+.theme-layered-offset .main-hero-section {
+  color: #173f43;
+
+  background: radial-gradient(
+      circle at 77% 25%,
+      rgba(20, 154, 145, 0.15),
+      transparent 34%
+    ),
+    linear-gradient(120deg, #edf9f7, #ffffff 70%);
+}
+
+.theme-layered-offset .main-hero-subtitle {
+  color: #15998f;
+}
+
+.theme-layered-offset .main-hero-title {
+  color: #173f43;
+}
+
+.theme-layered-offset .hero-title-line-two {
+  color: #15998f;
+}
+
+.theme-layered-offset .main-hero-description {
+  color: #6d8083;
+}
+
+.theme-layered-offset .hero-btn-primary {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #15998f, #22b5ab);
+
+  border-radius: 9px;
+
+  box-shadow: 0 15px 35px rgba(21, 153, 143, 0.2);
+}
+
+.theme-layered-offset .hero-btn-secondary {
+  color: #173f43;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(23, 63, 67, 0.12);
+
+  border-radius: 9px;
+}
+
+.theme-layered-offset .hero-layered-image {
+  display: block;
+
+  border: 8px solid #ffffff;
+
+  border-radius: 30px;
+
+  transform: rotate(2deg);
+
+  box-shadow: 0 30px 70px rgba(20, 75, 77, 0.14);
+}
+
+.theme-layered-offset .hero-floating-card {
+  display: flex;
+
+  color: #173f43;
+
+  background: rgba(255, 255, 255, 0.87);
+
+  border: 1px solid rgba(21, 153, 143, 0.13);
+
+  border-radius: 15px;
+
+  box-shadow: 0 18px 45px rgba(20, 75, 77, 0.11);
+
+  backdrop-filter: blur(14px);
+}
+
+.theme-layered-offset .floating-card-icon {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #15998f, #24b7ad);
+
+  border-radius: 11px;
+}
+
+.theme-layered-offset .hero-video-preview {
+  display: block;
+
+  border: 7px solid #ffffff;
+
+  border-radius: 20px;
+
+  box-shadow: 0 22px 50px rgba(20, 75, 77, 0.18);
+}
+
+.theme-layered-offset .video-preview-play {
+  color: #15998f;
+
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1199.98px) {
+  .main-hero-wrapper {
+    grid-template-columns:
+      1fr
+      0.85fr;
+
+    gap: 35px;
+  }
+
+  .main-hero-visual {
+    min-height: 540px;
+  }
+
+  .hero-orbit-large {
+    width: 500px;
+    height: 500px;
+  }
+
+  .hero-circle-image {
+    width: 435px;
+    height: 435px;
+  }
+}
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+  .main-hero-section {
+    min-height: auto;
+  }
+
+  .main-hero-wrapper {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    padding: 90px 0 70px;
+  }
+
+  .main-hero-content {
+    text-align: center;
+  }
+
+  .main-hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-hero-actions,
+  .main-hero-event-meta,
+  .main-hero-stats {
+    justify-content: center;
+  }
+
+  .main-hero-countdown {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-hero-visual {
+    width: min(600px, 100%);
+
+    min-height: 570px;
+
+    margin: auto;
+  }
+
+  /* Video layout */
+
+  .theme-clean-grid .main-hero-wrapper {
+    min-height: 650px;
+  }
+
+  /* Layered */
+
+  .theme-layered-offset .hero-layered-image {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 767.98px) {
+  .main-hero-wrapper {
+    padding: 75px 0 60px;
+  }
+
+  .main-hero-title {
+    font-size: 3rem;
+
+    letter-spacing: -1.5px;
+  }
+
+  .main-hero-description {
+    font-size: 0.92rem;
+  }
+
+  .main-hero-visual {
+    min-height: 470px;
+  }
+
+  .hero-speaker-ribbon {
+    right: 0;
+
+    min-width: 280px;
+  }
+
+  .hero-orbit-large {
+    width: 420px;
+    height: 420px;
+  }
+
+  .hero-circle-image {
+    width: 370px;
+    height: 370px;
+  }
+
+  /* Clean Grid */
+
+  .theme-clean-grid .main-hero-wrapper {
+    min-height: 610px;
+  }
+
+  .theme-clean-grid .main-hero-title::before {
+    font-size: 3rem;
+  }
+}
+
+/* ==========================================================================
+   SMALL MOBILE
+   ========================================================================== */
+
+@media (max-width: 575.98px) {
+  .main-hero-wrapper {
+    padding: 65px 0 50px;
+  }
+
+  .main-hero-title {
+    font-size: 2.4rem;
+
+    letter-spacing: -1px;
+  }
+
+  .main-hero-subtitle {
+    font-size: 0.66rem;
+  }
+
+  .main-hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .main-hero-btn {
+    width: min(290px, 100%);
+  }
+
+  .main-hero-watch {
+    justify-content: center;
+  }
+
+  .main-hero-visual {
+    min-height: 400px;
+  }
+
+  .hero-floating-card,
+  .hero-video-preview,
+  .hero-speaker-ribbon {
+    display: none !important;
+  }
+
+  .hero-orbit-large {
+    width: 345px;
+    height: 345px;
+  }
+
+  .hero-circle-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .education-object-one {
+    width: 100px;
+  }
+
+  .education-object-two {
+    width: 60px;
+  }
+
+  .education-object-three {
+    width: 55px;
+  }
+
+  /* Event countdown */
+
+  .main-hero-countdown {
+    width: 100%;
+
+    justify-content: center;
+
+    padding: 11px 8px;
+  }
+
+  .countdown-box {
+    min-width: 45px;
+  }
+
+  .countdown-colon {
+    padding: 0 2px;
+  }
+
+  /* Video theme */
+
+  .theme-clean-grid .main-hero-wrapper {
+    min-height: 570px;
+  }
+
+  .theme-clean-grid .main-hero-title::before {
+    font-size: 2.4rem;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .main-hero-section *,
+  .main-hero-section *::before,
+  .main-hero-section *::after {
+    animation: none !important;
+
+    transition: none !important;
+  }
+}

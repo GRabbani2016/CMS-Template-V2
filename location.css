@@ -1,0 +1,1725 @@
+/* ==========================================================================
+   LOCATION BASE
+   ========================================================================== */
+
+.location-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.location-section *,
+.location-section *::before,
+.location-section *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.location-header {
+  position: relative;
+  z-index: 30;
+
+  max-width: 900px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.location-subtitle {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-bottom: 13px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+}
+
+.location-title {
+  margin: 0 0 15px;
+
+  font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -1.6px;
+}
+
+.location-description {
+  max-width: 760px;
+
+  margin: auto;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ==========================================================================
+   MAP
+   ========================================================================== */
+
+.location-map {
+  position: relative;
+
+  width: min(1240px, 100%);
+
+  min-height: 640px;
+
+  margin: auto;
+
+  isolation: isolate;
+}
+
+.world-map {
+  position: absolute;
+
+  z-index: 1;
+
+  top: 50%;
+  left: 50%;
+
+  width: 91%;
+  max-height: 600px;
+
+  transform: translate(-50%, -50%);
+
+  object-fit: contain;
+
+  user-select: none;
+
+  pointer-events: none;
+
+  transition: transform 0.8s cubic-bezier(0.2, 0.75, 0.2, 1), opacity 0.5s ease,
+    filter 0.5s ease;
+}
+
+/* map hover */
+
+.location-map:hover .world-map {
+  transform: translate(-50%, -50%) scale(1.025);
+}
+
+/* ==========================================================================
+   ROUTES
+   ========================================================================== */
+
+.map-routes {
+  position: absolute;
+
+  z-index: 3;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+
+.route-line {
+  fill: none;
+
+  stroke-width: 1.6;
+
+  stroke-linecap: round;
+
+  stroke-dasharray: 8 9;
+
+  animation: routeDash 12s linear infinite;
+}
+
+@keyframes routeDash {
+  to {
+    stroke-dashoffset: -250;
+  }
+}
+
+/* ==========================================================================
+   POINTS
+   ========================================================================== */
+
+.map-point {
+  position: absolute;
+
+  z-index: 12;
+
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+
+  transition: transform 0.35s ease, z-index 0.1s;
+}
+
+.map-point:hover {
+  z-index: 50;
+
+  transform: scale(1.12);
+}
+
+/* dot */
+
+.point-dot {
+  position: absolute;
+
+  z-index: 4;
+
+  top: 50%;
+  left: 50%;
+
+  width: 11px;
+  height: 11px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-point:hover .point-dot {
+  transform: translate(-50%, -50%) scale(1.45);
+}
+
+/* radar */
+
+.point-radar {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 36px;
+  height: 36px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  animation: radarPulse 2.4s ease-out infinite;
+}
+
+.map-point:nth-of-type(2n) .point-radar {
+  animation-delay: 0.5s;
+}
+
+.map-point:nth-of-type(3n) .point-radar {
+  animation-delay: 1s;
+}
+
+@keyframes radarPulse {
+  0% {
+    opacity: 0.9;
+
+    transform: translate(-50%, -50%) scale(0.35);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translate(-50%, -50%) scale(1.9);
+  }
+}
+
+/* ==========================================================================
+   SIMPLE LABEL
+   ========================================================================== */
+
+.point-name {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 50%;
+  bottom: 31px;
+
+  padding: 8px 18px;
+
+  white-space: nowrap;
+
+  transform: translateX(-50%);
+
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.35s ease;
+}
+
+.point-name::after {
+  content: "";
+
+  position: absolute;
+
+  top: 100%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border: 7px solid transparent;
+}
+
+/* hide label when full card appears */
+
+.map-point:hover .point-name {
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateX(-50%) translateY(-10px);
+}
+
+/* ==========================================================================
+   FLAG
+   ========================================================================== */
+
+.point-flag {
+  position: absolute;
+
+  top: 22px;
+  left: 50%;
+
+  display: none;
+
+  font-size: 1.55rem;
+
+  transform: translateX(-50%);
+
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* ==========================================================================
+   LOCATION POPOVER
+   ========================================================================== */
+
+.location-popover {
+  position: absolute;
+
+  z-index: 25;
+
+  bottom: 37px;
+  left: 50%;
+
+  width: 285px;
+
+  padding: 18px;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateX(-50%) translateY(18px) scale(0.92);
+
+  transform-origin: center bottom;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease,
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  pointer-events: none;
+}
+
+.map-point:hover .location-popover {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateX(-50%) translateY(-8px) scale(1);
+}
+
+/* popover arrow */
+
+.location-popover::after {
+  content: "";
+
+  position: absolute;
+
+  top: 100%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border: 9px solid transparent;
+}
+
+/* popover top */
+
+.popover-head {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+}
+
+.popover-icon {
+  flex: 0 0 auto;
+
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  font-size: 1.1rem;
+}
+
+.popover-head small {
+  display: block;
+
+  margin-bottom: 2px;
+
+  font-size: 0.63rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.popover-head h4 {
+  margin: 0;
+
+  font-size: 1rem;
+}
+
+.location-popover p {
+  margin: 0 0 12px;
+
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+/* meta */
+
+.popover-meta {
+  display: flex;
+
+  gap: 7px;
+
+  flex-wrap: wrap;
+}
+
+.popover-meta span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 5px 8px;
+
+  border-radius: 50px;
+
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   POSITIONS
+   ========================================================================== */
+
+.point-canada {
+  left: 18%;
+  top: 28%;
+}
+
+.point-usa {
+  left: 27%;
+  top: 45%;
+}
+
+.point-brazil {
+  left: 35%;
+  top: 70%;
+}
+
+.point-germany {
+  left: 49%;
+  top: 38%;
+}
+
+.point-egypt {
+  left: 55%;
+  top: 52%;
+}
+
+.point-africa {
+  left: 55%;
+  top: 72%;
+}
+
+.point-india {
+  left: 68%;
+  top: 55%;
+}
+
+.point-china {
+  left: 76%;
+  top: 42%;
+}
+
+.point-russia {
+  left: 80%;
+  top: 26%;
+}
+
+.point-australia {
+  left: 84%;
+  top: 73%;
+}
+
+/* ==========================================================================
+   OPTIONAL CONTENT
+   ========================================================================== */
+
+.location-bento,
+.trust-card,
+.region-panel {
+  display: none;
+}
+
+/* ==========================================================================
+   THEME 1
+   EMERALD BLOCK
+   DARK BLUE GLOW
+   ========================================================================== */
+
+.theme-emerald-block .location-section {
+  background: radial-gradient(
+    circle at 50% 40%,
+    #1537d3,
+    #09289f 45%,
+    #071d80 100%
+  );
+
+  color: #ffffff;
+}
+
+.theme-emerald-block .location-subtitle {
+  display: none;
+}
+
+.theme-emerald-block .location-title {
+  color: #ffffff;
+}
+
+.theme-emerald-block .location-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-emerald-block .world-map {
+  opacity: 0.23;
+
+  filter: brightness(0) invert(1);
+}
+
+.theme-emerald-block .map-routes {
+  display: none;
+}
+
+.theme-emerald-block .point-dot {
+  background: #195cff;
+
+  box-shadow: 0 0 14px 7px rgba(25, 92, 255, 0.55);
+}
+
+.theme-emerald-block .point-radar {
+  background: rgba(40, 100, 255, 0.22);
+}
+
+.theme-emerald-block .point-name {
+  color: #666;
+
+  background: #ffffff;
+
+  border-radius: 50px;
+
+  box-shadow: 0 9px 25px rgba(0, 0, 0, 0.16);
+}
+
+.theme-emerald-block .point-name::after {
+  border-top-color: #ffffff;
+}
+
+/* popover */
+
+.theme-emerald-block .location-popover {
+  color: #17223f;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 17px;
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(15px);
+}
+
+.theme-emerald-block .location-popover::after {
+  border-top-color: rgba(255, 255, 255, 0.96);
+}
+
+.theme-emerald-block .popover-icon {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #1a61ff, #123dd4);
+
+  box-shadow: 0 8px 18px rgba(22, 79, 244, 0.25);
+}
+
+.theme-emerald-block .popover-head small {
+  color: #7790c4;
+}
+
+.theme-emerald-block .location-popover p {
+  color: #62708c;
+}
+
+.theme-emerald-block .popover-meta span {
+  color: #2756be;
+
+  background: #edf2ff;
+}
+
+/* ==========================================================================
+   THEME 2
+   CURVED SCALLOPED
+   LIGHT NETWORK + FLAGS
+   ========================================================================== */
+
+.theme-curved-scalloped .location-section {
+  background: linear-gradient(180deg, #f8faff, #ffffff);
+}
+
+.theme-curved-scalloped .location-subtitle {
+  display: none;
+}
+
+.theme-curved-scalloped .location-title {
+  color: #4b5670;
+}
+
+.theme-curved-scalloped .location-description {
+  color: #556176;
+}
+
+.theme-curved-scalloped .world-map {
+  opacity: 0.085;
+
+  filter: sepia(0.2) hue-rotate(145deg) saturate(3);
+}
+
+.theme-curved-scalloped .route-line {
+  stroke: rgba(20, 174, 147, 0.34);
+}
+
+.theme-curved-scalloped .point-dot {
+  background: #16ae92;
+
+  border: 2px solid #ffffff;
+
+  box-shadow: 0 0 0 1px #16ae92;
+}
+
+.theme-curved-scalloped .point-radar {
+  background: rgba(22, 174, 146, 0.13);
+}
+
+.theme-curved-scalloped .point-name {
+  display: none;
+}
+
+.theme-curved-scalloped .point-flag {
+  display: block;
+}
+
+/* flag goes away on hover */
+
+.theme-curved-scalloped .map-point:hover .point-flag {
+  opacity: 0;
+
+  transform: translateX(-50%) translateY(8px) scale(0.8);
+}
+
+/* popover */
+
+.theme-curved-scalloped .location-popover {
+  color: #253346;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(20, 174, 147, 0.17);
+
+  border-radius: 14px;
+
+  box-shadow: 0 20px 50px rgba(58, 82, 103, 0.14);
+}
+
+.theme-curved-scalloped .location-popover::after {
+  border-top-color: #ffffff;
+}
+
+.theme-curved-scalloped .popover-icon {
+  color: #ffffff;
+
+  background: #16ae92;
+}
+
+.theme-curved-scalloped .popover-head small {
+  color: #16ae92;
+}
+
+.theme-curved-scalloped .location-popover p {
+  color: #667283;
+}
+
+.theme-curved-scalloped .popover-meta span {
+  color: #118772;
+
+  background: #eaf9f6;
+}
+
+/* ==========================================================================
+   THEME 3
+   CLEAN GRID
+   MODERN MINIMAL NETWORK
+   ========================================================================== */
+
+.theme-default .location-section,
+.theme-clean-grid .location-section {
+  background: #ffffff;
+}
+
+.theme-default .location-subtitle,
+.theme-clean-grid .location-subtitle {
+  color: #1a78ef;
+}
+
+.theme-default .location-title,
+.theme-clean-grid .location-title {
+  color: #28516e;
+}
+
+.theme-default .location-description,
+.theme-clean-grid .location-description {
+  color: #547087;
+}
+
+.theme-default .world-map,
+.theme-clean-grid .world-map {
+  opacity: 0.12;
+
+  filter: grayscale(1) contrast(0.75);
+}
+
+.theme-default .route-line,
+.theme-clean-grid .route-line {
+  stroke: rgba(22, 118, 237, 0.22);
+}
+
+.theme-default .point-dot,
+.theme-clean-grid .point-dot {
+  background: #1777ed;
+
+  box-shadow: 0 0 13px rgba(23, 119, 237, 0.6);
+}
+
+.theme-default .point-radar,
+.theme-clean-grid .point-radar {
+  background: rgba(23, 119, 237, 0.12);
+
+  box-shadow: 0 0 0 7px rgba(23, 119, 237, 0.05);
+}
+
+.theme-default .point-name,
+.theme-clean-grid .point-name {
+  color: #ffffff;
+
+  background: #171717;
+
+  border-radius: 4px;
+
+  font-size: 0.7rem;
+}
+
+.theme-default .point-name::after,
+.theme-clean-grid .point-name::after {
+  border-top-color: #171717;
+}
+
+/* card */
+
+.theme-default .location-popover,
+.theme-clean-grid .location-popover {
+  color: #17253a;
+
+  background: #ffffff;
+
+  border-radius: 9px;
+
+  border: 1px solid #edf0f4;
+
+  box-shadow: 0 25px 55px rgba(22, 47, 79, 0.16);
+}
+
+.theme-default .location-popover::after,
+.theme-clean-grid .location-popover::after {
+  border-top-color: #ffffff;
+}
+
+.theme-default .popover-icon,
+.theme-clean-grid .popover-icon {
+  color: #ffffff;
+
+  background: #1777ed;
+}
+
+.theme-default .popover-head small,
+.theme-clean-grid .popover-head small {
+  color: #1777ed;
+}
+
+.theme-default .location-popover p,
+.theme-clean-grid .location-popover p {
+  color: #6b7889;
+}
+
+.theme-default .popover-meta span,
+.theme-clean-grid .popover-meta span {
+  color: #1765c8;
+
+  background: #edf5ff;
+}
+
+/* ==========================================================================
+   THEME 4
+   MODERN DARK
+   PURPLE NETWORK
+   ========================================================================== */
+
+.theme-modern-dark .location-section {
+  color: #ffffff;
+}
+
+.theme-modern-dark .location-header {
+  max-width: 930px;
+
+  margin-left: 0;
+
+  text-align: left;
+}
+
+.theme-modern-dark .location-subtitle {
+  display: none;
+}
+
+.theme-modern-dark .location-title {
+  color: #ffffff;
+
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+}
+
+.theme-modern-dark .location-description {
+  margin-left: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-modern-dark .world-map {
+  opacity: 0.23;
+
+  filter: brightness(0) invert(1);
+}
+
+.theme-modern-dark .route-line {
+  stroke: #ffffff;
+
+  stroke-dasharray: 280 20;
+
+  animation: purpleRoute 6s linear infinite;
+}
+
+@keyframes purpleRoute {
+  to {
+    stroke-dashoffset: -600;
+  }
+}
+
+.theme-modern-dark .point-dot {
+  width: 16px;
+  height: 16px;
+
+  background: #ffae1d;
+
+  box-shadow: 0 0 18px rgba(255, 174, 29, 0.55);
+}
+
+.theme-modern-dark .point-radar {
+  background: rgba(255, 174, 29, 0.15);
+}
+
+.theme-modern-dark .point-name {
+  display: none;
+}
+
+/* card */
+
+.theme-modern-dark .location-popover {
+  color: #ffffff;
+
+  background: rgba(39, 12, 66, 0.91);
+
+  border: 1px solid rgba(255, 174, 29, 0.32);
+
+  border-radius: 18px;
+
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.32);
+
+  backdrop-filter: blur(16px);
+}
+
+.theme-modern-dark .location-popover::after {
+  border-top-color: rgba(39, 12, 66, 0.91);
+}
+
+.theme-modern-dark .popover-icon {
+  color: #3b145e;
+
+  background: #ffae1d;
+
+  box-shadow: 0 8px 22px rgba(255, 174, 29, 0.25);
+}
+
+.theme-modern-dark .popover-head small {
+  color: #ffbd49;
+}
+
+.theme-modern-dark .location-popover p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.theme-modern-dark .popover-meta span {
+  color: #ffc762;
+
+  background: rgba(255, 174, 29, 0.11);
+}
+
+/* ==========================================================================
+   THEME 5
+   VIBRANT BENTO
+   ========================================================================== */
+
+.theme-vibrant-cards .location-section {
+  background: radial-gradient(
+      circle at 50% 52%,
+      rgba(105, 88, 255, 0.09),
+      transparent 40%
+    ),
+    #f8f9ff;
+}
+
+.theme-vibrant-cards .location-subtitle {
+  color: #6658ff;
+}
+
+.theme-vibrant-cards .location-title {
+  color: #171a36;
+}
+
+.theme-vibrant-cards .location-description {
+  color: #72788c;
+}
+
+.theme-vibrant-cards .location-map {
+  padding-right: 290px;
+
+  border: 1px solid rgba(101, 88, 255, 0.1);
+
+  border-radius: 35px;
+
+  background: rgba(255, 255, 255, 0.76);
+
+  box-shadow: 0 30px 70px rgba(50, 45, 120, 0.09);
+
+  backdrop-filter: blur(15px);
+}
+
+.theme-vibrant-cards .world-map {
+  width: 80%;
+
+  left: 42%;
+
+  opacity: 0.1;
+
+  filter: sepia(0.2) hue-rotate(195deg) saturate(3);
+}
+
+.theme-vibrant-cards .route-line {
+  stroke: rgba(101, 88, 255, 0.32);
+}
+
+.theme-vibrant-cards .point-dot {
+  background: #6658ff;
+
+  box-shadow: 0 0 15px rgba(102, 88, 255, 0.6);
+}
+
+.theme-vibrant-cards .point-radar {
+  background: rgba(102, 88, 255, 0.14);
+}
+
+.theme-vibrant-cards .point-name {
+  color: #ffffff;
+
+  background: #6658ff;
+
+  border-radius: 7px;
+
+  font-size: 0.67rem;
+}
+
+.theme-vibrant-cards .point-name::after {
+  border-top-color: #6658ff;
+}
+
+/* right cards */
+
+.theme-vibrant-cards .location-bento {
+  position: absolute;
+
+  z-index: 25;
+
+  top: 50%;
+  right: 25px;
+
+  width: 235px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  transform: translateY(-50%);
+}
+
+.theme-vibrant-cards .location-stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 17px;
+
+  color: #181c35;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(102, 88, 255, 0.11);
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 35px rgba(52, 45, 120, 0.08);
+
+  transition: 0.35s ease;
+}
+
+.theme-vibrant-cards .location-stat-card:hover {
+  transform: translateX(-8px) translateY(-4px);
+
+  border-color: rgba(102, 88, 255, 0.35);
+
+  box-shadow: 0 24px 50px rgba(102, 88, 255, 0.16);
+}
+
+.theme-vibrant-cards .location-stat-card > span {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+
+  place-items: center;
+
+  flex: 0 0 auto;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #796dff, #5145e9);
+
+  border-radius: 13px;
+
+  transition: transform 0.35s ease;
+}
+
+.theme-vibrant-cards .location-stat-card:hover > span {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.theme-vibrant-cards .location-stat-card strong {
+  display: block;
+
+  font-size: 1.15rem;
+}
+
+.theme-vibrant-cards .location-stat-card small {
+  color: #777d91;
+}
+
+/* popover */
+
+.theme-vibrant-cards .location-popover {
+  color: #171a35;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid rgba(102, 88, 255, 0.14);
+
+  border-radius: 18px;
+
+  box-shadow: 0 25px 60px rgba(55, 48, 130, 0.18);
+}
+
+.theme-vibrant-cards .location-popover::after {
+  border-top-color: #ffffff;
+}
+
+.theme-vibrant-cards .popover-icon {
+  color: #ffffff;
+
+  background: #6658ff;
+}
+
+.theme-vibrant-cards .popover-head small {
+  color: #6658ff;
+}
+
+.theme-vibrant-cards .location-popover p {
+  color: #707589;
+}
+
+.theme-vibrant-cards .popover-meta span {
+  color: #574bdd;
+
+  background: #f0efff;
+}
+
+/* ==========================================================================
+   THEME 6
+   ELEGANT SERIF
+   ========================================================================== */
+
+.theme-elegant-serif .location-section {
+  background: #ffffff;
+}
+
+.theme-elegant-serif .location-subtitle {
+  color: #ef555c;
+
+  font-family: "Inter", sans-serif;
+}
+
+.theme-elegant-serif .location-title {
+  color: #17253c;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.7rem, 4.8vw, 4rem);
+}
+
+.theme-elegant-serif .location-description {
+  display: none;
+}
+
+.theme-elegant-serif .world-map {
+  opacity: 0.065;
+
+  filter: grayscale(1) contrast(0.7);
+}
+
+.theme-elegant-serif .map-routes {
+  display: none;
+}
+
+.theme-elegant-serif .point-name {
+  display: none;
+}
+
+.theme-elegant-serif .point-dot {
+  width: 8px;
+  height: 8px;
+
+  background: #d4af37;
+}
+
+.theme-elegant-serif .point-radar {
+  width: 48px;
+  height: 48px;
+
+  background: #ffffff;
+
+  border: 4px solid #cbd1dc;
+
+  box-shadow: 5px 5px 0 rgba(203, 209, 220, 0.45);
+
+  animation: elegantFloat 3s ease-in-out infinite;
+}
+
+@keyframes elegantFloat {
+  50% {
+    transform: translate(-50%, -58%);
+  }
+}
+
+.theme-elegant-serif .map-point:hover .point-radar {
+  border-color: #d4af37;
+}
+
+.theme-elegant-serif .location-popover {
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(20, 30, 50, 0.09);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+/* trust card */
+
+.theme-elegant-serif .trust-card{
+  position: absolute;
+  z-index: 25;
+  top: 70px;
+  left: 0;
+  display: block;
+  width: 390px;
+  padding: 32px 35px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(20, 30, 50, 0.09);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.theme-elegant-serif .trust-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 35px 80px rgba(20, 30, 50, 0.15);
+}
+
+.theme-elegant-serif .trust-icon {
+  display: block;
+
+  color: #d4af37;
+
+  font-size: 3rem;
+
+  line-height: 1;
+}
+
+.theme-elegant-serif .trust-card > small {
+  display: block;
+
+  margin: 8px 0;
+
+  color: #d4af37;
+
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+}
+
+.theme-elegant-serif .trust-card h3 {
+  margin: 0 0 12px;
+
+  color: #17253c;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.55rem;
+}
+
+.theme-elegant-serif .trust-card p {
+  margin: 0 0 18px;
+
+  color: #6d7480;
+
+  font-size: 0.86rem;
+
+  line-height: 1.7;
+}
+
+.theme-elegant-serif .trust-card a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #17253c;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.theme-elegant-serif .trust-card a i {
+  transition: transform 0.3s ease;
+}
+
+.theme-elegant-serif .trust-card a:hover i {
+  transform: translate(4px, -4px);
+}
+.theme-elegant-serif .popover-icon {
+  color: #ffffff;
+
+  background: #d4af37;
+}
+
+.theme-elegant-serif .popover-head small {
+  color: #d4af37;
+}
+
+.theme-elegant-serif .location-popover p {
+  color: #707589;
+}
+
+.theme-elegant-serif .popover-meta span {
+  color: #d4af37;
+  background: #f7f6f0;
+}
+/* ==========================================================================
+   THEME 7
+   LAYERED OFFSET
+   ========================================================================== */
+
+.theme-layered-offset .location-section {
+  background: radial-gradient(
+      circle at 15% 25%,
+      rgba(19, 155, 145, 0.11),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #edf9f8, #ffffff 65%);
+}
+
+.theme-layered-offset .location-header {
+  max-width: 760px;
+
+  margin-left: 0;
+
+  text-align: left;
+}
+
+.theme-layered-offset .location-subtitle {
+  color: #f47b21;
+}
+
+.theme-layered-offset .location-title {
+  color: #173d40;
+}
+
+.theme-layered-offset .location-description {
+  margin-left: 0;
+
+  color: #6e7f82;
+}
+
+.theme-layered-offset .location-map {
+  padding-left: 330px;
+}
+
+.theme-layered-offset .world-map {
+  width: 78%;
+
+  left: 59%;
+
+  opacity: 0.1;
+
+  filter: sepia(0.3) hue-rotate(110deg) saturate(2);
+}
+
+.theme-layered-offset .route-line {
+  stroke: rgba(22, 153, 144, 0.34);
+}
+
+.theme-layered-offset .point-dot {
+  background: #169990;
+
+  box-shadow: 0 0 14px rgba(22, 153, 144, 0.55);
+}
+
+.theme-layered-offset .point-radar {
+  background: rgba(22, 153, 144, 0.13);
+}
+
+.theme-layered-offset .point-name {
+  color: #ffffff;
+
+  background: #173d40;
+
+  border-radius: 7px;
+
+  font-size: 0.67rem;
+}
+
+.theme-layered-offset .point-name::after {
+  border-top-color: #173d40;
+}
+
+/* side panel */
+
+.theme-layered-offset .region-panel {
+  position: absolute;
+
+  z-index: 25;
+
+  top: 50%;
+  left: 0;
+
+  display: block;
+
+  width: 290px;
+
+  padding: 20px;
+
+  transform: translateY(-50%);
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(22, 153, 144, 0.12);
+
+  border-radius: 22px;
+
+  box-shadow: 0 25px 55px rgba(20, 75, 77, 0.1);
+
+  backdrop-filter: blur(14px);
+}
+
+.theme-layered-offset .region-panel-head {
+  margin-bottom: 15px;
+}
+
+.theme-layered-offset .region-panel-head span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #169990;
+
+  font-size: 0.67rem;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.theme-layered-offset .region-panel-head strong {
+  color: #173d40;
+
+  font-size: 1.15rem;
+}
+
+.theme-layered-offset .region-item {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px;
+
+  margin-top: 9px;
+
+  border-radius: 14px;
+
+  transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.theme-layered-offset .region-item:hover {
+  transform: translateX(8px);
+
+  background: #ffffff;
+
+  box-shadow: 0 14px 30px rgba(20, 75, 77, 0.1);
+}
+
+.theme-layered-offset .region-icon {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+
+  place-items: center;
+
+  flex: 0 0 auto;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #15998f, #24b7ac);
+
+  border-radius: 11px;
+}
+
+.theme-layered-offset .region-item strong {
+  display: block;
+
+  color: #173d40;
+
+  font-size: 0.82rem;
+}
+
+.theme-layered-offset .region-item small {
+  color: #7a898b;
+
+  font-size: 0.63rem;
+}
+
+.theme-layered-offset .region-arrow {
+  margin-left: auto;
+
+  color: #169990;
+
+  opacity: 0;
+
+  transform: translateX(-8px);
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.theme-layered-offset .region-item:hover .region-arrow {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+/* Layered popover */
+
+.theme-layered-offset .location-popover {
+  color: #173d40;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(22, 153, 144, 0.17);
+
+  border-radius: 17px;
+
+  box-shadow: 0 25px 55px rgba(20, 75, 77, 0.15);
+
+  backdrop-filter: blur(15px);
+}
+
+.theme-layered-offset .location-popover::after {
+  border-top-color: #ffffff;
+}
+
+.theme-layered-offset .popover-icon {
+  color: #ffffff;
+
+  background: #169990;
+}
+
+.theme-layered-offset .popover-head small {
+  color: #169990;
+}
+
+.theme-layered-offset .location-popover p {
+  color: #6d7f82;
+}
+
+.theme-layered-offset .popover-meta span {
+  color: #13877f;
+
+  background: #ebf8f6;
+}
+
+/* ==========================================================================
+   EXTRA PREMIUM HOVER EFFECT
+   ========================================================================== */
+
+.location-map::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 0;
+
+  top: 50%;
+  left: 50%;
+
+  width: 65%;
+  height: 55%;
+
+  transform: translate(-50%, -50%) scale(0.8);
+
+  opacity: 0;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08),
+    transparent 65%
+  );
+
+  transition: opacity 0.5s ease, transform 0.8s ease;
+}
+
+.location-map:hover::before {
+  opacity: 1;
+
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+  .location-section {
+    padding: 80px 0;
+  }
+
+  .location-map {
+    min-height: 520px;
+  }
+
+  .theme-vibrant-cards .location-map {
+    padding: 20px 20px 175px;
+  }
+
+  .theme-vibrant-cards .world-map {
+    width: 88%;
+
+    left: 50%;
+  }
+
+  .theme-vibrant-cards .location-bento {
+    top: auto;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+
+    width: auto;
+
+    transform: none;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .theme-layered-offset .location-map {
+    padding: 0 0 260px;
+  }
+
+  .theme-layered-offset .world-map {
+    width: 90%;
+
+    left: 50%;
+  }
+
+  .theme-layered-offset .region-panel {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    transform: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .location-map {
+    min-height: 430px;
+  }
+
+  .point-name {
+    font-size: 0.6rem;
+
+    padding: 6px 10px;
+  }
+
+  .location-popover {
+    width: 235px;
+
+    padding: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .location-section {
+    padding: 65px 0;
+  }
+
+  .location-title {
+    font-size: 2rem;
+  }
+
+  .location-description {
+    font-size: 0.88rem;
+  }
+
+  .location-map {
+    min-height: 350px;
+  }
+
+  /* Don't show large cards on small phones */
+
+  .location-popover {
+    display: none;
+  }
+
+  .point-name {
+    display: none !important;
+  }
+
+  /* keep point glow */
+
+  .map-point:hover .point-dot {
+    transform: translate(-50%, -50%) scale(1.6);
+  }
+
+  .theme-modern-dark .location-header,
+  .theme-layered-offset .location-header {
+    text-align: center;
+  }
+
+  .theme-modern-dark .location-description,
+  .theme-layered-offset .location-description {
+    margin: auto;
+  }
+
+  .theme-vibrant-cards .location-map {
+    min-height: 610px;
+
+    padding-bottom: 270px;
+  }
+
+  .theme-vibrant-cards .location-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-elegant-serif .trust-card {
+    display: none;
+  }
+
+  .theme-layered-offset .location-map {
+    min-height: 670px;
+  }
+}

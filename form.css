@@ -1,270 +1,1274 @@
- /* ==========================================================================
-       6. CONTACT FORM SECTION STYLES (Unique Layout & CSS per Theme)
-       ========================================================================== */
-    .contact-form-section {
-        padding: 5rem 0;
-        background-color: var(--bg-body);
-        transition: background-color 0.4s ease;
+/* =========================================================
+   CONTACT SECTION - BASE
+========================================================= */
+
+.contactx-section {
+    --cx-accent: #e52e2e;
+    --cx-accent-rgb: 229, 46, 46;
+
+    --cx-heading: #111827;
+    --cx-text: #687078;
+
+    --cx-bg: #ffffff;
+    --cx-card: #ffffff;
+    --cx-input: #f7f7f7;
+    --cx-border: #e7e7e7;
+
+    position: relative;
+    overflow: hidden;
+    padding: 95px 0;
+    background: var(--cx-bg);
+    color: var(--cx-heading);
+    font-family: var(--font-family, "Inter", sans-serif);
+}
+
+.contactx-section *,
+.contactx-section *::before,
+.contactx-section *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP INFO
+========================================================= */
+
+.contactx-top-info {
+    margin-bottom: 80px;
+}
+
+.contactx-info-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+    min-height: 165px;
+    padding: 35px;
+    background: var(--cx-card);
+    border: 1px solid var(--cx-border);
+    transition: .3s ease;
+}
+
+.contactx-info-card:hover {
+    transform: translateY(-5px);
+}
+
+.contactx-info-icon {
+    flex: 0 0 74px;
+    width: 74px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cx-accent);
+    background: rgba(var(--cx-accent-rgb), .08);
+    border-radius: 50%;
+    font-size: 28px;
+}
+
+.contactx-info-content h3 {
+    margin: 0 0 9px;
+    color: var(--cx-heading);
+    font-size: 1.2rem;
+    font-weight: 750;
+}
+
+.contactx-info-content p {
+    margin: 0;
+    color: var(--cx-text);
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+.contactx-info-content a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.contactx-main {
+    align-items: stretch;
+}
+
+.contactx-side-panel,
+.contactx-form-panel {
+    height: 100%;
+}
+
+
+/* =========================================================
+   SIDE CONTENT
+========================================================= */
+
+.contactx-side-panel {
+    padding: 20px 35px 20px 0;
+}
+
+.contactx-subtitle {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--cx-accent);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.contactx-title {
+    max-width: 450px;
+    margin: 0;
+    color: var(--cx-heading);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.contactx-description {
+    max-width: 510px;
+    margin: 25px 0 0;
+    color: var(--cx-text);
+    font-size: .94rem;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   SIDE INFO
+========================================================= */
+
+.contactx-side-info {
+    margin-top: 35px;
+}
+
+.contactx-side-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cx-border);
+}
+
+.contactx-side-item:last-child {
+    border-bottom: 0;
+}
+
+.contactx-side-icon {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: var(--cx-accent);
+    border-radius: 50%;
+}
+
+.contactx-side-item h4 {
+    margin: 0 0 6px;
+    color: var(--cx-heading);
+    font-size: 1rem;
+    font-weight: 750;
+}
+
+.contactx-side-item p {
+    margin: 0;
+    color: var(--cx-text);
+    font-size: .83rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.contactx-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.contactx-social a {
+    width: 43px;
+    height: 43px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cx-accent);
+    background: rgba(var(--cx-accent-rgb), .08);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.contactx-social a:hover {
+    color: #ffffff;
+    background: var(--cx-accent);
+}
+
+
+/* =========================================================
+   FORM PANEL
+========================================================= */
+
+.contactx-form-panel {
+    padding: 40px;
+    background: var(--cx-card);
+    border: 1px solid var(--cx-border);
+}
+
+.contactx-form-heading {
+    display: none;
+    margin-bottom: 35px;
+}
+
+.contactx-form-heading span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--cx-accent);
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.contactx-form-heading h2 {
+    margin: 0;
+    color: var(--cx-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.contactx-form-heading p {
+    max-width: 570px;
+    margin: 12px 0 0;
+    color: var(--cx-text);
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+
+.contactx-field label {
+    display: none;
+    margin-bottom: 10px;
+    color: var(--cx-heading);
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contactx-input-wrap {
+    position: relative;
+}
+
+.contactx-input-wrap input,
+.contactx-input-wrap textarea,
+.contactx-input-wrap select {
+    width: 100%;
+    outline: none;
+    color: var(--cx-heading);
+    background: var(--cx-input);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: .88rem;
+    transition: .25s ease;
+}
+
+.contactx-input-wrap input,
+.contactx-input-wrap select {
+    height: 62px;
+    padding: 0 50px 0 20px;
+}
+
+.contactx-input-wrap textarea {
+    min-height: 185px;
+    padding: 20px 50px 20px 20px;
+    resize: vertical;
+}
+
+.contactx-input-wrap input:focus,
+.contactx-input-wrap textarea:focus,
+.contactx-input-wrap select:focus {
+    border-color: var(--cx-accent);
+    background: var(--cx-card);
+}
+
+.contactx-input-wrap > i {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    color: #a3a6aa;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.contactx-textarea-wrap > i {
+    top: 23px;
+    transform: none;
+}
+
+.contactx-service-field {
+    display: none;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.contactx-submit {
+    min-width: 190px;
+    height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin-top: 10px;
+    padding: 0 27px;
+    color: #ffffff;
+    background: var(--cx-accent);
+    border: 0;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 750;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.contactx-submit:hover {
+    transform: translateY(-3px);
+}
+
+.contactx-submit i {
+    transition: transform .25s ease;
+}
+
+.contactx-submit:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.contactx-visual-col,
+.contactx-map-col {
+    display: none;
+}
+
+.contactx-visual {
+    position: relative;
+    height: 100%;
+    min-height: 570px;
+    overflow: hidden;
+}
+
+.contactx-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 570px;
+    object-fit: cover;
+}
+
+.contactx-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: var(--cx-accent);
+    border: 6px solid rgba(255, 255, 255, .9);
+    border-radius: 50%;
+    font-size: 24px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.contactx-map {
+    height: 100%;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.contactx-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    border: 0;
+}
+
+
+/* =========================================================
+   =========================================================
+   01 — CLEAN GRID
+   Reference: 3 top cards + left text + right form
+   =========================================================
+========================================================= */
+
+:is(
+    .theme-clean-grid .contactx-section,
+    .contactx-section.theme-clean-grid,
+    .theme-default .contactx-section,
+    .contactx-section.theme-default
+) {
+    --cx-accent: #e72d2d;
+    --cx-accent-rgb: 231, 45, 45;
+
+    --cx-heading: #191919;
+    --cx-text: #747474;
+    --cx-bg: #ffffff;
+    --cx-card: #ffffff;
+    --cx-input: #ffffff;
+    --cx-border: #e5e5e5;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f3f3f3 0,
+            #f3f3f3 270px,
+            #ffffff 270px
+        );
+}
+
+.theme-clean-grid .contactx-info-card,
+.theme-default .contactx-info-card,
+.contactx-section.theme-clean-grid .contactx-info-card,
+.contactx-section.theme-default .contactx-info-card {
+    display: block;
+    min-height: 255px;
+    padding: 70px 30px 35px;
+    text-align: center;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .04);
+}
+
+.theme-clean-grid .contactx-info-icon,
+.theme-default .contactx-info-icon,
+.contactx-section.theme-clean-grid .contactx-info-icon,
+.contactx-section.theme-default .contactx-info-icon {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    width: 105px;
+    height: 105px;
+    color: #ffffff;
+    background: #e72d2d;
+    font-size: 42px;
+    transform: translateX(-50%);
+}
+
+.theme-clean-grid .contactx-info-content h3,
+.theme-default .contactx-info-content h3,
+.contactx-section.theme-clean-grid .contactx-info-content h3,
+.contactx-section.theme-default .contactx-info-content h3 {
+    margin-top: 10px;
+    font-size: 1.35rem;
+}
+
+.theme-clean-grid .contactx-top-info,
+.theme-default .contactx-top-info,
+.contactx-section.theme-clean-grid .contactx-top-info,
+.contactx-section.theme-default .contactx-top-info {
+    padding-top: 45px;
+    margin-bottom: 105px;
+}
+
+.theme-clean-grid .contactx-side-info,
+.theme-default .contactx-side-info,
+.contactx-section.theme-clean-grid .contactx-side-info,
+.contactx-section.theme-default .contactx-side-info {
+    display: none;
+}
+
+.theme-clean-grid .contactx-form-panel,
+.theme-default .contactx-form-panel,
+.contactx-section.theme-clean-grid .contactx-form-panel,
+.contactx-section.theme-default .contactx-form-panel {
+    padding: 0;
+    border: 0;
+}
+
+.theme-clean-grid .contactx-input-wrap input,
+.theme-clean-grid .contactx-input-wrap textarea,
+.theme-default .contactx-input-wrap input,
+.theme-default .contactx-input-wrap textarea,
+.contactx-section.theme-clean-grid .contactx-input-wrap input,
+.contactx-section.theme-clean-grid .contactx-input-wrap textarea,
+.contactx-section.theme-default .contactx-input-wrap input,
+.contactx-section.theme-default .contactx-input-wrap textarea {
+    border: 1px solid #e7e7e7;
+}
+
+.theme-clean-grid .contactx-title,
+.theme-default .contactx-title,
+.contactx-section.theme-clean-grid .contactx-title,
+.contactx-section.theme-default .contactx-title {
+    max-width: 360px;
+}
+
+
+/* =========================================================
+   02 — LAYERED OFFSET
+   Form left + contact info right / strong red header
+========================================================= */
+
+:is(
+    .theme-layered-offset .contactx-section,
+    .contactx-section.theme-layered-offset
+) {
+    --cx-accent: #df302f;
+    --cx-accent-rgb: 223, 48, 47;
+
+    --cx-heading: #071539;
+    --cx-text: #696969;
+    --cx-bg: #f8f8f8;
+    --cx-card: #ffffff;
+    --cx-input: #f5f5f5;
+}
+
+.theme-layered-offset .contactx-top-info,
+.contactx-section.theme-layered-offset .contactx-top-info {
+    display: none;
+}
+
+.theme-layered-offset .contactx-main,
+.contactx-section.theme-layered-offset .contactx-main {
+    align-items: stretch;
+}
+
+.theme-layered-offset .contactx-side-col,
+.contactx-section.theme-layered-offset .contactx-side-col {
+    order: 2;
+    flex: 0 0 34%;
+    max-width: 34%;
+}
+
+.theme-layered-offset .contactx-form-col,
+.contactx-section.theme-layered-offset .contactx-form-col {
+    order: 1;
+    flex: 0 0 66%;
+    max-width: 66%;
+}
+
+.theme-layered-offset .contactx-form-heading,
+.contactx-section.theme-layered-offset .contactx-form-heading {
+    display: block;
+    text-align: center;
+}
+
+.theme-layered-offset .contactx-side-panel,
+.contactx-section.theme-layered-offset .contactx-side-panel {
+    position: relative;
+    padding: 145px 45px 40px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.theme-layered-offset .contactx-side-panel::before,
+.contactx-section.theme-layered-offset .contactx-side-panel::before {
+    content: "Contact Info";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: #df302f;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.theme-layered-offset .contactx-subtitle,
+.theme-layered-offset .contactx-title,
+.theme-layered-offset .contactx-description,
+.contactx-section.theme-layered-offset .contactx-subtitle,
+.contactx-section.theme-layered-offset .contactx-title,
+.contactx-section.theme-layered-offset .contactx-description {
+    display: none;
+}
+
+.theme-layered-offset .contactx-side-item,
+.contactx-section.theme-layered-offset .contactx-side-item {
+    padding: 26px 0;
+}
+
+.theme-layered-offset .contactx-form-panel,
+.contactx-section.theme-layered-offset .contactx-form-panel {
+    padding: 60px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.theme-layered-offset .contactx-field label,
+.contactx-section.theme-layered-offset .contactx-field label {
+    display: none;
+}
+.theme-layered-offset .contactx-form-heading p {
+    padding: 12px 0 0;
+    margin: auto;
+}
+
+/* =========================================================
+   03 — ELEGANT SERIF
+   Top cards + centered heading + wide form
+========================================================= */
+
+:is(
+    .theme-elegant-serif .contactx-section,
+    .contactx-section.theme-elegant-serif
+) {
+    --cx-accent: #ca3d3d;
+    --cx-accent-rgb: 202, 61, 61;
+
+    --cx-heading: #073341;
+    --cx-text: #666666;
+    --cx-bg: #ffffff;
+    --cx-input: #f6f6f6;
+}
+
+.theme-elegant-serif .contactx-info-card,
+.contactx-section.theme-elegant-serif .contactx-info-card {
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, .08);
+}
+
+.theme-elegant-serif .contactx-side-col,
+.contactx-section.theme-elegant-serif .contactx-side-col {
+    display: none;
+}
+
+.theme-elegant-serif .contactx-form-col,
+.contactx-section.theme-elegant-serif .contactx-form-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.theme-elegant-serif .contactx-form-heading,
+.contactx-section.theme-elegant-serif .contactx-form-heading {
+    display: block;
+    text-align: center;
+}
+
+.theme-elegant-serif .contactx-form-heading h2,
+.contactx-section.theme-elegant-serif .contactx-form-heading h2 {
+    font-family: "Playfair Display", serif;
+    color: #073341;
+    font-size: 3.3rem;
+}
+
+.theme-elegant-serif .contactx-form-heading p,
+.contactx-section.theme-elegant-serif .contactx-form-heading p {
+    display: none;
+}
+
+.theme-elegant-serif .contactx-form-panel,
+.contactx-section.theme-elegant-serif .contactx-form-panel {
+    padding: 30px 0 0;
+    border: 0;
+}
+
+.theme-elegant-serif .contactx-field label,
+.contactx-section.theme-elegant-serif .contactx-field label {
+    display: block;
+}
+
+.theme-elegant-serif .contactx-input-wrap > i,
+.contactx-section.theme-elegant-serif .contactx-input-wrap > i {
+    display: none;
+}
+
+.theme-elegant-serif .contactx-input-wrap input,
+.theme-elegant-serif .contactx-input-wrap select,
+.contactx-section.theme-elegant-serif .contactx-input-wrap input,
+.contactx-section.theme-elegant-serif .contactx-input-wrap select {
+    height: 70px;
+    padding: 0 22px;
+}
+
+.theme-elegant-serif .contactx-input-wrap textarea,
+.contactx-section.theme-elegant-serif .contactx-input-wrap textarea {
+    min-height: 210px;
+    padding: 22px;
+}
+
+.theme-elegant-serif .contactx-submit,
+.contactx-section.theme-elegant-serif .contactx-submit {
+    display: flex;
+    min-width: 230px;
+    margin: 22px auto 0;
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   04 — VIBRANT CARDS
+   Blue information boxes + huge question heading
+========================================================= */
+
+:is(
+    .theme-vibrant-cards .contactx-section,
+    .contactx-section.theme-vibrant-cards
+) {
+    --cx-accent: #1762de;
+    --cx-accent-rgb: 23, 98, 222;
+
+    --cx-heading: #101a3a;
+    --cx-text: #656b75;
+
+    --cx-bg: #ffffff;
+    --cx-card: #ffffff;
+    --cx-input: #f1f3ff;
+}
+
+.theme-vibrant-cards .contactx-info-card,
+.contactx-section.theme-vibrant-cards .contactx-info-card {
+    min-height: 180px;
+    background: #eef1ff;
+    border: 0;
+}
+
+.theme-vibrant-cards .contactx-info-icon,
+.contactx-section.theme-vibrant-cards .contactx-info-icon {
+    width: 95px;
+    height: 95px;
+    flex-basis: 95px;
+    color: #ffffff;
+    background: #1762de;
+}
+
+.theme-vibrant-cards .contactx-title,
+.contactx-section.theme-vibrant-cards .contactx-title {
+    max-width: 440px;
+    font-size: clamp(3rem, 6vw, 4rem);
+}
+
+.theme-vibrant-cards .contactx-side-info,
+.contactx-section.theme-vibrant-cards .contactx-side-info {
+    display: none;
+}
+
+.theme-vibrant-cards .contactx-form-panel,
+.contactx-section.theme-vibrant-cards .contactx-form-panel {
+    padding: 0;
+    border: 0;
+}
+
+.theme-vibrant-cards .contactx-form-heading,
+.contactx-section.theme-vibrant-cards .contactx-form-heading {
+    display: none;
+}
+
+.theme-vibrant-cards .contactx-input-wrap input,
+.theme-vibrant-cards .contactx-input-wrap textarea,
+.contactx-section.theme-vibrant-cards .contactx-input-wrap input,
+.contactx-section.theme-vibrant-cards .contactx-input-wrap textarea {
+    border-radius: 0;
+}
+
+.theme-vibrant-cards .contactx-submit,
+.contactx-section.theme-vibrant-cards .contactx-submit {
+    min-width: 230px;
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   05 — EMERALD BLOCK
+   Form left + expert contact information right
+========================================================= */
+
+:is(
+    .theme-emerald-block .contactx-section,
+    .contactx-section.theme-emerald-block
+) {
+    --cx-accent: #138f8d;
+    --cx-accent-rgb: 19, 143, 141;
+
+    --cx-heading: #252d3d;
+    --cx-text: #5f6670;
+
+    --cx-bg: #ffffff;
+    --cx-card: #ffffff;
+    --cx-input: #ffffff;
+}
+
+.theme-emerald-block .contactx-top-info,
+.contactx-section.theme-emerald-block .contactx-top-info {
+    display: none;
+}
+
+.theme-emerald-block .contactx-side-col,
+.contactx-section.theme-emerald-block .contactx-side-col {
+    order: 2;
+}
+
+.theme-emerald-block .contactx-form-col,
+.contactx-section.theme-emerald-block .contactx-form-col {
+    order: 1;
+}
+
+.theme-emerald-block .contactx-side-panel,
+.contactx-section.theme-emerald-block .contactx-side-panel {
+    padding: 40px;
+}
+
+.theme-emerald-block .contactx-subtitle,
+.contactx-section.theme-emerald-block .contactx-subtitle {
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+.theme-emerald-block .contactx-title,
+.contactx-section.theme-emerald-block .contactx-title {
+    font-size: 2.8rem;
+}
+
+.theme-emerald-block .contactx-side-item,
+.contactx-section.theme-emerald-block .contactx-side-item {
+    margin-bottom: 18px;
+    padding: 22px 28px;
+    border: 1px solid #e0e4e5;
+    border-radius: 8px;
+}
+.theme-emerald-block .contactx-main {
+        align-items: center;
+}
+.theme-emerald-block .contactx-form-panel {
+    height: unset;
+}
+.theme-emerald-block .contactx-form-panel,
+.contactx-section.theme-emerald-block .contactx-form-panel {
+    padding: 50px;
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 35px rgba(15, 23, 42, .08);
+}
+
+.theme-emerald-block .contactx-field label,
+.contactx-section.theme-emerald-block .contactx-field label {
+    display: block;
+}
+
+.theme-emerald-block .contactx-input-wrap > i,
+.contactx-section.theme-emerald-block .contactx-input-wrap > i {
+    display: none;
+}
+.theme-curved-scalloped .contactx-input-wrap input,
+.theme-emerald-block .contactx-input-wrap input,
+.theme-curved-scalloped .contactx-input-wrap textarea,
+.theme-emerald-block .contactx-input-wrap textarea,
+.contactx-section.theme-emerald-block .contactx-input-wrap input,
+.contactx-section.theme-emerald-block .contactx-input-wrap textarea {
+    border: 1px solid #dfe3e5;
+}
+
+.theme-emerald-block .contactx-form-heading,
+.contactx-section.theme-emerald-block .contactx-form-heading {
+    display: none;
+}
+
+.theme-emerald-block .contactx-submit,
+.contactx-section.theme-emerald-block .contactx-submit {
+    width: 100%;
+}
+
+
+/* =========================================================
+   06 — CURVED SCALLOPED
+   Three info cards + form and map
+========================================================= */
+
+:is(
+    .theme-curved-scalloped .contactx-section,
+    .contactx-section.theme-curved-scalloped
+) {
+    --cx-accent: #2855e8;
+    --cx-accent-rgb: 40, 85, 232;
+
+    --cx-heading: #111b43;
+    --cx-text: #626b7c;
+
+    --cx-bg: #f4f6fa;
+    --cx-card: #ffffff;
+    --cx-input: #ffffff;
+}
+
+.theme-curved-scalloped .contactx-info-card,
+.contactx-section.theme-curved-scalloped .contactx-info-card {
+    border: 0;
+    border-radius: 15px;
+}
+
+.theme-curved-scalloped .contactx-side-col,
+.contactx-section.theme-curved-scalloped .contactx-side-col {
+    display: none;
+}
+
+.theme-curved-scalloped .contactx-form-col,
+.contactx-section.theme-curved-scalloped .contactx-form-col,
+.theme-curved-scalloped .contactx-map-col,
+.contactx-section.theme-curved-scalloped .contactx-map-col {
+    display: block;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.theme-curved-scalloped .contactx-map,
+.contactx-section.theme-curved-scalloped .contactx-map,
+.theme-curved-scalloped .contactx-form-panel,
+.contactx-section.theme-curved-scalloped .contactx-form-panel {
+    min-height: 540px;
+    border-radius: 18px;
+}
+
+.theme-curved-scalloped .contactx-form-heading,
+.contactx-section.theme-curved-scalloped .contactx-form-heading {
+    display: block;
+}
+
+.theme-curved-scalloped .contactx-form-panel,
+.contactx-section.theme-curved-scalloped .contactx-form-panel {
+    padding: 50px;
+    border: 0;
+}
+
+.theme-curved-scalloped .contactx-message-field textarea,
+.contactx-section.theme-curved-scalloped .contactx-message-field textarea {
+    min-height: 120px;
+}
+
+.theme-curved-scalloped .contactx-submit,
+.contactx-section.theme-curved-scalloped .contactx-submit {
+    border-radius: 30px;
+}
+
+.theme-curved-scalloped .contactx-map,
+.contactx-section.theme-curved-scalloped .contactx-map {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   07 — MODERN DARK
+   Image + floating premium dark form
+========================================================= */
+
+:is(
+    .theme-modern-dark .contactx-section,
+    .contactx-section.theme-modern-dark
+) {
+    --cx-accent: #23c8d7;
+    --cx-accent-rgb: 35, 200, 215;
+    --cx-heading: #ffffff;
+    --cx-text: #9eabb8;
+    --cx-bg: #07111c;
+    --cx-card: #0d1c2b;
+    --cx-input: #122536;
+    --cx-border: rgba(255, 255, 255, .09);
+}
+
+.theme-modern-dark .contactx-top-info,
+.contactx-section.theme-modern-dark .contactx-top-info {
+    display: none;
+}
+
+.theme-modern-dark .contactx-side-col,
+.contactx-section.theme-modern-dark .contactx-side-col {
+    display: none;
+}
+
+.theme-modern-dark .contactx-visual-col,
+.contactx-section.theme-modern-dark .contactx-visual-col {
+    display: block;
+    order: 1;
+    flex: 0 0 58%;
+    max-width: 58%;
+}
+
+.theme-modern-dark .contactx-form-col,
+.contactx-section.theme-modern-dark .contactx-form-col {
+    order: 2;
+    flex: 0 0 42%;
+    max-width: 42%;
+    position: relative;
+    z-index: 5;
+}
+
+.theme-modern-dark .contactx-form-panel,
+.contactx-section.theme-modern-dark .contactx-form-panel {
+    position: relative;
+    margin-left: -70px;
+    padding: 55px;
+    background: #0d1c2b;
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 18px;
+    box-shadow: 0 35px 90px rgba(0, 0, 0, .4);
+}
+
+.theme-modern-dark .contactx-form-heading,
+.contactx-section.theme-modern-dark .contactx-form-heading {
+    display: block;
+}
+
+.theme-modern-dark .contactx-form-heading h2,
+.contactx-section.theme-modern-dark .contactx-form-heading h2 {
+    color: #ffffff;
+}
+
+.theme-modern-dark .contactx-input-wrap input,
+.theme-modern-dark .contactx-input-wrap textarea,
+.theme-modern-dark .contactx-input-wrap select,
+.contactx-section.theme-modern-dark .contactx-input-wrap input,
+.contactx-section.theme-modern-dark .contactx-input-wrap textarea,
+.contactx-section.theme-modern-dark .contactx-input-wrap select {
+    color: #ffffff;
+    background: #122536;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.theme-modern-dark .contactx-input-wrap input::placeholder,
+.theme-modern-dark .contactx-input-wrap textarea::placeholder,
+.contactx-section.theme-modern-dark .contactx-input-wrap input::placeholder,
+.contactx-section.theme-modern-dark .contactx-input-wrap textarea::placeholder {
+    color: #8292a1;
+}
+
+
+.theme-modern-dark .contactx-service-field,
+.contactx-section.theme-modern-dark .contactx-service-field {
+    display: block;
+}
+
+.theme-modern-dark .contactx-message-field,
+.contactx-section.theme-modern-dark .contactx-message-field {
+    display: none;
+}
+
+.theme-modern-dark .contactx-submit,
+.contactx-section.theme-modern-dark .contactx-submit {
+    width: 100%;
+    color: #06141d;
+    background: #23c8d7;
+}
+
+.theme-modern-dark .contactx-visual,
+.contactx-section.theme-modern-dark .contactx-visual {
+    border-radius: 20px;
+}
+
+.theme-modern-dark .contactx-visual::after,
+.contactx-section.theme-modern-dark .contactx-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 15, 24, .2),
+            rgba(5, 15, 24, .5)
+        );
+}
+
+.theme-modern-dark .contactx-play,
+.contactx-section.theme-modern-dark .contactx-play {
+    z-index: 3;
+    color: #07111c;
+    background: #23c8d7;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .contactx-section {
+        padding: 75px 0;
     }
 
-    /* Theme 1: Emerald Solid Block Contact Layout */
-    .theme-emerald-block .contact-wrapper-box {
-        background: #1ba085;
-        border-radius: 20px;
-        padding: 3rem;
-        color: #ffffff;
-    }
-    .theme-emerald-block .contact-info-title {
-        font-size: 1.5rem;
-        font-weight: 800;
-        margin-bottom: 1.5rem;
-        color: #ffffff;
-        border-bottom: 2px solid rgba(255,255,255,0.2);
-        padding-bottom: 0.5rem;
-    }
-    .theme-emerald-block .contact-item {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        align-items: flex-start;
-    }
-    .theme-emerald-block .contact-item i {
-        font-size: 1.5rem;
-        color: #ffffff;
-        background: rgba(255,255,255,0.15);
-        padding: 10px;
-        border-radius: 10px;
-    }
-    .theme-emerald-block .contact-form-title {
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: #ffffff;
-        margin-bottom: 1rem;
-    }
-    .theme-emerald-block .contact-form-desc {
-        color: rgba(255,255,255,0.9);
-        margin-bottom: 2rem;
-    }
-    .theme-emerald-block .custom-contact-input {
-        background: rgba(255, 255, 255, 0.9);
-        border: none;
-        border-radius: 8px;
-        padding: 0.9rem 1rem;
-        color: #0f172a;
-    }
-    .theme-emerald-block .custom-contact-input:focus {
-        background: #ffffff;
-        box-shadow: 0 0 0 3px rgba(255,255,255,0.4);
-    }
-    .theme-emerald-block .contact-submit-btn {
-        background: #ffffff;
-        color: #1ba085;
-        font-weight: 700;
-        padding: 0.9rem 2rem;
-        border-radius: 8px;
-        border: none;
-        transition: all 0.3s ease;
-    }
-    .theme-emerald-block .contact-submit-btn:hover {
-        background: #f8f9fa;
-        transform: translateY(-2px);
+    .contactx-top-info {
+        margin-bottom: 60px;
     }
 
-    /* Theme 2: Curved Scalloped Contact Layout */
-    .theme-curved-scalloped .contact-wrapper-box {
-        background: #fcfbf9;
-        border: 2px dashed #1ba085;
-        border-radius: 40px;
-        padding: 4rem 3rem;
-    }
-    .theme-curved-scalloped .contact-info-title {
-        font-size: 1.6rem;
-        font-weight: 800;
-        color: #1a1a1a;
-        margin-bottom: 1.5rem;
-    }
-    .theme-curved-scalloped .contact-item i {
-        font-size: 1.6rem;
-        color: #1ba085;
-        background: #f5f0e6;
-        padding: 12px;
-        border-radius: 50%;
-    }
-    .theme-curved-scalloped .contact-form-title {
-        font-size: 2.8rem;
-        font-weight: 800;
-        color: #1a1a1a;
-        margin-bottom: 1rem;
-    }
-    .theme-curved-scalloped .custom-contact-input {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 50px;
-        padding: 1rem 1.5rem;
-    }
-    .theme-curved-scalloped textarea.custom-contact-input {
-        border-radius: 30px;
-    }
-    .theme-curved-scalloped .contact-submit-btn {
-        background: #1ba085;
-        color: #ffffff;
-        font-weight: 700;
-        padding: 1rem 2.5rem;
-        border-radius: 50px;
-        border: none;
+    .contactx-side-panel {
+        padding-right: 0;
     }
 
-    /* Theme 3: Minimalist Border Grid Contact Layout */
-    .theme-default .contact-wrapper-box {
-        background: #ffffff;
-        border: 1px solid #e9ecef;
-        border-radius: 6px;
-        padding: 3rem;
-    }
-    .theme-default .contact-form-title {
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: #1a1a1a;
-    }
-    .theme-default .custom-contact-input {
-        border: 1px solid #ced4da;
-        border-radius: 6px;
-    }
-    .theme-default .contact-submit-btn {
-        background: #1a1a1a;
-        color: #ffffff;
-        border-radius: 6px;
-        font-weight: 600;
+
+    /* Layered */
+    .theme-layered-offset .contactx-side-col,
+    .theme-layered-offset .contactx-form-col,
+    .contactx-section.theme-layered-offset .contactx-side-col,
+    .contactx-section.theme-layered-offset .contactx-form-col {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
-    /* Theme 4: Modern Dark Glassmorphism Contact Layout */
-    .theme-modern-dark .contact-wrapper-box {
-        background: rgba(17, 24, 39, 0.75);
-        border: 1px solid rgba(6, 182, 212, 0.3);
-        backdrop-filter: blur(12px);
-        border-radius: 16px;
-        padding: 3.5rem;
-    }
-    .theme-modern-dark .contact-info-title,
-    .theme-modern-dark .contact-form-title {
-        color: #ffffff;
-    }
-    .theme-modern-dark .contact-item i {
-        color: #06b6d4;
-        background: rgba(6, 182, 212, 0.1);
-        border-radius: 12px;
-    }
-    .theme-modern-dark .custom-contact-input {
-        background: rgba(11, 15, 25, 0.8);
-        border: 1px solid rgba(6, 182, 212, 0.3);
-        color: #f3f4f6;
-        border-radius: 8px;
-    }
-    .theme-modern-dark .custom-contact-input:focus {
-        border-color: #06b6d4;
-        background: rgba(11, 15, 25, 0.95);
-        color: #ffffff;
-    }
-    .theme-modern-dark .contact-submit-btn {
-        background: #06b6d4;
-        color: #0b0f19;
-        font-weight: 700;
-        border-radius: 8px;
-        box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    .theme-layered-offset .contactx-form-col,
+    .contactx-section.theme-layered-offset .contactx-form-col {
+        order: 1;
     }
 
-    /* Theme 5: Vibrant Floating Cards Contact Layout */
-    .theme-vibrant-cards .contact-wrapper-box {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 24px;
-        box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.1);
-        padding: 3.5rem;
-    }
-    .theme-vibrant-cards .contact-item i {
-        color: #4f46e5;
-        background: #e0e7ff;
-        border-radius: 50px;
-    }
-    .theme-vibrant-cards .custom-contact-input {
-        border-radius: 50px;
-        padding: 0.9rem 1.5rem;
-        border: 1px solid #cbd5e1;
-    }
-    .theme-vibrant-cards textarea.custom-contact-input {
-        border-radius: 20px;
-    }
-    .theme-vibrant-cards .contact-submit-btn {
-        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-        color: #ffffff;
-        border-radius: 50px;
-        font-weight: 700;
+    .theme-layered-offset .contactx-side-col,
+    .contactx-section.theme-layered-offset .contactx-side-col {
+        order: 2;
     }
 
-    /* Theme 6: Luxury Gold Frame Contact Layout */
-    .theme-elegant-serif .contact-wrapper-box {
-        background: #ffffff;
-        border: 2px solid #d4af37;
-        border-radius: 4px;
-        padding: 4rem;
-    }
-    .theme-elegant-serif .contact-info-title,
-    .theme-elegant-serif .contact-form-title {
-        font-family: 'Playfair Display', serif;
-        color: #2c2a29;
-    }
-    .theme-elegant-serif .contact-item i {
-        color: #d4af37;
-        background: #faf8f5;
-        border: 1px solid #d4af37;
-        border-radius: 0px;
-    }
-    .theme-elegant-serif .custom-contact-input {
-        border: 1px solid #d4af37;
-        border-radius: 0px;
-        background: #faf8f5;
-    }
-    .theme-elegant-serif .contact-submit-btn {
-        background: #d4af37;
-        color: #ffffff;
-        border-radius: 0px;
-        font-family: 'Playfair Display', serif;
-        font-weight: 700;
+
+    /* Curved */
+    .theme-curved-scalloped .contactx-form-col,
+    .theme-curved-scalloped .contactx-map-col,
+    .contactx-section.theme-curved-scalloped .contactx-form-col,
+    .contactx-section.theme-curved-scalloped .contactx-map-col {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
-    /* Theme 7: Layered Offset Frames Contact Layout */
-    .theme-layered-offset .contact-wrapper-box {
-        background: #f5f5f7;
-        border-radius: 20px;
-        padding: 3.5rem;
-        position: relative;
+
+    /* Dark */
+    .theme-modern-dark .contactx-visual-col,
+    .theme-modern-dark .contactx-form-col,
+    .contactx-section.theme-modern-dark .contactx-visual-col,
+    .contactx-section.theme-modern-dark .contactx-form-col {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-    .theme-layered-offset .contact-info-title,
-    .theme-layered-offset .contact-form-title {
-        color: #2d3748;
-        font-weight: 700;
+
+    .theme-modern-dark .contactx-form-panel,
+    .contactx-section.theme-modern-dark .contactx-form-panel {
+        margin: -80px 35px 0;
     }
-    .theme-layered-offset .contact-item i {
-        color: #f37a1f;
-        background: #fff;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        border-radius: 12px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .contactx-section {
+        padding: 60px 0;
     }
-    .theme-layered-offset .custom-contact-input {
-        border: 2px solid #e2e8f0;
-        border-radius: 12px;
-        background: #ffffff;
+
+    .contactx-top-info {
+        margin-bottom: 45px;
     }
-    .theme-layered-offset .custom-contact-input:focus {
-        border-color: #f37a1f;
-        box-shadow: none;
+
+    .contactx-info-card {
+        min-height: auto;
     }
-    .theme-layered-offset .contact-submit-btn {
-        background: #f37a1f;
-        color: #ffffff;
-        border-radius: 12px;
-        font-weight: 700;
+
+    .contactx-title {
+        font-size: 2.3rem;
     }
-    .theme-layered-offset .contact-submit-btn:hover {
-        background: #d9630d;
+
+    .contactx-form-panel {
+        padding: 30px 24px;
     }
+
+    .contactx-side-panel {
+        padding: 0;
+    }
+
+
+    /* Clean */
+    .theme-clean-grid .contactx-info-card,
+    .theme-default .contactx-info-card,
+    .contactx-section.theme-clean-grid .contactx-info-card,
+    .contactx-section.theme-default .contactx-info-card {
+        min-height: 220px;
+        margin-top: 50px;
+    }
+
+
+    /* Layered */
+    .theme-layered-offset .contactx-form-panel,
+    .contactx-section.theme-layered-offset .contactx-form-panel {
+        padding: 40px 25px;
+    }
+
+
+    /* Vibrant */
+    .theme-vibrant-cards .contactx-title,
+    .contactx-section.theme-vibrant-cards .contactx-title {
+        font-size: 3.2rem;
+    }
+
+
+    /* Dark */
+    .theme-modern-dark .contactx-form-panel,
+    .contactx-section.theme-modern-dark .contactx-form-panel {
+        margin: -45px 15px 0;
+        padding: 35px 24px;
+    }
+
+    .theme-modern-dark .contactx-visual,
+    .theme-modern-dark .contactx-visual img,
+    .contactx-section.theme-modern-dark .contactx-visual,
+    .contactx-section.theme-modern-dark .contactx-visual img {
+        min-height: 430px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .contactx-info-card {
+        padding: 25px;
+    }
+
+    .contactx-info-icon {
+        width: 60px;
+        height: 60px;
+        flex-basis: 60px;
+        font-size: 22px;
+    }
+
+    .contactx-form-heading h2 {
+        font-size: 2rem;
+    }
+
+    .contactx-input-wrap input,
+    .contactx-input-wrap select {
+        height: 58px;
+    }
+
+    .contactx-submit {
+        width: 100%;
+    }
+
+}
