@@ -904,14 +904,9 @@
   background: #071c34;
 }
 
-.theme-emerald-block .main-hero-bg {
-  background: linear-gradient(
-      90deg,
-      rgba(4, 22, 44, 0.96),
-      rgba(8, 29, 55, 0.85)
-    ),
-    url("/template/assets/img/hero/corporate-bg.webp") center / cover no-repeat;
-}
+.theme-emerald-block .main-hero-bg { 
+  background: linear-gradient( 90deg, rgba(4, 22, 44, 0.96), rgba(8, 29, 55, 0.85) ), url("/template/assets/img/hero/corporate-bg.webp");
+ }
 
 .theme-emerald-block .main-hero-overlay {
   background: radial-gradient(
@@ -954,8 +949,8 @@
 
 .theme-emerald-block .hero-btn-primary {
   color: #ffffff;
-    background: #1ba085;
-    box-shadow: 0 5px 15px #1ba08566;
+  background: #1ba085;
+  box-shadow: 0 5px 15px #1ba08566;
 }
 
 .theme-emerald-block .hero-btn-secondary,
